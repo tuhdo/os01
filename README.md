@@ -23,6 +23,42 @@ After completing this book, at the very least:
 
 [Download the book](https://github.com/tuhdo/os01/zipball/master)
 
+# Prerequisites
+
+Know some circuit concepts:
+  + Basic Concepts of Electricity: atom, electrons, proton, neutron, current flow.
+  + Ohm law
+
+However, if you know absolute nothing, you can quickly learn it here:
+http://www.allaboutcircuits.com/textbook/, by reading chapter 1 and chapter 2.
+
+Know some C programming. In particular:
+
+- Variable and functions declaration/definitions
+
+- While and for loops.
+
+- Understand how pointers work.
+
+- Fundamentals of algorithm and data structure in C.
+
+Know Linux basics: 
+
+- Know how to navigate directory with the command line
+
+- Know how to invoke a command with options.
+
+- Know how to pipe output to another program.
+
+Know how to touch type. Since we are going to use Linux, touch typing helps. I
+know typing speed does not relate to problem -solving, but at least the speed
+should be fast enough not to let it get it the way and degrade the learning
+experience.
+
+In general, I assume that a reader acquired basic programming knowledge with C,
+and can use an IDE at its basic. That is, know how to press the Play button for
+building and running a program.
+
 # Status:
 * Part 1
    - Chapter 1: Complete
