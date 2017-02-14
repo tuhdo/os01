@@ -1,17 +1,24 @@
 Operating System: From 0 to 1
 =============================
 
-This book helps you gain the foundational knowledge required to write an operating system from scratch. Hence the title, 0 to 1.
+This book helps you gain the foundational knowledge required to write an
+operating system from scratch. Hence the title, 0 to 1.
 
 After completing this book, at the very least:
 
-- How to write an operating system from scratch by reading hardware datasheets. In the real world, it works like that. You won't be able to consult Google for a quick answer.
-
-- Write code independently. It's pointless to copy and paste code. Real learning happens when you solve problems on your own. Some examples are given to kick start, but most problems are yours to conquer. However, the solutions are available online for you to examine after giving a good try.
+- How to write an operating system from scratch by reading hardware datasheets.
+  In the real world, it works like that. You won't be able to consult Google for
+  a quick answer.
 
 - A big picture of how each layer of a computer is related to the other, from hardware to software.
 
-- Linux as a development environment and how to use common tools for low-level programming.
+- Write code independently. It's pointless to copy and paste code. Real learning
+  happens when you solve problems on your own. Some examples are given to kick
+  start, but most problems are yours to conquer. However, the solutions are
+  available online for you to examine after giving a good try.
+
+- Linux as a development environment and how to use common tools for low-level
+  programming.
 
 - Understand x86 assembly in-depth.
 
@@ -19,21 +26,53 @@ After completing this book, at the very least:
 
 - How to debug a program running directly on hardware with gdb and QEMU.
 
-- Linking and loading on bare metal x86_64, with pure C. No standard library. No runtime overhead.
+- Linking and loading on bare metal x86_64, with pure C. No standard library. No
+  runtime overhead.
 
 [Download the book](https://github.com/tuhdo/os01/zipball/master)
 
 # The pedagogy of the book
 
-> You give a poor man a fish and you feed him for a day. You teach him to fish and you give him an occupation that will feed him for a lifetime.
+> You give a poor man a fish and you feed him for a day. You teach him to fish
+> and you give him an occupation that will feed him for a lifetime.
 
-This is the guiding principle of the book when I was writing it. The book does not try to teach you everything, but enough to enable you to learn by yourself. The book itself, at this point, is quite "complete": once you master part 1 and part 2 (which consist of 8 chapters), you can drop the book and learn by yourself. At this point, a smart reader should be able to continue on his own. For example, he can continue his journey on [OSDev wiki](http://wiki.osdev.org/Main_Page); in fact, after you study everything in part 1 and part 2, you only meet the [minimum requirement](http://wiki.osdev.org/Required_Knowledge) by OSDev Wiki. Or, if he considers developing an OS for fun is impractical, he can continue with a Linux-specific book, such as this free book [Linux Insiders](https://0xax.gitbooks.io/linux-insides/content/), or other popular Linux kernel books. The book tries hard to provide you a strong foundation, and that's why part 1 and part 2 were released first.
+This is the guiding principle of the book when I was writing it. The book does
+not try to teach you everything, but enough to enable you to learn by yourself.
+The book itself, at this point, is quite "complete": once you master part 1 and
+part 2 (which consist of 8 chapters), you can drop the book and learn by
+yourself. At this point, a smart reader should be able to continue on his own.
+For example, he can continue his journey
+on [OSDev wiki](http://wiki.osdev.org/Main_Page); in fact, after you study
+everything in part 1 and part 2, you only meet
+the [minimum requirement](http://wiki.osdev.org/Required_Knowledge) by OSDev
+Wiki. Or, if he considers developing an OS for fun is impractical, he can
+continue with a Linux-specific book, such as this free
+book [Linux Insiders](https://0xax.gitbooks.io/linux-insides/content/), or other
+popular Linux kernel books. The book tries hard to provide you a strong
+foundation, and that's why part 1 and part 2 were released first.
 
-The book teaches you core concepts, such as x86 Assembly, ELF, linking and debugging on bare metal, etc., but more importantly, where such information comes from. For example, instead of just teaching x86 Assembly, it also teaches you how to use the reference manuals from Intel. Learning to read the official manuals is important because only the hardware manufacturers themselves understand how their hardware work. If you only learn from the secondary resources because it is easier, you will never gain a complete understating of the hardware you are programming for. Have you ever read a book on Assembly, and wonder where does all the information come from? How does the author know everything he says is correct? And how one seems to magically know so much about hardware programming? The book gives a pointer to such questions.
+The book teaches you core concepts, such as x86 Assembly, ELF, linking and
+debugging on bare metal, etc., but more importantly, where such information
+comes from. For example, instead of just teaching x86 Assembly, it also teaches
+you how to use the reference manuals from Intel. Learning to read the official
+manuals is important because only the hardware manufacturers themselves
+understand how their hardware work. If you only learn from the secondary
+resources because it is easier, you will never gain a complete understating of
+the hardware you are programming for. Have you ever read a book on Assembly, and
+wonder where does all the information come from? How does the author know
+everything he says is correct? And how one seems to magically know so much about
+hardware programming? The book gives a pointer to such questions.
 
-As an example, you should skim through chapter 4, "x86 Assembly and C", to see how it makes use of the Intel manual, Volume 2, when explaining stuffs. And in the process, it guides you how to use the official manuals.
+As an example, you should skim through chapter 4, "x86 Assembly and C", to see
+how it makes use of the Intel manual, Volume 2, when explaining stuffs. And in
+the process, it guides you how to use the official manuals.
 
-Part 3 is planned as a series of specifications that a reader will implement to complete each operating system component. It will not contain code, aside from a few examples. Part 3 is just there to shorten the reader's time from read the official manuals by giving hints where to read, explaining difficult concepts and how to use the manuals to debug. In sum, the implementation, is up to the reader to work on his own; the chapters are just like university assignments.
+Part 3 is planned as a series of specifications that a reader will implement to
+complete each operating system component. It will not contain code, aside from a
+few examples. Part 3 is just there to shorten the reader's time from read the
+official manuals by giving hints where to read, explaining difficult concepts
+and how to use the manuals to debug. In sum, the implementation, is up to the
+reader to work on his own; the chapters are just like university assignments.
 
 # Prerequisites
 
@@ -114,9 +153,14 @@ For example: `[pg.9][grammar] Incorrect verb usage`.
 - `Style`: indicates a style improvement.
 - `Content`: indicates problems with the content.
 
-Even better, you can make a pull request with the provided book source. The main content of the book is in the file "Operating System: From 0 to 1.lyx". You can use [Lyx editor](https://www.lyx.org) to edit it, or any editor that can understand Latex.
+Even better, you can make a pull request with the provided book source. The main
+content of the book is in the file "Operating System: From 0 to 1.lyx". You can
+use [Lyx editor](https://www.lyx.org) to edit it, or any editor that can
+understand Latex.
 
+The book is in development, so please bare with me if the English irritates you.
 I really appreciate it.
 
 # Got questions?
-If you have any question related to the material or the development of the book, feel free to open a Github issue.
+If you have any question related to the material or the development of the book,
+feel free to open a Github issue.
