@@ -98,3 +98,9 @@ building and running a program.
 - LAPIC.
 
 Paging and I/O are not yet implemented. I will try to implement it as the book progresses.
+
+# Contributing
+
+I will upload the Lyx - Latex source soon, after cleaning it up. In the
+meantime, if you find any grammatical issue, please report it using Github
+issue. I really appreciated it.
