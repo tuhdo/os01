@@ -21,6 +21,8 @@ After completing this book, at the very least:
 
 - Linking and loading on bare metal x86_64, with pure C. No standard library. No runtime overhead.
 
+[Download the book](github.com/tuhdo/os01/zipball/master)
+
 # Status:
 * Part 1
    - Chapter 1: Complete
@@ -38,4 +40,13 @@ After completing this book, at the very least:
    - Chapter 11: Incomplete
    - Chapter 12: Incomplete
    - Chapter 13: Incomplete
-      
+
+# Sample OS
+[This repository](https://github.com/tuhdo/sample-os) is the sample OS of the book that is intended as a reference material for part 3. It covers 10 chapters of the "System Programming Guide" (Intel Manual Volume 3), along with a simple keyboard and video driver for input and output. However, at the moment, only the following features are implmeneted:
+
+- Protected mode.
+- Creating and managing processes with TSS (Task State Structure).
+- Interrupts
+- LAPIC.
+
+Paging and I/O are not yet implemented. I will try to implement it as the book progresses.
