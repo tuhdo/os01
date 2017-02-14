@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg viewBox="0 0 600 250" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="15.29084" patternTransform="translate(114.8634,269.85474)" patternUnits="userSpaceOnUse" width="15.26297">
+<path d="m.125,15.16584 15.01297-15.04084" fill="none" stroke="#000" stroke-linecap="square" stroke-width=".25"/>
+</pattern>
+</defs>
+<g transform="matrix(.81579,0,0,.81579,40.31571,-180.2899)">
+<path d="m69.06164,267.59018h198v98h-198z" fill="#fff" stroke="#000" stroke-linecap="square" stroke-width="2.4516"/>
+<path d="m365.267,267.59018h198v98h-198z" fill="#fff" stroke="#000" stroke-linecap="square" stroke-width="2.4516"/>
+<path d="m267.25424,267.59018h98v98h-98z" fill="#fff" stroke="#000" stroke-linecap="square" stroke-width="2.4516"/><text font-family="Helvetica" font-size="28" font-style="oblique" x="159.64659" xml:space="preserve" y="324.431"><tspan x="159.64659" y="324.431">n</tspan></text><text font-family="Helvetica" font-size="28" font-style="oblique" x="455.85196" xml:space="preserve" y="324.431"><tspan x="455.85196" y="324.431">n</tspan></text><text font-family="Helvetica" font-size="28" font-style="oblique" x="308.05112" xml:space="preserve" y="321.51889"><tspan x="308.05112" y="321.51889">p</tspan></text>
+<path d="m271.25424,366.03052h90v5.99999h-90z" stroke="#000" stroke-linecap="square" stroke-width=".30645"/>
+<path d="m271.59018-68.04377h90v5.99999h-90z" stroke="#000" stroke-linecap="square" stroke-width=".30645" transform="matrix(0,1,-1,0,0,0)"/>
+<path d="m271.59018-568.75806h90v5.99999h-90z" stroke="#000" stroke-linecap="square" stroke-width=".30645" transform="matrix(0,1,-1,0,0,0)"/>
+<path d="m316.25424,367.91745v85.61043" fill="none" stroke="#000" stroke-width="2.4516"/>
+<path d="m322.85713,453.03571a7.32143,7.32143 0 1,1 -14.64285,0 7.32143,7.32143 0 1,1 14.64285,0z" fill="#fff" stroke="#000" stroke-linecap="square" stroke-width="2.4516" transform="translate(.71853)"/>
+<path d="m69.05525,316.59018h-56.31601" fill="none" stroke="#000" stroke-width="2.4516"/>
+<path d="m322.85713,453.03571a7.32143,7.32143 0 1,1 -14.64285,0 7.32143,7.32143 0 1,1 14.64285,0z" fill="#fff" stroke="#000" stroke-linecap="square" stroke-width="2.4516" transform="matrix(0,1,-1,0,466.26712,1.05447)"/>
+<path d="m563.51419,316.59018h56.31601" fill="none" stroke="#000" stroke-width="2.4516"/>
+<path d="m322.85713,453.03571a7.32143,7.32143 0 1,1 -14.64285,0 7.32143,7.32143 0 1,1 14.64285,0z" fill="#fff" stroke="#000" stroke-linecap="square" stroke-width="2.4516" transform="matrix(0,1,1,0,166.30232,1.05447)"/><text font-family="Helvetica" font-size="28" font-style="oblique" x="13.9323" xml:space="preserve" y="274.431"><tspan x="13.9323" y="274.431">E</tspan></text><text font-family="Helvetica" font-size="28" font-style="oblique" x="612.50372" xml:space="preserve" y="281.57385"><tspan x="612.50372" y="281.57385">C</tspan></text><text font-family="Helvetica" font-size="28" font-style="oblique" x="306.78943" xml:space="preserve" y="494.431"><tspan x="306.78943" y="494.431">B</tspan></text>
+</g>
+</svg>

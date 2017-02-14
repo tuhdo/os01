@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.0 r15299"
+   sodipodi:docname="q35_system_block_diagram.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="148.22354"
+     inkscape:cy="684.65058"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="1295"
+     inkscape:window-height="1007"
+     inkscape:window-x="-4"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4487" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.09197269;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4485"
+       width="25.232832"
+       height="9.5438747"
+       x="107.05884"
+       y="10.093558" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.31216058;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4665"
+       width="34.129185"
+       height="152.22362"
+       x="103.45415"
+       y="25.713884" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.22644833;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4485-9"
+       width="23.81251"
+       height="61.306423"
+       x="108.47916"
+       y="31.964409" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.22661941;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4485-9-2"
+       width="23.848528"
+       height="61.306381"
+       x="108.47916"
+       y="109.14584" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.65466547px;line-height:2.28416586px;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.09136663"
+       x="115.16039"
+       y="63.885509"
+       id="text4536"><tspan
+         sodipodi:role="line"
+         id="tspan4534"
+         x="115.16039"
+         y="63.885509"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif';stroke-width:0.09136663">GMCH</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.65466547px;line-height:2.28416586px;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.09136663"
+       x="116.43023"
+       y="141.06691"
+       id="text4536-8"><tspan
+         sodipodi:role="line"
+         id="tspan4534-1"
+         x="116.43023"
+         y="141.06691"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif';stroke-width:0.09136663">ICH9</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.65466547px;line-height:2.28416586px;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.09136663"
+       x="112.26687"
+       y="16.112864"
+       id="text4536-6"><tspan
+         sodipodi:role="line"
+         id="tspan4534-10"
+         x="112.26687"
+         y="16.112864"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif';stroke-width:0.09136663">Processor</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.24084105;stroke-miterlimit:4;stroke-dasharray:0.24084105, 0.48168209;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4648-5"
+       width="31.240646"
+       height="16.221107"
+       x="160.43698"
+       y="52.970585" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.23174939;stroke-miterlimit:4;stroke-dasharray:0.23174939, 0.46349878;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4648"
+       width="31.240646"
+       height="15.019542"
+       x="160.43698"
+       y="37.951042" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.09197269;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4485-6"
+       width="25.232832"
+       height="9.5438747"
+       x="164.04167"
+       y="40.354168" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.65466547px;line-height:2.28416586px;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.09136663"
+       x="171.84082"
+       y="46.394001"
+       id="text4536-6-9"><tspan
+         sodipodi:role="line"
+         id="tspan4534-10-8"
+         x="171.84082"
+         y="46.394001"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif';stroke-width:0.09136663">DDR2</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.09197269;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4485-6-4"
+       width="25.232832"
+       height="9.5438747"
+       x="164.04167"
+       y="57.244694" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.65466547px;line-height:2.28416586px;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.09136663"
+       x="171.84082"
+       y="63.284527"
+       id="text4536-6-9-3"><tspan
+         sodipodi:role="line"
+         id="tspan4534-10-8-7"
+         x="171.84082"
+         y="63.284527"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif';stroke-width:0.09136663">DDR2</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.07630117;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4485-4"
+       width="25.232832"
+       height="6.5685477"
+       x="48.850502"
+       y="32.416668" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.65466547px;line-height:2.28416586px;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.09136663"
+       x="57.892551"
+       y="36.968834"
+       id="text4536-6-2"><tspan
+         sodipodi:role="line"
+         id="tspan4534-10-3"
+         x="57.892551"
+         y="36.968834"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif';stroke-width:0.09136663">VGA</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.088105;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4485-4-1"
+       width="25.23283"
+       height="8.7580633"
+       x="48.850502"
+       y="45.553764" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.65466547px;line-height:2.28416586px;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.09136663"
+       x="55.813606"
+       y="50.877693"
+       id="text4536-6-2-6"><tspan
+         sodipodi:role="line"
+         id="tspan4534-10-3-0"
+         x="55.813606"
+         y="50.877693"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif';stroke-width:0.09136663">Display</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.06878533;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4485-4-1-4"
+       width="15.38001"
+       height="8.7580633"
+       x="81.69323"
+       y="45.553764" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.65466547px;line-height:2.28416586px;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.09136663"
+       x="85.43502"
+       y="51.200691"
+       id="text4536-6-2-6-5"><tspan
+         sodipodi:role="line"
+         id="tspan4534-10-3-0-1"
+         x="85.43502"
+         y="51.200691"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif';stroke-width:0.09136663">MEC</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.10790615;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4485-4-1-46"
+       width="25.23283"
+       height="13.137095"
+       x="53.229534"
+       y="60.880371" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.65466547px;line-height:2.28416586px;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.09136663"
+       x="59.331612"
+       y="66.353233"
+       id="text4536-6-2-6-2"><tspan
+         sodipodi:role="line"
+         id="tspan4534-10-3-0-8"
+         x="59.331612"
+         y="66.353233"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif';stroke-width:0.09136663">Graphics</tspan><tspan
+         sodipodi:role="line"
+         x="59.331612"
+         y="68.728409"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif';stroke-width:0.09136663"
+         id="tspan4772">    </tspan><tspan
+         sodipodi:role="line"
+         x="59.331612"
+         y="71.103584"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif';stroke-width:0.09136663"
+         id="tspan4774">   Card</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.088105;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4485-4-1-44"
+       width="25.23283"
+       height="8.7580633"
+       x="22.576315"
+       y="60.880371" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.65466547px;line-height:2.28416586px;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.09136663"
+       x="29.539419"
+       y="66.2043"
+       id="text4536-6-2-6-6"><tspan
+         sodipodi:role="line"
+         id="tspan4534-10-3-0-15"
+         x="29.539419"
+         y="66.2043"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif';stroke-width:0.09136663">Display</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.16068326;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4485-4-1-46-1"
+       width="39.6875"
+       height="18.520832"
+       x="50.270832"
+       y="109.14584" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.65466547px;line-height:2.28416586px;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.09136663"
+       x="70.416695"
+       y="114.48725"
+       id="text4536-6-2-6-2-7"><tspan
+         sodipodi:role="line"
+         x="70.416695"
+         y="114.48725"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif';text-align:center;text-anchor:middle;stroke-width:0.09136663"
+         id="tspan4774-9">USB 2.0</tspan><tspan
+         sodipodi:role="line"
+         x="70.416695"
+         y="116.77142"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif';text-align:center;text-anchor:middle;stroke-width:0.09136663"
+         id="tspan4856" /><tspan
+         sodipodi:role="line"
+         x="70.416695"
+         y="119.1466"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif';text-align:center;text-anchor:middle;stroke-width:0.09136663"
+         id="tspan4858">(Support 12 USB ports</tspan><tspan
+         sodipodi:role="line"
+         x="70.416695"
+         y="121.43076"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif';text-align:center;text-anchor:middle;stroke-width:0.09136663"
+         id="tspan4860" /><tspan
+         sodipodi:role="line"
+         x="70.416695"
+         y="123.80593"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif';text-align:center;text-anchor:middle;stroke-width:0.09136663"
+         id="tspan4862">Dual EHCI Controller)</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.10101654;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4485-4-1-44-7"
+       width="33.17033"
+       height="8.7580633"
+       x="51.496338"
+       y="132.13777" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.65466547px;line-height:2.28416586px;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.09136663"
+       x="56.367123"
+       y="137.43047"
+       id="text4536-6-2-6-6-3"><tspan
+         sodipodi:role="line"
+         id="tspan4534-10-3-0-15-9"
+         x="56.367123"
+         y="137.43047"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif';stroke-width:0.09136663">SATA (6 ports)</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.11854734;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4485-4-1-44-7-0"
+       width="39.6875"
+       height="10.080974"
+       x="51.59375"
+       y="144.86458" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.65466547px;line-height:2.28416586px;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.09136663"
+       x="71.414276"
+       y="148.45789"
+       id="text4536-6-2-6-6-3-5"><tspan
+         sodipodi:role="line"
+         id="tspan4534-10-3-0-15-9-7"
+         x="71.414276"
+         y="148.45789"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif';text-align:center;text-anchor:middle;stroke-width:0.09136663">Intel High Definition</tspan><tspan
+         sodipodi:role="line"
+         x="71.414276"
+         y="150.74205"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif';text-align:center;text-anchor:middle;stroke-width:0.09136663"
+         id="tspan4906" /><tspan
+         sodipodi:role="line"
+         x="71.414276"
+         y="153.11723"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif';text-align:center;text-anchor:middle;stroke-width:0.09136663"
+         id="tspan4908">Audio Codec(s)</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.10101654;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4485-4-1-44-7-6"
+       width="33.17033"
+       height="8.7580633"
+       x="51.496338"
+       y="158.5961" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.65466547px;line-height:2.28416586px;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.09136663"
+       x="56.570557"
+       y="163.92717"
+       id="text4536-6-2-6-6-3-6"><tspan
+         sodipodi:role="line"
+         id="tspan4534-10-3-0-15-9-9"
+         x="56.570557"
+         y="163.92717"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif';stroke-width:0.09136663">PCI Express x1</tspan></text>
+  </g>
+</svg>

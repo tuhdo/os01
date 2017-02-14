@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="77.495979mm"
+   height="51.029221mm"
+   viewBox="0 0 77.495979 51.02922"
+   version="1.1"
+   id="svg18"
+   inkscape:version="0.92.0 r15299"
+   sodipodi:docname="7400_pin_configuration.svg">
+  <defs
+     id="defs12" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.959798"
+     inkscape:cx="159.53337"
+     inkscape:cy="124.97049"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:snap-others="true"
+     inkscape:snap-to-guides="true"
+     inkscape:snap-grids="true"
+     inkscape:snap-center="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="2560"
+     inkscape:window-height="1017"
+     inkscape:window-x="-5"
+     inkscape:window-y="-5"
+     inkscape:window-maximized="1">
+    <sodipodi:guide
+       position="241.79225,-117.53427"
+       orientation="1,0"
+       id="guide850"
+       inkscape:locked="false" />
+    <inkscape:grid
+       type="xygrid"
+       id="grid954"
+       originx="-44.720677"
+       originy="-161.901" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata15">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-44.720677,-84.069774)">
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.80606872;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect935"
+       width="50.148724"
+       height="49.391033"
+       x="58.440609"
+       y="84.88887" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.56300902;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect937"
+       width="5.5329041"
+       height="4.6816883"
+       x="53.009724"
+       y="88.838982" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.56300902;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect937-6"
+       width="5.5329041"
+       height="4.6816883"
+       x="53.009724"
+       y="94.766235" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.56300902;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect937-6-3"
+       width="5.5329041"
+       height="4.6816883"
+       x="53.009724"
+       y="100.69348" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.56300902;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect937-6-3-0"
+       width="5.5329041"
+       height="4.6816883"
+       x="53.009724"
+       y="106.62074" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.56300902;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect937-6-3-0-9"
+       width="5.5329041"
+       height="4.6816883"
+       x="53.009724"
+       y="112.548" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.56300902;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect937-6-3-0-9-1"
+       width="5.5329041"
+       height="4.6816883"
+       x="53.009724"
+       y="118.47524" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.56300902;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect937-6-3-0-9-1-1"
+       width="5.5329041"
+       height="4.6816883"
+       x="53.009724"
+       y="124.40249" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.56300902;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect937-8"
+       width="5.5329041"
+       height="4.6816883"
+       x="108.72507"
+       y="88.838982" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.56300902;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect937-6-38"
+       width="5.5329041"
+       height="4.6816883"
+       x="108.72507"
+       y="94.766235" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.56300902;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect937-6-3-5"
+       width="5.5329041"
+       height="4.6816883"
+       x="108.72507"
+       y="100.69348" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.56300902;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect937-6-3-0-4"
+       width="5.5329041"
+       height="4.6816883"
+       x="108.72507"
+       y="106.62074" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.56300902;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect937-6-3-0-9-8"
+       width="5.5329041"
+       height="4.6816883"
+       x="108.72507"
+       y="112.54798" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.56300902;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect937-6-3-0-9-1-8"
+       width="5.5329041"
+       height="4.6816883"
+       x="108.72507"
+       y="118.47523" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.56300902;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect937-6-3-0-9-1-1-4"
+       width="5.5329041"
+       height="4.6816883"
+       x="108.72507"
+       y="124.40248" />
+    <circle
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.74674004;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path1076"
+       cx="65.852097"
+       cy="91.80262"
+       r="2.9636247" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.20964956px;line-height:2.63103104px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.10524125"
+       x="46.681046"
+       y="92.521317"
+       id="text1080"><tspan
+         sodipodi:role="line"
+         id="tspan1078"
+         x="46.681046"
+         y="92.521317"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text';stroke-width:0.10524125">1A</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.20965004px;line-height:2.63103104px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.10524125"
+       x="46.681046"
+       y="98.44857"
+       id="text1080-2"><tspan
+         sodipodi:role="line"
+         id="tspan1078-9"
+         x="46.681046"
+         y="98.44857"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text';stroke-width:0.10524125">1B</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.20965004px;line-height:2.63103104px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.10524125"
+       x="46.681046"
+       y="104.37582"
+       id="text1080-4"><tspan
+         sodipodi:role="line"
+         id="tspan1078-91"
+         x="46.681046"
+         y="104.37582"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text';stroke-width:0.10524125">1Y</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.20965004px;line-height:2.63103104px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.10524125"
+       x="46.681046"
+       y="110.30307"
+       id="text1080-7"><tspan
+         sodipodi:role="line"
+         id="tspan1078-2"
+         x="46.681046"
+         y="110.30307"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text';stroke-width:0.10524125">2A</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.20965004px;line-height:2.63103104px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.10524125"
+       x="46.681046"
+       y="116.23032"
+       id="text1080-1"><tspan
+         sodipodi:role="line"
+         id="tspan1078-1"
+         x="46.681046"
+         y="116.23032"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text';stroke-width:0.10524125">2B</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.20965004px;line-height:2.63103104px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.10524125"
+       x="46.681046"
+       y="122.15756"
+       id="text1080-6"><tspan
+         sodipodi:role="line"
+         id="tspan1078-0"
+         x="46.681046"
+         y="122.15756"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text';stroke-width:0.10524125">2Y</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.20965004px;line-height:2.63103104px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.10524125"
+       x="44.560349"
+       y="128.05911"
+       id="text1080-13"><tspan
+         sodipodi:role="line"
+         id="tspan1078-96"
+         x="44.560349"
+         y="128.05911"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text';stroke-width:0.10524125">GND</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.20965004px;line-height:2.63103104px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.10524125"
+       x="115.83229"
+       y="92.521317"
+       id="text1080-77"><tspan
+         sodipodi:role="line"
+         id="tspan1078-07"
+         x="115.83229"
+         y="92.521317"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text';stroke-width:0.10524125">V<tspan
+   style="font-size:2.82222222px;baseline-shift:sub"
+   id="tspan1304">cc</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.20965052px;line-height:2.63103104px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.10524125"
+       x="115.83229"
+       y="98.44857"
+       id="text1080-2-5"><tspan
+         sodipodi:role="line"
+         id="tspan1078-9-6"
+         x="115.83229"
+         y="98.44857"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text';stroke-width:0.10524125">4B</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.20965052px;line-height:2.63103104px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.10524125"
+       x="115.83229"
+       y="104.37582"
+       id="text1080-4-1"><tspan
+         sodipodi:role="line"
+         id="tspan1078-91-7"
+         x="115.83229"
+         y="104.37582"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text';stroke-width:0.10524125">4A</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.20965052px;line-height:2.63103104px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.10524125"
+       x="115.83229"
+       y="110.30307"
+       id="text1080-7-1"><tspan
+         sodipodi:role="line"
+         id="tspan1078-2-0"
+         x="115.83229"
+         y="110.30307"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text';stroke-width:0.10524125">4Y</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.20965052px;line-height:2.63103104px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.10524125"
+       x="115.83229"
+       y="116.23032"
+       id="text1080-1-0"><tspan
+         sodipodi:role="line"
+         id="tspan1078-1-8"
+         x="115.83229"
+         y="116.23032"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text';stroke-width:0.10524125">3B</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.20965052px;line-height:2.63103104px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.10524125"
+       x="115.83229"
+       y="122.15756"
+       id="text1080-6-7"><tspan
+         sodipodi:role="line"
+         id="tspan1078-0-2"
+         x="115.83229"
+         y="122.15756"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text';stroke-width:0.10524125">3A</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.20965052px;line-height:2.63103104px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.10524125"
+       x="115.83229"
+       y="128.08479"
+       id="text1080-13-3"><tspan
+         sodipodi:role="line"
+         id="tspan1078-96-5"
+         x="115.83229"
+         y="128.08479"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text';stroke-width:0.10524125">3Y</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.20965004px;line-height:2.63103104px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.10524125"
+       x="54.624702"
+       y="92.519234"
+       id="text1080-0"><tspan
+         sodipodi:role="line"
+         id="tspan1078-98"
+         x="54.624702"
+         y="92.519234"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text';stroke-width:0.10524125">1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.20965052px;line-height:2.63103104px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.10524125"
+       x="54.624702"
+       y="98.44648"
+       id="text1080-2-7"><tspan
+         sodipodi:role="line"
+         id="tspan1078-9-60"
+         x="54.624702"
+         y="98.44648"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text';stroke-width:0.10524125">2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.20965052px;line-height:2.63103104px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.10524125"
+       x="54.624702"
+       y="104.37373"
+       id="text1080-4-18"><tspan
+         sodipodi:role="line"
+         id="tspan1078-91-5"
+         x="54.624702"
+         y="104.37373"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text';stroke-width:0.10524125">3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.20965052px;line-height:2.63103104px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.10524125"
+       x="54.624702"
+       y="110.30098"
+       id="text1080-7-4"><tspan
+         sodipodi:role="line"
+         id="tspan1078-2-5"
+         x="54.624702"
+         y="110.30098"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text';stroke-width:0.10524125">4</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.20965052px;line-height:2.63103104px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.10524125"
+       x="54.624702"
+       y="116.22823"
+       id="text1080-1-6"><tspan
+         sodipodi:role="line"
+         id="tspan1078-1-85"
+         x="54.624702"
+         y="116.22823"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text';stroke-width:0.10524125">5</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.20965052px;line-height:2.63103104px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.10524125"
+       x="54.624702"
+       y="122.15548"
+       id="text1080-6-8"><tspan
+         sodipodi:role="line"
+         id="tspan1078-0-8"
+         x="54.624702"
+         y="122.15548"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text';stroke-width:0.10524125">6</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.20965052px;line-height:2.63103104px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.10524125"
+       x="54.673004"
+       y="128.06938"
+       id="text1080-13-1"><tspan
+         sodipodi:role="line"
+         id="tspan1078-96-3"
+         x="54.673004"
+         y="128.06938"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text';stroke-width:0.10524125">7</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.20965052px;line-height:2.63103104px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.10524125"
+       x="109.11886"
+       y="92.521309"
+       id="text1080-0-6"><tspan
+         sodipodi:role="line"
+         id="tspan1078-98-2"
+         x="109.11886"
+         y="92.521309"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text';stroke-width:0.10524125">14</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.20965099px;line-height:2.63103104px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.10524125"
+       x="109.11886"
+       y="98.448555"
+       id="text1080-2-7-0"><tspan
+         sodipodi:role="line"
+         id="tspan1078-9-60-4"
+         x="109.11886"
+         y="98.448555"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text';stroke-width:0.10524125">13</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.20965099px;line-height:2.63103104px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.10524125"
+       x="109.11886"
+       y="104.37581"
+       id="text1080-4-18-2"><tspan
+         sodipodi:role="line"
+         id="tspan1078-91-5-4"
+         x="109.11886"
+         y="104.37581"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text';stroke-width:0.10524125">12</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.20965099px;line-height:2.63103104px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.10524125"
+       x="109.11886"
+       y="110.30305"
+       id="text1080-7-4-2"><tspan
+         sodipodi:role="line"
+         id="tspan1078-2-5-8"
+         x="109.11886"
+         y="110.30305"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text';stroke-width:0.10524125">11</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.20965099px;line-height:2.63103104px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.10524125"
+       x="109.11886"
+       y="116.23029"
+       id="text1080-1-6-5"><tspan
+         sodipodi:role="line"
+         id="tspan1078-1-85-9"
+         x="109.11886"
+         y="116.23029"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text';stroke-width:0.10524125">10</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.20965099px;line-height:2.63103104px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.10524125"
+       x="110.38811"
+       y="122.13186"
+       id="text1080-6-8-4"><tspan
+         sodipodi:role="line"
+         id="tspan1078-0-8-2"
+         x="110.38811"
+         y="122.13186"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text';stroke-width:0.10524125">9</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.20965099px;line-height:2.63103104px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.10524125"
+       x="110.38914"
+       y="128.05911"
+       id="text1080-13-1-4"><tspan
+         sodipodi:role="line"
+         id="tspan1078-96-3-1"
+         x="110.38914"
+         y="128.05911"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text';stroke-width:0.10524125">8</tspan></text>
+  </g>
+</svg>

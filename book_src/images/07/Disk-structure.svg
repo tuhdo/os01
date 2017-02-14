@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="600"
+   height="600"
+   version="1.0"
+   id="svg52"
+   sodipodi:docname="Disk-structure.svg"
+   inkscape:version="0.92.0 r15299">
+  <metadata
+     id="metadata56">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1278"
+     inkscape:window-height="1011"
+     id="namedview54"
+     showgrid="false"
+     inkscape:zoom="1.1125147"
+     inkscape:cx="303.96662"
+     inkscape:cy="310.7548"
+     inkscape:window-x="-4"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg52" />
+  <!-- Disk structure. Made by MistWiz and released in the Public Domain. -->
+  <defs
+     id="shapes_n_styles">
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker4930"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path4928"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.4) rotate(180) translate(10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker4890"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path4578"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.4) rotate(180) translate(10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Mend"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path4596"
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         transform="scale(0.6) rotate(180) translate(0,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lstart"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path4569"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8) translate(12.5,0)" />
+    </marker>
+    <marker
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Mend"
+       style="overflow:visible;">
+      <path
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none;"
+         transform="scale(0.4) rotate(180)"
+         id="path2" />
+    </marker>
+    <style
+       type="text/css"
+       id="style5"><![CDATA[
+      .simple { stroke:#000000; stroke-width:1; fill:none; }
+      .arrow { stroke:#000000; stroke-width:2; marker-end:url(#Arrow1Mend) }
+      .lightGray { stroke:#000000; stroke-width:1; fill:#E0E0E0; }
+      .white { stroke:#000000; stroke-width:1; fill:#FFFFFF; }
+      .lightRed { stroke:#FF0000; stroke-width:1; fill:#FF8080; }
+      .lightBlue { stroke:#0000FF; stroke-width:1; fill:#8080FF;}
+      .violet { stroke:#FF00FF; stroke-width:1; fill:#A000A0;}    
+      .green { stroke:#00FF00; stroke-width:1; fill:#00A000;}
+      .labels {font-size:32px; font-style:normal; font-family:Bitstream Vera Sans}
+    ]]></style>
+  </defs>
+  <circle
+     id="radius200"
+     class="lightGray"
+     cx="300"
+     cy="300"
+     r="200" />
+  <path
+     id="track"
+     class="lightRed"
+     d="M 360,196.08 A 120,120 0 1 0 403.92,240  L 395.26,245 A 110,110 0 1 1 355,204.74 Z" />
+  <path
+     id="sectorOfTrack"
+     class="violet"
+     d="M 360,196.08 A 120,120 0 0 1 403.92,240  L 395.26,245 A 110,110 0 0 0 355,204.74 Z" />
+  <path
+     id="cluster"
+     class="green"
+     d="M 210, 455.8845727 A 180 180 0 0 0 455.8845727, 390 L 447.2243186, 385 A 170 170 0 0 1 215, 447.2243186 Z" />
+  <circle
+     id="radius50"
+     class="white"
+     cx="300"
+     cy="300"
+     r="50" />
+  <circle
+     id="radius60"
+     class="simple"
+     cx="300"
+     cy="300"
+     r="60" />
+  <circle
+     id="radius70"
+     class="simple"
+     cx="300"
+     cy="300"
+     r="70" />
+  <circle
+     id="radius80"
+     class="simple"
+     cx="300"
+     cy="300"
+     r="80" />
+  <circle
+     id="radius90"
+     class="simple"
+     cx="300"
+     cy="300"
+     r="90" />
+  <circle
+     id="radius100"
+     class="simple"
+     cx="300"
+     cy="300"
+     r="100" />
+  <circle
+     id="radius110"
+     class="simple"
+     cx="300"
+     cy="300"
+     r="110" />
+  <circle
+     id="radius120"
+     class="simple"
+     cx="300"
+     cy="300"
+     r="120" />
+  <circle
+     id="radius130"
+     class="simple"
+     cx="300"
+     cy="300"
+     r="130" />
+  <circle
+     id="radius140"
+     class="simple"
+     cx="300"
+     cy="300"
+     r="140" />
+  <circle
+     id="radius150"
+     class="simple"
+     cx="300"
+     cy="300"
+     r="150" />
+  <circle
+     id="radius160"
+     class="simple"
+     cx="300"
+     cy="300"
+     r="160" />
+  <circle
+     id="radius170"
+     class="simple"
+     cx="300"
+     cy="300"
+     r="170" />
+  <circle
+     id="radius180"
+     class="simple"
+     cx="300"
+     cy="300"
+     r="180" />
+  <circle
+     id="radius190"
+     class="simple"
+     cx="300"
+     cy="300"
+     r="190" />
+  <line
+     id="0"
+     class="simple"
+     x1="350"
+     y1="300"
+     x2="500"
+     y2="300" />
+  <line
+     id="30"
+     class="simple"
+     x1="473.20"
+     y1="200"
+     x2="343.30"
+     y2="275" />
+  <line
+     id="60"
+     class="simple"
+     x1="400"
+     y1="128.80"
+     x2="325"
+     y2="256.70" />
+  <line
+     id="90"
+     class="simple"
+     x1="300"
+     y1="100"
+     x2="300"
+     y2="250" />
+  <line
+     id="120"
+     class="simple"
+     x1="200"
+     y1="128.80"
+     x2="275"
+     y2="256.70" />
+  <line
+     id="150"
+     class="simple"
+     x1="128.80"
+     y1="200"
+     x2="256.70"
+     y2="275" />
+  <line
+     id="180"
+     class="simple"
+     x1="100"
+     y1="300"
+     x2="250"
+     y2="300" />
+  <line
+     id="210"
+     class="simple"
+     x1="128.80"
+     y1="400"
+     x2="256.70"
+     y2="325" />
+  <line
+     id="240"
+     class="simple"
+     x1="200"
+     y1="473.20"
+     x2="275"
+     y2="343.30" />
+  <line
+     id="270"
+     class="simple"
+     x1="300"
+     y1="350"
+     x2="300"
+     y2="500" />
+  <line
+     id="300"
+     class="simple"
+     x1="400"
+     y1="473.20"
+     x2="325"
+     y2="343.30" />
+  <line
+     id="330"
+     class="simple"
+     x1="473.20"
+     y1="400"
+     x2="343.30"
+     y2="325" />
+  <!-- A for track -->
+  <path
+     id="arrowA"
+     class="simple"
+     d="M 364.7047613,58.51854343 L 329.7641902,188.91853 Z"
+     style="marker-end:url(#marker4890)" />
+  <text
+     class="labels"
+     x="325.15472"
+     y="46.833305"
+     id="text41"
+     style="font-style:normal;font-size:32px;font-family:'Bitstream Vera Sans'">
+    <tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif'"
+       id="tspan4547">Track</tspan>
+  </text>
+  <!-- B for sector  -->
+  <!-- C for sector of track -->
+  <path
+     id="arrowB"
+     class="simple"
+     d="M 460.6969024, 108.4888892 L 373.9205751,211.904889 Z"
+     style="marker-end:url(#Arrow2Mend)" />
+  <!-- D for cluster  -->
+  <path
+     id="arrowD"
+     class="simple"
+     d="M 364.7047613,541.4814566  L 345.2933329, 469.0370196 Z"
+     style="marker-end:url(#marker4930)" />
+  <text
+     class="labels"
+     x="351.2218"
+     y="577.43604"
+     id="text50"
+     style="font-style:normal;font-size:32px;font-family:'Bitstream Vera Sans'">
+    <tspan
+       style="-inkscape-font-specification:'CMU Sans Serif';font-family:'CMU Sans Serif';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+       id="tspan4549">Cluster</tspan>
+  </text>
+  <text
+     class="labels"
+     x="454.66373"
+     y="101.7188"
+     id="text41-2"
+     style="font-style:normal;font-size:32px;font-family:'Bitstream Vera Sans'">
+    <tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif'"
+       id="tspan4547-6">Sector</tspan>
+  </text>
+</svg>

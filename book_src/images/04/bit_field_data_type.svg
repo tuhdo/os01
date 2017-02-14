@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg6172"
+   inkscape:version="0.92.0 r15299"
+   sodipodi:docname="bit_field_data_type.svg">
+  <defs
+     id="defs6166" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.8101934"
+     inkscape:cx="450.02369"
+     inkscape:cy="621.47366"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="1245"
+     inkscape:window-height="1007"
+     inkscape:window-x="1305"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0">
+    <inkscape:grid
+       type="xygrid"
+       id="grid6804" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata6169">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#0000ff;fill-opacity:0;stroke:#000000;stroke-width:0.4;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4487-2-5"
+       width="106.69402"
+       height="7.8885312"
+       x="42.333332"
+       y="93.841843" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.23333311px;line-height:6.61458349px;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="118.17334"
+       y="119.3894"
+       id="text4491-2-6-5-1"><tspan
+         sodipodi:role="line"
+         id="tspan4489-8-3-6-3"
+         x="118.17334"
+         y="119.3894"
+         style="font-size:4.23333311px;text-align:center;text-anchor:middle;stroke-width:0.26458332">Least</tspan><tspan
+         sodipodi:role="line"
+         x="118.17334"
+         y="126.00398"
+         style="font-size:4.23333333px;text-align:center;text-anchor:middle;stroke-width:0.26458332"
+         id="tspan6806">Significant</tspan><tspan
+         sodipodi:role="line"
+         x="118.17334"
+         y="132.61856"
+         style="font-size:4.23333311px;text-align:center;text-anchor:middle;stroke-width:0.26458332"
+         id="tspan6810">Bit</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.23333311px;line-height:6.61458349px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="87.235382"
+       y="91.474075"
+       id="text4491-8"><tspan
+         sodipodi:role="line"
+         id="tspan4489-4"
+         x="87.235382"
+         y="91.474075"
+         style="font-size:4.23333311px;stroke-width:0.26458332">Bit Field</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.23333311px;line-height:6.61458349px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="82.789139"
+       y="108.62592"
+       id="text4491-3"><tspan
+         sodipodi:role="line"
+         id="tspan4489-7"
+         x="82.789139"
+         y="108.62592"
+         style="font-size:4.23333311px;line-height:10px;stroke-width:0.26458332">Field Length</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 74.083333,93.800013 V 101.7375"
+       id="path6814"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 119.0625,93.800016 V 101.7375"
+       id="path6814-9"
+       inkscape:connector-curvature="0" />
+    <g
+       id="g6837"
+       transform="translate(5.29167,0.26458667)">
+      <path
+         inkscape:connector-curvature="0"
+         id="path6831"
+         d="m 113.77083,103.06042 v 10.84791 0"
+         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path6833"
+         d="m 108.21458,107.55833 h 5.55625"
+         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+    <g
+       transform="matrix(-1,0,0,1,187.85416,0.26458667)"
+       id="g6837-9">
+      <path
+         inkscape:connector-curvature="0"
+         id="path6831-6"
+         d="m 113.77083,103.06042 v 10.84791 0"
+         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path6833-7"
+         d="m 108.21458,107.55833 h 5.55625"
+         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+  </g>
+</svg>
