@@ -1,7 +1,7 @@
-Operating System: From 0 to 1
+Operating Systems: From 0 to 1
 =============================
 
-This book helps you gaining the foundation knowledge to write an operating system from scratch. Hence the title, 0 to 1. 
+This book helps you gain the foundational knowledge required to write an operating system from scratch. Hence the title, 0 to 1. 
 
 After completing this book, at the very least:
 
@@ -9,7 +9,7 @@ After completing this book, at the very least:
 
 - Write code independently. It's pointless to copy and paste code. Real learning happens when you solve problems on your own. Some examples are given to kick start, but most problems are yours to conquer. However, the solutions are available online for you to examine after giving a good try.
 
-- A big picture of how each layer of a computer related to each other, from hardware to software.
+- A big picture of how each layer of a computer is related to the other, from hardware to software.
 
 - Linux as a development environment and how to use common tools for low-level programming.
 
@@ -44,7 +44,7 @@ Know some C programming. In particular:
 
 Know Linux basics: 
 
-- Know how to navigate directory with the command line
+- Know how to navigate directories with the command line
 
 - Know how to invoke a command with options.
 
@@ -63,7 +63,7 @@ building and running a program.
 * Part 1
    - Chapter 1: Complete
    - Chapter 2: Complete
-   - Chapter 3: Almost. Currently the book relies on the Intel Manual for fully explaining x86 execution environment.
+   - Chapter 3: Almost. Currently, the book relies on the Intel Manual for fully explaining x86 execution environment.
    - Chapter 4: Complete
    - Chapter 5: Complete
    - Chapter 6: Complete
@@ -78,7 +78,7 @@ building and running a program.
    - Chapter 13: Incomplete
 
 # Sample OS
-[This repository](https://github.com/tuhdo/sample-os) is the sample OS of the book that is intended as a reference material for part 3. It covers 10 chapters of the "System Programming Guide" (Intel Manual Volume 3), along with a simple keyboard and video driver for input and output. However, at the moment, only the following features are implmeneted:
+[This repository](https://github.com/tuhdo/sample-os) is the sample OS of the book that is intended as a reference material for part 3. It covers 10 chapters of the "System Programming Guide" (Intel Manual Volume 3), along with a simple keyboard and video driver for input and output. However, at the moment, only the following features are implemented:
 
 - Protected mode.
 - Creating and managing processes with TSS (Task State Structure).
