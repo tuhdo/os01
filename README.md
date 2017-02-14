@@ -45,8 +45,9 @@ For example, he can continue his journey
 on [OSDev wiki](http://wiki.osdev.org/Main_Page); in fact, after you study
 everything in part 1 and part 2, you only meet
 the [minimum requirement](http://wiki.osdev.org/Required_Knowledge) by OSDev
-Wiki. Or, if he considers developing an OS for fun is impractical, he can
-continue with a Linux-specific book, such as this free
+Wiki (well, not quite, the book actually goes deeper for the suggested topics).
+Or, if he considers developing an OS for fun is impractical, he can continue
+with a Linux-specific book, such as this free
 book [Linux Insiders](https://0xax.gitbooks.io/linux-insides/content/), or other
 popular Linux kernel books. The book tries hard to provide you a strong
 foundation, and that's why part 1 and part 2 were released first.
