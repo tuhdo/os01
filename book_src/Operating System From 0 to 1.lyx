@@ -1997,13 +1997,13 @@ The classic transistors invented open a whole new world of micro digital
  - were used to present 0 and 1, and required human to turn it on and off.
  
 \begin_inset Marginal
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
 \series bold
 \emph on
-MOFET
+MOSFET
 \end_layout
 
 \end_inset
@@ -2012,15 +2012,15 @@ MOFET
 \emph on
 
 \begin_inset Index idx
-status collapsed
+status open
 
 \begin_layout Plain Layout
-MOFET
+MOSFET
 \end_layout
 
 \end_inset
 
-MOFET
+MOSFET
 \emph default
 , or 
 \series bold
