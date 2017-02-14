@@ -103,4 +103,5 @@ Paging and I/O are not yet implemented. I will try to implement it as the book p
 
 I will upload the Lyx - Latex source soon, after cleaning it up. In the
 meantime, if you find any grammatical issue, please report it using Github
-issue. I really appreciated it.
+issue. Or, if some sentence or paragraph is difficult to understand, feel free
+to open an issue. I really appreciated it.
