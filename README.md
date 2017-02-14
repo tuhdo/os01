@@ -73,21 +73,21 @@ building and running a program.
 
 # Status:
 * Part 1
-- Chapter 1: Complete
-- Chapter 2: Complete
-- Chapter 3: Almost. Currently, the book relies on the Intel Manual for fully explaining x86 execution environment.
-- Chapter 4: Complete
-- Chapter 5: Complete
-- Chapter 6: Complete
+    - Chapter 1: Complete
+    - Chapter 2: Complete
+    - Chapter 3: Almost. Currently, the book relies on the Intel Manual for fully explaining x86 execution environment.
+    - Chapter 4: Complete
+    - Chapter 5: Complete
+    - Chapter 6: Complete
 * Part 2
-- Chapter 7: Complete
-- Chapter 8: Complete
+    - Chapter 7: Complete
+    - Chapter 8: Complete
 * Part 3
-- Chapter 9: Incomplete
-- Chapter 10: Incomplete
-- Chapter 11: Incomplete
-- Chapter 12: Incomplete
-- Chapter 13: Incomplete
+    - Chapter 9: Incomplete
+    - Chapter 10: Incomplete
+    - Chapter 11: Incomplete
+    - Chapter 12: Incomplete
+    - Chapter 13: Incomplete
 
 # Sample OS
 [This repository](https://github.com/tuhdo/sample-os) is the sample OS of the book that is intended as a reference material for part 3. It covers 10 chapters of the "System Programming Guide" (Intel Manual Volume 3), along with a simple keyboard and video driver for input and output. However, at the moment, only the following features are implemented:
