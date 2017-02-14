@@ -23,6 +23,18 @@ After completing this book, at the very least:
 
 [Download the book](https://github.com/tuhdo/os01/zipball/master)
 
+# The pedagogy of the book
+
+> You give a poor man a fish and you feed him for a day. You teach him to fish and you give him an occupation that will feed him for a lifetime.
+
+This is the guiding principle of the book when writing it. The book does not try to teach you everything, but enough to enable you to learn by yourself. The book itself, at this point, is quite "complete": once you master part 1 and part 2 (which consists of 8 chapters), you can drop the book and learn by yourself. At this pint, a smart reader should be able to continue on his own.
+
+The book teaches you core concepts, such as x86 Assembly, ELF, linking and debugging on bare metal, etc., but more importantly, where such information comes from. For example, instead of just teaching x86 Assembly, it also teaches you how to use the reference manuals from Intel. Learning to read the official manuals is important because only the hardware manufacturers themselves understand how their hardware work. If you only learn from the secondary resources because it is easier, you will never gain a complete understating of the hardware you are programming for. Have you ever read a book on Assembly, and wonder where does all the information come from? How does the author know everything he says is correct? And how one seems to magically know so much about hardware programming? The book gives a pointer to such questions.
+
+As an example, you should skim through chapter 4, "x86 Assembly and C", to see how it makes use of the Intel manual, Volume 2, when explaining stuffs. And in the process, it guides you how to use the official manuals.
+
+Part 3 is planned as a series of specifications that a reader will implement to complete each operating system component. It will not contain code, aside from a few examples. Part 3 is just there to shorten the reader's time from read the official manuals by giving hints where to read, explaining difficult concepts and how to use the manuals to debug. In sum, the implementation, is up to the reader to work on his own; the chapters are just like university assignments.
+
 # Prerequisites
 
 Know some circuit concepts:
