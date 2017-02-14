@@ -101,7 +101,17 @@ Paging and I/O are not yet implemented. I will try to implement it as the book p
 
 # Contributing
 
-I will upload the Lyx - Latex source soon, after cleaning it up. In the
-meantime, if you find any grammatical issue, please report it using Github
-issue. Or, if some sentence or paragraph is difficult to understand, feel free
-to open an issue. I really appreciate it.
+If you find any grammatical issue, please report it using Github issue. Or, if
+some sentence or paragraph is difficult to understand, feel free to open an
+issue with the following title format: `[page number][type] Descriptive Title`.
+
+For example: `[pg.9][grammar] Incorrect verb usage`.
+
+`type` can be one of the following:
+
+- `Typo`: indicates typing mistake.
+- `Grammar`: indicates incorrect grammar usage.
+- `Style`: indicates a style improvement.
+- `Content`: indicates problems with the content.
+
+I really appreciate it.
