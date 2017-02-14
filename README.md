@@ -117,3 +117,6 @@ For example: `[pg.9][grammar] Incorrect verb usage`.
 Even better, you can make a pull request with the provided book source. The main content of the book is in the file "Operating System: From 0 to 1.lyx". You can use [Lyx editor](https://www.lyx.org) to edit it, or any editor that can understand Latex.
 
 I really appreciate it.
+
+# Got questions?
+If you have any question related to the material or the development of the book, feel free to open a Github issue.
