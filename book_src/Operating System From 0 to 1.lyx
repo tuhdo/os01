@@ -425,7 +425,7 @@ Probably you asked yourself at least once, how an Operating System (OS)
  get stuck.
  However, deep inside you still want to write an operating system without
  a crystal clear understanding.
- After all, you are a software engineer, and an operating system is a software.
+ After all, you are a software engineer, and an operating system is software.
  You should know your software better than anyone else!
 \end_layout
 
@@ -527,7 +527,7 @@ There are many books on this topic and even courses out there already, made
 
 \begin_layout Standard
 One strong focus of this book is to guide the learners through the habit
- of reading official documents from vendor to implement a software, not
+ of reading official documents from vendor to implement software, not
  from random online articles, which could be useful as supplementary material
  but difficult for systematic study.
  Official documents from hardware vendors e.g.
