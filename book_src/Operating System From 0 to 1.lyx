@@ -425,7 +425,7 @@ Probably you asked yourself at least once, how an Operating System (OS)
  get stuck.
  However, deep inside you still want to write an operating system without
  a crystal clear understanding.
- After all, you are a software engineer, and an operating system is a software.
+ After all, you are a software engineer, and an operating system is software.
  You should know your software better than anyone else!
 \end_layout
 
@@ -435,14 +435,22 @@ If that is the case, this book is for you.
  that is essential and enable you to implement your operating system, from
  scratch! Yes, from scratch, without going through any existing operating
  system layer to comfort yourself that you are an operating system developer.
- You may ask, "isn't it more practical to learn the internals of Linux?
+ You may ask, 
+
+\begin_inset Quotes eld
+\end_inset
+
+Isn't it more practical to learn the internals of Linux?
+\begin_inset Quotes erd
+\end_inset
+
  In the end, you learn Linux to improve your day job significantly and might
  be able to contribute to it.
  That is an excellent approach.
  However, if you follow that route, you still do not achieve the ultimate
  goal: writing an actual operating system.
  Also, you gain knowledge that can never learn from using any current operating
- system, and this experience can impact how you write software .
+ system, and this experience can impact how you write software.
  These are the benefits of writing your operating system:
 \end_layout
 
@@ -490,7 +498,7 @@ There are many books on this topic and even courses out there already, made
  by famous professors and experts.
  Who am I to write a book on such advanced topic? It is true that many quality
  books are out there.
- But then: of all the operating system books, does any of them show you
+ But then: of all the operating system books, do any of them show you
  how to compile your C code that is independent of an existing operating
  system and the C runtime library on top of it? Most books talk about operating
  system designs and books that talk about implementations, only mention
@@ -502,7 +510,7 @@ There are many books on this topic and even courses out there already, made
  book, and probably the students are assumed to obtain enough hardware knowledge
  beforehand from other courses.
  Or, the students only need to work within existing assignment framework:
- the only thing they need to do is filling the empty function body, run
+ the only thing they need to do is fill the empty function body, run
  against test cases and complete their homework.
  Either way, hardware details are ignored, and it is hard to find relevant
  resources on the internet for a self-learner.
@@ -519,7 +527,7 @@ There are many books on this topic and even courses out there already, made
 
 \begin_layout Standard
 One strong focus of this book is to guide the learners through the habit
- of reading official documents from vendor to implement a software, not
+ of reading official documents from vendor to implement software, not
  from random online articles, which could be useful as supplementary material
  but difficult for systematic study.
  Official documents from hardware vendors e.g.
@@ -541,7 +549,7 @@ Hello World
 \end_inset
 
  centric.
- Most examples revolve around variants of 
+ Most examples revolve around variants of a
 \begin_inset Quotes eld
 \end_inset
 
@@ -561,7 +569,7 @@ Hello World
  program.
  The concepts must be acquainted before attempting to write an operating
  system.
- Anything beyond that a simple 
+ Anything beyond a simple 
 \begin_inset Quotes eld
 \end_inset
 
@@ -569,8 +577,8 @@ Hello World
 \begin_inset Quotes erd
 \end_inset
 
- example gets in the way of teaching the concepts, thus lengthen the time
- spent for getting started writing an operating system.
+ example gets in the way of teaching the concepts, thus lengthening the time
+ spent on getting started writing an operating system.
  
 \end_layout
 
@@ -640,7 +648,7 @@ Understand how pointers work.
 \end_layout
 
 \begin_layout Itemize
-Fundamentals of algorithm and data structure in C.
+Fundamentals of algorithms and data structures in C.
 \end_layout
 
 \end_deeper
@@ -759,8 +767,8 @@ How to use Linux or any OS types of books
 
 \end_inset
 
-: though Linux is used as a development environment and as a medium to demonstra
-te high-level operating system concepts.
+: Though Linux is used as a development environment and as a medium to demonstra
+te high-level operating system concepts, it is not the focus of this book.
 \end_layout
 
 \begin_layout Itemize
@@ -773,7 +781,7 @@ Linux Kernel development
 
 \end_inset
 
-: There is already high-quality books out there.
+: There are already high-quality books out there.
 \end_layout
 
 \begin_layout Itemize
@@ -781,7 +789,7 @@ Linux Kernel development
 status open
 
 \begin_layout Plain Layout
-Operating system books focused on algorithm
+Operating system books focused on algorithms
 \end_layout
 
 \end_inset
@@ -810,7 +818,7 @@ Chapter 1 briefly explains the importance of domain documents.
 
 \begin_layout Itemize
 Chapter 2 explains the layers of abstractions from hardware to software.
- The idea is to provide an intuition how code physically runs.
+ The idea is to provide insight into how code physically runs.
  
 \end_layout
 
