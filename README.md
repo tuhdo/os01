@@ -29,7 +29,7 @@ After completing this book, at the very least:
 - Linking and loading on bare metal x86_64, with pure C. No standard library. No
   runtime overhead.
 
-[Download the book](https://github.com/tuhdo/os01/zipball/master)
+[Download the book](https://github.com/tuhdo/os01/files/776266/Operating_System_From_0_to_1.pdf)
 
 # The pedagogy of the book
 
