@@ -85,7 +85,7 @@ Know some circuit concepts:
 + Ohm law
 
 However, if you know absolute nothing, you can quickly learn it here:
-http://www.allaboutcircuits.com/textbook/, by reading chapter 1 and chapter 2.
+<http://www.allaboutcircuits.com/textbook/>, by reading chapter 1 and chapter 2.
 
 Know some C programming. In particular:
 
@@ -179,4 +179,4 @@ this project and keep it going.
 
 # Got questions?
 If you have any question related to the material or the development of the book,
-feel free to open a Github issue.
+feel free to [open a Github issue](https://github.com/tuhdo/os01/issues/new).
