@@ -7,3 +7,4 @@
   * [#10] Use `__FUNCTION__` for consistency.
   * [#11] Fix incorrect filename.
   * [#12] Fix confusing sentence.
+  * [#13] Fix a typo.
