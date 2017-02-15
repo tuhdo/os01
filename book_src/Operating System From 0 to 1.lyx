@@ -44636,7 +44636,7 @@ Align
 \begin_layout Example
 Output of 
 \family typewriter
-NULL
+.interp
 \family default
  section:
 \end_layout
@@ -49863,7 +49863,13 @@ $ ./hello
 \begin_layout Standard
 
 \family typewriter
-constructor
+init1
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+init2
 \end_layout
 
 \begin_layout Standard
@@ -50323,7 +50329,7 @@ main()
 .
  If the application terminate abnormally, such as through 
 \family typewriter
-.abort()
+abort()
 \family default
  call or a crash, the 
 \family typewriter
@@ -50360,9 +50366,9 @@ __attribute__((destructor)) static void destructor(){
 
 \begin_layout Plain Layout
 
-    printf("destructor
+    printf("%s
 \backslash
-n");
+n", __FUNCTION__);
 \end_layout
 
 \begin_layout Plain Layout
@@ -52166,7 +52172,7 @@ begin{shellcommand}
 \begin_layout Standard
 
 \family typewriter
-$ gcc -m32 -c lib.c 
+$ gcc -m32 -c math.c 
 \end_layout
 
 \begin_layout Standard
@@ -52192,7 +52198,11 @@ end{shellcommand}
 \end_layout
 
 \begin_layout Standard
-Then, we check the sections of both files:
+Then, we check the sections of 
+\family typewriter
+math.o
+\family default
+:
 \end_layout
 
 \begin_layout Standard
@@ -52390,9 +52400,17 @@ As shown in the output, all the section virtual memory addresses of every
 block of binary
 \emph default
  that contains code and data.
- Its existence is to server as a material container for the final product,
+ Its existence is to serve as a material container for the final product,
  which is the executable binary.
- No segment exists at this stage:
+ As such, the virtual addresses in 
+\family typewriter
+hello.o
+\family default
+ are all zeroes.
+\end_layout
+
+\begin_layout Standard
+No segment exists at this stage:
 \end_layout
 
 \begin_layout Standard
