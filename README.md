@@ -128,9 +128,17 @@ building and running a program.
     - Chapter 11: Incomplete
     - Chapter 12: Incomplete
     - Chapter 13: Incomplete
+    ... and future chapters not included ...
+
+In the future, I hope to expand part 3 to cover more than the first 2 parts. But
+for the time being, I will try to finish the above chapters first.
 
 # Sample OS
-[This repository](https://github.com/tuhdo/sample-os) is the sample OS of the book that is intended as a reference material for part 3. It covers 10 chapters of the "System Programming Guide" (Intel Manual Volume 3), along with a simple keyboard and video driver for input and output. However, at the moment, only the following features are implemented:
+[This repository](https://github.com/tuhdo/sample-os) is the sample OS of the
+book that is intended as a reference material for part 3. It covers 10 chapters
+of the "System Programming Guide" (Intel Manual Volume 3), along with a simple
+keyboard and video driver for input and output. However, at the moment, only the
+following features are implemented:
 
 - Protected mode.
 - Creating and managing processes with TSS (Task State Structure).
