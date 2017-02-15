@@ -561,7 +561,7 @@ Hello World
  program.
  The concepts must be acquainted before attempting to write an operating
  system.
- Anything beyond that a simple 
+ Anything beyond a simple 
 \begin_inset Quotes eld
 \end_inset
 
@@ -569,8 +569,8 @@ Hello World
 \begin_inset Quotes erd
 \end_inset
 
- example gets in the way of teaching the concepts, thus lengthen the time
- spent for getting started writing an operating system.
+ example gets in the way of teaching the concepts, thus lengthening the time
+ spent on getting started writing an operating system.
  
 \end_layout
 
