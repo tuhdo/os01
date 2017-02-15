@@ -435,7 +435,15 @@ If that is the case, this book is for you.
  that is essential and enable you to implement your operating system, from
  scratch! Yes, from scratch, without going through any existing operating
  system layer to comfort yourself that you are an operating system developer.
- You may ask, "isn't it more practical to learn the internals of Linux?
+ You may ask, 
+
+\begin_inset Quotes eld
+\end_inset
+
+Isn't it more practical to learn the internals of Linux?
+\begin_inset Quotes erd
+\end_inset
+
  In the end, you learn Linux to improve your day job significantly and might
  be able to contribute to it.
  That is an excellent approach.
