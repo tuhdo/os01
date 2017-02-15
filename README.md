@@ -1,3 +1,6 @@
+***
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=tuhdo1710%40gmail%2ecom&lc=VN&item_number=tuhdo&currency_code=USD&bn=PP%2dDonationsBF%3aDonate%2dPayPal%2dgreen%2esvg%3aNonHosted)
+***
 Operating System: From 0 to 1
 =============================
 
@@ -167,8 +170,11 @@ content of the book is in the file "Operating System: From 0 to 1.lyx". You can
 use [Lyx editor](https://www.lyx.org) to edit it, or any editor that can
 understand Latex.
 
-The book is in development, so please bear with me if the English irritates you.
+The book is in development, so please bear with me if the English irritates you. 
 I really appreciate it.
+
+Finally, if you like the project and if it is possible, please donate to help
+this project and keep it going.
 
 # Got questions?
 If you have any question related to the material or the development of the book,
