@@ -502,7 +502,7 @@ There are many books on this topic and even courses out there already, made
  book, and probably the students are assumed to obtain enough hardware knowledge
  beforehand from other courses.
  Or, the students only need to work within existing assignment framework:
- the only thing they need to do is filling the empty function body, run
+ the only thing they need to do is fill the empty function body, run
  against test cases and complete their homework.
  Either way, hardware details are ignored, and it is hard to find relevant
  resources on the internet for a self-learner.
