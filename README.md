@@ -131,7 +131,8 @@ building and running a program.
     - Chapter 11: Incomplete
     - Chapter 12: Incomplete
     - Chapter 13: Incomplete
-    ... and future chapters not included ...
+    
+    ... and more future chapters not included yet ...
 
 In the future, I hope to expand part 3 to cover more than the first 2 parts. But
 for the time being, I will try to finish the above chapters first.
