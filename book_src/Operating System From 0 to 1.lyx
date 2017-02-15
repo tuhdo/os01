@@ -490,7 +490,7 @@ There are many books on this topic and even courses out there already, made
  by famous professors and experts.
  Who am I to write a book on such advanced topic? It is true that many quality
  books are out there.
- But then: of all the operating system books, does any of them show you
+ But then: of all the operating system books, do any of them show you
  how to compile your C code that is independent of an existing operating
  system and the C runtime library on top of it? Most books talk about operating
  system designs and books that talk about implementations, only mention
