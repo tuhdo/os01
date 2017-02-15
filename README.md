@@ -159,7 +159,7 @@ content of the book is in the file "Operating System: From 0 to 1.lyx". You can
 use [Lyx editor](https://www.lyx.org) to edit it, or any editor that can
 understand Latex.
 
-The book is in development, so please bare with me if the English irritates you.
+The book is in development, so please bear with me if the English irritates you.
 I really appreciate it.
 
 # Got questions?
