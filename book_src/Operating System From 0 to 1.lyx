@@ -5074,7 +5074,7 @@ execute
  More instructions can be implemented by adding more devices and allocating
  more opcodes for the instructions, then update the decoder accordingly.
  The Apollo Guidance Computer, a digital computer produced for the Apollo
- space program from 1961 -- 1972, was built entirely with a NOR gate - the
+ space program from 1961 -- 1972, was built entirely with NOR gates - the
  other choice to NAND gate for creating other logic gates.
  Similarly, if we keep improving our hypothetical device, it eventually
  becomes a full-fledge computer.
