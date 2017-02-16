@@ -830,17 +830,16 @@ Chapter 3 provides a general architecture of a computer, then introduces
 \begin_layout Itemize
 Chapter 4 introduces the x86 assembly language through the use of the Intel
  manuals along with commonly used instructions.
- The chapter gives detailed examples of how high-level syntax corresponds to
- low-level assembly, thus enabling the reader to read generated assembly code
- comfortably.
+ The chapter gives detailed examples of how high-level syntax corresponds
+ to low-level assembly, thus enabling the reader to read generated assembly
+ code comfortably.
  It is necessary to read assembly code when debugging an operating system.
 \end_layout
 
 \begin_layout Itemize
 Chapter 5 dissects ELF in detail.
- Only by understanding the structure of a program at binary level
- the reader can build one that runs on bare metal by manipulating its
- structure.
+ Only by understanding the structure of a program at binary level the reader
+ can build one that runs on bare metal by manipulating its structure.
 \end_layout
 
 \begin_layout Itemize
@@ -875,10 +874,10 @@ Groundwork
 \end_inset
 
 .
- After mastering this part, the reader can either continue with the next part
- that is a guide on writing an operating system.
- However, if the reader does not like the presentation, he or she can look elsewhere,
- such as OSDev Wiki: 
+ After mastering this part, the reader can either continue with the next
+ part that is a guide on writing an operating system.
+ However, if the reader does not like the presentation, he or she can look
+ elsewhere, such as OSDev Wiki: 
 \begin_inset Flex URL
 status open
 
@@ -895,8 +894,8 @@ http://wiki.osdev.org/
 
 \begin_deeper
 \begin_layout Itemize
-Chapter 7 introduces the bootloader, explains how to write one in assembly, and how to
- load it on QEMU, a hardware emulator.
+Chapter 7 introduces the bootloader, explains how to write one in assembly,
+ and how to load it on QEMU, a hardware emulator.
  This process involves typing repetitive and long commands, so GNU Make
  is applied to improve the productivity by automating the repetitive parts
  and simplifying the interaction with the project.
@@ -906,9 +905,9 @@ Chapter 7 introduces the bootloader, explains how to write one in assembly, and 
 \begin_layout Itemize
 Chapter 8 introduces linking by explaining the relocation process when combining
  object files.
- In addition to a bootloader and an operating system written in C,
- linking is the last piece of the puzzle required to build debuggable
- programs on bare metal.
+ In addition to a bootloader and an operating system written in C, linking
+ is the last piece of the puzzle required to build debuggable programs on
+ bare metal.
 \end_layout
 
 \end_deeper
@@ -918,13 +917,13 @@ Part
 \end_inset
 
 3 provides guidance on how to write an operating system.
- Only guidance, since the reader should implement it on his or her own and be proud
- of this creation.
+ Only guidance, since the reader should implement it on his or her own and
+ be proud of this creation.
  The guidance consists of a simpler and coherent explanation of necessary
  concepts, from hardware to software, to implement the features of an operating
  system.
- Without this guidance, the reader would spend more time gathering information spread
- throughout different parts of various documents, some on the Internet.
+ Without this guidance, the reader would spend more time gathering information
+ spread throughout different parts of various documents, some on the Internet.
  The chapter then provides a plan on how to map concepts to code.
 \end_layout
 
@@ -8154,7 +8153,7 @@ objdump
 
 \end_inset
 
- to examine how hight level source code maps to assembly code.
+ to examine how high level source code maps to assembly code.
  For now, we ignore the output and learn how to use the command first.
  It is simple to use 
 \begin_inset Flex Code
@@ -22049,7 +22048,6 @@ Values of SIB Byte (In Hexadecimal)
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
 00
 \end_layout
 
@@ -22061,8 +22059,7 @@ Values of SIB Byte (In Hexadecimal)
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-08
+01
 \end_layout
 
 \end_inset
@@ -22073,8 +22070,7 @@ Values of SIB Byte (In Hexadecimal)
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-10
+02
 \end_layout
 
 \end_inset
@@ -22085,8 +22081,7 @@ Values of SIB Byte (In Hexadecimal)
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-18
+03
 \end_layout
 
 \end_inset
@@ -22097,8 +22092,7 @@ Values of SIB Byte (In Hexadecimal)
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-20
+04
 \end_layout
 
 \end_inset
@@ -22109,8 +22103,7 @@ Values of SIB Byte (In Hexadecimal)
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-28
+05
 \end_layout
 
 \end_inset
@@ -22121,8 +22114,7 @@ Values of SIB Byte (In Hexadecimal)
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-30
+06
 \end_layout
 
 \end_inset
@@ -22133,8 +22125,7 @@ Values of SIB Byte (In Hexadecimal)
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-38
+07
 \end_layout
 
 \end_inset
@@ -22180,8 +22171,7 @@ Values of SIB Byte (In Hexadecimal)
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-01
+08
 \end_layout
 
 \end_inset
@@ -22192,7 +22182,6 @@ Values of SIB Byte (In Hexadecimal)
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
 09
 \end_layout
 
@@ -22204,8 +22193,7 @@ Values of SIB Byte (In Hexadecimal)
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-11
+0A
 \end_layout
 
 \end_inset
@@ -22216,8 +22204,7 @@ Values of SIB Byte (In Hexadecimal)
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-19
+0B
 \end_layout
 
 \end_inset
@@ -22228,8 +22215,7 @@ Values of SIB Byte (In Hexadecimal)
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-21
+0C
 \end_layout
 
 \end_inset
@@ -22240,8 +22226,7 @@ Values of SIB Byte (In Hexadecimal)
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-29
+0D
 \end_layout
 
 \end_inset
@@ -22252,8 +22237,7 @@ Values of SIB Byte (In Hexadecimal)
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-31
+0E
 \end_layout
 
 \end_inset
@@ -22264,8 +22248,7 @@ Values of SIB Byte (In Hexadecimal)
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-39
+0F
 \end_layout
 
 \end_inset
@@ -22311,8 +22294,7 @@ Values of SIB Byte (In Hexadecimal)
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-02
+10
 \end_layout
 
 \end_inset
@@ -22323,8 +22305,7 @@ Values of SIB Byte (In Hexadecimal)
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-0A
+11
 \end_layout
 
 \end_inset
@@ -22335,7 +22316,6 @@ Values of SIB Byte (In Hexadecimal)
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
 12
 \end_layout
 
@@ -22347,8 +22327,7 @@ Values of SIB Byte (In Hexadecimal)
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-1A
+13
 \end_layout
 
 \end_inset
@@ -22359,8 +22338,7 @@ Values of SIB Byte (In Hexadecimal)
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-22
+14
 \end_layout
 
 \end_inset
@@ -22371,8 +22349,7 @@ Values of SIB Byte (In Hexadecimal)
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-2A
+15
 \end_layout
 
 \end_inset
@@ -22383,8 +22360,7 @@ Values of SIB Byte (In Hexadecimal)
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-32
+16
 \end_layout
 
 \end_inset
@@ -22395,8 +22371,7 @@ Values of SIB Byte (In Hexadecimal)
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-3A
+17
 \end_layout
 
 \end_inset
@@ -22442,8 +22417,7 @@ Values of SIB Byte (In Hexadecimal)
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-03
+18
 \end_layout
 
 \end_inset
@@ -22454,8 +22428,7 @@ Values of SIB Byte (In Hexadecimal)
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-0B
+19
 \end_layout
 
 \end_inset
@@ -22466,8 +22439,7 @@ Values of SIB Byte (In Hexadecimal)
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-13
+1A
 \end_layout
 
 \end_inset
@@ -22478,7 +22450,6 @@ Values of SIB Byte (In Hexadecimal)
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
 1B
 \end_layout
 
@@ -22490,8 +22461,7 @@ Values of SIB Byte (In Hexadecimal)
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-23
+1C
 \end_layout
 
 \end_inset
@@ -22502,8 +22472,7 @@ Values of SIB Byte (In Hexadecimal)
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-2B
+1D
 \end_layout
 
 \end_inset
@@ -22514,8 +22483,7 @@ Values of SIB Byte (In Hexadecimal)
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-33
+1E
 \end_layout
 
 \end_inset
@@ -22526,8 +22494,7 @@ Values of SIB Byte (In Hexadecimal)
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-3B
+1F
 \end_layout
 
 \end_inset
@@ -22573,8 +22540,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-04
+20
 \end_layout
 
 \end_inset
@@ -22585,8 +22551,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-0C
+21
 \end_layout
 
 \end_inset
@@ -22597,8 +22562,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-14
+22
 \end_layout
 
 \end_inset
@@ -22609,8 +22573,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-1C
+23
 \end_layout
 
 \end_inset
@@ -22621,7 +22584,6 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
 24
 \end_layout
 
@@ -22633,8 +22595,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-2C
+25
 \end_layout
 
 \end_inset
@@ -22645,8 +22606,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-34
+26
 \end_layout
 
 \end_inset
@@ -22657,8 +22617,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-3C
+27
 \end_layout
 
 \end_inset
@@ -22704,8 +22663,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-05
+28
 \end_layout
 
 \end_inset
@@ -22716,8 +22674,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-0D
+29
 \end_layout
 
 \end_inset
@@ -22728,8 +22685,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-15
+2A
 \end_layout
 
 \end_inset
@@ -22740,8 +22696,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-1D
+2B
 \end_layout
 
 \end_inset
@@ -22752,8 +22707,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-25
+2C
 \end_layout
 
 \end_inset
@@ -22764,7 +22718,6 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
 2D
 \end_layout
 
@@ -22776,8 +22729,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-35
+2E
 \end_layout
 
 \end_inset
@@ -22788,8 +22740,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-3D
+2F
 \end_layout
 
 \end_inset
@@ -22835,8 +22786,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-06
+30
 \end_layout
 
 \end_inset
@@ -22847,8 +22797,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-0E
+31
 \end_layout
 
 \end_inset
@@ -22859,8 +22808,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-16
+32
 \end_layout
 
 \end_inset
@@ -22871,8 +22819,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-1E
+33
 \end_layout
 
 \end_inset
@@ -22883,8 +22830,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-26
+34
 \end_layout
 
 \end_inset
@@ -22895,8 +22841,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-2E
+35
 \end_layout
 
 \end_inset
@@ -22907,7 +22852,6 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
 36
 \end_layout
 
@@ -22919,8 +22863,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-3E
+37
 \end_layout
 
 \end_inset
@@ -22966,8 +22909,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-07
+38
 \end_layout
 
 \end_inset
@@ -22978,8 +22920,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-0F
+39
 \end_layout
 
 \end_inset
@@ -22990,8 +22931,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-17
+3A
 \end_layout
 
 \end_inset
@@ -23002,8 +22942,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-1F
+3B
 \end_layout
 
 \end_inset
@@ -23014,8 +22953,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-27
+3C
 \end_layout
 
 \end_inset
@@ -23026,8 +22964,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-2F
+3D
 \end_layout
 
 \end_inset
@@ -23038,8 +22975,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-37
+3E
 \end_layout
 
 \end_inset
@@ -23050,7 +22986,6 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
 3F
 \end_layout
 
@@ -23100,7 +23035,6 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
 40
 \end_layout
 
@@ -23112,8 +23046,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-48
+41
 \end_layout
 
 \end_inset
@@ -23124,8 +23057,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-50
+42
 \end_layout
 
 \end_inset
@@ -23136,8 +23068,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-58
+43
 \end_layout
 
 \end_inset
@@ -23148,8 +23079,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-60
+44
 \end_layout
 
 \end_inset
@@ -23160,8 +23090,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-68
+45
 \end_layout
 
 \end_inset
@@ -23172,8 +23101,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-70
+46
 \end_layout
 
 \end_inset
@@ -23184,8 +23112,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-78
+47
 \end_layout
 
 \end_inset
@@ -23231,8 +23158,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-41
+48
 \end_layout
 
 \end_inset
@@ -23243,7 +23169,6 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
 49
 \end_layout
 
@@ -23255,8 +23180,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-51
+4A
 \end_layout
 
 \end_inset
@@ -23267,8 +23191,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-59
+4B
 \end_layout
 
 \end_inset
@@ -23279,8 +23202,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-61
+4C
 \end_layout
 
 \end_inset
@@ -23291,8 +23213,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-69
+4D
 \end_layout
 
 \end_inset
@@ -23303,8 +23224,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-71
+4E
 \end_layout
 
 \end_inset
@@ -23315,8 +23235,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-79
+4F
 \end_layout
 
 \end_inset
@@ -23362,8 +23281,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-42
+50
 \end_layout
 
 \end_inset
@@ -23374,8 +23292,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-4A
+51
 \end_layout
 
 \end_inset
@@ -23386,7 +23303,6 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
 52
 \end_layout
 
@@ -23398,8 +23314,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-5A
+53
 \end_layout
 
 \end_inset
@@ -23410,8 +23325,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-62
+54
 \end_layout
 
 \end_inset
@@ -23422,8 +23336,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-6A
+55
 \end_layout
 
 \end_inset
@@ -23434,8 +23347,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-72
+56
 \end_layout
 
 \end_inset
@@ -23446,8 +23358,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-7A
+57
 \end_layout
 
 \end_inset
@@ -23493,8 +23404,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-43
+58
 \end_layout
 
 \end_inset
@@ -23505,8 +23415,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-4B
+59
 \end_layout
 
 \end_inset
@@ -23517,8 +23426,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-53
+5A
 \end_layout
 
 \end_inset
@@ -23529,7 +23437,6 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
 5B
 \end_layout
 
@@ -23541,8 +23448,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-63
+5C
 \end_layout
 
 \end_inset
@@ -23553,8 +23459,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-6B
+5D
 \end_layout
 
 \end_inset
@@ -23565,8 +23470,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-73
+5E
 \end_layout
 
 \end_inset
@@ -23577,8 +23481,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-7B
+5F
 \end_layout
 
 \end_inset
@@ -23624,8 +23527,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-44
+60
 \end_layout
 
 \end_inset
@@ -23636,8 +23538,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-4C
+61
 \end_layout
 
 \end_inset
@@ -23648,8 +23549,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-54
+62
 \end_layout
 
 \end_inset
@@ -23660,8 +23560,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-5C
+63
 \end_layout
 
 \end_inset
@@ -23672,7 +23571,6 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
 64
 \end_layout
 
@@ -23684,8 +23582,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-6C
+65
 \end_layout
 
 \end_inset
@@ -23696,8 +23593,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-74
+66
 \end_layout
 
 \end_inset
@@ -23708,8 +23604,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-7C
+67
 \end_layout
 
 \end_inset
@@ -23755,8 +23650,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-45
+68
 \end_layout
 
 \end_inset
@@ -23767,8 +23661,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-4D
+69
 \end_layout
 
 \end_inset
@@ -23779,8 +23672,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-55
+6A
 \end_layout
 
 \end_inset
@@ -23791,8 +23683,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-5D
+6B
 \end_layout
 
 \end_inset
@@ -23803,8 +23694,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-65
+6C
 \end_layout
 
 \end_inset
@@ -23815,7 +23705,6 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
 6D
 \end_layout
 
@@ -23827,8 +23716,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-75
+6E
 \end_layout
 
 \end_inset
@@ -23839,8 +23727,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-7D
+6F
 \end_layout
 
 \end_inset
@@ -23886,8 +23773,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-46
+70
 \end_layout
 
 \end_inset
@@ -23898,8 +23784,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-4E
+71
 \end_layout
 
 \end_inset
@@ -23910,8 +23795,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-56
+72
 \end_layout
 
 \end_inset
@@ -23922,8 +23806,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-5E
+73
 \end_layout
 
 \end_inset
@@ -23934,8 +23817,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-66
+74
 \end_layout
 
 \end_inset
@@ -23946,8 +23828,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-6E
+75
 \end_layout
 
 \end_inset
@@ -23958,7 +23839,6 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
 76
 \end_layout
 
@@ -23970,8 +23850,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-7E
+77
 \end_layout
 
 \end_inset
@@ -24017,8 +23896,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-47
+78
 \end_layout
 
 \end_inset
@@ -24029,8 +23907,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-4F
+79
 \end_layout
 
 \end_inset
@@ -24041,8 +23918,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-57
+7A
 \end_layout
 
 \end_inset
@@ -24053,8 +23929,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-5F
+7B
 \end_layout
 
 \end_inset
@@ -24065,8 +23940,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-67
+7C
 \end_layout
 
 \end_inset
@@ -24077,8 +23951,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-6F
+7D
 \end_layout
 
 \end_inset
@@ -24089,8 +23962,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-77
+7E
 \end_layout
 
 \end_inset
@@ -24101,7 +23973,6 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
 7F
 \end_layout
 
@@ -24151,7 +24022,6 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
 80
 \end_layout
 
@@ -24163,8 +24033,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-88
+81
 \end_layout
 
 \end_inset
@@ -24175,8 +24044,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-90
+82
 \end_layout
 
 \end_inset
@@ -24187,8 +24055,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-98
+83
 \end_layout
 
 \end_inset
@@ -24199,8 +24066,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-A0
+84
 \end_layout
 
 \end_inset
@@ -24211,8 +24077,7 @@ A0
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-A8
+85
 \end_layout
 
 \end_inset
@@ -24223,8 +24088,7 @@ A8
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-B0
+86
 \end_layout
 
 \end_inset
@@ -24235,8 +24099,7 @@ B0
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-B8
+87
 \end_layout
 
 \end_inset
@@ -24282,8 +24145,7 @@ B8
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-81
+88
 \end_layout
 
 \end_inset
@@ -24294,7 +24156,6 @@ B8
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
 89
 \end_layout
 
@@ -24306,8 +24167,7 @@ B8
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-91
+8A
 \end_layout
 
 \end_inset
@@ -24318,8 +24178,7 @@ B8
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-99
+8B
 \end_layout
 
 \end_inset
@@ -24330,8 +24189,7 @@ B8
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-A1
+8C
 \end_layout
 
 \end_inset
@@ -24342,8 +24200,7 @@ A1
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-A9
+8D
 \end_layout
 
 \end_inset
@@ -24354,8 +24211,7 @@ A9
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-B1
+8E
 \end_layout
 
 \end_inset
@@ -24366,8 +24222,7 @@ B1
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-B9
+8F
 \end_layout
 
 \end_inset
@@ -24413,8 +24268,7 @@ B9
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-82
+90
 \end_layout
 
 \end_inset
@@ -24425,8 +24279,7 @@ B9
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-8A
+91
 \end_layout
 
 \end_inset
@@ -24437,7 +24290,6 @@ B9
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
 92
 \end_layout
 
@@ -24449,8 +24301,7 @@ B9
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-9A
+93
 \end_layout
 
 \end_inset
@@ -24461,8 +24312,7 @@ B9
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-A2
+94
 \end_layout
 
 \end_inset
@@ -24473,8 +24323,7 @@ A2
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-AA
+95
 \end_layout
 
 \end_inset
@@ -24485,8 +24334,7 @@ AA
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-B2
+96
 \end_layout
 
 \end_inset
@@ -24497,8 +24345,7 @@ B2
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-BA
+97
 \end_layout
 
 \end_inset
@@ -24544,8 +24391,7 @@ BA
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-83
+98
 \end_layout
 
 \end_inset
@@ -24556,8 +24402,7 @@ BA
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-8B
+99
 \end_layout
 
 \end_inset
@@ -24568,8 +24413,7 @@ BA
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-93
+9A
 \end_layout
 
 \end_inset
@@ -24580,7 +24424,6 @@ BA
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
 9B
 \end_layout
 
@@ -24592,8 +24435,7 @@ BA
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-A3
+9C
 \end_layout
 
 \end_inset
@@ -24604,8 +24446,7 @@ A3
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-AB
+9D
 \end_layout
 
 \end_inset
@@ -24616,8 +24457,7 @@ AB
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-B3
+9E
 \end_layout
 
 \end_inset
@@ -24628,8 +24468,7 @@ B3
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-BB
+9F
 \end_layout
 
 \end_inset
@@ -24675,8 +24514,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-84
+A0
 \end_layout
 
 \end_inset
@@ -24687,8 +24525,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-8C
+A1
 \end_layout
 
 \end_inset
@@ -24699,8 +24536,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-94
+A2
 \end_layout
 
 \end_inset
@@ -24711,8 +24547,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-9C
+A3
 \end_layout
 
 \end_inset
@@ -24723,7 +24558,6 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
 A4
 \end_layout
 
@@ -24735,8 +24569,7 @@ A4
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-AC
+A5
 \end_layout
 
 \end_inset
@@ -24747,8 +24580,7 @@ AC
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-B4
+A6
 \end_layout
 
 \end_inset
@@ -24759,8 +24591,7 @@ B4
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-BC
+A7
 \end_layout
 
 \end_inset
@@ -24806,8 +24637,7 @@ BC
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-85
+A8
 \end_layout
 
 \end_inset
@@ -24818,8 +24648,7 @@ BC
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-8D
+A9
 \end_layout
 
 \end_inset
@@ -24830,8 +24659,7 @@ BC
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-95
+AA
 \end_layout
 
 \end_inset
@@ -24842,8 +24670,7 @@ BC
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-9D
+AB
 \end_layout
 
 \end_inset
@@ -24854,8 +24681,7 @@ BC
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-A5
+AC
 \end_layout
 
 \end_inset
@@ -24866,7 +24692,6 @@ A5
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
 AD
 \end_layout
 
@@ -24878,8 +24703,7 @@ AD
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-B5
+AE
 \end_layout
 
 \end_inset
@@ -24890,8 +24714,7 @@ B5
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-BD
+AF
 \end_layout
 
 \end_inset
@@ -24937,8 +24760,7 @@ BD
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-86
+B0
 \end_layout
 
 \end_inset
@@ -24949,8 +24771,7 @@ BD
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-8E
+B1
 \end_layout
 
 \end_inset
@@ -24961,8 +24782,7 @@ BD
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-96
+B2
 \end_layout
 
 \end_inset
@@ -24973,8 +24793,7 @@ BD
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-9E
+B3
 \end_layout
 
 \end_inset
@@ -24985,8 +24804,7 @@ BD
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-A6
+B4
 \end_layout
 
 \end_inset
@@ -24997,8 +24815,7 @@ A6
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-AE
+B5
 \end_layout
 
 \end_inset
@@ -25009,7 +24826,6 @@ AE
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
 B6
 \end_layout
 
@@ -25021,8 +24837,7 @@ B6
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-BE
+B7
 \end_layout
 
 \end_inset
@@ -25068,8 +24883,7 @@ BE
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-87
+B8
 \end_layout
 
 \end_inset
@@ -25080,8 +24894,7 @@ BE
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-8F
+B9
 \end_layout
 
 \end_inset
@@ -25092,8 +24905,7 @@ BE
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-97
+BA
 \end_layout
 
 \end_inset
@@ -25104,8 +24916,7 @@ BE
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-9F
+BB
 \end_layout
 
 \end_inset
@@ -25116,8 +24927,7 @@ BE
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-A7
+BC
 \end_layout
 
 \end_inset
@@ -25128,8 +24938,7 @@ A7
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-AF
+BD
 \end_layout
 
 \end_inset
@@ -25140,8 +24949,7 @@ AF
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-B7
+BE
 \end_layout
 
 \end_inset
@@ -25152,7 +24960,6 @@ B7
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
 BF
 \end_layout
 
@@ -25202,7 +25009,6 @@ BF
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
 C0
 \end_layout
 
@@ -25214,8 +25020,7 @@ C0
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-C8
+C1
 \end_layout
 
 \end_inset
@@ -25226,8 +25031,7 @@ C8
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-D0
+C2
 \end_layout
 
 \end_inset
@@ -25238,8 +25042,7 @@ D0
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-D8
+C3
 \end_layout
 
 \end_inset
@@ -25250,8 +25053,7 @@ D8
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-E0
+C4
 \end_layout
 
 \end_inset
@@ -25262,8 +25064,7 @@ E0
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-E8
+C5
 \end_layout
 
 \end_inset
@@ -25274,8 +25075,7 @@ E8
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-F0
+C6
 \end_layout
 
 \end_inset
@@ -25286,8 +25086,7 @@ F0
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-F8
+C7
 \end_layout
 
 \end_inset
@@ -25333,8 +25132,7 @@ F8
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-C1
+C8
 \end_layout
 
 \end_inset
@@ -25345,7 +25143,6 @@ C1
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
 C9
 \end_layout
 
@@ -25357,8 +25154,7 @@ C9
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-D1
+CA
 \end_layout
 
 \end_inset
@@ -25369,8 +25165,7 @@ D1
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-D9
+CB
 \end_layout
 
 \end_inset
@@ -25381,8 +25176,7 @@ D9
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-E1
+CC
 \end_layout
 
 \end_inset
@@ -25393,8 +25187,7 @@ E1
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-E9
+CD
 \end_layout
 
 \end_inset
@@ -25405,8 +25198,7 @@ E9
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-F1
+CE
 \end_layout
 
 \end_inset
@@ -25417,8 +25209,7 @@ F1
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-F9
+CF
 \end_layout
 
 \end_inset
@@ -25464,8 +25255,7 @@ F9
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-C2
+D0
 \end_layout
 
 \end_inset
@@ -25476,8 +25266,7 @@ C2
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-CA
+D1
 \end_layout
 
 \end_inset
@@ -25488,7 +25277,6 @@ CA
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
 D2
 \end_layout
 
@@ -25500,8 +25288,7 @@ D2
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-DA
+D3
 \end_layout
 
 \end_inset
@@ -25512,8 +25299,7 @@ DA
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-E2
+D4
 \end_layout
 
 \end_inset
@@ -25524,8 +25310,7 @@ E2
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-EA
+D5
 \end_layout
 
 \end_inset
@@ -25536,8 +25321,7 @@ EA
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-F2
+D6
 \end_layout
 
 \end_inset
@@ -25548,8 +25332,7 @@ F2
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-FA
+D7
 \end_layout
 
 \end_inset
@@ -25595,8 +25378,7 @@ FA
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-C3
+D8
 \end_layout
 
 \end_inset
@@ -25607,8 +25389,7 @@ C3
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-CB
+D9
 \end_layout
 
 \end_inset
@@ -25619,8 +25400,7 @@ CB
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-D3
+DA
 \end_layout
 
 \end_inset
@@ -25631,7 +25411,6 @@ D3
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
 DB
 \end_layout
 
@@ -25643,8 +25422,7 @@ DB
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-E3
+DC
 \end_layout
 
 \end_inset
@@ -25655,8 +25433,7 @@ E3
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-EB
+DD
 \end_layout
 
 \end_inset
@@ -25667,8 +25444,7 @@ EB
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-F3
+DE
 \end_layout
 
 \end_inset
@@ -25679,8 +25455,7 @@ F3
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-FB
+DF
 \end_layout
 
 \end_inset
@@ -25726,8 +25501,7 @@ none
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-C4
+E0
 \end_layout
 
 \end_inset
@@ -25738,8 +25512,7 @@ C4
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-CC
+E1
 \end_layout
 
 \end_inset
@@ -25750,8 +25523,7 @@ CC
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-D4
+E2
 \end_layout
 
 \end_inset
@@ -25762,8 +25534,7 @@ D4
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-DC
+E3
 \end_layout
 
 \end_inset
@@ -25774,7 +25545,6 @@ DC
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
 E4
 \end_layout
 
@@ -25786,8 +25556,7 @@ E4
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-EC
+E5
 \end_layout
 
 \end_inset
@@ -25798,8 +25567,7 @@ EC
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-F4
+E6
 \end_layout
 
 \end_inset
@@ -25810,8 +25578,7 @@ F4
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-FC
+E7
 \end_layout
 
 \end_inset
@@ -25857,8 +25624,7 @@ FC
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-C5
+E8
 \end_layout
 
 \end_inset
@@ -25869,8 +25635,7 @@ C5
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-CD
+E9
 \end_layout
 
 \end_inset
@@ -25881,8 +25646,7 @@ CD
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-D5
+EA
 \end_layout
 
 \end_inset
@@ -25893,8 +25657,7 @@ D5
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-DD
+EB
 \end_layout
 
 \end_inset
@@ -25905,8 +25668,7 @@ DD
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-E5
+EC
 \end_layout
 
 \end_inset
@@ -25917,7 +25679,6 @@ E5
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
 ED
 \end_layout
 
@@ -25929,8 +25690,7 @@ ED
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-F5
+EE
 \end_layout
 
 \end_inset
@@ -25941,8 +25701,7 @@ F5
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-FD
+EF
 \end_layout
 
 \end_inset
@@ -25988,8 +25747,7 @@ FD
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-C6
+F0
 \end_layout
 
 \end_inset
@@ -26000,8 +25758,7 @@ C6
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-CE
+F1
 \end_layout
 
 \end_inset
@@ -26012,8 +25769,7 @@ CE
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-D6
+F2
 \end_layout
 
 \end_inset
@@ -26024,8 +25780,7 @@ D6
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-DE
+F3
 \end_layout
 
 \end_inset
@@ -26036,8 +25791,7 @@ DE
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-E6
+F4
 \end_layout
 
 \end_inset
@@ -26048,8 +25802,7 @@ E6
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-EE
+F5
 \end_layout
 
 \end_inset
@@ -26060,7 +25813,6 @@ EE
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
 F6
 \end_layout
 
@@ -26072,8 +25824,7 @@ F6
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-FE
+F7
 \end_layout
 
 \end_inset
@@ -26119,8 +25870,7 @@ FE
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-C7
+F8
 \end_layout
 
 \end_inset
@@ -26131,8 +25881,7 @@ C7
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-CF
+F9
 \end_layout
 
 \end_inset
@@ -26143,8 +25892,7 @@ CF
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-D7
+FA
 \end_layout
 
 \end_inset
@@ -26155,8 +25903,7 @@ D7
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-DF
+FB
 \end_layout
 
 \end_inset
@@ -26167,8 +25914,7 @@ DF
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-E7
+FC
 \end_layout
 
 \end_inset
@@ -26179,8 +25925,7 @@ E7
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-EF
+FD
 \end_layout
 
 \end_inset
@@ -26191,8 +25936,7 @@ EF
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
-F7
+FE
 \end_layout
 
 \end_inset
@@ -26203,7 +25947,6 @@ F7
 \begin_layout Plain Layout
 
 \family typewriter
-\size footnotesize
 FF
 \end_layout
 
