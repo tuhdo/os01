@@ -26253,7 +26253,7 @@ prefix
  The number is a predefined prefix for address-size override prefix.
  After the prefix, comes the opcode 
 \family typewriter
-0x67 
+0xff 
 \family default
 and the 
 \family typewriter
