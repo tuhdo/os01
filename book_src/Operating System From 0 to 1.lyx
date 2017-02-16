@@ -2217,7 +2217,7 @@ functionally complete
  Later, Charles Sanders Peirce (during 1880 -- 1881) proved that either
  Boolean function of NOR or NAND alone is enough to create all other Boolean
  logic functions.
- Thus NOR and NAND gates are functionally complete
+ Thus NOR and NAND gates are functionally complete 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Peirce"
