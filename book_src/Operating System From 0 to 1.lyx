@@ -806,7 +806,7 @@ Part
 \begin_inset space ~
 \end_inset
 
-1 provides a foundation for learning operating system.
+1 provides a foundation for learning operating systems.
 \end_layout
 
 \begin_deeper
@@ -830,16 +830,16 @@ Chapter 3 provides a general architecture of a computer, then introduces
 \begin_layout Itemize
 Chapter 4 introduces the x86 assembly language through the use of the Intel
  manuals along with commonly used instructions.
- The chapter gives detailed examples how high-level syntax corresponds to
- low-level assembly, thus enabling a reader to read generated assembly code
+ The chapter gives detailed examples of how high-level syntax corresponds to
+ low-level assembly, thus enabling the reader to read generated assembly code
  comfortably.
  It is necessary to read assembly code when debugging an operating system.
 \end_layout
 
 \begin_layout Itemize
 Chapter 5 dissects ELF in detail.
- Only by understanding how the structure of a program at the binary level,
- a reader can build one that runs on the bare metal by manipulating its
+ Only by understanding the structure of a program at binary level
+ the reader can build one that runs on bare metal by manipulating its
  structure.
 \end_layout
 
@@ -849,12 +849,12 @@ Chapter 6 introduces
 gdb
 \family default
  debugger with extensive examples for commonly used commands.
- After a reader is acquainted with 
+ After acquainting the reader with 
 \family typewriter
 gdb
 \family default
 , it then provides insight on how a debugger works.
- This knowledge is essential for building a debug-able program on the bare
+ This knowledge is essential for building a debuggable program on the bare
  metal.
  
 \end_layout
@@ -866,7 +866,7 @@ Part
 \end_inset
 
 2 presents how to write a bootloader to bootstrap a kernel.
- Hence, the name 
+ Hence the name 
 \begin_inset Quotes eld
 \end_inset
 
@@ -875,9 +875,9 @@ Groundwork
 \end_inset
 
 .
- After mastering this part, a reader can either continue with the next part
- that guides the reader how to write an operating system by himself.
- However, if the reader does not like the presentation, he can look elsewhere,
+ After mastering this part, the reader can either continue with the next part
+ that is a guide on writing an operating system.
+ However, if the reader does not like the presentation, he or she can look elsewhere,
  such as OSDev Wiki: 
 \begin_inset Flex URL
 status open
@@ -895,20 +895,20 @@ http://wiki.osdev.org/
 
 \begin_deeper
 \begin_layout Itemize
-Chapter 7 introduces to bootloader, how to write one in assembly and then
+Chapter 7 introduces the bootloader, explains how to write one in assembly, and how to
  load it on QEMU, a hardware emulator.
  This process involves typing repetitive and long commands, so GNU Make
  is applied to improve the productivity by automating the repetitive parts
- and simpler the interaction with the project.
+ and simplifying the interaction with the project.
  This chapter also demonstrates the use of GNU Make in context.
 \end_layout
 
 \begin_layout Itemize
 Chapter 8 introduces linking by explaining the relocation process when combining
  object files.
- Then, this is the last piece of the puzzle required to build debuggable
- programs on bare metal, include the bootloader and an operating system
- written in C.
+ In addition to a bootloader and an operating system written in C,
+ linking is the last piece of the puzzle required to build debuggable
+ programs on bare metal.
 \end_layout
 
 \end_deeper
@@ -918,14 +918,14 @@ Part
 \end_inset
 
 3 provides guidance on how to write an operating system.
- Only guidance, since a reader should implement on his own and be proud
- of his creation.
+ Only guidance, since the reader should implement it on his or her own and be proud
+ of this creation.
  The guidance consists of a simpler and coherent explanation of necessary
- concepts, from hardware to software, to implement a feature of an operating
+ concepts, from hardware to software, to implement the features of an operating
  system.
- Without the guidance, a reader spends more time gathering information spread
- through different parts of various documents and on the Internet.
- It then provides a plan on how to map the concepts to code.
+ Without this guidance, the reader would spend more time gathering information spread
+ throughout different parts of various documents, some on the Internet.
+ The chapter then provides a plan on how to map concepts to code.
 \end_layout
 
 \begin_layout Section*
