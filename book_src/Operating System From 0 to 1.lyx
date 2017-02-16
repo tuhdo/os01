@@ -436,7 +436,6 @@ If that is the case, this book is for you.
  scratch! Yes, from scratch, without going through any existing operating
  system layer to comfort yourself that you are an operating system developer.
  You may ask, 
-
 \begin_inset Quotes eld
 \end_inset
 
@@ -498,9 +497,9 @@ There are many books on this topic and even courses out there already, made
  by famous professors and experts.
  Who am I to write a book on such advanced topic? It is true that many quality
  books are out there.
- But then: of all the operating system books, do any of them show you
- how to compile your C code that is independent of an existing operating
- system and the C runtime library on top of it? Most books talk about operating
+ But then: of all the operating system books, do any of them show you how
+ to compile your C code that is independent of an existing operating system
+ and the C runtime library on top of it? Most books talk about operating
  system designs and books that talk about implementations, only mention
  the software side of operating system: algorithms, while the hardware side
  to enable an operating system to communicate with hardware is skipped;
@@ -527,8 +526,8 @@ There are many books on this topic and even courses out there already, made
 
 \begin_layout Standard
 One strong focus of this book is to guide the learners through the habit
- of reading official documents from vendor to implement software, not
- from random online articles, which could be useful as supplementary material
+ of reading official documents from vendor to implement software, not from
+ random online articles, which could be useful as supplementary material
  but difficult for systematic study.
  Official documents from hardware vendors e.g.
  Intel are critical for implementing an operating system or any other software
@@ -577,8 +576,8 @@ Hello World
 \begin_inset Quotes erd
 \end_inset
 
- example gets in the way of teaching the concepts, thus lengthening the time
- spent on getting started writing an operating system.
+ example gets in the way of teaching the concepts, thus lengthening the
+ time spent on getting started writing an operating system.
  
 \end_layout
 
@@ -64360,7 +64359,47 @@ http://www.cs.cmu.edu/~ralf/files.html
 \end_layout
 
 \begin_layout Standard
-[illustration: - bootloader arrows to BIOS - OS arrows to BIOS]
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The boot process.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename images/07/simple_boot_process.pdf
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Description
