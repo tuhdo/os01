@@ -7449,7 +7449,7 @@ Registers
 
 
 \emph default
-is a hardware component for high-speed data access and communication with
+are a hardware component for high-speed data access and communication with
  other hardware devices.
  Registers allow software to control hardware directly by writing to registers
  of a device, or receive information from hardware device when reading from
