@@ -7377,7 +7377,7 @@ To use these devices, a programmer needs to controls the CPU to use the
 In a CPU, many OS concepts are already implemented directly in hardware,
  e.g.
  task switching, paging.
- A kernel programmer needs to how to use the hardware features, to avoid
+ A kernel programmer needs to know how to use the hardware features, to avoid
  duplicating such concept in software, thus wasting computer resources.
 \end_layout
 
