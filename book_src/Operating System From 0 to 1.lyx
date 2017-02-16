@@ -7745,8 +7745,8 @@ Hardware
 
 \begin_layout Standard
 Hardware is a specific implementation of a computer.
- A line of processors contains same instruction set architectures and nearly
- identical organizations but differ in hardware implementation.
+ A line of processors implement the same instruction set architecture and use
+ nearly identical organizations but differ in hardware implementation.
  For example, core i7 family provides a model for desktop computers that
  is more powerful but consumes more energy, while another model for laptops
  is less performant but more energy efficient.
