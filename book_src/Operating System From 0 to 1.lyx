@@ -2178,7 +2178,7 @@ th
 \end_inset
 
 century by George Boole.
- From a sound mathematical theory as a foundation created logic gates
+ With a sound mathematical theory as a foundation logic gates were created
 \emph on
 .
  
@@ -2216,7 +2216,7 @@ functionally complete
  Later, Charles Sanders Peirce (during 1880 -- 1881) proved that either
  Boolean function of NOR or NAND alone is enough to create all other Boolean
  logic functions.
- Thus NOR and NAND gates are functionally complete
+ Thus NOR and NAND gates are functionally complete 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Peirce"
@@ -5073,7 +5073,7 @@ execute
  More instructions can be implemented by adding more devices and allocating
  more opcodes for the instructions, then update the decoder accordingly.
  The Apollo Guidance Computer, a digital computer produced for the Apollo
- space program from 1961 -- 1972, was built entirely with a NOR gate - the
+ space program from 1961 -- 1972, was built entirely with NOR gates - the
  other choice to NAND gate for creating other logic gates.
  Similarly, if we keep improving our hypothetical device, it eventually
  becomes a full-fledge computer.
@@ -5386,7 +5386,7 @@ The recurring details are given a new and simpler language than the languages
 \begin_layout Standard
 What to realize is that every layer is just
 \emph on
- and a more convenient language to 
+ a more convenient language to 
 \series bold
 describe
 \series default
@@ -5741,7 +5741,7 @@ programmable programming language
  familiar or even aware of the existence of a code pattern, then it is hopeless
  to understand the code.
  A prime example is reading C code that controls hardware, e.g.
- an operating system: if a programmer knows absolutely knowing about hardware,
+ an operating system: if a programmer knows absolutely nothing about hardware,
  then it is impossible to read and write operating system code in C, even
  if he could have 20 years of writing application C code.
 \end_layout
@@ -7376,7 +7376,7 @@ To use these devices, a programmer needs to controls the CPU to use the
 In a CPU, many OS concepts are already implemented directly in hardware,
  e.g.
  task switching, paging.
- A kernel programmer needs to how to use the hardware features, to avoid
+ A kernel programmer needs to know how to use the hardware features, to avoid
  duplicating such concept in software, thus wasting computer resources.
 \end_layout
 
@@ -7448,7 +7448,7 @@ Registers
 
 
 \emph default
-is a hardware component for high-speed data access and communication with
+are a hardware component for high-speed data access and communication with
  other hardware devices.
  Registers allow software to control hardware directly by writing to registers
  of a device, or receive information from hardware device when reading from
@@ -7579,7 +7579,7 @@ memory controller
 status open
 
 \begin_layout Plain Layout
-Prior to the CPU produced in 2009
+Prior to the CPU's produced in 2009
 \end_layout
 
 \end_inset
@@ -7744,9 +7744,9 @@ Hardware
 
 \begin_layout Standard
 Hardware is a specific implementation of a computer.
- A line of processors contains same instruction set architectures and nearly
- identical organizations but differ in hardware implementation.
- For example, core i7 family provides a model for desktop computers that
+ A line of processors implement the same instruction set architecture and use
+ nearly identical organizations but differ in hardware implementation.
+ For example, the Core i7 family provides a model for desktop computers that
  is more powerful but consumes more energy, while another model for laptops
  is less performant but more energy efficient.
  To write software for a hardware device, seldom we need to understand a
