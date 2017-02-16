@@ -5742,7 +5742,7 @@ programmable programming language
  familiar or even aware of the existence of a code pattern, then it is hopeless
  to understand the code.
  A prime example is reading C code that controls hardware, e.g.
- an operating system: if a programmer knows absolutely knowing about hardware,
+ an operating system: if a programmer knows absolutely nothing about hardware,
  then it is impossible to read and write operating system code in C, even
  if he could have 20 years of writing application C code.
 \end_layout
