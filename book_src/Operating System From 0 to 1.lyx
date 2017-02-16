@@ -411,22 +411,18 @@ Greetings!
 \end_layout
 
 \begin_layout Standard
-\noindent
-Probably you asked yourself at least once, how an Operating System (OS)
- was written from the ground up? You probably have spent years programming,
- but still understand operating system as a collection of abstract concepts,
- not how to implement an operating system in actual code.
- In your mind, somehow the operating system can magically control the underlying
- hardware and do what you want through the higher level API of your favorite
- programming language.
- You wish to understand the details, but for some reason, it seems too difficult
- because regardless how much you learn, it is never enough.
- You may feel that you are missing an important piece of the puzzle, and
- get stuck.
- However, deep inside you still want to write an operating system without
- a crystal clear understanding.
- After all, you are a software engineer, and an operating system is software.
- You should know your software better than anyone else!
+You've probably asked yourself at least once how an operating system is
+ written from the ground up.
+ You might even have years of programming experience under your belt, yet
+ your understanding of operating systems may still be a collection of abstract
+ concepts, not grounded in actual implementation.
+ To those who've never built one, an operating system may seem like magic:
+ a mysterious thing that can control hardware while handling a programmer's
+ requests via an API of their favorite programming language.
+ Learning how to build an operating system seems intimidating and difficult;
+ no matter how much you learn, it never feels like you know enough.
+ You're probably reading this book right now to gain a better understanding
+ of operating systems to be a better software engineer.
 \end_layout
 
 \begin_layout Standard
@@ -443,53 +439,54 @@ Isn't it more practical to learn the internals of Linux?
 \begin_inset Quotes erd
 \end_inset
 
- In the end, you learn Linux to improve your day job significantly and might
- be able to contribute to it.
- That is an excellent approach.
- However, if you follow that route, you still do not achieve the ultimate
- goal: writing an actual operating system.
- Also, you gain knowledge that can never learn from using any current operating
- system, and this experience can impact how you write software.
- These are the benefits of writing your operating system:
+, you might ask.
+ Yes...
+ and no.
+ Learning Linux can help your workflow at your day job.
+ However, if you follow that route, you still won't achieve the ultimate
+ goal of writing an actualo perating system.
+ By writing your own operating system, you'll gain knowledge that you won't
+ be able to glean just from learning Linux.
+ 
+\end_layout
+
+\begin_layout Standard
+Here's a list of some benefits of writing your own OS:
 \end_layout
 
 \begin_layout Itemize
-Learn how a computer works at the hardware level, and how you can write
- software that manages it directly.
+You'll learn how a computer works at the hardware level, and you'll learn
+ to write software to manage that hardware directly
 \end_layout
 
 \begin_layout Itemize
-Learn the fundamentals so you can adapt to any operating system and not
- just Linux, or even write a new one.
+You'll learn the fundamentals of operating systems, making you able to adapt
+ to any operating system, not just Linux
 \end_layout
 
 \begin_layout Itemize
-You won't fully understand how Linux works without writing one on your own
- anyway.
- That is, to hack Linux internals profoundly, you will need to write at
- least one operating system on your own.
- Just like to write a large application, you need to start writing simple
- programs.
- Later you can proudly say that you really wrote an operating system from
- scratch, not a copy/paste textbook operating system.
+To hack Linux internals profoundly, you'll need to write at least one operating
+ system on your own.
+ This is just like applications programming: to write a large application,
+ you'll need to start with simple ones
 \end_layout
 
 \begin_layout Itemize
-Open pathways to various low-level programming domains such as reverse engineeri
-ng, exploitations, virtual machines, game console emulators and more, since
- Assembly language becomes one of your indispensable tool for low-level
- analysis (but it does not mean that you have to write your operating system
- in Assembly!).
+You'll open pathways to various low-level programming domains such as reverse
+ engineering, exploits, building virtual machines, game console emulators
+ and more.
+ Assembly language will become one of your indispensable tools for low-level
+ analysis
 \end_layout
 
 \begin_layout Itemize
-Writing an operating system is fun.
+Writing an operating system is fun!
 \end_layout
 
 \begin_layout Section*
 
 \emph on
-Why another book on Operating System? 
+Why another book on operating systems? 
 \end_layout
 
 \begin_layout Standard
@@ -535,7 +532,7 @@ One strong focus of this book is to guide the learners through the habit
  At the minimum, an operating system developer is required to comprehend
  such documents and derive an implementation based on a set of requirements.
  Thus, the first chapter is dedicated to discuss relevant documents and
- its importance.
+ their importance.
 \end_layout
 
 \begin_layout Standard
@@ -548,7 +545,7 @@ Hello World
 \end_inset
 
  centric.
- Most examples revolve around variants of a
+ Most examples revolve around variants of a 
 \begin_inset Quotes eld
 \end_inset
 
@@ -556,17 +553,8 @@ Hello World
 \begin_inset Quotes erd
 \end_inset
 
- program.
- You will see that there are so many concepts to learn from a simple 
-\begin_inset Quotes eld
-\end_inset
-
-Hello World
-\begin_inset Quotes erd
-\end_inset
-
- program.
- The concepts must be acquainted before attempting to write an operating
+ program, which will acquaint you to some basic concepts.
+ These concepts must be learned before attempting to write an operating
  system.
  Anything beyond a simple 
 \begin_inset Quotes eld
@@ -582,14 +570,13 @@ Hello World
 \end_layout
 
 \begin_layout Standard
-If you agree with me, then wait no longer.
- Start diving in.
- With this book, I hope that I could provide enough foundational knowledge
- that finally you can make sense of available OS books and code.
- This book is especially beneficial to students who've just finished their
- first C/C++ course.
- Imagine how cool it is to show your future employer that you already wrote
- an OS on your own.
+Let's dive in.
+ With this book, I hope to provide enough foundational knowledge that will
+ open doors for you to make sense of other O resources.
+ This book is will be especially beneficial to students who've just finished
+ their first C/C++ course.
+ Imagine how cool it would be to show prospective employers that you've
+ already built an operating system.
 \end_layout
 
 \begin_layout Section*
@@ -599,21 +586,22 @@ Prerequisites
 \end_layout
 
 \begin_layout Itemize
-Know some circuit concepts:
+Basic knowledge of circuits
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
 Basic Concepts of Electricity: atom, electrons, proton, neutron, current
- flow.
+ flow
 \end_layout
 
 \begin_layout Itemize
-Ohm law
+Ohm's Law
 \end_layout
 
 \begin_layout Standard
-However, if you know absolute nothing, you can quickly learn it here: 
+If you're unfamiliar with these concepts, you can quickly learn them here:
+ 
 \begin_inset Flex URL
 status open
 
@@ -629,30 +617,29 @@ http://www.allaboutcircuits.com/textbook/
 
 \end_deeper
 \begin_layout Itemize
-Know some C programming.
- In particular:
+C programming
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-Variable and functions declaration/definitions
+Variable and function declarations/definitions
 \end_layout
 
 \begin_layout Itemize
-While and for loops.
+While and for loops
 \end_layout
 
 \begin_layout Itemize
-Understand how pointers work.
+Pointers
 \end_layout
 
 \begin_layout Itemize
-Fundamentals of algorithms and data structures in C.
+Fundamental algorithms and data structures in C
 \end_layout
 
 \end_deeper
 \begin_layout Itemize
-Know Linux basics: 
+Linux basics
 \end_layout
 
 \begin_deeper
@@ -661,26 +648,25 @@ Know how to navigate directory with the command line
 \end_layout
 
 \begin_layout Itemize
-Know how to invoke a command with options.
+Know how to invoke a command with options
 \end_layout
 
 \begin_layout Itemize
-Know how to pipe output to another program.
+Know how to pipe output to another program
 \end_layout
 
 \end_deeper
 \begin_layout Itemize
-Know how to touch type.
+Touch typing.
  Since we are going to use Linux, touch typing helps.
- I know typing speed does not relate to problem -solving, but at least the
+ I know typing speed does not relate to problem-solving, but at least the
  speed should be fast enough not to let it get it the way and degrade the
  learning experience.
 \end_layout
 
 \begin_layout Standard
-In general, I assume that a reader acquired basic programming knowledge
- with C, and can use an IDE at its basic.
- That is, know how to press the Play button for building and running a program.
+In general, I assume that the reader has basic C programming knowledge,
+ and can use an IDE to build and run a program.
 \end_layout
 
 \begin_layout Section*
@@ -749,9 +735,8 @@ Electrical Engineering
 
 \end_inset
 
-: Although the book mentions some concepts of electronics and electrical
- engineering, they are for making intuitions of how software operates physically
- at bare metal.
+: The book discusses some concepts from electronics and electrical engineering
+ only to the extent of how software operates on bare metal.
  When you are comfortable with the underlying hardware, writing an operating
  system is much easier.
 \end_layout
@@ -761,13 +746,14 @@ Electrical Engineering
 status open
 
 \begin_layout Plain Layout
-How to use Linux or any OS types of books
+How to use Linux or any other OS
 \end_layout
 
 \end_inset
 
-: Though Linux is used as a development environment and as a medium to demonstra
-te high-level operating system concepts, it is not the focus of this book.
+: Though Linux is used as a part of the development environment and as a
+ medium to demonstrate high-level operating system concepts, it is not the
+ focus of this book.
 \end_layout
 
 \begin_layout Itemize
@@ -780,7 +766,7 @@ Linux Kernel development
 
 \end_inset
 
-: There are already high-quality books out there.
+: There are already many high-quality books out there on this subject.
 \end_layout
 
 \begin_layout Itemize
@@ -806,7 +792,7 @@ Part
 \begin_inset space ~
 \end_inset
 
-1 provides a foundation for learning operating systems.
+1 provides a foundation for learning operating system.
 \end_layout
 
 \begin_deeper
@@ -822,24 +808,22 @@ Chapter 2 explains the layers of abstractions from hardware to software.
 \end_layout
 
 \begin_layout Itemize
-Chapter 3 provides a general architecture of a computer, then introduces
- a sample computer model that a reader will use for writing an operating
- system.
+Chapter 3 provides the general architecture of a computer, then introduces
+ a sample computer model that you will use to write an operating system.
 \end_layout
 
 \begin_layout Itemize
 Chapter 4 introduces the x86 assembly language through the use of the Intel
- manuals along with commonly used instructions.
- The chapter gives detailed examples of how high-level syntax corresponds
- to low-level assembly, thus enabling the reader to read generated assembly
- code comfortably.
+ manuals, along with commonly used instructions.
+ This chapter gives detailed examples of how high-level syntax corresponds
+ to low-level assembly, enabling you to read generated assembly code comfortably.
  It is necessary to read assembly code when debugging an operating system.
 \end_layout
 
 \begin_layout Itemize
 Chapter 5 dissects ELF in detail.
- Only by understanding the structure of a program at binary level the reader
- can build one that runs on bare metal by manipulating its structure.
+ Only by understanding how the structure of a program at the binary level
+ can you can build one that runs on bare metal.
 \end_layout
 
 \begin_layout Itemize
@@ -894,20 +878,20 @@ http://wiki.osdev.org/
 
 \begin_deeper
 \begin_layout Itemize
-Chapter 7 introduces the bootloader, explains how to write one in assembly,
+Chapter 7 introduces what the bootloader is, how to write one in assembly,
  and how to load it on QEMU, a hardware emulator.
  This process involves typing repetitive and long commands, so GNU Make
- is applied to improve the productivity by automating the repetitive parts
- and simplifying the interaction with the project.
+ is applied to improve productivity by automating the repetitive parts and
+ simplifying the interaction with the project.
  This chapter also demonstrates the use of GNU Make in context.
 \end_layout
 
 \begin_layout Itemize
 Chapter 8 introduces linking by explaining the relocation process when combining
  object files.
- In addition to a bootloader and an operating system written in C, linking
- is the last piece of the puzzle required to build debuggable programs on
- bare metal.
+ This is the last piece of the puzzle required for building debuggable programs
+ on bare metal, including the bootloader and an operating system written
+ in C.
 \end_layout
 
 \end_deeper
@@ -917,14 +901,14 @@ Part
 \end_inset
 
 3 provides guidance on how to write an operating system.
- Only guidance, since the reader should implement it on his or her own and
- be proud of this creation.
- The guidance consists of a simpler and coherent explanation of necessary
- concepts, from hardware to software, to implement the features of an operating
+ This chapter will only provide guidance, as you should implement an OS
+ on your own and be proud of your creation.
+ The guidance consists of simple and coherent explanations of necessary
+ concepts, from hardware to software, to implement features of an operating
  system.
- Without this guidance, the reader would spend more time gathering information
- spread throughout different parts of various documents, some on the Internet.
- The chapter then provides a plan on how to map concepts to code.
+ Without such guidance, you'll waste time gathering information spread through
+ various documents and the Internet.
+ It then provides a plan on how to map the concepts to code.
 \end_layout
 
 \begin_layout Section*
@@ -2216,7 +2200,7 @@ functionally complete
  Later, Charles Sanders Peirce (during 1880 -- 1881) proved that either
  Boolean function of NOR or NAND alone is enough to create all other Boolean
  logic functions.
- Thus NOR and NAND gates are functionally complete 
+ Thus NOR and NAND gates are functionally complete
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Peirce"
@@ -5690,7 +5674,7 @@ general-purpose
 \end_layout
 
 \end_deeper
-\begin_layout --Separator--
+\begin_layout Standard
 
 \end_layout
 
@@ -6556,7 +6540,7 @@ PCB
 
 PCB
 \emph default
- -- 
+ – 
 \emph on
 
 \begin_inset Index idx
@@ -7298,12 +7282,12 @@ The Von-Neumann computer operates by storing its instructions in main memory,
 status open
 
 \begin_layout Plain Layout
-fetch -- decode -- execute
+fetch – decode – execute
 \end_layout
 
 \end_inset
 
-fetch -- decode -- execute
+fetch – decode – execute
 \emph default
  cycle.
 \end_layout
@@ -7376,8 +7360,8 @@ To use these devices, a programmer needs to controls the CPU to use the
 In a CPU, many OS concepts are already implemented directly in hardware,
  e.g.
  task switching, paging.
- A kernel programmer needs to know how to use the hardware features, to avoid
- duplicating such concept in software, thus wasting computer resources.
+ A kernel programmer needs to know how to use the hardware features, to
+ avoid duplicating such concept in software, thus wasting computer resources.
 \end_layout
 
 \begin_layout Itemize
@@ -7744,11 +7728,11 @@ Hardware
 
 \begin_layout Standard
 Hardware is a specific implementation of a computer.
- A line of processors implement the same instruction set architecture and use
- nearly identical organizations but differ in hardware implementation.
- For example, the Core i7 family provides a model for desktop computers that
- is more powerful but consumes more energy, while another model for laptops
- is less performant but more energy efficient.
+ A line of processors implement the same instruction set architecture and
+ use nearly identical organizations but differ in hardware implementation.
+ For example, the Core i7 family provides a model for desktop computers
+ that is more powerful but consumes more energy, while another model for
+ laptops is less performant but more energy efficient.
  To write software for a hardware device, seldom we need to understand a
  hardware implementation if documents are available.
  Computer organization and especially the instruction set architecture are
@@ -9259,8 +9243,7 @@ height "1.5pt"
 
 \end_layout
 
-\begin_layout --Separator--
-\noindent
+\begin_layout Standard
 
 \end_layout
 
@@ -36942,7 +36925,7 @@ foo
 \end_layout
 
 \end_deeper
-\begin_layout --Separator--
+\begin_layout Standard
 
 \end_layout
 
@@ -39526,7 +39509,7 @@ b
 Function Call and Return
 \begin_inset CommandInset label
 LatexCommand label
-name "sub:Function-Call-and"
+name "subsec:Function-Call-and"
 
 \end_inset
 
@@ -44576,7 +44559,7 @@ Align
 \end_layout
 
 \end_deeper
-\begin_layout --Separator--
+\begin_layout Standard
 
 \end_layout
 
@@ -49645,7 +49628,7 @@ end{shellcommand}
 \end_layout
 
 \end_deeper
-\begin_layout --Separator--
+\begin_layout Standard
 
 \end_layout
 
@@ -49832,7 +49815,7 @@ end{shellcommand}
 
 \end_layout
 
-\begin_layout --Separator--
+\begin_layout Standard
 
 \end_layout
 
@@ -50908,7 +50891,7 @@ STRTAB
  section.
 \end_layout
 
-\begin_layout --Separator--
+\begin_layout Standard
 
 \end_layout
 
@@ -50929,7 +50912,7 @@ Info
  field onward, no local symbol appears.
 \end_layout
 
-\begin_layout --Separator--
+\begin_layout Standard
 
 \end_layout
 
@@ -50949,7 +50932,7 @@ SYMTAB
  section.
 \end_layout
 
-\begin_layout --Separator--
+\begin_layout Standard
 
 \end_layout
 
@@ -53633,7 +53616,7 @@ A list of sections with its starting and ending addresses.
 \end_layout
 
 \end_deeper
-\begin_layout --Separator--
+\begin_layout Standard
 
 \end_layout
 
@@ -55125,7 +55108,7 @@ green
 \end_layout
 
 \end_deeper
-\begin_layout --Separator--
+\begin_layout Standard
 
 \end_layout
 
@@ -55685,7 +55668,7 @@ main
 \end_layout
 
 \end_deeper
-\begin_layout --Separator--
+\begin_layout Standard
 
 \end_layout
 
@@ -56538,7 +56521,7 @@ gdb
 \end_layout
 
 \end_deeper
-\begin_layout --Separator--
+\begin_layout Standard
 
 \end_layout
 
@@ -56613,7 +56596,7 @@ main
 \end_layout
 
 \end_deeper
-\begin_layout --Separator--
+\begin_layout Standard
 
 \end_layout
 
@@ -56754,7 +56737,7 @@ end{shellcommand}
 \end_layout
 
 \end_deeper
-\begin_layout --Separator--
+\begin_layout Standard
 
 \end_layout
 
@@ -56830,7 +56813,7 @@ end{shellcommand}
 \end_layout
 
 \end_deeper
-\begin_layout --Separator--
+\begin_layout Standard
 
 \end_layout
 
@@ -65843,7 +65826,7 @@ Floppy disk platter with 2 sides.
 Read and load sectors from a floppy disk
 \begin_inset CommandInset label
 LatexCommand label
-name "sub:Read-and-load"
+name "subsec:Read-and-load"
 
 \end_inset
 
@@ -68980,7 +68963,7 @@ status open
 Automate debugging steps with GDB script
 \begin_inset CommandInset label
 LatexCommand label
-name "sub:Automate-debugging-steps"
+name "subsec:Automate-debugging-steps"
 
 \end_inset
 
@@ -74298,7 +74281,7 @@ GNU_STACK
 \end_layout
 
 \end_deeper
-\begin_layout --Separator--
+\begin_layout Standard
 
 \end_layout
 
@@ -74819,7 +74802,7 @@ In previous examples, the file size and memory size of the NULL section
 \end_layout
 
 \end_deeper
-\begin_layout --Separator--
+\begin_layout Standard
 
 \end_layout
 
@@ -77105,7 +77088,7 @@ Enter
  section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sub:Automate-debugging-steps"
+reference "subsec:Automate-debugging-steps"
 
 \end_inset
 
@@ -77959,7 +77942,7 @@ Now that we know where the position of the entry address in the ELF header,
  it is easy to modify the bootloader made in section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sub:Read-and-load"
+reference "subsec:Read-and-load"
 
 \end_inset
 
@@ -79050,7 +79033,7 @@ Something wrong is going on here.
  in section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sub:Function-Call-and"
+reference "subsec:Function-Call-and"
 
 \end_inset
 
