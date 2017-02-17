@@ -10,189 +10,190 @@ Tu, Do Hoang
 
 Table of Contents
 
-    Preface
-        Why another book on Operating System? 
-        Prerequisites
-        What you will learn in this book 
-        What this book is not about
-        The organization of the book
-        Acknowledgments
+Preface
+Why another book on Operating System? 
+Prerequisites
+What you will learn in this book 
+What this book is not about
+The organization of the book
+Acknowledgments
 Part I Preliminary
-    Domain documents
-        Problem domains
-        Documents for implementing a problem dom
-            Software Requirement Document
-            Software Specification
-        Documents for writing an x86 Operating S
-        The physical implementation of a bit
-            MOSFET transistors
-        Beyond transistors: digital logic gates
-            The theory behind logic gates
-            Logic Gate implementation: CMOS circuit
-        Beyond Logic Gates: Machine Language
-            Machine language
-            Assembly Language
-            Programming Languages
-        Abstraction
-            Why abstraction works
-            Why abstraction reduces complexity
-    Computer Architecture
-        What is a computer?
-            Server
-            Desktop Computer
-            Mobile Computer
-            Game Consoles
-            Embedded Computer
-            Field Gate Programmable Array
-            Application-Specific Integrated Circuit
-        Computer Architecture
-            Instruction Set Architecture
-            Computer organization
-            Hardware
-        x86 architecture
-        Intel Q35 Chipset
-        x86 Execution Environment
-    x86 Assembly and C
-        objdump
-        Reading the output
-        Intel manuals
-        Experiment with assembly code 
-        Anatomy of an Assembly Instruction
-        Understand an instruction in detail
-        Example: jmp instruction
-        Examine compiled data
-            Fundamental data types
-            Pointer Data Types
-            Bit Field Data Type
-            String Data Types
-        Examine compiled code
-            Data Transfer
-            Expressions
-            Stack
-            Automatic variables
-            Function Call and Return
-            Loop
-            Conditional
-    The Anatomy of a Program
-        Reference documents: 
-        ELF header
-        Section header table
-        Understand Section in-depth
-        Program header table
-        Segments vs sections
-    Runtime inspection and debug
-        A sample program
-        Static inspection of a program
-            Command: info target/info file/info file
-            Command: maint info sections
-            Command: info functions
-            Command: info variables
-            Command: disassemble/disas
-            Command: x
-            Command: print/p
-        Runtime inspection of a program
-            Command: run
-            Command: break/b
-            Command: next/n
-            Command: step/s
-            Command: ni
-            Command: si
-            Command: until
-            Command: finish
-            Command: bt
-            Command: up
-            Command: down
-            Command: info registers
-        How debuggers work: A brief introduction
-            How breakpoints work
-            Single stepping
-            How a debugger understands high level so
+Domain documents
+Problem domains
+Documents for implementing a problem domain
+Software Requirement Document
+Software Specification
+Documents for writing an x86 Operating System
+The physical implementation of a bit
+MOSFET transistors
+Beyond transistors: digital logic gates
+The theory behind logic gates
+Logic Gate implementation: CMOS circuit
+Beyond Logic Gates: Machine Language
+Machine language
+Assembly Language
+Programming Languages
+Abstraction
+Why abstraction works
+Why abstraction reduces complexity
+Computer Architecture
+What is a computer?
+Server
+Desktop Computer
+Mobile Computer
+Game Consoles
+Embedded Computer
+Field Gate Programmable Array
+Application-Specific Integrated Circuit
+Computer Architecture
+Instruction Set Architecture
+Computer organization
+Hardware
+x86 architecture
+Intel Q35 Chipset
+x86 Execution Environment
+x86 Assembly and C
+objdump
+Reading the output
+Intel manuals
+Experiment with assembly code 
+Anatomy of an Assembly Instruction
+Understand an instruction in detail
+Example: jmp instruction
+Examine compiled data
+Fundamental data types
+Pointer Data Types
+Bit Field Data Type
+String Data Types
+Examine compiled code
+Data Transfer
+Expressions
+Stack
+Automatic variables
+Function Call and Return
+Loop
+Conditional
+The Anatomy of a Program
+Reference documents: 
+ELF header
+Section header table
+Understand Section in-depth
+Program header table
+Segments vs sections
+Runtime inspection and debug
+A sample program
+Static inspection of a program
+Command: info target/info file/info files
+Command: maint info sections
+Command: info functions
+Command: info variables
+Command: disassemble/disas
+Command: x
+Command: print/p
+Runtime inspection of a program
+Command: run
+Command: break/b
+Command: next/n
+Command: step/s
+Command: ni
+Command: si
+Command: until
+Command: finish
+Command: bt
+Command: up
+Command: down
+Command: info registers
+How debuggers work: A brief introduction
+How breakpoints work
+Single stepping
+How a debugger understands high level source code
 Part II Groundwork 
-    Bootloader
-        x86 Boot Process
-        Using BIOS services
-        Boot process
-        Example Bootloader
-        Compile and load
-            Debugging
-        Loading a program from bootloader
-            Floppy Disk Anatomy
-            Read and load sectors from a floppy disk
-        Improve productivity with scripts
-            Automate build with GNU Make
-            GNU Make Syntax summary
-            Automate debugging steps with GDB script
-    Linking and loading on bare metal
-        Understand relocations with readelf
-            Offset 
-            Info 
-            Type 
-            Sym.Value 
-            Sym. Name
-        Crafting ELF binary with linker scripts
-            Example linker script
-            Understand the custom ELF structure
-            Manipulate the program segments
-        C Runtime: Hosted vs Freestanding
-        Debuggable bootloader on bare metal
-        Debuggable program on bare metal
-            Loading an ELF binary from a bootloader
-            Debugging the memory layout
-            Testing the new binary
+Bootloader
+x86 Boot Process
+Using BIOS services
+Boot process
+Example Bootloader
+Compile and load
+Debugging
+Loading a program from bootloader
+Floppy Disk Anatomy
+Read and load sectors from a floppy disk
+Improve productivity with scripts
+Automate build with GNU Make
+GNU Make Syntax summary
+Automate debugging steps with GDB script
+Linking and loading on bare metal
+Understand relocations with readelf
+Offset 
+Info 
+Type 
+Sym.Value 
+Sym. Name
+Crafting ELF binary with linker scripts
+Example linker script
+Understand the custom ELF structure
+Manipulate the program segments
+C Runtime: Hosted vs Freestanding
+Debuggable bootloader on bare metal
+Debuggable program on bare metal
+Loading an ELF binary from a bootloader
+Debugging the memory layout
+Testing the new binary
 Part III Kernel Programming
-    x86 Descriptors
-        Basic operating system concepts
-            Hardware Abstraction Layer
-            System programming interface 
-            The need for an Operating System 
-        Drivers
-        Userspace and kernel space
-        Memory Segment
-        Segment Descriptor
-        Types of Segment Descriptors
-            Code and Data descriptors
-            Task Descriptor
-            Interrupt Descriptor
-        Descriptor Scope
-            Global Descriptor
-            Local Descriptor
-        Segment Selector
-        Enhancement: Bootloader with descriptors
-    Process
-        Concepts
-        Process
-            Task
-            Process
-            Scheduler
-            Context switch
-            Priority
-            Preemptive vs Non-preemptive
-            Process states
-            procfs
-        Threads
-        Task: x86 concept of a process
-        Task Data Structure
-            Task State Segment
-            Task Descriptor
-        Process Implementation
-            Requirements
-            Major Plan
-            Stage 1: Switch to a task from bootloade
-            Stage 2: Switch to a task with one funct
-            Stage 3: Switch to a task with many func
-        Milestone: Code Refactor
-    Interrupt
-    Memory management
-            Address Space
-            Virtual Memory
-    File System
-            Example: Ex2 filesystem
-    Bibliography
+x86 Descriptors
+Basic operating system concepts
+Hardware Abstraction Layer
+System programming interface 
+The need for an Operating System 
+Drivers
+Userspace and kernel space
+Memory Segment
+Segment Descriptor
+Types of Segment Descriptors
+Code and Data descriptors
+Task Descriptor
+Interrupt Descriptor
+Descriptor Scope
+Global Descriptor
+Local Descriptor
+Segment Selector
+Enhancement: Bootloader with descriptors
+Process
+Concepts
+Process
+Task
+Process
+Scheduler
+Context switch
+Priority
+Preemptive vs Non-preemptive
+Process states
+procfs
+Threads
+Task: x86 concept of a process
+Task Data Structure
+Task State Segment
+Task Descriptor
+Process Implementation
+Requirements
+Major Plan
+Stage 1: Switch to a task from bootloader
+Stage 2: Switch to a task with one function from kernel
+Stage 3: Switch to a task with many functions from kernel
+Milestone: Code Refactor
+Interrupt
+Memory management
+Address Space
+Virtual Memory
+File System
+Example: Ex2 filesystem
+Bibliography
 
 
 
 
 Preface
+
 
 
 
@@ -218,7 +219,7 @@ essential and enable you to implement your operating system, from
 scratch! Yes, from scratch, without going through any existing 
 operating system layer to comfort yourself that you are an 
 operating system developer. You may ask, “Isn't it more practical 
-to learn the internals of Linux?”, you might ask.
+to learn the internals of Linux?”
 
 Yes...
 
@@ -248,7 +249,7 @@ Here's a list of some benefits of writing your own OS:
   such as reverse engineering, exploits, building virtual 
   machines, game console emulators and more. Assembly language 
   will become one of your indispensable tools for low-level 
-  analysis.(but it does not mean that you have to write your 
+  analysis (but it does not mean that you have to write your 
   operating system in Assembly!).
 
 • Writing an operating system is fun!
@@ -305,6 +306,7 @@ already built an operating system.
 
 • Basic knowledge of circuits
 
+
   – Basic Concepts of Electricity: atoms, electrons, proton, 
     neutron, current flow.
 
@@ -316,6 +318,7 @@ already built an operating system.
 
 • C programming. In particular:
 
+
   – Variable and function declarations/definitions
 
   – While and for loops
@@ -325,6 +328,7 @@ already built an operating system.
   – Fundamental algorithms and data structures in C
 
 • Linux basics: 
+
 
   – Know how to navigate directory with the command line
 
@@ -390,6 +394,7 @@ knowledge, and can use an IDE to build and run a program.
 
   Part 1 provides a foundation for learning operating system.
 
+
   • Chapter 1 briefly explains the importance of domain 
     documents. Documents are crucial for the learning experience, 
     so they deserve a chapter.
@@ -427,6 +432,7 @@ knowledge, and can use an IDE to build and run a program.
   does not like the presentation, he or she can look elsewhere, 
   such as OSDev Wiki: http://wiki.osdev.org/. 
 
+
   • Chapter 7 introduces what the bootloader is, how to write one 
     in assembly, and how to load it on QEMU, a hardware emulator. 
     This process involves typing repetitive and long commands, so 
@@ -453,7 +459,7 @@ knowledge, and can use an IDE to build and run a program.
 
   Acknowledgments
 
-Thank you, my beloved family. Thank you, the contributors.
+Thank you, my beloved family. Thank you, contributors.
 
 
 
@@ -495,19 +501,19 @@ problem domain, is [footnote:
 We refer to the concept of “programming” here as someone able to 
 write code in a language, but not necessary know any or all 
 software engineering knowledge.
-]. Not only a software engineer needs to understand how to 
-implement the software, but also the problem domain that it tries 
-to solve, which might require in-depth expert knowledge. The 
-software engineer must also select the right programming 
-techniques that are apply to the problem domain he is trying to 
-solve because many techniques that are effective in one domain 
-might not be in another. For example, many types of applications 
-do not require performant written code, but a short time to 
-market. In this case, interpreted languages are widely popular 
-because it can satisfy such need. However, for writing huge 3D 
-games or operating system, compiled languages are dominant 
-because it can generate the most efficient code required for such 
-applications.
+]. Not only do software engineers needs to understand how to 
+implement the software, but also the problem domain that the 
+problem tries to solve, which might require in-depth expert 
+knowledge. The software engineer must also select the right 
+programming techniques that are applicable to the problem domain 
+he is trying to solve, because many techniques that are effective 
+in one domain might not be in another. For example, many 
+applications do not require performant written code, but rather, 
+short time to production. In this case, interpreted languages are 
+widely used because it can satisfy such need. However, for 
+writing huge 3D games or operating systems, compiled languages 
+are dominant because it can generate the most efficient code 
+required for such applications.
 
 Often, it is too much for a software engineer to learn 
 non-trivial domains (that might require a bachelor degree or 
@@ -520,37 +526,37 @@ themselves.
 [float Figure:
 
 
-[Figure 0.1:
+[Figure 0.1: 
 Problem domains: Software and Non-software.
 ]
 
-     <Graphics file: C:/Users/Tu Do/os01/book_src/images/01/domains_general.pdf>
+     <Graphics file: /Users/james/Documents/Programming/Git/os01/book_src/images/01/domains_general.pdf>
      
 ]
 
 One example of such scenario is the domain that is presenting in 
 this book: operating system. A certain amount of electrical 
 engineering (EE) knowledge is required to implement an operating 
-system. If a computer science (CS) curriculum that does not 
-include minimum EE courses, students in the curriculum have 
-little chance to implement a working operating system. Even if 
-they can implement one, either they need to invest a significant 
-amount of time to study on their own, or they fill code in a 
-predefined framework just to understand high-level algorithms. 
-For that reason, EE students have an easier time to implement an 
-OS, as they only need to study a few core CS courses. In fact, 
-only “C programming” and “Algorithms and Data Structures” classes 
-are usually enough to get them start writing code for device 
-drivers, and later generalize it into an operating system.
+system. If a computer science (CS) curriculum does not include 
+basic EE courses, students in the curriculum have trouble 
+implementing a working operating system. Even if they can 
+implement one, either they need to invest a significant amount of 
+time to study on their own, or they fill code in a predefined 
+framework just to understand high-level algorithms. For that 
+reason, EE students have an easier time to implement an OS, as 
+they only need to study a few core CS courses. In fact, only “C 
+programming” and “Algorithms and Data Structures” classes are 
+usually enough to get them started with writing code for device 
+drivers, which can be later generalized into an operating system.
 
 [float Figure:
 
 
-[Figure 0.2:
+[Figure 0.2: 
 Operating System domain.
 ]
 
-     <Graphics file: C:/Users/Tu Do/os01/book_src/images/01/domains_os_example.pdf>
+     <Graphics file: /Users/james/Documents/Programming/Git/os01/book_src/images/01/domains_os_example.pdf>
      
 ]
 
@@ -561,15 +567,15 @@ intelligence, etc., are parts of software engineering domains
 (actually it is more of a computer science domain than a software 
 engineering domain). In general, a software-exclusive domain 
 creates software to be used by other software. Operating System 
-is also a domain, but is overlapped with other domain such as 
+is also a domain, but is overlapped with other domains such as 
 electrical engineering. To effectively implement an operating 
 system, it is required to learn enough of the external domain. 
 How much learning is enough for a software engineer? At the 
 minimum, a software engineer should be knowledgeable enough to 
-understand the documents prepared by hardware engineers for using 
-(i.e. programming) their devices.
+understand the documents prepared by hardware engineers for 
+programming their devices.
 
-Learning a programming language, even C or Assembly, does not 
+Learning a programming language, such as C or Assembly, does not 
 mean a software engineer can automatically be good at hardware 
 programming or any related low-level programming domains. One can 
 spend 10 years, 20 years or his entire life writing C/C++ code, 
@@ -586,11 +592,11 @@ programming in their spare time.
   Documents for implementing a problem domain
 
 Documents are essential for learning a problem domain (and 
-actually, anything) since information can be passed down in a 
-reliable way. It is evident that this written text has been used 
-for thousands of years to pass knowledge from generations to 
-generations. Documents are integral parts of non-trivial 
-projects. Without the documents:
+actually, anything) because it allows information to be passed 
+down in a reliable way. It is evident that this written text has 
+been used for thousands of years to pass knowledge from 
+generations to generations. Documents are integral parts of 
+non-trivial projects. Without the documents:
 
 • New people will find it much harder to join a project.
 
@@ -603,10 +609,9 @@ projects. Without the documents:
   format to be displayed by a graphical user interface. Important 
   information must be stored somewhere safe, readily accessible.
 
-There are many types of documents. However, to facilitate the 
-understanding of a problem domain, these two documents need to be 
-written: software requirement document and software 
-specification. 
+There are many types of documents. However, to understand a 
+problem domain, these two documents need to be written: software 
+requirement document and software specification. 
 
   Software Requirement Document
 
@@ -616,39 +621,42 @@ Software requirement
 requirements and a description of the problem domain (Kovitz, 1999)
 .
 
-A software solves a business problem. But, which problems to 
-solve, are requested by a customer. Many of these requests make a 
-list of requirements that our software needs to fulfill. However, 
-an enumerated list of features is seldom useful in delivering 
-software. As stated in the previous section, the tricky part is 
-not programming alone but programming according to a problem 
-domain. The bulk of software design and implementation depends 
-upon the knowledge of the problem domain. The better understood 
-the domain, the higher quality software can be. For example, 
+Software solves business problems. A customer decides which 
+problems must be solved with the software, allowing us to find a 
+list of requirements which must be completed by the software. 
+While we may get these requirements as a list of features, it 
+won't be helpful when actully looking to develop the software. As 
+stated in the previous section, the tricky part is not 
+programming itself, but programming according to a problem 
+domain. The majority of software design and implementation 
+depends upon understanding the problem domain. The more which is 
+understood, the higher quality the software will be. For example, 
 building a house is practiced over thousands of years and is well 
-understood, and it is easy to build a high-quality house; 
-software is no difference. Code that is difficult to understand, 
-usually because of the ignorance of problem domain. In the 
-context of this book, we sought to understand the low-level 
-working of various hardware devices.
+understood, and it is easy to build a well structued house; 
+software is no different. Code that is difficult to understand is 
+usually due to ignorance of the problem domain. In the context of 
+this book, we sought to undersand the low-level operation of 
+various hardware devices.
 
-Because software quality depends upon the understandings of the 
-problem domain, the amount of software requirement document 
-should consist of problem domain description.
+Since software quality is dependant upon undersatding a problem 
+domain, a software requirement document should include a problem 
+doman description.
 
 Be aware that software requirements are not:
 
   What vs How
 
-  “what” and “how” are vague terms. What is the “what”? Does it 
-  consist of nouns only? If so, what if a customer requires his 
-  software to perform specific steps of operations, such as 
-  purchasing procedure for a customer on a website. Does it 
-  include “verbs” now? However, isn't the “how” supposed to be 
-  step by step operations? Anything can be the “what” and 
-  anything can be the “how”. 
+
+  “what” and “how” are vague terms. What is the “what”? Is it 
+  nouns only? If so, what if a customer requires his software to 
+  perform specific steps of operations, such as purchasing 
+  procedure for a customer on a website. Does it include “verbs” 
+  now? However, isn't the “how” supposed to be step by step 
+  operations? Anything can be the “what” and anything can be the “
+  how”. 
 
   Sketches
+
 
   Software requirement document is all about the problem domain. 
   It should not be a high-level description of an implementation. 
@@ -661,7 +669,7 @@ Be aware that software requirements are not:
 
   • Books are stored in a linked list”. 
 
-  • ...
+  • Airports are stored as a graph.
 
   In the future, instead of a drop-down menu, all books are 
   listed directly on a page in thumbnails. Books might be 
@@ -674,14 +682,15 @@ Be aware that software requirements are not:
   much, the developers give up documentation, and everyone starts 
   ranting how useless documentation is. 
 
-  More often than not there is no straightforward one-to-one 
-  mapping. For example, a regular computer user expects OS to be 
-  something that runs some program with GUI, or their favorite 
-  computer games. But for such requirements, an operating system 
-  is implemented as multiple layers, each hides the details from 
-  the upper layers. To implement an operating system, a large 
-  body of knowledge from multiple fields are required, especially 
-  if the operating system runs on non-PC devices. 
+  More often than not, there is no straightforward one-to-one 
+  mapping. For example, the average user expects an OS to be 
+  something that runs programs with GUI, or their favorite 
+  computer game. But for such requirements, an operating system 
+  is implemented with multiple layers, each hiding their own 
+  details from the upper layers. To implement an operating 
+  system, a large body of knowledge from multiple fields are 
+  required, especially if the operating system runs on non-PC 
+  devices. 
 
   It's better to put anything related to the problem domain in 
   the requirement document. A good way to test the quality of 
@@ -694,17 +703,17 @@ Be aware that software requirements are not:
 
 Software specification[margin:
 Software specification
-]Software specification document states rules relating desired 
+]Software specification documents state rules describing desired 
 behavior of the output devices to all possible behavior of the 
-input devices, as well as any rules that other parts of the 
-problem domain must obey.Kovitz (1999)
+input values, as well as any rules that other parts of the 
+problem domain must obey.Kovitz (1999)0
 
 Simply put, software specification is interface design, with 
-constraints for the problem domain to follow e.g. the software 
+constraints for the problem domain to follow (i.e: the software 
 can accept certain types of input such as the software is 
-designed to accept English but no other language. For a hardware 
+designed to accept English but no other language). For a hardware 
 device, a specification is always needed, as software depends on 
-its hardwired behaviors. And in fact, it is mostly the case that 
+its hardwired behaviors. In fact, it is mostly the case that 
 hardware specifications are well-defined, with the tiniest 
 details in it. It needs to be that way because once hardware is 
 physically manufactured, there's no going back, and if defects 
@@ -775,32 +784,32 @@ flow to achieve desired effects in the real world. Computers are
 no exception. When we write software, we indirectly manipulate 
 electrical current at the physical level, in such a way that the 
 underlying machine produces desired effects. To understand the 
-process, we consider a simple light bulb. A light bulb can change 
-two states between on and off with a switch, periodically: an off 
-means number 0, and an on means 1.[float MarginFigure:
-[MarginFigure 1:
+process, we start from a light bulb. A light bulb can be 
+alternating between on and off with a switch, periodically: an 
+off means number 0, and an on means 1.[float MarginFigure:
+[MarginFigure 1: 
 A lightbulb
 ]
 
-<Graphics file: C:/Users/Tu Do/os01/book_src/images/02/bulb.svg>
+<Graphics file: /Users/james/Documents/Programming/Git/os01/book_src/images/02/bulb.svg>
 ]
 
-However, one problem is that such a switch requires manual 
-intervention from a human. What is required is an automatic 
-switch based on the voltage level, as described above. To enable 
-automatic switching of electrical signals, a device called 
-transistor, invented by William Shockley, John Bardeen and Walter 
-Brattain. This invention started the whole computer industry. 
+However, one problem is that such switch requires manual 
+intervention from a human. What needed is an automatic switch 
+based on voltage level, as described above. To enable automatic 
+switching of electrical signals, a device called transistor, 
+invented by William Shockley, John Bardeen and Walter Brattain. 
+This invention started the whole computer industry. 
 
 At the core, a [margin:
 transistor
 ]transistortransistor is just a resistor whose values can vary 
 based on an input voltage value[float MarginFigure:
-[MarginFigure 2:
+[MarginFigure 2: 
 Modern transistor
 ]
 
-<Graphics file: C:/Users/Tu Do/os01/book_src/images/02/transistor.svg>
+<Graphics file: /Users/james/Documents/Programming/Git/os01/book_src/images/02/transistor.svg>
 ]. With this property, a transistor can be used as a current 
 amplifier (more voltage, less resistance) or switch electrical 
 signals off and on (block and unblock an electron flow) based on 
@@ -850,11 +859,11 @@ logic gate
 logic gate includes a number of inputs and an output. All 
 computer operations are built from the combinations of logic 
 gates, which are just combinations of boolean functions. [float MarginFigure:
-[MarginFigure 3:
+[MarginFigure 3: 
 Example: NAND gate
 ]
 
-<Graphics file: C:/Users/Tu Do/os01/book_src/images/02/Nand-gate.svg>
+<Graphics file: /Users/james/Documents/Programming/Git/os01/book_src/images/02/Nand-gate.svg>
 
 
 ]
@@ -873,7 +882,7 @@ Boolean functions, a set of Boolean functions is functionally complete
 functionally complete
 ]functionally complete, if this set can construct all other 
 Boolean functions can be constructed from. Later, Charles Sanders 
-Peirce (during 1880 -- 1881) proved that either Boolean function 
+Peirce (during 1880 – 1881) proved that either Boolean function 
 of NOR or NAND alone is enough to create all other Boolean logic 
 functions. Thus NOR and NAND gates are functionally complete Peirce (1933)
 . Gates are simply the implementations of Boolean logic 
@@ -915,7 +924,7 @@ From NOT gate, a NAND gate can be created:
 
 
 
-From NAND gate, we have all other gates. As demonstrated, such a 
+From NAND gate, we have all other gates. As demonstrated, such 
 simple circuitry performs the logical operators in day-to-day 
 program languages e.g. NOT operator ~ is executed directly by an 
 inverter circuit, and operator & is executed by an AND circuit 
@@ -953,12 +962,13 @@ consumer market. Depends on the context, it is understood
 differently.[float MarginFigure:
 
 
-[MarginFigure 4:
+[MarginFigure 4: 
 74HC00 chip physical view
 ]
 
-<Graphics file: C:/Users/Tu Do/os01/book_src/images/02/74hc00_nxp_physical.jpg>
+<Graphics file: /Users/james/Documents/Programming/Git/os01/book_src/images/02/74hc00_nxp_physical.jpg>
 ]
+
 
 
 -------------------------------------------
@@ -973,24 +983,25 @@ chip comes with 4 gates that can be combined. Each combination
 enables a different logic function, effective creating other 
 logic gates. This feature is what make the chip popular. 
 
+
   [float Figure:
-[Figure 0.3:
+[Figure 0.3: 
 74HC00 logic diagrams (Source: 74HC00 datasheet, http://www.nxp.com/documents/data_sheet/74HC_HCT00.pdf
 )
 ]
 
 [float Figure:
-[Sub-Figure a:
+[Sub-Figure a: 
 Logic diagram of 74HC00
 ]
 
-<Graphics file: C:/Users/Tu Do/os01/book_src/images/02/7400_block_diagram.png>
+<Graphics file: /Users/james/Documents/Programming/Git/os01/book_src/images/02/7400_block_diagram.png>
 ]     [float Figure:
-[Sub-Figure b:
+[Sub-Figure b: 
 Logic diagram of one NAND gate
 ]
 
-<Graphics file: C:/Users/Tu Do/os01/book_src/images/02/7400_logic_diagram.png>
+<Graphics file: /Users/james/Documents/Programming/Git/os01/book_src/images/02/7400_logic_diagram.png>
 ]
 ]
 
@@ -1006,6 +1017,7 @@ Logic diagram of one NAND gate
   write the output of 1 NAND gate to an input of another NAND 
   gate, thus chaining NAND gates together to produce the diagrams 
   as above.
+
 
 
 -------------------------------------------
@@ -1029,9 +1041,9 @@ architecture, the pattern 10100000 means telling a CPU to add two
 numbers, or 000000101 to halt a computer. In the early days of 
 computers, people had to write completely in binary.
 
-Why does such a bit pattern cause a device to do something? The 
+Why does such bit pattern cause a device to do something? The 
 reason is that underlying each instruction is a small circuit 
-that implements the instruction. Similar to how a 
+that implements such instruction. Similar to how a 
 function/subroutine in a computer program is called by its name, 
 a bit pattern is a name of a little function inside a CPU that 
 got executed when the CPU finds one.
@@ -1045,6 +1057,7 @@ the device to perform different actions. For example, a printer
 has its set of commands for instructing it how to prints a page.
 
 
+
 -------------------------------------------
 
 
@@ -1052,13 +1065,14 @@ has its set of commands for instructing it how to prints a page.
 its internal, but only the interface for using the device. First, 
 we need to know its layout:
 
+
   [float Figure:
-[Figure 0.4:
+[Figure 0.4: 
 74HC00 Pin Layout (Source: 74HC00 datasheet, http://www.nxp.com/documents/data_sheet/74HC_HCT00.pdf
 )
 ]
 
-     <Graphics file: C:/Users/Tu Do/os01/book_src/images/02/7400_pin_configuration.pdf>
+     <Graphics file: /Users/james/Documents/Programming/Git/os01/book_src/images/02/7400_pin_configuration.pdf>
      
 ]
 
@@ -1070,7 +1084,7 @@ we need to know its layout:
 Then, the functionality of each pin:
 
   [float Table:
-[Table 1:
+[Table 1: 
 Pin Description (Source: 74HC00 datasheet, http://www.nxp.com/documents/data_sheet/74HC_HCT00.pdf
 )
 ]
@@ -1095,7 +1109,7 @@ Pin Description (Source: 74HC00 datasheet, http://www.nxp.com/documents/data_she
   Finally, how to use the pins:
 
   [float Table:
-[Table 2:
+[Table 2: 
 Functional Description
 ]
 
@@ -1121,8 +1135,8 @@ Functional Description
 ]The functional description provides a truth table with all 
   possible pin inputs and outputs, which also describes the usage 
   of all pins in the device. A user needs not to know the 
-  implementation, but on such a table to use the device. We can 
-  say that the truth table above is the machine language of the 
+  implementation, but on such table to use the device. We can say 
+  that the truth table above is the machine language of the 
   device. Since the device is digital, its language is a 
   collection of binary strings:
 
@@ -1136,8 +1150,7 @@ Functional Description
   the number of output strings is what the device can speak. 
   Together, they make the language of the device. Even though 
   this device is simple, yet the language it can accept contains 
-  quite many binary strings: 2^{8}+2^{4}=272
-. However, the 
+  quite many binary strings: 2^{8}+2^{4}=272. However, such 
   number is a tiny fraction of a complex device like a CPU, with 
   hundreds of pins.
 
@@ -1166,10 +1179,10 @@ at the maximum.
   [float Figure:
 
 
-[Figure 0.5:
+[Figure 0.5: 
 Pins when receiving digital signals that correspond to a binary 
 string. Green signals are inputs; blue signals are outputs.
-]     <Graphics file: C:/Users/Tu Do/os01/book_src/images/02/7400_bin_string1.pdf>
+]     <Graphics file: /Users/james/Documents/Programming/Git/os01/book_src/images/02/7400_bin_string1.pdf>
      
 ]
 
@@ -1186,7 +1199,7 @@ string. Green signals are inputs; blue signals are outputs.
   
 
 [float Table:
-[Table 3:
+[Table 3: 
 Truth table of OR logic diagram.
 ]
 
@@ -1214,16 +1227,16 @@ Truth table of OR logic diagram.
 
 
 
-To implement a 4-bit OR gate, we need a total of four of 74HC00 
-chips configured as OR gates, packaged as a single chip as in 
-figure [or-chip-74hc00].
+To implement a 4-bit OR gate, we need a total of four of such 
+74HC00 chips configured as OR gates, packaged as a single chip as 
+in figure [or-chip-74hc00].
 
 [float Figure:
-[Figure 0.6:
+[Figure 0.6: 
 4-bit OR chip made from four 74HC00 devices
 ]<or-chip-74hc00>
 
-     <Graphics file: C:/Users/Tu Do/os01/book_src/images/02/4-bit-or-gate-layout.pdf>
+     <Graphics file: /Users/james/Documents/Programming/Git/os01/book_src/images/02/4-bit-or-gate-layout.pdf>
      
 ]
 
@@ -1245,6 +1258,7 @@ want to understand, the deeper understanding of machine
 architecture is required.
 
 We can build a device with 2 assembly instructions:
+
 
   or   <op1>, <op2>
 
@@ -1274,7 +1288,7 @@ We can build a device with 2 assembly instructions:
     operation code or opcode for short, and embed it as part of 
     input. The value for each instruction is specified as in 
     table [ex-ins-ops].[float MarginTable:
-[MarginTable 1:
+[MarginTable 1: 
 Instruction-Opcode mapping.
 ]<ex-ins-ops>
 
@@ -1289,6 +1303,7 @@ Instruction-Opcode mapping.
 +--------------+-------------+
 
 ]
+
 
     Each input now contains additional data at the beginning: an 
     opcode. For example, the instruction:
@@ -1350,17 +1365,17 @@ storage device
 
   • Execute the instruction.
 
-  Or in short, a fetch -- decode -- executefetch -- decode -- 
-  execute cycle. The above device is extremely rudimentary, but 
-  it already represents a computer with a fetch -- decode -- 
-  execute cycle. More instructions can be implemented by adding 
-  more devices and allocating more opcodes for the instructions, 
-  then update the decoder accordingly. The Apollo Guidance 
-  Computer, a digital computer produced for the Apollo space 
-  program from 1961 -- 1972, was built entirely with NOR gates - 
-  the other choice to NAND gate for creating other logic gates. 
-  Similarly, if we keep improving our hypothetical device, it 
-  eventually becomes a full-fledge computer.
+  Or in short, a fetch – decode – executefetch – decode – execute 
+  cycle. The above device is extremely rudimentary, but it 
+  already represents a computer with a fetch – decode – execute 
+  cycle. More instructions can be implemented by adding more 
+  devices and allocating more opcodes for the instructions, then 
+  update the decoder accordingly. The Apollo Guidance Computer, a 
+  digital computer produced for the Apollo space program from 
+  1961 – 1972, was built entirely with NOR gates - the other 
+  choice to NAND gate for creating other logic gates. Similarly, 
+  if we keep improving our hypothetical device, it eventually 
+  becomes a full-fledge computer.
 
   Programming Languages
 
@@ -1370,17 +1385,17 @@ repeating patterns of usages. It would be nice if instead of
 writing all the repeating blocks of code all over again in all 
 places, we simply refer to such blocks of code with easier to use 
 text forms. For example, a block of assembly code checks whether 
-one variable is greater than another and if so, execute a block 
-of code, else execute another block of code; in C, such block of 
+one variable is greater than another and if so, execute the block 
+of code A, else execute the block of code B; in C, such block of 
 assembly code is represented by an if statement that is close to 
 human language. 
 
 [float Figure:
-[Figure 0.7:
+[Figure 0.7: 
 Repeated assembly patterns are generalized into a new language.
 ]
 
-     <Graphics file: C:/Users/Tu Do/os01/book_src/images/02/asm_to_proglang.pdf>
+     <Graphics file: /Users/james/Documents/Programming/Git/os01/book_src/images/02/asm_to_proglang.pdf>
      
 ]
 
@@ -1554,11 +1569,13 @@ domain it is trying to solve. Consider this example: That is, the
 what it will do rather the how it will do.
 
 
+
 -------------------------------------------
 
 
 Graphviz (http://www.graphviz.org/) is a visualization software 
 that provides a language, called dot, for describing graph:
+
 
   
 
@@ -1588,6 +1605,7 @@ that provides a language, called dot, for describing graph:
   programmer is needed to decipher and extract the domain 
   knowledge out. If the domain knowledge cannot be extracted, 
   then the software cannot be further developed.
+
 
 
 
@@ -1673,14 +1691,14 @@ The audience are people with their personal computer connected to
 a server.
 
 [float Figure:
-[Figure 0.8:
+[Figure 0.8: 
 Blade servers. Each blade server is a computer with a modular 
 design optimize for the use of physical space and energy. The 
 enclosure of blade servers is called a chassis.(Source: [https://commons.wikimedia.org/wiki/File:Wikimedia_Foundation_Servers-8055_35.jpg||Wikimedia]
 , author: Victorgrigas)
 ]
 
-     <Graphics file: C:/Users/Tu Do/os01/book_src/images/03/Wikimedia_Foundation_Servers-8055_35.jpg>
+     <Graphics file: /Users/james/Documents/Programming/Git/os01/book_src/images/03/Wikimedia_Foundation_Servers-8055_35.jpg>
      
 ]
 
@@ -1698,11 +1716,11 @@ putting various computer components such as a processor, a
 motherboard, a power supply, a hard drive, etc.
 
 [float Figure:
-[Figure 0.9:
+[Figure 0.9: 
 A typical desktop computer.
 ]
 
-     <Graphics file: C:/Users/Tu Do/os01/book_src/images/03/computer-158675.svg>
+     <Graphics file: /Users/james/Documents/Programming/Git/os01/book_src/images/03/computer-158675.svg>
      
 ]
 
@@ -1742,21 +1760,21 @@ embedded computer
 ]embedded computerembedded computer is a single-board or 
 single-chip computer with limited resources designed for 
 integrating into larger hardware devices. [float MarginFigure:
-[MarginFigure 5:
+[MarginFigure 5: 
 An Intel 82815 Graphics and Memory Controller Hub embedded on a 
 PC motherboard. (Source: [https://commons.wikimedia.org/wiki/File:Intel_82815_GMCH.jpg||Wikimedia]
 , author: Qurren)
 ]
 
-     <Graphics file: C:/Users/Tu Do/os01/book_src/images/03/Intel_82815_GMCH.jpg>
+     <Graphics file: /Users/james/Documents/Programming/Git/os01/book_src/images/03/Intel_82815_GMCH.jpg>
      
 ][float MarginFigure:
-[MarginFigure 6:
+[MarginFigure 6: 
 A PIC microcontroller. (Soure: [http://www.microchip.com/wwwproducts/en/PIC18F4620||Microchip]
 )
 ]
 
-     <Graphics file: C:/Users/Tu Do/os01/book_src/images/03/medium-PIC18F4620-PDIP-40.png>
+     <Graphics file: /Users/james/Documents/Programming/Git/os01/book_src/images/03/medium-PIC18F4620-PDIP-40.png>
      
 ]
 
@@ -1785,17 +1803,17 @@ smartphone, such as Apple A5 SoC used in Ipad2 and iPhone 4S, or
 Qualcomm Snapdragon used in many Android phones.[float MarginFigure:
 
 
-[MarginFigure 7:
+[MarginFigure 7: 
 Apple A5 SoC
 ]
 
-     <Graphics file: C:/Users/Tu Do/os01/book_src/images/03/128px-Apple_A5_Chip.jpg>
+     <Graphics file: /Users/james/Documents/Programming/Git/os01/book_src/images/03/128px-Apple_A5_Chip.jpg>
      
 ]
 
 Be it a microcontroller or a system-on-chip, there must be an 
 environment where these devices can connect to other devices. 
-This environment is a circuit board called a PCBPCB -- Printed Circuit Board
+This environment is a circuit board called a PCBPCB – Printed Circuit Board
 Printed Circuit Board. A printed circuit boardPrinted Circuit Board
  is a physical board that contains lines and pads to enable 
 electron flows between electrical and electronics components. 
@@ -1844,12 +1862,12 @@ feature. This high-level feature is usually a dedicated algorithm
 that needs high-speed processing.
 
 [float Figure:
-[Figure 0.10:
+[Figure 0.10: 
 FPGA Architecture (Source: [http://www.ni.com/tutorial/6097/en/||National Instruments]
 )
 ]
 
-     <Graphics file: C:/Users/Tu Do/os01/book_src/images/03/fpga_400x212.jpg>
+     <Graphics file: /Users/james/Documents/Programming/Git/os01/book_src/images/03/fpga_400x212.jpg>
      
 ]
 
@@ -1911,7 +1929,6 @@ architect from high level to low level.
 
 Computer\,Architecture=Instruction\,Set\,Architecture+Computer\,Organization+Hardware
 
-
 At the highest-level is the Instruction Set Architecture.
 
 At the middle-level is the Computer Organization.
@@ -1954,11 +1971,11 @@ computer architecture.
 ]:
 
 [float Figure:
-[Figure 0.11:
+[Figure 0.11: 
 Von-Neumann Architecture
 ]
 
- <Graphics file: C:/Users/Tu Do/os01/book_src/images/03/von_neumann_architecture.pdf>
+ <Graphics file: /Users/james/Documents/Programming/Git/os01/book_src/images/03/von_neumann_architecture.pdf>
  
 ]
 
@@ -1982,8 +1999,8 @@ its internal storage for executing, one after another. Data are
 transferred through a data bus between CPU, memory and I/O 
 devices, and where to store in the devices is transferred through 
 the address bus by the CPU. This architecture completely 
-implements the fetch -- decode -- executefetch -- decode -- 
-execute cycle.
+implements the fetch – decode – executefetch – decode – execute 
+cycle.
 
 The earlier computers were just the exact implementations of the 
 Von Neumann architecture, with CPU and memory and I/O devices 
@@ -2039,6 +2056,7 @@ Registers
   software to control hardware directly by writing to registers 
   of a device, or receive information from hardware device when 
   reading from registers of a device.
+
 
   Not all registers are used for communication with other 
   devices. In a CPU, most registers are used as high-speed 
@@ -2151,6 +2169,7 @@ that a CPU can control. This environment typically consists of
 • a chipset of two chips which are the Northbridge and 
   Southbridge chips
 
+
   – Northbridge chip is responsible for the high-performance 
     communication between CPU, main memory and the graphic card. 
 
@@ -2167,11 +2186,11 @@ that a CPU can control. This environment typically consists of
 • ports for I/O devices, e.g. keyboard, mouse, USB.
 
 [float Figure:
-[Figure 0.12:
+[Figure 0.12: 
 Motherboard organization.
 ]<mobo-organization>
 
-<Graphics file: C:/Users/Tu Do/os01/book_src/images/03/Motherboard_diagram.svg>
+<Graphics file: /Users/james/Documents/Programming/Git/os01/book_src/images/03/Motherboard_diagram.svg>
 ]
 
 To write a complete operating system, a programmer needs to 
@@ -2281,6 +2300,7 @@ $ objdump -d hello
 
 
 
+
 -d option only displays assembled contents of executable 
 sections. A sectionsection is a block of memory that contains 
 either program code or data. A code section is executable by the 
@@ -2293,6 +2313,7 @@ section when studying ELF binary file format in chapter [chap:The-Anatomy-of-a-p
 
 
 $ objdump -D hello
+
 
 
 
@@ -2328,6 +2349,7 @@ $ objdump -M intel -D hello | less
 
 
 
+
 When using -M option, option -D or -d must be explicitly 
 supplied. Next, we will use objdump to examine how compiled C 
 data and code are represented in machine code.
@@ -2341,6 +2363,7 @@ $ objdump -M i386,intel -D hello | less
 
 
 
+
 -M i386 tells objdump to display assembly content using 32-bit 
 layout. Knowing the difference between 32-bit and 64-bit is 
 crucial for writing kernel code. We will examine this matter 
@@ -2351,9 +2374,11 @@ later on when writing our kernel.
 At the start of the output displays the file format of the object 
 file:
 
+
 hello: file format elf64-x86-64
 
 After the line is a series of disassembled sections:
+
 
 Disassembly of section .interp:
 
@@ -2374,6 +2399,7 @@ etc
 Finally, each disassembled section displays its actual content - 
 which is a sequence of assembly instructions - with the following 
 format:
+
 
 4004d6:       55                      push   rbp
 
@@ -2397,6 +2423,7 @@ format:
 • The optional fourth column is a comment - appears when there is 
   a reference to an address - to inform where the address 
   originates. For example, the comment in blue:
+
 
       lea    r12,[rip+0x2008ee]        # 600e10 
   <__frame_dummy_init_array_entry>
@@ -2486,11 +2513,13 @@ this purpose, we use nasm assembler to write a few line of
 assembly code and see the generated code.
 
 
+
 -------------------------------------------
 
 
 Suppose we want to see the machine code generated for this 
 instruction:
+
 
   jmp eax
 
@@ -2503,6 +2532,7 @@ instruction:
   $ nasm -f bin test.asm -o test
 
   
+
 
   -f option specifies the file format, e.g. ELF, of the final 
   output file. But in this case, the format is bin, which means 
@@ -2532,18 +2562,22 @@ base, e.g. binary, other than hex.
   equivalent to the instruction jmp eax. 
 
 
+
 -------------------------------------------
+
 
 
 
 
 If we were to use elf as file format:
 
+
   
 
   $ nasm -f elf test.asm -o test
 
   
+
 
   It would be more challenging to learn and understand assembly 
   instructions with all the added noise[footnote:
@@ -2649,7 +2683,7 @@ manual.
 
 
 
-<Graphics file: C:/Users/Tu Do/os01/book_src/images/04/x86_instruction_format.pdf>
+<Graphics file: /Users/james/Documents/Programming/Git/os01/book_src/images/04/x86_instruction_format.pdf>
 
 
 
@@ -2676,6 +2710,7 @@ of information. These parts are:
   includes an additional 3-bit field in the ModR/M byte when 
   needed.
 
+
   This instruction:
 
   jmp [0x1234]
@@ -2691,6 +2726,7 @@ of information. These parts are:
   be a register, a memory location or an immediate value. This 
   component of an instruction consists of 3 smaller parts:
 
+
   • mod field, or modifier field, is combined with r/m field for 
     a total of 5 bits of information to encode 32 possible 
     values: 8 registers and 24 addressing modes.
@@ -2704,6 +2740,7 @@ of information. These parts are:
   The tables [mod-rm-16] and [mod-rm-32] list all possible 256 
   values of ModR/M byte and how each value maps to an addressing 
   mode and a register, in 16-bit and 32-bit modes.
+
 
 
 
@@ -2847,10 +2884,12 @@ look up the byte value in this table to get the corresponding
 operands in the row and column.
 
 
+
 -------------------------------------------
 
 
 An instruction uses this addressing mode:
+
 
   jmp [0x1234]
 
@@ -2884,6 +2923,7 @@ Remember, using bin format generates 16-bit code by default
   Let's break down the ModR/M byte, with an example value c8, 
   into bits:
 
+
   
 +----------+---------------------+-------------+
   |   mod    |     reg/opcode      |     r/m     |
@@ -2901,6 +2941,7 @@ Remember, using bin format generates 16-bit code by default
   instruction requires one.
 
 
+
 -------------------------------------------
 
 
@@ -2909,8 +2950,8 @@ Remember, using bin format generates 16-bit code by default
   is the name that is based on this formula for calculating an 
   effective address:
 
-  \mathtt{Effective\,address=scale*index+base}
 
+  \mathtt{Effective\,address=scale*index+base}
 
   • Index is an offset into an array.
 
@@ -2922,8 +2963,8 @@ Remember, using bin format generates 16-bit code by default
     each element is 12-bytes long instead of 1, 2, 4 or 8, Scale 
     is set to 1 and a compiler needs to calculate the offset:
 
-    \mathtt{Effective\,address=1*(12*n)+base}
 
+    \mathtt{Effective\,address=1*(12*n)+base}
 
     Why do we bother with SIB when we can manually calculate the 
     offset? The answer is that in the above scenario, an 
@@ -3013,6 +3054,7 @@ Remember, using bin format generates 16-bit code by default
 
   This instruction:
 
+
     jmp [eax*2 + ebx]
 
     generates the following code:
@@ -3030,7 +3072,9 @@ Remember, using bin format generates 16-bit code by default
 
   Displacement is the offset from the start of the base index. 
 
+
   This instruction:
+
 
     jmp [0x1234]
 
@@ -3043,6 +3087,7 @@ Remember, using bin format generates 16-bit code by default
     ModR/M byte. 
 
     This instruction:
+
 
       jmp [eax * 4  + 0x1234]
 
@@ -3072,7 +3117,9 @@ Remember, using bin format generates 16-bit code by default
   is not necessary used an offset, but an arbitrary value of 
   anything. 
 
+
   This instruction:
+
 
     mov eax, 0x1234
 
@@ -3093,6 +3140,7 @@ Remember, using bin format generates 16-bit code by default
 
 Read section 2.1 in Volume 2 for even more details. 
 
+
   Skim through section 5.1 in volume 1. Read chapter 7 in volume 
   1. If there are terminologies that you don't understand e.g. 
   segmentation, don't worry as the terms will be explained in 
@@ -3109,6 +3157,7 @@ the following common structure for organizing information:
 
   Opcode table lists all possible opcodes of an assembly 
   instruction.
+
 
   Each table contains the following fields, and can have one or 
   more rows:
@@ -3148,6 +3197,7 @@ Feature flag    Description |
     Encoding” is added for explaining the operand encoding, with 
     the following structure:
 
+
     
 +--------+------------+------------+------------+-----------+
     | Op/En  | Operand 1  | Operand 2  | Operand 3  | Operand 4 |
@@ -3177,12 +3227,13 @@ lists the information of available CPUs and its features in flags
 field.
 ]
 
+
     Compat/Leg Mode Many instructions do not have this field, but 
       instead is replaced with Compat/Leg Mode, which stands for 
       Compatibility or Legacy Mode. This mode enables 64-bit 
       variants of instructions to run normally in 16 or 32-bit 
       mode. [float MarginTable:
-[MarginTable 2:
+[MarginTable 2: 
 Notations in Compat/Leg Mode
 ]
 
@@ -3309,23 +3360,21 @@ main2:
 generates the machine code:
 
 [float Table:
-[Table 4:
+[Table 4: 
 Memory address of each opcode
 ]
 
 
-           +-------------------+                  +-------------------------+            
-           | main              |                  |          main2          |            
-           +-------------------+                  +-------------------------+            
-             \downarrow
-                                  \downarrow
-                    
-+----------+--------------+-----+-----+-----+-----+-----+--------------+-----+-----+----+
-| Address  |     00       | 01  | 02  | 03  | 04  | 05  |     06       | 07  | 08  | 09 |
-+----------               +-----+-----+-----+-----+-----+--------------+-----+-----+----+
-+----------+--------------+-----+-----+-----+-----+-----+--------------+-----+-----+----+
-| Opcode   |     eb       | fe  | eb  | 02  | eb  | fa  |     e9       | 2b  | 12  | 00 |
-+----------+--------------+-----+-----+-----+-----+-----+--------------+-----+-----+----+
+           +------------------+                  +------------------------+            
+           | main             |                  |         main2          |            
+           +------------------+                  +------------------------+            
+             \downarrow                                  \downarrow                    
++----------+-------------+-----+-----+-----+-----+-----+-------------+-----+-----+----+
+| Address  |     00      | 01  | 02  | 03  | 04  | 05  |     06      | 07  | 08  | 09 |
++----------              +-----+-----+-----+-----+-----+-------------+-----+-----+----+
++----------+-------------+-----+-----+-----+-----+-----+-------------+-----+-----+----+
+| Opcode   |     eb      | fe  | eb  | 02  | eb  | fa  |     e9      | 2b  | 12  | 00 |
++----------+-------------+-----+-----+-----+-----+-----+-------------+-----+-----+----+
 
 ]
 
@@ -3421,8 +3470,9 @@ make it more concrete, here is an example:
 
 
 
-     <Graphics file: C:/Users/Tu Do/os01/book_src/images/04/far_jmp_ex.pdf>
+     <Graphics file: /Users/james/Documents/Programming/Git/os01/book_src/images/04/far_jmp_ex.pdf>
      
+
 
 
 
@@ -3488,7 +3538,7 @@ and 16 bytes (128 bits).
 
 
 
-<Graphics file: C:/Users/Tu Do/os01/book_src/images/04/fundamental_data_types.pdf>
+<Graphics file: /Users/james/Documents/Programming/Git/os01/book_src/images/04/fundamental_data_types.pdf>
 
 
 
@@ -3525,6 +3575,7 @@ to the fundamental types:
 
   Source
 
+
   #include <stdint.h>
 
 
@@ -3552,6 +3603,7 @@ int main(int argc, char *argv[]) {
 }
 
   Assembly
+
 
   0804a018 <byte>:
 
@@ -3658,6 +3710,7 @@ $ readelf -x .data hello
 
 
 
+
 the output is (the colors mark which values belong to which 
 variables):
 
@@ -3737,7 +3790,7 @@ Pointers are variables that hold memory addresses. x86 works with
 
 
 
-     <Graphics file: C:/Users/Tu Do/os01/book_src/images/04/pointer_data_type.pdf>
+     <Graphics file: /Users/james/Documents/Programming/Git/os01/book_src/images/04/pointer_data_type.pdf>
      
 
 
@@ -3748,6 +3801,7 @@ the address of current segment starts at 0, so the offset is
 actually any memory addres from 0 to the maximum address.
 
   Source
+
 
   #include <stdint.h>
 
@@ -3768,6 +3822,7 @@ int main(int argc, char *argv[]) {
 }
 
   Assembly
+
 
   0000000000601030 <p1>:
 
@@ -3832,12 +3887,13 @@ structures at the bit level are common for low-level programming.
 
 
 
-     <Graphics file: C:/Users/Tu Do/os01/book_src/images/04/bit_field_data_type.pdf>
+     <Graphics file: /Users/james/Documents/Programming/Git/os01/book_src/images/04/bit_field_data_type.pdf>
      
 
 
 
   Source
+
 
   struct bit_field {
 
@@ -3938,6 +3994,7 @@ int main(int argc, char *argv[]) {
 }
 
   Assembly
+
 
   Each variable and its value are given a unique color in the 
   assembly listing below:
@@ -4041,6 +4098,7 @@ all 4 bytes..
 What happens when the definition of bit_field struct and bf 
 variable are changed to:
 
+
   struct bit_field {
 
       int data1:8;
@@ -4087,6 +4145,7 @@ types:
 
   Source
 
+
   #include <stdint.h>
 
 
@@ -4112,6 +4171,7 @@ int main(int argc, char *argv[])
 }
 
   Assembly
+
 
   0804a018 <a8>:
 
@@ -4176,7 +4236,7 @@ a64[1] are the same: f0 de bc 9a 78 56 34 12, that got
 misinterpreted to fidivr instruction.
 
 [float Figure:
-[Figure 0.13:
+[Figure 0.13: 
 a8, a16, a32 and a64 memory layouts
 ]
 
@@ -4211,6 +4271,7 @@ hardware string type, C provides its own syntax for
 multi-dimensional arrays:
 
   Source
+
 
   #include <stdint.h>
 
@@ -4248,6 +4309,7 @@ int main(int argc, char *argv[]) {
 
   Assembly
 
+
   0804a018 <a2>:
 
    804a018: 12 34 56                adc    dh,BYTE PTR 
@@ -4271,8 +4333,7 @@ int main(int argc, char *argv[]) {
 
 Technically, multi-dimensional arrays are like normal arrays: in 
 the end, the total size is translated into flat allocated bytes. 
-A 2 x 2 array is allocated with 4 bytes; a 2\times2\times2
- array 
+A 2 x 2 array is allocated with 4 bytes; a 2\times2\times2 array 
 is allocated with 8 bytes, as can be seen in the assembly listing 
 of a2[footnote:
 Again, objdump is confused and put the number 12 next to 78 in a3 
@@ -4287,6 +4348,7 @@ time.
 
 The following two-dimensional array can hold a list of 2 names 
 with the length of 10:
+
 
   char names[2][10] = {
 
@@ -4357,6 +4419,7 @@ another storage source.
 
   Source
 
+
   #include <stdint.h>
 
 
@@ -4378,6 +4441,7 @@ int main(int argc, char *argv[]) {
 }
 
   Assembly
+
 
   080483db <main>:
 
@@ -4445,6 +4509,7 @@ register.
   Expressions
 
   Source
+
 
   int expr(int i, int j)
 
@@ -4518,10 +4583,12 @@ int main(int argc, char *argv[]) {
 
   Assembly
 
+
   The full assembly listing is really long. For that reason, we 
   examine expression by expression.
 
   Expression: int add = i + j;
+
 
      80483e1:       mov    edx,DWORD PTR [ebp+0x8]
 
@@ -4539,6 +4606,7 @@ int main(int argc, char *argv[]) {
 
   Expression: int sub = i - j;
 
+
     80483ec:       mov    eax,DWORD PTR [ebp+0x8]
 
     80483ef:       sub    eax,DWORD PTR [ebp+0xc]
@@ -4553,6 +4621,7 @@ int main(int argc, char *argv[]) {
     into the variable sub, at location [ebp-0x30].
 
   Expression: int mul = i * j;
+
 
     80483f5:       mov    eax,DWORD PTR [ebp+0x8]
 
@@ -4569,6 +4638,7 @@ Unsigned multiply is perform by mul instruction.
     variable mul at location [ebp-0x34].
 
   Expression: int div = i / j;
+
 
     80483ff:       mov    eax,DWORD PTR [ebp+0x8]
 
@@ -4596,6 +4666,7 @@ Unsigned multiply is perform by mul instruction.
 
   Expression: int mod = i % j;
 
+
     8048409:       mov    eax,DWORD PTR [ebp+0x8]
 
     804840c:       cdq    
@@ -4609,6 +4680,7 @@ Unsigned multiply is perform by mul instruction.
     variable mod, at location [ebp-0x2c].
 
   Expression: int neg = -i;
+
 
     8048413:       mov    eax,DWORD PTR [ebp+0x8] 
 
@@ -4625,6 +4697,7 @@ Unsigned multiply is perform by mul instruction.
 
   Expression: int and = i & j;
 
+
     804841b:        mov    eax,DWORD PTR [ebp+0x8] 
 
     804841e:        and    eax,DWORD PTR [ebp+0xc] 
@@ -4636,6 +4709,7 @@ Unsigned multiply is perform by mul instruction.
     variable and at [ebp-0x24].
 
   Expression: int or = i | j;
+
 
     8048424:       mov    eax,DWORD PTR [ebp+0x8] 
 
@@ -4650,6 +4724,7 @@ Unsigned multiply is perform by mul instruction.
 
   Expression: int xor = i ^ j;
 
+
     804842d:       mov    eax,DWORD PTR [ebp+0x8] 
 
     8048430:       xor    eax,DWORD PTR [ebp+0xc] 
@@ -4661,6 +4736,7 @@ Unsigned multiply is perform by mul instruction.
     destination operand, which is the variable xor at [ebp-0x1c].
 
   Expression: int not = ~i;
+
 
     8048436:       mov    eax,DWORD PTR [ebp+0x8] 
 
@@ -4674,6 +4750,7 @@ Unsigned multiply is perform by mul instruction.
     variable not at [ebp-0x18]. 
 
   Expression: int shl = i << 8;
+
 
     804843e:       mov    eax,DWORD PTR [ebp+0x8]
 
@@ -4698,6 +4775,7 @@ Unsigned multiply is perform by mul instruction.
 
   Expression: int shr = i >> 8;
 
+
     8048447:       mov    eax,DWORD PTR [ebp+0x8]
 
     804844a:   	sar    eax,0x8
@@ -4715,11 +4793,11 @@ Unsigned multiply is perform by mul instruction.
     are filled with zeros.
 
     [float Figure:
-[Figure 0.14:
+[Figure 0.14: 
 SAR Instruction Operation (Source: Figure 7-8, Volume 1)
 ]
 
-     <Graphics file: C:/Users/Tu Do/os01/book_src/images/04/sar.pdf>
+     <Graphics file: /Users/james/Documents/Programming/Git/os01/book_src/images/04/sar.pdf>
      
 ]
 
@@ -4729,6 +4807,7 @@ SAR Instruction Operation (Source: Figure 7-8, Volume 1)
     get the value 1.
 
   Expression: char equal1 = (i == j);
+
 
     8048450:       mov    eax,DWORD PTR [ebp+0x8]
 
@@ -4751,6 +4830,7 @@ SAR Instruction Operation (Source: Figure 7-8, Volume 1)
 
   Expression: int equal2 = (i == j);
 
+
     804845c:       mov    eax,DWORD PTR [ebp+0x8]
 
     804845f:       cmp    eax,DWORD PTR [ebp+0xc]
@@ -4771,10 +4851,10 @@ SAR Instruction Operation (Source: Figure 7-8, Volume 1)
     filled with 0 to ensure the eax carries the same value as al.
 
     [float Figure:
-[Figure 0.15:
+[Figure 0.15: 
 movzx instruction
 ]     [float Figure:
-[Sub-Figure a:
+[Sub-Figure a: 
 eax before movzx
 ]
 
@@ -4784,7 +4864,7 @@ eax before movzx
 +-----+-----+-----+----+
 
 ]     [float Figure:
-[Sub-Figure b:
+[Sub-Figure b: 
 after movzx eax, al
 ]
 
@@ -4797,6 +4877,7 @@ after movzx eax, al
 ]
 
   Expression: char greater = (i > j);
+
 
     804846b:       mov    eax,DWORD PTR [ebp+0x8]
 
@@ -4811,6 +4892,7 @@ after movzx eax, al
 
   Expression: char less = (i < j);
 
+
     8048477:       mov    eax,DWORD PTR [ebp+0x8]
 
     804847a:       cmp    eax,DWORD PTR [ebp+0xc]
@@ -4822,6 +4904,7 @@ after movzx eax, al
     Applied setl for less comparison.
 
   Expression: char greater_equal = (i >= j);
+
 
     8048483:       mov    eax,DWORD PTR [ebp+0x8]
 
@@ -4835,6 +4918,7 @@ after movzx eax, al
 
   Expression: char less_equal = (i <= j);
 
+
     804848f:       mov    eax,DWORD PTR [ebp+0x8]
 
     8048492:       cmp    eax,DWORD PTR [ebp+0xc]
@@ -4846,6 +4930,7 @@ after movzx eax, al
     Applied setle for less than or equal comparison.
 
   Expression: int logical_and = (i && j);
+
 
     804849b:       cmp    DWORD PTR [ebp+0x8],0x0
 
@@ -4872,6 +4957,7 @@ in hardware.
 
     1. First, check if i is 0 with the instruction at 0x804849b. 
 
+
       (a) If true, jump to 0x80484ae and set eax to 0. 
 
       (b) Set the variable logical_and to 0, as it is the next 
@@ -4879,6 +4965,7 @@ in hardware.
 
     2. If i is not 0, check if j is 0 with the instruction at 
       0x80484a1. 
+
 
       (a) If true, jump to 0x80484ae and set eax to 0.
 
@@ -4888,12 +4975,14 @@ in hardware.
     3. If both i and j are not 0, the result is certainly 1, or 
       true.
 
+
       (a) Set it accordingly with the instruction at 0x80484a7. 
 
       (b) Then jump over the instruction at 0x80484ae to set the 
         variable logical_and at [ebp-0x8] to 0.
 
   Expression: int logical_or = (i || j);
+
 
     80484b6:       cmp    DWORD PTR [ebp+0x8],0x0
 
@@ -4916,6 +5005,7 @@ in hardware.
 
   Expression: ++i; and --i; (or i++ and i--)
 
+
     80484d1:       add    DWORD PTR [ebp+0x8],0x1
 
     80484d5:       sub    DWORD PTR [ebp+0x8],0x1
@@ -4933,6 +5023,7 @@ in hardware.
     ). 
 
   Expression: int i1 = i++;
+
 
     80484d9:       mov    eax,DWORD PTR [ebp+0x8]
 
@@ -4958,6 +5049,7 @@ in hardware.
     80484e2.
 
   Expression: int i2 = ++i;
+
 
     80484e5:       add    DWORD PTR [ebp+0x8],0x1
 
@@ -4987,6 +5079,7 @@ in hardware.
 
   Expression: int i3 = i--;
 
+
     80484ef:       mov    eax,DWORD PTR [ebp+0x8]
 
     80484f2:       lea    edx,[eax-0x1]
@@ -4999,6 +5092,7 @@ in hardware.
 
   Expression: int i4 = --i;
 
+
     80484fb:       sub    DWORD PTR [ebp+0x8],0x1
 
     80484ff:       mov    eax,DWORD PTR [ebp+0x8]
@@ -5009,6 +5103,7 @@ in hardware.
 
 Read section 3.5.2.4, “Partial Register Stalls” to understand 
 register stalls in general.
+
 
   Read the sections from 7.3.1 to 7.3.7 in volume 1.
 
@@ -5034,53 +5129,50 @@ for manipulating stacks:
 
 
 
-+----------+----+                      
-| 0x10000  | 00 |                      
-+----------+----+                      
-| 0x10001  | 00 |                      
-+----------+----+                      
-| 0x10002  | 00 |                      
-+----------+----+                      
-| 0x10003  | 00 |                      
-+----------+----+               +-----+
-| 0x10004  | 12 |  \leftarrow
-  | esp |
-+----------+----+               +-----+
++----------+----+                     
+| 0x10000  | 00 |                     
++----------+----+                     
+| 0x10001  | 00 |                     
++----------+----+                     
+| 0x10002  | 00 |                     
++----------+----+                     
+| 0x10003  | 00 |                     
++----------+----+              +-----+
+| 0x10004  | 12 |  \leftarrow  | esp |
++----------+----+              +-----+
 
 
      
 
 
-+----------+----+                      
-| 0x10000  | 00 |                      
-+----------+----+                      
-| 0x10001  | 00 |                      
-+----------+----+               +-----+
-| 0x10002  | 78 |  \leftarrow
-  | esp |
-                                +-----+
-+----------+----+                      
-| 0x10003  | 56 |                      
-+----------+----+                      
-| 0x10004  | 12 |                      
-+----------+----+                      
++----------+----+                     
+| 0x10000  | 00 |                     
++----------+----+                     
+| 0x10001  | 00 |                     
++----------+----+              +-----+
+| 0x10002  | 78 |  \leftarrow  | esp |
+                               +-----+
++----------+----+                     
+| 0x10003  | 56 |                     
++----------+----+                     
+| 0x10004  | 12 |                     
++----------+----+                     
 
 
      
 
 
-+----------+----+                      
-| 0x10000  | 00 |                      
-+----------+----+                      
-| 0x10001  | 00 |                      
-+----------+----+                      
-| 0x10002  | 00 |                      
-+----------+----+                      
-| 0x10003  | 00 |                      
-+----------+----+               +-----+
-| 0x10004  | 12 |  \leftarrow
-  | esp |
-+----------+----+               +-----+
++----------+----+                     
+| 0x10000  | 00 |                     
++----------+----+                     
+| 0x10001  | 00 |                     
++----------+----+                     
+| 0x10002  | 00 |                     
++----------+----+                     
+| 0x10003  | 00 |                     
++----------+----+              +-----+
+| 0x10004  | 12 |  \leftarrow  | esp |
++----------+----+              +-----+
 
 
 
@@ -5095,6 +5187,7 @@ exist outside of its scope and its inner scope.
 
 Function scope:
 
+
   void foo() {
 
     int a;
@@ -5107,7 +5200,9 @@ Function scope:
 
 
 
+
 Unnamed scope:
+
 
   int foo() {
 
@@ -5189,6 +5284,7 @@ Here is an example to make it more concrete:
 
   Source
 
+
   int add(int @|\color{red}\bfseries a|@, int 
 @|\color{green}\bfseries b|@) {
 
@@ -5202,6 +5298,7 @@ Here is an example to make it more concrete:
 }
 
   Assembly
+
 
   080483db <add>:
 
@@ -5250,33 +5347,27 @@ on stack to ebp, the closer it is to a function name.
 
 
 
-                       +-------------------+            +-------------------+            +-------------------+            +-------------------+
-                       |      ebp+0xc      |            |      ebp+0x8      |            |      ebp+0x4      |            |        ebp        |
-                       +-------------------+            +-------------------+            +-------------------+            +-------------------+
-                                                                                                                                ---------------
-                               \downarrow
-                      \downarrow
-                      \downarrow
-                      \downarrow
-  
-+----------+-----+-----+-----+--------------+-----+-----+-----+--------------+-----+-----+-----+--------------+-----+-----+-----+-------------+
-|          | 00  | 01  | 02  |     03       | 04  | 05  | 06  |     07       | 08  | 09  | 0a  |     0b       | 0c  | 0d  | 0e  |     0f      |
-+----------+--------------------------------+--------------------------------+--------------------------------+-------------------------------+
-| 0x10000  |               b                |               a                |        Return Address          |            Old ebp            |
-+----------+--------------------------------+--------------------------------+--------------------------------+-------------------------------+
-                                                                                                                                               
-                                                                                         +-------------------+            +-------------------+
-                                                                                         |      ebp+0x8      |            |      ebp+0x4      |
-                                                                                         +-------------------+            +-------------------+
-                                                                                                 \downarrow
-                      \downarrow
-  
-+----------+-----+-----+-----+--------------+-----+-----+-----+--------------+-----+-----+-----+--------------+-----+-----+-----+-------------+
-|          | 00  | 01  | 02  |     03       | 04  | 05  | 06  |     07       | 08  | 09  | 0a  |     0b       | 0c  | 0d  | 0e  |     0f      |
-                                                                             +-----                           +-----            +-------------+
-+----------+-----+-----+-----+--------------+-----+-----+-----+--------------+-----+-----+-----+--------------+-------------------------------+
-|  0xffe0  |     |     |     |              |     |     |     |              |     |     |     |      N       |               i               |
-+----------+-----+-----+-----+--------------+-----+-----+-----+--------------+-----+-----+-----+--------------+-------------------------------+
+                       +------------------+            +------------------+            +------------------+            +------------------+
+                       |     ebp+0xc      |            |     ebp+0x8      |            |     ebp+0x4      |            |       ebp        |
+                       +------------------+            +------------------+            +------------------+            +------------------+
+                                                                                                                             --------------
+                               \downarrow                      \downarrow                      \downarrow                      \downarrow  
++----------+-----+-----+-----+-------------+-----+-----+-----+-------------+-----+-----+-----+-------------+-----+-----+-----+------------+
+|          | 00  | 01  | 02  |     03      | 04  | 05  | 06  |     07      | 08  | 09  | 0a  |     0b      | 0c  | 0d  | 0e  |     0f     |
++----------+-------------------------------+-------------------------------+-------------------------------+------------------------------+
+| 0x10000  |              b                |              a                |        Return Address         |           Old ebp            |
++----------+-------------------------------+-------------------------------+-------------------------------+------------------------------+
+                                                                                                                                           
+                                                                                       +------------------+            +------------------+
+                                                                                       |     ebp+0x8      |            |     ebp+0x4      |
+                                                                                       +------------------+            +------------------+
+                                                                                               \downarrow                      \downarrow  
++----------+-----+-----+-----+-------------+-----+-----+-----+-------------+-----+-----+-----+-------------+-----+-----+-----+------------+
+|          | 00  | 01  | 02  |     03      | 04  | 05  | 06  |     07      | 08  | 09  | 0a  |     0b      | 0c  | 0d  | 0e  |     0f     |
+                                                                           +-----                          +-----            +------------+
++----------+-----+-----+-----+-------------+-----+-----+-----+-------------+-----+-----+-----+-------------+------------------------------+
+|  0xffe0  |     |     |     |             |     |     |     |             |     |     |     |     N       |              i               |
++----------+-----+-----+-----+-------------+-----+-----+-----+-------------+-----+-----+-----+-------------+------------------------------+
 
 
 
@@ -5287,9 +5378,10 @@ From the figure, we can see that a and b are laid out in memory
 with the exact order as written in C, relative to the return 
 address. 
 
-  Function Call and Return<sub:Function-Call-and>
+  Function Call and Return<subsec:Function-Call-and>
 
   Source 
+
 
   #include <stdio.h>
 
@@ -5318,6 +5410,7 @@ int main(int argc, char *argv[]) {
 }
 
   Assembly
+
 
   For every function call, gcc pushes arguments on the stack in 
   reversed order with the push instructions. That is, the 
@@ -5416,6 +5509,7 @@ looping is a pervasive pattern, it earned its own syntax in C.
 
   Source
 
+
   #include <stdio.h>
 
 
@@ -5433,6 +5527,7 @@ int main(int argc, char *argv[]) {
 }
 
   Assembly
+
 
   080483db <main>:
 
@@ -5491,6 +5586,7 @@ int main(int argc, char *argv[]) {
   appears before the compare instructions (the green 
   instructions)?
 
+
     What assembly code can be generated for while and do...while?
 
   Conditional
@@ -5500,6 +5596,7 @@ another application of jmp instruction under the hood. It is also
 a pervasive pattern that earned its own syntax in C.
 
   Source
+
 
   #include <stdio.h>
 
@@ -5528,6 +5625,7 @@ int main(int argc, char *argv[]) {
 }
 
   Assembly
+
 
   int main(int argc, char *argv[]) {
 
@@ -5651,6 +5749,7 @@ Segments and sections
   which are the code and data, divided into chunks of different 
   purposes.
 
+
   A segmentsegment is a composition of zero or more sections and 
   is directly loaded by an operating system at runtime.
 
@@ -5665,11 +5764,11 @@ Segments and sections
   Linker uses sections to build segments.
 
 [float Figure:
-[Figure 0.16:
+[Figure 0.16: 
 ELF - Linking View vs Executable View (Source: Wikipedia)
 ]
 
-     <Graphics file: C:/Users/Tu Do/os01/book_src/images/05/Elf-layout--en.pdf>
+     <Graphics file: /Users/james/Documents/Programming/Git/os01/book_src/images/05/Elf-layout--en.pdf>
      
 ]
 
@@ -5713,6 +5812,7 @@ To see the information of an ELF header:
 
 
 $ readelf -h hello
+
 
 
 
@@ -5768,12 +5868,14 @@ Let's go through each field:
 
   Magic
 
+
   Displays the raw bytes that uniquely addresses a file is an ELF 
   executable binary. Each byte gives a brief information.
 
   In the example, we have the following magic bytes:
 
   
+
 
   Magic:   7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00
 
@@ -5802,6 +5904,7 @@ future use when more information is needed.
 
   Class
 
+
   A byte in Magic field. It specifies the class or capacity of a 
   file. 
 
@@ -5816,6 +5919,7 @@ future use when more information is needed.
   
 
   Data
+
 
   A byte in Magic field. It specifies the data encoding of the 
   processor-specific data in the object file.
@@ -5832,6 +5936,7 @@ future use when more information is needed.
 
   Version
 
+
   A byte in Magic. It specifies the ELF header version number.
 
   Possible values:
@@ -5845,6 +5950,7 @@ future use when more information is needed.
 
   OS/ABI
 
+
   A byte in Magic field. It specifies the target operating system 
   ABI. Originally, it was a padding byte.
 
@@ -5852,6 +5958,7 @@ future use when more information is needed.
   long list of different operating systems.
 
   Type
+
 
   Identifies the object file type.
 
@@ -5873,6 +5980,7 @@ future use when more information is needed.
 
   Machine
 
+
   Specifies the required architecture value for an ELF file e.g. 
   x86_64, MIPS, SPARC, etc. In the example, the machine is of x86_64
    architecture.
@@ -5882,11 +5990,13 @@ future use when more information is needed.
 
   Version
 
+
   Specifies the version number of the current object file (not 
   the version of the ELF header, as the above Version field 
   specified).
 
   Entry point address
+
 
   Specifies the memory address where the very first code to be 
   executed. The address of main function is the default in a 
@@ -5897,6 +6007,7 @@ future use when more information is needed.
   kernel, and everything else can be ignored.
 
   Start of program headers
+
 
   The offset of the program header table, in bytes. In the 
   example, this number is 64 bytes, which means the 65th byte, or 
@@ -5909,11 +6020,13 @@ future use when more information is needed.
 
   Start of section headers
 
+
   The offset of the section header table in bytes, similar to the 
   start of program headers. In the example, it is 6648 bytes into 
   file.
 
   Flags
+
 
   Hold processor-specific flags associated with the file. When 
   the program is loaded, in a x86 machine, EFLAGS register is set 
@@ -5921,6 +6034,7 @@ future use when more information is needed.
   which means EFLAGS register is in a clear state.
 
   Size of this header
+
 
   Specifies the total size of ELF header's size in bytes. In the 
   example, it is 64 bytes, which is equivalent to Start of 
@@ -5932,26 +6046,31 @@ future use when more information is needed.
 
   Size of program headers
 
+
   Specifies the size of each program header in bytes. In the 
   example, it is 64 bytes.
 
   Number of program headers
+
 
   Specifies the total number of program headers. In the example, 
   the file has a total of 9 program headers.
 
   Size of section headers
 
+
   Specifies the size of each section header in bytes. In the 
   example, it is 64 bytes.
 
   Number of section headers
+
 
   Specifies the total number of section headers. In the example, 
   the file has a total of 31 section headers. In a section header 
   table, the first entry in the table is always an empty section.
 
   Section header string table index
+
 
   Specifies the index of the header in the section header table 
   that points to the section that holds all null-terminated 
@@ -5987,6 +6106,7 @@ the following command:
 
 
 $ readelf -S hello
+
 
 
 
@@ -6186,6 +6306,7 @@ There are 31 section headers, starting at offset 0x19c8
 
 
 
+
 summarizes the total number of sections in the file, and where 
 the address where it starts. Then, comes the listing section by 
 section with the following header, is also the format of each 
@@ -6237,13 +6358,14 @@ offset
   execute code in .data is denied by the running OS: in Linux, 
   such invalid section usage gives a segmentation fault.
 
+
   ELF gives information to enable an OS with such protection 
   mechanism. However, running on bare metal, nothing can prevent 
   from doing anything. Our OS can execute code in data section, 
   and vice versa, writing to code section.
 
 
-                                                                                                                                                                                           [Table 5:
+                                                                                                                                                                                          [Table 5: 
 Section Flags
 ]                                                                                                                                                                                           
 +-------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -6322,6 +6444,7 @@ processor supplement explains them.                                             
   of a section, a symbol table entry or a hash table entry, 
   depends on the type of a section. 
 
+
   Later when writing our OS, we will handcraft the kernel image 
   by explicitly linking the object files (produced by gcc) 
   through a linker script. We will specify the memory layout of 
@@ -6336,6 +6459,7 @@ processor supplement explains them.                                             
   alignment constraint.
 
 Output of .interp section:
+
 
   
 
@@ -6377,7 +6501,9 @@ Output of .interp section:
 
 
 
+
 Output of the .text section:
+
 
   
 
@@ -6412,7 +6538,6 @@ Output of the .text section:
 
   Align is 16, which means the starting address of the section 
   should be divisible by 16, or 0x10. Indeed, it is: \mathtt{0x3e0/0x10=0x3e}
-
   . 
 
   Understand Section in-depth
@@ -6454,7 +6579,9 @@ If a section contains strings e.g. string symbol table, the flag
   section header table. It means, any useful section starts from 
   1.
 
+
   The sample output of NULL section:
+
 
     
 
@@ -6484,7 +6611,9 @@ If a section contains strings e.g. string symbol table, the flag
   programs will check for conformance, compatibility... by a 
   vendor or a system builder.
 
+
   In the sample output, we have 2 NOTE sections:
+
 
     
 
@@ -6533,7 +6662,9 @@ If a section contains strings e.g. string symbol table, the flag
   PROGBITS indicates a section holding the main content of a 
   program, either code or data.
 
+
   There are many PROGBITS sections:
+
 
     
 
@@ -6627,13 +6758,16 @@ If a section contains strings e.g. string symbol table, the flag
 
     
 
+
   For our operating system, we only need the following section:
 
   .text
 
+
     This section holds all the compiled code of a program. 
 
   .data
+
 
     This section holds the initialized data of a program. Since 
     the data are initialized with actual values, gcc allocates 
@@ -6641,16 +6775,19 @@ If a section contains strings e.g. string symbol table, the flag
 
   .rodata
 
+
     This section holds read-only data, such as fixed-size strings 
     in a program, e.g. “Hello World”, and others.
 
   .bss
+
 
     This section, shorts for Block Started by Symbol, holds 
     uninitialized data of a program. Unlike other sections, no 
     space is allocated for this section in the image of the 
     executable binary on disk. The section is allocated only when 
     the program is loaded into main memory.
+
 
   Other sections are mainly needed for dynamic linking, that is 
   code linking at runtime for sharing between many programs. To 
@@ -6665,7 +6802,9 @@ If a section contains strings e.g. string symbol table, the flag
   The types of these entities are also the types of symbols, and 
   these are the possible types of an entity:
 
+
   In the sample output, section 5 and 29 are symbol tables:
+
 
     
 
@@ -6765,6 +6904,7 @@ If a section contains strings e.g. string symbol table, the flag
 
   Type is a symbol type according to table.
 
+
     NOTYPE The type of a symbol is not specified. 
 
     OBJECT	The symbol is associated with a data object. In C, any 
@@ -6787,12 +6927,15 @@ If a section contains strings e.g. string symbol table, the flag
 
   Bind is the scope of a symbol. 
 
+
     LOCAL are symbols that are only visible in the object files 
       that defined them. In C, the static modifier marks a symbol 
       (e.g. a variable/function) as local to only the file that 
       defines it.
 
+
       If we define variables and functions with static modifer:
+
 
         static int global_static_var = 0;
 
@@ -6818,6 +6961,7 @@ int main(int argc, char *argv[])
 
       Then we get the static variables listed as local symbols 
       after compiling:
+
 
         
 
@@ -6853,6 +6997,7 @@ int main(int argc, char *argv[])
 
              0: 00000000     0 NOTYPE  LOCAL  DEFAULT  UND 
 
+
                 ......... output omitted .........
 
             38: 0804a020     4 OBJECT  LOCAL  DEFAULT   26 
@@ -6875,8 +7020,10 @@ int main(int argc, char *argv[])
       is accessible in the final executable binary, so an extern 
       variable is also considered GLOBAL.
 
+
       Similar to the LOCAL example above, the output lists many 
       GLOBAL symbols such as main:
+
 
         Num:    Value  Size Type    Bind   Vis      Ndx Name
 
@@ -6893,8 +7040,10 @@ int main(int argc, char *argv[])
       the default implementation can be replaced by a different 
       definition at link time.
 
+
       Suppose we have a default implementation of the function 
       add:
+
 
         #include <stdio.h>
 
@@ -6956,6 +7105,7 @@ function attribute
 
 }
 
+
         and compile the two files together:
 
         
@@ -6975,10 +7125,11 @@ function attribute
   Vis is the visibility of a symbol. The following values are 
     available:
 
+
     
-                                                                                                                                  [Table 6:
+                                                                                                                                  [Table 6: 
 Symbol Visibility
-]                                                                                                                                   
+]                                                                                                                                  
     +------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
     | Value      | Description                                                                                                                                                                                                                                                                       |
     +------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -7008,8 +7159,9 @@ processor-specific ABI.                                                         
     fixed index numbers that represent section indexes, index has 
     these special values:
 
+
     
-                                                                                                                                                 [Table 7:
+                                                                                                                                                [Table 7: 
 Symbol Index
 ]                                                                                                                                                 
     +-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -7051,6 +7203,7 @@ This means that the index is processor-specific.                                
   A C application program always starts from symbol main. The 
   entry for main in the symbol table in .symtab section is:
 
+
     
 
     Num:                Value  Size Type    Bind   Vis      Ndx 
@@ -7086,7 +7239,9 @@ This means that the index is processor-specific.                                
   various objects in a program, e.g. variable, functions, section 
   names, in a human-readable text instead of its raw hex address.
 
+
   In the sample output, section 28 and 30 are of STRTAB type:
+
 
     
 
@@ -7118,6 +7273,7 @@ This means that the index is processor-specific.                                
     section.
 
   Strings in those section can be inspected with the command:
+
 
     
 
@@ -7298,6 +7454,7 @@ This means that the index is processor-specific.                                
 
   NOBITS is similar to PROGBITS but occupies no space.
 
+
   .bss section holds uninitialized data, which means the bytes in 
   the section can have any value. Until a operating system 
   actually loads the section into main memory, there is no need 
@@ -7346,6 +7503,7 @@ This means that the index is processor-specific.                                
   section are executed first. The first element in this array is 
   an ignored function pointer. 
 
+
   It might not make sense when we can include initialization code 
   in the main() function. However, for shared object files where 
   there are no main(), this section ensures that the 
@@ -7363,6 +7521,7 @@ This means that the index is processor-specific.                                
 
   To use the INIT_ARRAY, we simply mark a function with the 
   attribute constructor:
+
 
     #include <stdio.h>
 
@@ -7417,10 +7576,12 @@ int main(int argc, char *argv[])
 
   
 
+
   Optionally, a constructor can be assigned with a priority from 
   101 onward. The priorities from 0 to 100 are reserved for gcc. 
   If we want init2 to run before init1, we give it a higher 
   priority:
+
 
     #include <stdio.h>
 
@@ -7474,7 +7635,9 @@ int main(int argc, char *argv[])
 
   
 
+
   We can add initialization functions using another method:
+
 
     #include <stdio.h>
 
@@ -7538,12 +7701,14 @@ int main(int argc, char *argv[])
 
   hello world!
 
+
     
 
   FINI_ARRAY is an array of function pointers for program 
   termination, called after exiting main(). If the application 
   terminate abnormally, such as through abort() call or a crash, 
   the .finit_array is ignored.
+
 
   A destructor is automatically called after exiting main(), if 
   one or more available:
@@ -7586,6 +7751,7 @@ int main(int argc, char *argv[])
 
   PREINIT_ARRAY is an array of function pointers that are invoked 
   before all other initialization functions in INIT_ARRAY.
+
 
   To use the .preinit_array, the only way to put functions into 
   this section is to use the attribute section():
@@ -7725,6 +7891,7 @@ the index of a STRTAB section.
 
 
 
+
 Verify that the value of the Info field of a SYMTAB section is 
 the index of last local symbol + 1. It means, in the symbol 
 table, from the index listed by Info field onward, no local 
@@ -7732,8 +7899,10 @@ symbol appears.
 
 
 
+
 Verify that the value of the Info field of a REL section is the 
 index of the SYMTAB section.
+
 
 
 
@@ -7787,7 +7956,7 @@ Similar to a section, a program header also has types:
 
 A segment also has permission, which is a combination of these 3 
 values:[float MarginTable:
-[MarginTable 3:
+[MarginTable 3: 
 Segment Permission
 ]
 
@@ -7816,6 +7985,7 @@ Segment Permission
 
 
 The command to get the program header table:
+
 
   
 
@@ -7986,6 +8156,7 @@ The command to get the program header table:
   second at index 1 and so on. LOAD are segments at index 2 and 
   3. As can be seen from the two lists of sections, most sections 
   are loadable and is available at runtime.
+
 
 
 -------------------------------------------
@@ -8338,9 +8509,7 @@ sections belong to it. Then:
 
 • \mathtt{1^{st}\,section\,address=starting\,segment\,address+section\,offset=0x8048000+0x154=0x08048154}
 
-
 • \mathtt{2^{nd}\,section\,address=starting\,segment\,address+section\,offset=0x8048000+0x168=0x08048168}
-
 
 • .... and so on until the last loadable section...
 
@@ -8354,8 +8523,7 @@ $ readelf -l hello
 
 
 And check, for example, LOAD segment which starts at 0x08048000 
-and end at \mathtt{0x08048000+0x005fc=0x080485fc}
-:
+and end at \mathtt{0x08048000+0x005fc=0x080485fc}:
 
 
 
@@ -8433,7 +8601,6 @@ RW  0x10
 The last section in the first LOAD segment is .eh_frame. The 
 section starts at 0x08048510, with the offset 0x510 and its size 
 is 0xec. The end address of .eh_frame should be: \mathtt{0x08048510+0x510+0xec=0x080485fc}
-
 , exactly the same as the end address of the first LOAD segment.
 
 Chapter [chap:Linking-and-loading] will explore this whole 
@@ -8468,6 +8635,7 @@ gdb is the program name. gdb can do four main kinds of things:
 There must be an existing program for debugging. The good old “
 Hello World” program suffices for the educational purpose in this 
 chapter:
+
 
 #include <stdio.h>
 
@@ -8515,6 +8683,7 @@ A target is the debugging program.
 
 The output of the command from hello program, a local target in 
 detail:
+
 
   
 
@@ -8595,10 +8764,12 @@ detail:
     especially for remote debugging. In the example, it is this 
     line:
 
+
     Symbols from "/tmp/hello".
 
   • The path of the debugging program and its file type. In the 
     example, it is this line:
+
 
     Local exec file:
 
@@ -8607,6 +8778,7 @@ detail:
   • The entry point to the debugging program. That is, the very 
     first code the program runs. In the example, it is this line:
 
+
     Entry point: 0x8048310
 
   • A list of sections with its starting and ending addresses. In 
@@ -8614,8 +8786,10 @@ detail:
 
 
 
+
 If the debugging program runs in a different machine, it is a 
 remote target and gdb only prints a brief information:
+
 
   
 
@@ -8640,6 +8814,7 @@ about program sections, specifically the file offset and the
 flags of each section.
 
 Here is the output when running against hello program:
+
 
   
 
@@ -8693,13 +8868,16 @@ section flags for filtered outputs:
 
   section names displays only named sections. 
 
+
   The command:
+
 
     
 
     (gdb) maint info sections .text .data .bss
 
     
+
 
     only displays .text, .data and .bss sections:
 
@@ -8723,6 +8901,7 @@ section flags for filtered outputs:
   flags. Note that these section flags are specific to gdb, 
   though it is based on the section attributes defined 
   previously. Currently, gdb understands the following flags:
+
 
   ALLOC Section will have space allocated in the process when 
     loaded. Set for all sections except those containing debug 
@@ -8761,6 +8940,7 @@ section flags for filtered outputs:
   We can restrict the output to only display sections that 
   contain code with the command:
 
+
     
 
     (gdb) maint info sections CODE
@@ -8798,6 +8978,7 @@ This commands list all function names and their loaded addresses.
 The names can be filtered with a regular expression.
 
 Run the command, we get the following output:
+
 
   
 
@@ -8846,6 +9027,7 @@ filtered with a regular expression.
 
 If we add a global variable int i into the sample source program 
 and recompile then run the command, we get the following output:
+
 
   
 
@@ -8912,6 +9094,7 @@ and recompile then run the command, we get the following output:
 This command displays the assembly code of the executable file. 
 
 gdb can display the assembly code of a function:
+
 
   
 
@@ -9023,8 +9206,10 @@ gdb can display the assembly code of a function:
 
 
 
+
 If the option /r is added, raw instructions in hex are included, 
 just like how objdump displays assembly code by default:
+
 
   
 
@@ -9153,6 +9338,7 @@ This command examines the content of a given memory range.
 
 We can examine the raw content of main:
 
+
   
 
   (gdb) x main
@@ -9171,8 +9357,10 @@ We can examine the raw content of main:
 
 
 
+
 With format arguments, the command can print a range of memory in 
 a specific format.
+
 
   
 
@@ -9252,6 +9440,7 @@ This command starts running the program.
 
 Run the hello program:
 
+
   
 
   (gdb) r
@@ -9282,6 +9471,7 @@ current state of a program.
 A breakpoint can be set on a line as displayed by an editor. 
 Suppose we want to set a breakpoint at line 3 of the program, 
 which is the start of main function:
+
 
   #include <stdio.h>
 
@@ -9336,10 +9526,12 @@ which is the start of main function:
 
 
 
+
 Line of code is not always the reliable way to specify a 
 breakpoint, as the source code can be changed. What if gdb should 
 always stop at main function? In this case, a better method is to 
 use the function name directly:
+
 
   
 
@@ -9352,10 +9544,12 @@ use the function name directly:
 
 
 
+
 Sometimes, the debugging program does not contain debug info, or 
 gdb is debugging assembly code. In that case, a memory address 
 can be specified as a stop point. To get the function address, 
 print command can be used:
+
 
   
 
@@ -9380,10 +9574,12 @@ print command can be used:
 
 
 
+
 gdb can also set breakpoint in any source file. Suppose that 
 hello program is composed not just one file but many files e.g. 
 hello1.c, hello2.c, hello3.c... In that case, simply add the 
 filename before either a line number:
+
 
   
 
@@ -9393,7 +9589,9 @@ filename before either a line number:
 
 
 
+
 A function name in a specific file can also be set:
+
 
   
 
@@ -9408,6 +9606,7 @@ line. When the current line is a function call, steps over it.
 
 After setting a breakpoint at main, run a program and stop at the 
 first printf:
+
 
   
 
@@ -9459,6 +9658,7 @@ functions is tricky because to make debugging works, the debug
 info must be installed and loaded. It is not worth the trouble 
 for demonstrating this simple command.
 ]:
+
 
   #include <stdio.h>
 
@@ -9538,6 +9738,7 @@ instruction is a call, step over it to the next instruction.
 
 When breakpoint is on the printf call and ni is used, it steps 
 through each assembly instruction:
+
 
   
 
@@ -9692,6 +9893,7 @@ in the called function.
 Recall that the assembly code generated from printf contains a 
 call instruction:
 
+
   
 
   (gdb) disassemble /s main
@@ -9809,6 +10011,7 @@ This command executes until the next line is greater than the
 current line.
 
 Suppose we have a function that execute a long loop:
+
 
   #include <stdio.h>
 
@@ -9984,6 +10187,7 @@ version of until.
 Using the add1000 function from the previous example and use 
 finish instead of until:
 
+
   
 
   (gdb) r
@@ -10027,6 +10231,7 @@ backtrace
 ]backtracebacktrace is a list of currently active functions:
 
 Suppose we have a chain of function calls:
+
 
   void d(int d) { };
 
@@ -10153,6 +10358,7 @@ This command goes up one frame earlier the current frame.
 Instead of staying in d function, we can go up to c function and 
 look at its state:
 
+
   
 
   (gdb) bt
@@ -10196,6 +10402,7 @@ Similar to up, this command goes down one frame later then the
 current frame.
 
 After inspecting c function, we can go back to d:
+
 
   
 
@@ -10253,6 +10460,7 @@ system code, as we can inspect the current state of the machine.
 
 Executing the command, we can see the commonly used registers:
 
+
   
 
   (gdb) info registers 
@@ -10308,18 +10516,17 @@ instruction of a statement is replaced with another instruction,
 int 3 with opcode CCh:
 
 [float Figure:
-[Figure 0.17:
+[Figure 0.17: 
 Opcode replacement, with int 3
 ]
 
      
-+-----+-----+---------+                +-----+-----+----+
-| 83  | ec  |   0c    |  \rightarrow
-  | cc  | ec  | 0c |
-+-----+-----+---------+                +-----+-----+----+
-+---------------------+                +----------------+
-|     sub esp,0x4     |                |     int 3      |
-+---------------------+                +----------------+
++-----+-----+---------+               +-----+-----+----+
+| 83  | ec  |   0c    |  \rightarrow  | cc  | ec  | 0c |
++-----+-----+---------+               +-----+-----+----+
++---------------------+               +----------------+
+|     sub esp,0x4     |               |     int 3      |
++---------------------+               +----------------+
      
 ]
 
@@ -10335,23 +10542,23 @@ with the original opcode and executes the original instruction
 normally.
 
 [float Figure:
-[Figure 0.18:
+[Figure 0.18: 
 Restore the original opcode, after int 3 was executed
 ]
 
      
-+-----+-----+----+                +-----+-----+---------+
-| cc  | ec  | 0c |  \rightarrow
-  | 83  | ec  |   0c    |
-+-----+-----+----+                +-----+-----+---------+
-+----------------+                +---------------------+
-|     int 3      |                |     sub esp,0x4     |
-+----------------+                +---------------------+
++-----+-----+----+               +-----+-----+---------+
+| cc  | ec  | 0c |  \rightarrow  | 83  | ec  |   0c    |
++-----+-----+----+               +-----+-----+---------+
++----------------+               +---------------------+
+|     int 3      |               |     sub esp,0x4     |
++----------------+               +---------------------+
      
 ]
 
 It is simple to see int 3 in action. First, we add an int 3 
 instruction where we need gdb to stop:
+
 
   #include <stdio.h>
 
@@ -10450,16 +10657,15 @@ source-level debugging:
 
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------+                          +------------------------------------------------------------------+
-| hello.c                                                                                                                                           |                          | DIE                                                              |
-+---------------------------------------------------------------------------------------------------------------------------------------------------+                          +------------------------------------------------------------------+
-+--------------------------------------------------------------+------------------------------------------------------------------------------------+                          +------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------+                         +------------------------------------------------------------------+
+| hello.c                                                                                                                                          |                         | DIE                                                              |
++--------------------------------------------------------------------------------------------------------------------------------------------------+                         +------------------------------------------------------------------+
++-------------------------------------------------------------+------------------------------------------------------------------------------------+                         +------------------------------------------------------------------+
 |   Line 1
 
   Line 2
 
-\Rightarrow
- Line 3
+\Rightarrow Line 3
 
   Line 5
 
@@ -10477,8 +10683,7 @@ int main(int argc, char *argv[])
 
  
 
-  \rightarrow
-    | ....
+  \rightarrow    | ....
 
 ....
 
@@ -10487,18 +10692,16 @@ main in hello.c is at 0x804840b in hello
 ....
 
 .... |
-+--------------------------------------------------------------+------------------------------------------------------------------------------------+                          +------------------------------------------------------------------+
-                                                                                                                                                                                                                                                   
-                                                                                                                                                                                                     \downarrow
-\uparrow
-                          
-                                                                                                                                                                                                                                                   
-                                                                                                                                                                               +------------------------------------------------------------------+
-                                                                                                                                                                               | hello (at 0x804840b)                                             |
-                                                                                                                                                                               +------------------------------------------------------------------+
-                                                                                                                                                                               +------------------------------------------------------------------+
-                                                                                                                                                                               | ...8d 4c 24 04 83 e4 f0 ff 71 fc ....                            |
-                                                                                                                                                                               +------------------------------------------------------------------+
++-------------------------------------------------------------+------------------------------------------------------------------------------------+                         +------------------------------------------------------------------+
+                                                                                                                                                                                                                                                 
+                                                                                                                                                                                                   \downarrow\uparrow                            
+                                                                                                                                                                                                                                                 
+                                                                                                                                                                             +------------------------------------------------------------------+
+                                                                                                                                                                             | hello (at 0x804840b)                                             |
+                                                                                                                                                                             +------------------------------------------------------------------+
+                                                                                                                                                                             +------------------------------------------------------------------+
+                                                                                                                                                                             | ...8d 4c 24 04 83 e4 f0 ff 71 fc ....                            |
+                                                                                                                                                                             +------------------------------------------------------------------+
 
 
 
@@ -10529,6 +10732,7 @@ operating system that can be debugged with gdb.
 When an executable binary contains debug info, readelf can 
 display such information in a readable format. Using the good old 
 hello world program:
+
 
   #include <stdio.h>
 
@@ -10562,6 +10766,7 @@ int main(int argc, char *argv[])
   $ readlelf -wL hello
 
   
+
 
   -w option prints all the debug information. In combination with 
   its sub-option, only specific information is displayed. For 
@@ -10658,6 +10863,7 @@ int main(int argc, char *argv[])
     attached to a DIE that describe an entity. Notable 
     attributes:
 
+
     DW_AT_name
 
     DW_AT_comp_dir The filename of the compilation unit and the 
@@ -10675,9 +10881,9 @@ int main(int argc, char *argv[])
       DW_AT_high_pc is the size of the compilation unit, when 
       adding up to DW_AT_low_pc results in the end address of the 
       entity. In this example, code compiled from hello.c starts 
-      at 0x804840b and end at \mathtt{0x804840b+0x2e=0x8048439}
-. 
+      at 0x804840b and end at \mathtt{0x804840b+0x2e=0x8048439}. 
       To really make sure, we verify with objdump:
+
 
       
 
@@ -10754,6 +10960,7 @@ int main(int argc, char *argv[])
     displayed with -wi, the DIEs are displayed with their values. 
     -wa option shows abbreviations in the .debug_abbrev section:
 
+
     
 
     Contents of the .debug_abbrev section:
@@ -10800,7 +11007,7 @@ but with overhead.
 
   
 
-  <Graphics file: C:/Users/Tu Do/os01/book_src/images/06/dwarf_tree.svg>
+  <Graphics file: /Users/james/Documents/Programming/Git/os01/book_src/images/06/dwarf_tree.svg>
   <dwarf_tree>
 
   
@@ -10826,6 +11033,7 @@ Then, the all DIE entries in test.c are displayed before the DIE
 entries in hello.c:
 
 <0><b>: Abbrev Number: 1 (DW_TAG_compile_unit)
+
 
       <c>   DW_AT_producer    : (indirect string, offset: 0x0): 
   GNU C11 5.4.0 20160609 
@@ -10947,11 +11155,11 @@ interrupts is available with Ralf Brown's Interrupt List at: http://www.cs.cmu.e
 [float Figure:
 
 
-[Figure 0.19:
+[Figure 0.19: 
 The boot process.
 ]
 
-     <Graphics file: C:/Users/Tu Do/os01/book_src/images/07/simple_boot_process.pdf>
+     <Graphics file: /Users/james/Documents/Programming/Git/os01/book_src/images/07/simple_boot_process.pdf>
      
 ]
 
@@ -10961,6 +11169,7 @@ The boot process.
   the sector is stored in memory at the address defined by the 
   pair of registers ES:BX. The parameters are stored in registers 
   like this:
+
 
   ; Store sector content in the buffer 10FF:0000
 
@@ -11000,6 +11209,7 @@ must provide its own kernel drivers for talking to hardware.
 
 3. Load the kernel:
 
+
   (a) Read kernel from disk.
 
   (b) Save it somewhere in the main memory.
@@ -11024,6 +11234,7 @@ from previous run is still reserved. For that reason, it is
 called a warm reboot. The opposite of warm reboot is cold reboot, 
 in which the machine environment is reset to initial settings 
 when the computer starts from a powerless state.
+
 
 ;******************************************
 
@@ -11233,11 +11444,11 @@ If the virtual machine successfully runs the bootloader, this is
 what the QEMU screen should look like:
 
 [float Figure:
-[Figure 0.20:
+[Figure 0.20: 
 Boot succeeded.
 ]
 
-<Graphics file: C:/Users/Tu Do/os01/book_src/images/07/boot_succeeded.png>
+<Graphics file: /Users/james/Documents/Programming/Git/os01/book_src/images/07/boot_succeeded.png>
 ]
 
   Debugging
@@ -11255,6 +11466,7 @@ scenarios are likely:
   not a bootable disk” appears for floppy disk booting. Make sure 
   the bootloader is correctly written to the first sector. It can 
   be verify by check the disk with hd:
+
 
   
 
@@ -11277,6 +11489,7 @@ scenarios are likely:
 
 Print a welcome message
 
+
   We loaded the bootloader successfully. But, it needs to do 
   something useful other than halting our machine. The easiest 
   thing to do is printing something on screen, like how an 
@@ -11291,6 +11504,7 @@ Or whatever message you want.
 
   1. MovCursor 
 
+
     Purpose: Move a cursor to a specific location on screen and 
     remember this location.
 
@@ -11303,6 +11517,7 @@ Or whatever message you want.
     Return: None
 
   2. PutChar 
+
 
     Purpose: Print a character on screen, at the cursor position 
     previously set by MovCursor .
@@ -11319,6 +11534,7 @@ Or whatever message you want.
 
   3. Print 
 
+
     Purpose: Print a string.
 
     Parameters:
@@ -11331,6 +11547,7 @@ Or whatever message you want.
   compile and run. To debug, run GDB and set a breakpoint at a 
   specific routine. The end result is that Print should display a 
   welcome message on screen.
+
 
 
 -------------------------------------------
@@ -11376,11 +11593,11 @@ floppy disk.
 [float MarginFigure:
 
 
-[MarginFigure 8:
+[MarginFigure 8: 
 Sector and Track.
 ]
 
-     <Graphics file: C:/Users/Tu Do/os01/book_src/images/07/Disk-structure.pdf>
+     <Graphics file: /Users/james/Documents/Programming/Git/os01/book_src/images/07/Disk-structure.pdf>
      
 ]
 
@@ -11393,16 +11610,17 @@ track 1 and so on, until no space left on the device. The same
 procedure is also applied for reading data from floppy disk.[float MarginFigure:
 
 
-[MarginFigure 9:
+[MarginFigure 9: 
 Floppy disk platter with 2 sides.
 ]
 
-<Graphics file: C:/Users/Tu Do/os01/book_src/images/07/Disk_heads.pdf>
+<Graphics file: /Users/james/Documents/Programming/Git/os01/book_src/images/07/Disk_heads.pdf>
 ]
 
-  Read and load sectors from a floppy disk<sub:Read-and-load>
+  Read and load sectors from a floppy disk<subsec:Read-and-load>
 
 First, we need to a sample program for writing into the 2[superscript:nd] sector, so we can experiment with floppy disk reading:
+
 
 ;******************************************
 
@@ -11433,7 +11651,7 @@ $ dd if=sample of=disk.img bs=512 count=1 seek=0
 [float Figure:
 
 
-[Figure 0.21:
+[Figure 0.21: 
 The bootloader and the sample program on floppy disk.
 ]
 
@@ -11479,6 +11697,7 @@ Return:
       = 1 if error
 
 Apply the above routine, the bootloader can read the 2[superscript:nd] sector:
+
 
 ;******************************************
 
@@ -11587,6 +11806,7 @@ page: https://www.gnu.org/software/make/manual/ .
 
 With Makefile, we can build simpler commands and save time:
 
+
 all: bootloader bootdisk
 
 
@@ -11664,6 +11884,7 @@ place that is changed - the variable definition - all other
 places are updated automatically. The following variables are 
 added:
 
+
 BOOTLOADER=bootloader.o
 
 OS=sample.o
@@ -11682,10 +11903,10 @@ this problem, instead of changing filenames manually, we create a
 rule that automatically generate the filenames of one extension 
 to another. In this case, we want any source file that starts 
 with .asm to have its equivalent binary files, without any 
-extension e.g. bootloader.asm \rightarrow
- bootloader.o. Such 
+extension e.g. bootloader.asm \rightarrow bootloader.o. Such 
 transformation is common, so GNU Make provides built-in 
 functions: wildcard and patsubst for solving such problems:
+
 
 BOOTLOADER_SRCS := $(wildcard *.asm)
 
@@ -11699,13 +11920,13 @@ value:
 bootloader.asm sample.asm
 
 patsubst substitutes any filename starts with .asm into a 
-filename .o e.g. bootloader.asm \rightarrow
- bootloader.o. After 
+filename .o e.g. bootloader.asm \rightarrow bootloader.o. After 
 patsubsts runs, we get a list of object files in BOOTLOADER_OBJS:
 
 bootloader.o sample.o
 
 Finally, a recipe for building from .asm to .o are needed:
+
 
 %.o: %.asm
 
@@ -11719,8 +11940,7 @@ Finally, a recipe for building from .asm to .o are needed:
 
 When the recipe is executed, the variables are replaced with the 
 actual values. For example, if a transformation is bootloader.asm 
-\rightarrow
- bootloader.o, then the actual command executed when 
+\rightarrow bootloader.o, then the actual command executed when 
 replace the placeholders in the recipe is: 
 
 nasm -f bin bootloader.asm -o bootloader.o
@@ -11729,7 +11949,7 @@ With the recipe, all the .asm files are built automatically with
 the nasm command into .o files and we no longer need a separate 
 recipe for each object files. Putting it all together with the 
 new variables, we get a better Makefile:[float MarginFigure:
-[MarginFigure 10:
+[MarginFigure 10: 
 A better project layout
 ]<project-layout>
 
@@ -11765,6 +11985,7 @@ The layout can be displayed with tree command:
 
 $ tree
 ]
+
 
 BOOTLOADER=bootloader.o
 
@@ -11818,6 +12039,7 @@ Makefile is released from the burden of building the bootloader,
 but only the disk image. The content of the Makefile in 
 bootloader/ directory should be:
 
+
 BUILD_DIR=@|\color{blue}\bfseries ../build/|@bootloader
 
 
@@ -11836,7 +12058,7 @@ all: $(BOOTLOADER_OBJS)
 $(BUILD_DIR)/%.o: %.asm
 
 	nasm -f bin $< -o $@[float MarginFigure:
-[MarginFigure 11:
+[MarginFigure 11: 
 Makefile in bootloader/
 ]
 
@@ -11874,8 +12096,7 @@ Makefile are extracted into this Makefile. When make runs this
 Makefile, bootloader.o should be built and put into ../build/ 
 directory. As a good practice, all references to ../build/ go 
 through BUILD_DIR variable. The recipe for transforming from .asm 
-\rightarrow
- .o is also updated with proper paths, else it will 
+\rightarrow .o is also updated with proper paths, else it will 
 not work. 
 
 • %.asm refers to the assembly source files in the current 
@@ -11885,15 +12106,14 @@ not work.
   directory in the path ../build/.
 
 The entire recipe implements the transformation from 
-<source_file.asm> \rightarrow
- ../build/<object_file.o>. Note 
-that all paths must be correct. If we try to build object files 
-in a different directory e.g. current directory, it will not work 
+<source_file.asm> \rightarrow ../build/<object_file.o>. Note that 
+all paths must be correct. If we try to build object files in a 
+different directory e.g. current directory, it will not work 
 since there is no such recipe exists to build objects at such a 
 path.
 
 We also create a similar Makefile for os/ directory:[float MarginFigure:
-[MarginFigure 12:
+[MarginFigure 12: 
 Makefile in os/
 ]
 
@@ -11926,6 +12146,7 @@ Makefile in os/
     └── sample.asm
 ]
 
+
 BUILD_DIR=../build/os
 
 
@@ -11947,7 +12168,7 @@ $(BUILD_DIR)/%.o: %.asm
 For now, it looks almost identical to the Makefile for 
 bootloader. In the next chapter, we will update it for C code. 
 Then, we update the top-level Makefile:[float MarginFigure:
-[MarginFigure 13:
+[MarginFigure 13: 
 Top-level Makefile
 ]
 
@@ -11979,6 +12200,7 @@ Top-level Makefile
 
     └── sample.asm
 ]
+
 
 BUILD_DIR=build
 
@@ -12041,6 +12263,7 @@ of the same names.
 To save time entering the command for starting up a QEMU virtual 
 machine, we also add a target to the top-level Makefile:
 
+
 qemu:
 
 	qemu-system-i386 -machine q35 -fda $(DISK_IMG) -gdb tcp::26000 
@@ -12055,17 +12278,20 @@ is added with a clean target at the end:
 
 • Bootloader Makefile:
 
+
   clean:
 
 	rm $(BUILD_DIR)/*
 
 • OS Makefile:
 
+
   clean:
 
 	rm $(BUILD_DIR)/*
 
 • Top-level Makefile:
+
 
   clean:
 
@@ -12179,7 +12405,7 @@ running the whole test suite and all runs every main targets.
 
 
 
-  Automate debugging steps with GDB script<sub:Automate-debugging-steps>
+  Automate debugging steps with GDB script<subsec:Automate-debugging-steps>
 
 For the convenience, we save GDB configuration to .gdbinit file 
 at the project root directory. This configuration is just a 
@@ -12191,6 +12417,7 @@ only this projec e.g. not all programs are required a remote
 connection.
 
 Our first configuration:
+
 
 define hook-stop
 
@@ -12493,7 +12720,6 @@ R_386_PC32, the following formula is applied for relocation
 
 Relocated\,Offset=S+A-P
 
-
 To understand the formula, it is necessary to understand symbol 
 values.
 
@@ -12505,6 +12731,7 @@ assigned to a symbol, whose meaning depends on the Ndx field:
   A symbol whose section index is COMMON, its symbol value holds 
   alignment constraints.
 
+
   In the symbol table, the variable i is identified as COM 
   (uninitialized variable):[footnote:
 The command for listing symbol table is (assume the object file 
@@ -12512,6 +12739,7 @@ is hello.o):
 
 readelf -s hello.o
 ]
+
 
     
 
@@ -12562,7 +12790,9 @@ readelf -s hello.o
   A symbol whose Ndx identifies a specific section, its symbol 
   value holds a section offset.
 
+
   In the symbol table, main and foo belong to section 1:
+
 
     
 
@@ -12615,6 +12845,7 @@ readelf -S hello.o
   In the final executable and shared object files, instead of the 
   above values, a symbol value holds a memory address.
 
+
   After compiling hello.o into the final executable hello, the 
   symbol table now contains the memory address for each symbol[footnote:
 The command to compile the object file hello.o into the 
@@ -12622,6 +12853,7 @@ executable hello:
 
 gcc -g -m32 -masm=intel hello.o -o hello
 ]:
+
 
     
 
@@ -12666,8 +12898,8 @@ Now it suffices to understand relocation types. Previously, we
 mentioned the type R_386_PC32. The following formula is applied 
 for relocation (Inteli386 psABI): 
 
-Relocated\,Offset=S+A-P
 
+Relocated\,Offset=S+A-P
 
 where
 
@@ -12694,10 +12926,12 @@ sugar that is later transformed into one of the relative
 addressing mode provided by the x86 hardware by the assembler.
 
 
+
 -------------------------------------------
 
 
 For the foo symbol:
+
 
   
 
@@ -12706,10 +12940,8 @@ For the foo symbol:
   
 
   The distance between the usage of foo in main.o and its 
-  definition, applying the formula S+A-P
- is: \mathtt{2e+0-1c=12}
-
-  . That is, the place where memory fixing starts is 0x12 or 18 
+  definition, applying the formula S+A-P is: \mathtt{2e+0-1c=12}. 
+  That is, the place where memory fixing starts is 0x12 or 18 
   bytes away from the definition of the symbol foo. However, to 
   make an instruction works properly, we must also subtract 4 
   from 0x12 and results in 0xe. Why the extra -4? Because the 
@@ -12781,8 +13013,7 @@ The end of an instruction is the memory address right after its
 last operand. The whole instruction e8 spans from the address 1b 
 to the address 1f. 
 ]. -4 means 4 bytes backward from the end of instruction, that 
-  is: \mathtt{20-4=1c}
-. After linking, the output of the final 
+  is: \mathtt{20-4=1c}. After linking, the output of the final 
   executable file is displayed with the actual memory fixing:
 
   
@@ -12846,8 +13077,7 @@ to the address 1f.
   with the actual value 0e 00 00 00 using the same calculating 
   method from its object file: opcode e8 is at 80483f6. The 
   definition of foo is at 8048409. The offset from the next 
-  address after e8 is \mathtt{8048409+0-80483f7-4=0e}
-. However, 
+  address after e8 is \mathtt{8048409+0-80483f7-4=0e}. However, 
   for readability, the assembly is displayed as call 8048409 
   <foo>, since GNU as[footnote:
 Or any current assembler in use today.
@@ -12855,6 +13085,7 @@ Or any current assembler in use today.
   symbol definition. Such address is later translated into 
   relative addressing mode, saving the programmer the trouble of 
   calculating offset manually.
+
 
 
 -------------------------------------------
@@ -12897,6 +13128,7 @@ following format:
 COMMAND 
 
 {
+
 
   sub-command 1
 
@@ -13461,6 +13693,7 @@ With only name and type, we can create any number of program
 segments. For example, we can add the NULL program segment and 
 remove the GNU_STACK segment:
 
+
   PHDRS
 
 {
@@ -13540,8 +13773,10 @@ SECTIONS
 
 
 
+
 We can add as many segments of the same type, as long as they are 
 given different names:
+
 
   PHDRS
 
@@ -13631,6 +13866,7 @@ SECTIONS
   Now .text and .eh_frame are in different segments.
 
 
+
 -------------------------------------------
 
 
@@ -13649,6 +13885,7 @@ SECTIONS
 
 
 Adding the FILEHDR keyword changes the size of NULL segment:
+
 
   PHDRS
 
@@ -13707,8 +13944,10 @@ Adding the FILEHDR keyword changes the size of NULL segment:
 
 
 
+
 If we assign FILEHDR to a non-starting segment, its size and 
 starting address changes significantly:
+
 
   PHDRS
 
@@ -13783,26 +14022,27 @@ starting address changes significantly:
   between the memory layouts with and without FILEHDR keyword.
 
   [float Figure:
-[Figure 0.22:
+[Figure 0.22: 
 LOAD segment on disk and in memory.
 ]<LOAD_segment>
 
 [float Figure:
-[Sub-Figure a:
+[Sub-Figure a: 
 Without FILEHDR.
 ]
 
-<Graphics file: C:/Users/Tu Do/os01/book_src/images/08/no_FILEHDR.pdf>
+<Graphics file: /Users/james/Documents/Programming/Git/os01/book_src/images/08/no_FILEHDR.pdf>
 ]
 
 [float Figure:
-[Sub-Figure b:
+[Sub-Figure b: 
 With FILEHDR.
 ]
 
-<Graphics file: C:/Users/Tu Do/os01/book_src/images/08/with_FILEHDR.pdf>
+<Graphics file: /Users/james/Documents/Programming/Git/os01/book_src/images/08/with_FILEHDR.pdf>
 ]
 ]
+
 
 
 -------------------------------------------
@@ -13827,6 +14067,7 @@ gcc is a PHDR since the program segment header table appears
 right after the ELF header. It is also a convenient segment to 
 put the ELF header into using the FILEHDR keyword. We replace the 
 unused NULL segment earlier with a PHDR segment:
+
 
   PHDRS
 
@@ -13918,6 +14159,7 @@ unused NULL segment earlier with a PHDR segment:
   segment is placed. Every segment or section has a virtual 
   memory address and a load memory address:
 
+
   • A [margin:
 virtual memory address
 ]virtual memory addressvirtual memory address is a starting 
@@ -13948,11 +14190,13 @@ Read-Only Memory
   target application or operating system. 
 
 
+
 -------------------------------------------
 
 
 We can specify a load memory address for the segment LOAD with AT 
 syntax:
+
 
   PHDRS
 
@@ -14009,12 +14253,14 @@ syntax:
   concern.
 
 
+
 -------------------------------------------
 
 
   FLAGS (flags) assigns permissions to a segment. Each flag is an 
   integer that represents a permission and can be combined with 
   OR operations. Possible values:
+
 
   
 +-------------+--------+-------------+
@@ -14030,11 +14276,13 @@ syntax:
   
 
 
+
 -------------------------------------------
 
 
 We can create a LOAD segment with Read, Write and Execute 
 permissions enabled:
+
 
   PHDRS
 
@@ -14086,6 +14334,7 @@ permissions enabled:
   
 
   LOAD segment now gets all the RWE permissions, as shown above.
+
 
 
 -------------------------------------------
@@ -14233,9 +14482,11 @@ To enable debug information, we modify the bootloader Makefile:
   Makefile in bootloader/ directory and change this line under 
   $(BUILD_DIR)/%.o: %.asm recipe:
 
+
   nasm -f bin $< -o $@
 
   to this line:
+
 
   nasm -f elf $< -F dwarf -g -o $@
 
@@ -14256,6 +14507,7 @@ To enable debug information, we modify the bootloader Makefile:
   binary content as the original bootloader by adding this line 
   to $(BUILD_DIR)/%.o: %.asm:
 
+
   objcopy -O binary $(BUILD_DIR)/bootloader.o.elf $@
 
   objcopy, as its name implies, is a program that copies and 
@@ -14263,6 +14515,7 @@ To enable debug information, we modify the bootloader Makefile:
   bootloader and translate it into a flat binary file.
 
 The updated recipe should look like:
+
 
 $(BUILD_DIR)/%.o: %.asm
 
@@ -14276,6 +14529,7 @@ Now we test the bootloader with debug information available:
 
 1. Start the QEMU machine:
 
+
   
 
   $ make qemu
@@ -14285,6 +14539,7 @@ Now we test the bootloader with debug information available:
 2. Start gdb with the debug information stored in 
   bootloader.o.elf:
 
+
   
 
   $ gdb build/bootloader/bootloader.o.elf
@@ -14292,7 +14547,7 @@ Now we test the bootloader with debug information available:
   
 
   After getting into gdb, press the Enter key and if the sample 
-  .gdbinit section [sub:Automate-debugging-steps] is used, the 
+  .gdbinit section [subsec:Automate-debugging-steps] is used, the 
   output should look like:
 
   
@@ -14331,6 +14586,7 @@ correctly jump to main with source code displayed properly in
 gdb, so no fancy C code is needed yet.
 
 The next step is updating os/Makefile:
+
 
 BUILD_DIR=../build_os
 
@@ -14430,6 +14686,7 @@ Earlier we examined that an ELF header contains a entry address
 of a program. That information is 0x18 bytes away from the 
 beginning of an ELF header, according to man elf :
 
+
 typedef struct {
 
                unsigned char e_ident[EI_NIDENT];
@@ -14467,6 +14724,7 @@ is:
 
 • 16 bytes of e_ident[EI_NIDENT]:
 
+
   #define EI_NIDENT 16
 
 • 2 bytes of e_type
@@ -14477,13 +14735,12 @@ is:
 
 \mathtt{Offset=16+2+2+4=24=0x18}
 
-
 e_entry is of type ElfN_Addr, in which N is either 32 or 64. We 
-are writing 32-bit operating system, in this case N=32
- and so 
+are writing 32-bit operating system, in this case N=32 and so 
 ElfN_Addr is Elf32_Addr, which is 4 bytes long.
 
 With any program, such as this simple one:
+
 
   #include <stdio.h>
 
@@ -14549,8 +14806,9 @@ int main(int argc, char *argv[])
   reverse makes the address 0x00400430.
 
 Now that we know where the position of the entry address in the 
-ELF header, it is easy to modify the bootloader made in section [sub:Read-and-load]
+ELF header, it is easy to modify the bootloader made in section [subsec:Read-and-load]
  to retrieve and jump to the address:
+
 
 ;******************************************
 
@@ -14630,7 +14888,6 @@ execute the sector!
 It is as simple as that! First, we load the operating system 
 binary at 0x500, then we retrieve the entry address at the offset 
 0x18 from 0x500, by first calculating the expression 500h+18h=518h
-
  to get the actual in-memory address, then retrieve the content 
 by dereference it.
 
@@ -14944,7 +15201,7 @@ Breakpoint 2, main () at main.c:1
 
 
 Something wrong is going on here. It is not the generated 
-assembly code for function call as it is known in section [sub:Function-Call-and]
+assembly code for function call as it is known in section [subsec:Function-Call-and]
 . It is definitely wrong, verified with objdump:
 
 
@@ -14991,11 +15248,11 @@ made the .text section at address 0x500, in which main code is in
 the first byte for executing, and instructed the bootloader to 
 retrieve the address at the offset 0x18, then jump to the entry 
 address.[float MarginFigure:
-[MarginFigure 14:
+[MarginFigure 14: 
 Memory state after loading 2[superscript:nd] sector.
 ]<mem-state-bootloader>
 
-     <Graphics file: C:/Users/Tu Do/os01/book_src/images/08/mem_after_load_os.pdf>
+     <Graphics file: /Users/james/Documents/Programming/Git/os01/book_src/images/08/mem_after_load_os.pdf>
      
 ]
 
@@ -15023,8 +15280,7 @@ Here is the problem: 0x500 is the start of the ELF header. The
 bootloader actually loads the 2[superscript:nd] sector, which stores the executable as a whole, to 0x500. 
 Clearly, .text section, where main resides, is far from 0x500. 
 Since the in-memory entry address of the executable binary is 
-0x500, .text should be at \mathtt{0x500+0x500=0xa00}
-. However, 
+0x500, .text should be at \mathtt{0x500+0x500=0xa00}. However, 
 the entry address recorded in the ELF header remains 0x500 and as 
 a result, the bootloader jumped there instead of 0xa00. This is 
 one of the issues that must be fixed.
@@ -15037,11 +15293,11 @@ the address actually is at 0xa00. This memory mismatch renders
 the debug info useless.
 
 [float Figure:
-[Figure 0.23:
+[Figure 0.23: 
 Wrong symbol-memory mappings in debug info.
 ]
 
-     <Graphics file: C:/Users/Tu Do/os01/book_src/images/08/debug_info_bad_position.pdf>
+     <Graphics file: /Users/james/Documents/Programming/Git/os01/book_src/images/08/debug_info_bad_position.pdf>
      
 ]
 
@@ -15181,6 +15437,7 @@ $ readelf -l build/os/os
   os.lds), the offset starts from 0x1000 to 0x1073, accordingly. 
   For example, by setting it to 0x0:
 
+
   
 
   Elf file type is EXEC (Executable file)
@@ -15218,6 +15475,7 @@ $ readelf -l build/os/os
 
 • By setting the virtual address of .text to 0x74 (in os.lds):
 
+
   
 
   Elf file type is EXEC (Executable file)
@@ -15249,7 +15507,6 @@ $ readelf -l build/os/os
 
   PHDR is 0x74 bytes in size, so if LOAD starts at 0x1074, the 
   distance between the PHDR segment and LOAD segment is \mathtt{0x1074-0x74=0x1000}
-
    bytes. To save space, it removes that extra 0x1000 bytes.
 
 • By setting the virtual address of .text to any value between 
@@ -15302,18 +15559,17 @@ The binary will look like figure [fig-good-bin-layout] in memory:
 [float Figure:
 
 
-[Figure 0.24:
+[Figure 0.24: 
 A good binary layout.
 ]<fig-good-bin-layout>
 
-     <Graphics file: C:/Users/Tu Do/os01/book_src/images/08/binary_layout_good.pdf>
+     <Graphics file: /Users/james/Documents/Programming/Git/os01/book_src/images/08/binary_layout_good.pdf>
      
 ]
 
 If we set the Offset field to 0x100 from the beginning of the 
 file and the VirtAddr to 0x600, when loading in memory, the 
-actual memory of .text is \mathtt{0x500+0x100=0x600}
-; 0x500 is 
+actual memory of .text is \mathtt{0x500+0x100=0x600}; 0x500 is 
 the memory location where the bootloader loads into the physical 
 memory and 0x100 is the offset from the end of ELF header to 
 .text. The entry address and the debug info will then take the 
@@ -15378,6 +15634,7 @@ system page, which is 4096, or 0x1000 bytes in size. The -n or
 -nmagic option disables this behavior, which is needed. We amend 
 the ld command used in os/Makefile:
 
+
 ..... above content omitted ....
 
 $(OS): $(OS_OBJS)
@@ -15399,6 +15656,7 @@ $ ls -l build/os/os
 
 We update the rule so that the sectors are automatically 
 calculated:
+
 
 ..... above content omitted ....
 
@@ -16014,6 +16272,7 @@ To implement the concept of a process, a kernel needs to be able
 to save and restore its machine states for different tasks. 
 
   Description
+
 
   [Describe task switching mechanism involving LDT and GDT]
 
