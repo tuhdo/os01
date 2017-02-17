@@ -7684,14 +7684,40 @@ end{figure*}
 \end_layout
 
 \begin_layout Standard
-At the physical level, RAM is implemented by a transistor grid that stores
- charge; the charge gradually leaks and after a period, the grid needs refreshin
-g otherwise it loses all stored values.
- The individual transistor that stores charge is called 
+At the physical level, RAM is implemented as a grid of cells that each contain
+ a transistor and an electrical device called a 
+\emph on
+
+\begin_inset Marginal
+status open
+
+\begin_layout Plain Layout
+
+\series bold
 \emph on
 capacitor
+\end_layout
+
+\end_inset
+
+capacitor
 \emph default
-.
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+capacitor
+\end_layout
+
+\end_inset
+
+, which stores charge for short periods of time.
+ The transistor controls access to the capacitor; when switched on, it allows
+ a small charge to be read from or written to the capacitor.
+ The charge on the capacitor slowly dissipates, requiring the inclusion
+ of a refresh circuit to periodically read values from the cells and write
+ them back after amplification from an external power source.
 \end_layout
 
 \begin_layout Standard
@@ -7701,6 +7727,19 @@ capacitor
 status open
 
 \begin_layout Plain Layout
+Bus
+\end_layout
+
+\end_inset
+
+
+\begin_inset Marginal
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\emph on
 Bus
 \end_layout
 
@@ -7719,6 +7758,19 @@ Bus
 status open
 
 \begin_layout Plain Layout
+bus width
+\end_layout
+
+\end_inset
+
+
+\begin_inset Marginal
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\emph on
 bus width
 \end_layout
 
