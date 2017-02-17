@@ -167,7 +167,8 @@ For example: `[pg.9][grammar] Incorrect verb usage`.
 Even better, you can make a pull request with the provided book source. The main
 content of the book is in the file "Operating System: From 0 to 1.lyx". You can
 use [Lyx editor](https://www.lyx.org) to edit it, or any editor that can
-understand Latex.
+understand Latex. For compatability, please use Lyx version 2.1, otherwise the
+pull request will be a huge diff.
 
 The book is in development, so please bear with me if the English irritates you.
 I really appreciate it.
