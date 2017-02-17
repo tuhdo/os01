@@ -412,19 +412,21 @@ Greetings!
 
 \begin_layout Standard
 \noindent
-You've probably asked yourself at least once how an operating system is^M
- written from the ground up.
- You might even have years of programming experience under your belt, yet
- your understanding of operating systems may still be a collection of abstract
- concepts, not grounded in actual implementation.
- To those who've never built one, an operating system may seem like magic:
- a mysterious thing that can control hardware while handling a programmer's
- requests via an API of their favorite programming language.
- Learning how to build an operating system seems intimidating and difficult;
- no matter how much you learn, it never feels like you know enough.
- You're probably reading this book right now to gain a better understanding
- of operating systems to be a better software engineer.
- 
+Probably you asked yourself at least once, how an Operating System (OS)
+ was written from the ground up? You probably have spent years programming,
+ but still understand operating system as a collection of abstract concepts,
+ not how to implement an operating system in actual code.
+ In your mind, somehow the operating system can magically control the underlying
+ hardware and do what you want through the higher level API of your favorite
+ programming language.
+ You wish to understand the details, but for some reason, it seems too difficult
+ because regardless how much you learn, it is never enough.
+ You may feel that you are missing an important piece of the puzzle, and
+ get stuck.
+ However, deep inside you still want to write an operating system without
+ a crystal clear understanding.
+ After all, you are a software engineer, and an operating system is software.
+ You should know your software better than anyone else!
 \end_layout
 
 \begin_layout Standard
@@ -441,57 +443,47 @@ Isn't it more practical to learn the internals of Linux?
 \begin_inset Quotes erd
 \end_inset
 
-, you might ask.
-\end_layout
-
-\begin_layout Standard
-Yes...
-\end_layout
-
-\begin_layout Standard
-and no.
-\end_layout
-
-\begin_layout Standard
-Learning Linux can help your workflow at your day job.
- However, if you follow that route, you still won't achieve the ultimate
- goal of writing an actual operating system.
- By writing your own operating system, you will gain knowledge that you
- will not be able to glean just from learning Linux.
-\end_layout
-
-\begin_layout Standard
-Here's a list of some benefits of writing your own OS:
+ In the end, you learn Linux to improve your day job significantly and might
+ be able to contribute to it.
+ That is an excellent approach.
+ However, if you follow that route, you still do not achieve the ultimate
+ goal: writing an actual operating system.
+ Also, you gain knowledge that can never learn from using any current operating
+ system, and this experience can impact how you write software.
+ These are the benefits of writing your operating system:
 \end_layout
 
 \begin_layout Itemize
-You will learn how a computer works at the hardware level, and you will
- learn to write software to manage that hardware directly.
+Learn how a computer works at the hardware level, and how you can write
+ software that manages it directly.
 \end_layout
 
 \begin_layout Itemize
-You will learn the fundamentals of operating systems, making you able to
- adapt to any operating system, not just Linux
+Learn the fundamentals so you can adapt to any operating system and not
+ just Linux, or even write a new one.
 \end_layout
 
 \begin_layout Itemize
-To hack Linux internals profoundly, you'll need to write at least one operating
- system on your own.
- This is just like applications programming: to write a large application,
- you'll need to start with simple ones.
+You won't fully understand how Linux works without writing one on your own
+ anyway.
+ That is, to hack Linux internals profoundly, you will need to write at
+ least one operating system on your own.
+ Just like to write a large application, you need to start writing simple
+ programs.
+ Later you can proudly say that you really wrote an operating system from
+ scratch, not a copy/paste textbook operating system.
 \end_layout
 
 \begin_layout Itemize
-You will open pathways to various low-level programming domains such as
- reverse engineering, exploits, building virtual machines, game console
- emulators and more.
- Assembly language will become one of your indispensable tools for low-level
- analysis.(but it does not mean that you have to write your operating system
+Open pathways to various low-level programming domains such as reverse engineeri
+ng, exploitations, virtual machines, game console emulators and more, since
+ Assembly language becomes one of your indispensable tool for low-level
+ analysis (but it does not mean that you have to write your operating system
  in Assembly!).
 \end_layout
 
 \begin_layout Itemize
-Writing an operating system is fun!
+Writing an operating system is fun.
 \end_layout
 
 \begin_layout Section*
@@ -501,37 +493,49 @@ Why another book on Operating System?
 \end_layout
 
 \begin_layout Standard
-There are many books and courses on this topic made by famous professors
- and experts out there already.
- Who am I to write a book on such an advanced topic? While it's true that
- many quality resources exist, I find them lacking.
- Do any of them show you how to compile your C code and the C runtime library
- on top of it independent of an existing operating system? Most books on
- operating system design and implementation only discuss the software side;
- how the operating system communicates with the hardware is skipped.
- Important hardware details are skipped, and it's difficult for a self-learner
- to find relevant resources on the Internet.
- The aim of this book is to bridge that gap: not only will you learn how
- to program hardware directly, but also how to read official documents from
- hardware vendors to program it.
- You no longer have to seek out resources to help you interpret hardware
- manuals and documentation: you can do it yourself.
- Lastly, I wrote this book from an autodidact's perspective.
- I made this book as self-contained as possible, so you can spend more time
- learning and less time guessing or seeking out information on the Internet.
- 
+There are many books on this topic and even courses out there already, made
+ by famous professors and experts.
+ Who am I to write a book on such advanced topic? It is true that many quality
+ books are out there.
+ But then: of all the operating system books, do any of them show you how
+ to compile your C code that is independent of an existing operating system
+ and the C runtime library on top of it? Most books talk about operating
+ system designs and books that talk about implementations, only mention
+ the software side of operating system: algorithms, while the hardware side
+ to enable an operating system to communicate with hardware is skipped;
+ even if you read such books, the best you can only do is to experiment
+ its algorithm in an existing operating system, which is not so satisfying.
+ Maybe the scope of hardware is too large to include in an operating system
+ book, and probably the students are assumed to obtain enough hardware knowledge
+ beforehand from other courses.
+ Or, the students only need to work within existing assignment framework:
+ the only task is to fill the empty function body, run against test cases
+ and complete their homework.
+ Either way, hardware details are ignored, and it is hard to find relevant
+ resources on the internet for a self-learner.
+ The aim of this book is to provide that missing gap: not only you will
+ learn how to program hardware directly, but you will also learn how to
+ read official documents from hardware vendors to program it.
+ You no longer have to guess where the online articles get such mysterious
+ information of a hardware device to program it.
+ You can do it yourself.
+ Lastly, I wrote this book from an autodidact's perspective, thus I worked
+ my best to make the book as self-contained as possible, so you spend more
+ time learning and less time guessing and looking for information.
 \end_layout
 
 \begin_layout Standard
-One of the core focuses of this book is to guide you through the process
- of reading official documentation from vendors to implement your software.
- Official documents from hardware vendors like Intel are critical for implementi
-ng an operating system or any other software that directly controls the
- hardware.
- At a minimum, an operating system developer needs to be able to comprehend
- these documents and implement software based on a set of hardware requirements.
- Thus, the first chapter is dedicated to discussing relevant documents and
- their importance.
+One strong focus of this book is to guide the learners through the habit
+ of reading official documents from vendor to implement software, not from
+ random online articles, which could be useful as supplementary material
+ but difficult for systematic study.
+ Official documents from hardware vendors e.g.
+ Intel are critical for implementing an operating system or any other software
+ that directly controls the hardware.
+ At the minimum, an operating system developer is required to comprehend
+ such documents and derive an implementation based on a set of requirements.
+ Thus, the first chapter is dedicated to discuss relevant documents and
+ its importance.
 \end_layout
 
 \begin_layout Standard
@@ -553,7 +557,7 @@ Hello World
 \end_inset
 
  program.
- Most examples revolve around variants of a 
+ You will see that there are so many concepts to learn from a simple 
 \begin_inset Quotes eld
 \end_inset
 
@@ -561,8 +565,8 @@ Hello World
 \begin_inset Quotes erd
 \end_inset
 
- program, which will acquaint you with core concepts.
- These concepts must be learned before attempting to write an operating
+ program.
+ The concepts must be acquainted before attempting to write an operating
  system.
  Anything beyond a simple 
 \begin_inset Quotes eld
@@ -578,13 +582,14 @@ Hello World
 \end_layout
 
 \begin_layout Standard
-Let's dive in.
- With this book, I hope to provide enough foundational knowledge that will
- open doors for you to make sense of other resources.
- This book is will be especially beneficial to students who've just finished
- their first C/C++ course.
- Imagine how cool it would be to show prospective employers that you've
- already built an operating system.
+If you agree with me, then wait no longer.
+ Start diving in.
+ With this book, I hope that I could provide enough foundational knowledge
+ that finally you can make sense of available OS books and code.
+ This book is especially beneficial to students who've just finished their
+ first C/C++ course.
+ Imagine how cool it is to show your future employer that you already wrote
+ an OS on your own.
 \end_layout
 
 \begin_layout Section*
@@ -594,24 +599,23 @@ Prerequisites
 \end_layout
 
 \begin_layout Itemize
-Basic knowledge of circuits
+Know some circuit concepts:
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-Basic Concepts of Electricity: atoms, electrons, proton, neutron, current
+Basic Concepts of Electricity: atom, electrons, proton, neutron, current
  flow.
 \end_layout
 
 \begin_layout Itemize
-Ohm's law
+Ohm law
 \end_layout
 
 \begin_layout Standard
-If you are unfamiliar with these concepts, you can quickly learn them here:
- 
+However, if you know absolute nothing, you can quickly learn it here: 
 \begin_inset Flex URL
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -625,30 +629,30 @@ http://www.allaboutcircuits.com/textbook/
 
 \end_deeper
 \begin_layout Itemize
-C programming.
+Know some C programming.
  In particular:
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-Variable and function declarations/definitions
+Variable and functions declaration/definitions
 \end_layout
 
 \begin_layout Itemize
-While and for loops
+While and for loops.
 \end_layout
 
 \begin_layout Itemize
-Pointers and function pointers
+Understand how pointers work.
 \end_layout
 
 \begin_layout Itemize
-Fundamental algorithms and data structures in C
+Fundamentals of algorithms and data structures in C.
 \end_layout
 
 \end_deeper
 \begin_layout Itemize
-Linux basics: 
+Know Linux basics: 
 \end_layout
 
 \begin_deeper
@@ -657,25 +661,26 @@ Know how to navigate directory with the command line
 \end_layout
 
 \begin_layout Itemize
-Know how to invoke a command with options
+Know how to invoke a command with options.
 \end_layout
 
 \begin_layout Itemize
-Know how to pipe output to another program
+Know how to pipe output to another program.
 \end_layout
 
 \end_deeper
 \begin_layout Itemize
-Touch typing.
+Know how to touch type.
  Since we are going to use Linux, touch typing helps.
- I know typing speed does not relate to problem-solving, but at least your
- typing speed should be fast enough not to let it get it the way and degrade
- the learning experience.
+ I know typing speed does not relate to problem -solving, but at least the
+ speed should be fast enough not to let it get it the way and degrade the
+ learning experience.
 \end_layout
 
 \begin_layout Standard
-In general, I assume that the reader has basic C programming knowledge,
- and can use an IDE to build and run a program.
+In general, I assume that a reader acquired basic programming knowledge
+ with C, and can use an IDE at its basic.
+ That is, know how to press the Play button for building and running a program.
 \end_layout
 
 \begin_layout Section*
@@ -686,7 +691,8 @@ What you will learn in this book
 
 \begin_layout Itemize
 How to write an operating system from scratch by reading hardware datasheets.
- In the real world, you will not be able to consult Google for a quick answer.
+ In the real world, it works like that.
+ You won't be able to consult Google for a quick answer.
  
 \end_layout
 
@@ -694,10 +700,9 @@ How to write an operating system from scratch by reading hardware datasheets.
 Write code independently.
  It's pointless to copy and paste code.
  Real learning happens when you solve problems on your own.
- Some examples are provided to help kick start your work, but most problems
- are yours to conquer.
- However, the solutions are available online for you after giving a good
- try.
+ Some examples are given to kick start, but most problems are yours to conquer.
+ However, the solutions are available online for you to examine after giving
+ a good try.
 \end_layout
 
 \begin_layout Itemize
@@ -706,7 +711,7 @@ A big picture of how each layer of a computer related to each other, from
 \end_layout
 
 \begin_layout Itemize
-How to use Linux as a development environment and common tools for low-level
+Linux as a development environment and how to use common tools for low-level
  programming.
 \end_layout
 
@@ -744,8 +749,11 @@ Electrical Engineering
 
 \end_inset
 
-: The book discusses some concepts from electronics and electrical engineering
- only to the extent of how software operates on bare metal.
+: Although the book mentions some concepts of electronics and electrical
+ engineering, they are for making intuitions of how software operates physically
+ at bare metal.
+ When you are comfortable with the underlying hardware, writing an operating
+ system is much easier.
 \end_layout
 
 \begin_layout Itemize
@@ -772,7 +780,7 @@ Linux Kernel development
 
 \end_inset
 
-: There are already many high-quality books out there on this subject.
+: There are already high-quality books out there.
 \end_layout
 
 \begin_layout Itemize
@@ -798,7 +806,7 @@ Part
 \begin_inset space ~
 \end_inset
 
-1 provides a foundation for learning operating system.
+1 provides a foundation for learning operating systems.
 \end_layout
 
 \begin_deeper
@@ -809,26 +817,29 @@ Chapter 1 briefly explains the importance of domain documents.
 
 \begin_layout Itemize
 Chapter 2 explains the layers of abstractions from hardware to software.
- The idea is to provide insight into how code runs physically.
+ The idea is to provide insight into how code physically runs.
+ 
 \end_layout
 
 \begin_layout Itemize
-Chapter 3 provides the general architecture of a computer, then introduces
- a sample computer model that you will use to write an operating system.
+Chapter 3 provides a general architecture of a computer, then introduces
+ a sample computer model that a reader will use for writing an operating
+ system.
 \end_layout
 
 \begin_layout Itemize
 Chapter 4 introduces the x86 assembly language through the use of the Intel
- manuals, along with commonly used instructions.
- This chapter gives detailed examples of how high-level syntax corresponds
- to low-level assembly, enabling you to read generated assembly code comfortably.
+ manuals along with commonly used instructions.
+ The chapter gives detailed examples of how high-level syntax corresponds
+ to low-level assembly, thus enabling the reader to read generated assembly
+ code comfortably.
  It is necessary to read assembly code when debugging an operating system.
 \end_layout
 
 \begin_layout Itemize
 Chapter 5 dissects ELF in detail.
- Only by understanding how the structure of a program at the binary level,
- you can build one that runs on bare metal.
+ Only by understanding the structure of a program at binary level the reader
+ can build one that runs on bare metal by manipulating its structure.
 \end_layout
 
 \begin_layout Itemize
@@ -855,8 +866,6 @@ Part
 
 2 presents how to write a bootloader to bootstrap a kernel.
  Hence the name 
-\emph on
-
 \begin_inset Quotes eld
 \end_inset
 
@@ -864,8 +873,6 @@ Groundwork
 \begin_inset Quotes erd
 \end_inset
 
-
-\emph default
 .
  After mastering this part, the reader can either continue with the next
  part that is a guide on writing an operating system.
@@ -887,21 +894,20 @@ http://wiki.osdev.org/
 
 \begin_deeper
 \begin_layout Itemize
-Chapter 7 introduces what the bootloader is, how to write one in assembly,
+Chapter 7 introduces the bootloader, explains how to write one in assembly,
  and how to load it on QEMU, a hardware emulator.
  This process involves typing repetitive and long commands, so GNU Make
- is applied to improve productivity by automating the repetitive parts and
- simplifying the interaction with the project.
+ is applied to improve the productivity by automating the repetitive parts
+ and simplifying the interaction with the project.
  This chapter also demonstrates the use of GNU Make in context.
 \end_layout
 
 \begin_layout Itemize
 Chapter 8 introduces linking by explaining the relocation process when combining
  object files.
- In addition to a bootloader and an operating system written in C, this
- is the last piece of the puzzle required for building debuggable programs
- on bare metal, including the bootloader written in Assembly and an operating
- system written in C.
+ In addition to a bootloader and an operating system written in C, linking
+ is the last piece of the puzzle required to build debuggable programs on
+ bare metal.
 \end_layout
 
 \end_deeper
@@ -910,14 +916,15 @@ Part
 \begin_inset space ~
 \end_inset
 
-3 provides guidance on how to write an operating system, as you should implement
- an operating system on your own and be proud of your creation.
- The guidance consists of simpler and coherent explanations of necessary
+3 provides guidance on how to write an operating system.
+ Only guidance, since the reader should implement it on his or her own and
+ be proud of this creation.
+ The guidance consists of a simpler and coherent explanation of necessary
  concepts, from hardware to software, to implement the features of an operating
  system.
- Without such guidance, you will waste time gathering information spread
- through various documents and the Internet.
- It then provides a plan on how to map the concepts to code.
+ Without this guidance, the reader would spend more time gathering information
+ spread throughout different parts of various documents, some on the Internet.
+ The chapter then provides a plan on how to map concepts to code.
 \end_layout
 
 \begin_layout Section*
@@ -7369,8 +7376,8 @@ To use these devices, a programmer needs to controls the CPU to use the
 In a CPU, many OS concepts are already implemented directly in hardware,
  e.g.
  task switching, paging.
- A kernel programmer needs to know how to use the hardware features, to
- avoid duplicating such concept in software, thus wasting computer resources.
+ A kernel programmer needs to know how to use the hardware features, to avoid
+ duplicating such concept in software, thus wasting computer resources.
 \end_layout
 
 \begin_layout Itemize
@@ -7737,11 +7744,11 @@ Hardware
 
 \begin_layout Standard
 Hardware is a specific implementation of a computer.
- A line of processors implement the same instruction set architecture and
- use nearly identical organizations but differ in hardware implementation.
- For example, the Core i7 family provides a model for desktop computers
- that is more powerful but consumes more energy, while another model for
- laptops is less performant but more energy efficient.
+ A line of processors implement the same instruction set architecture and use
+ nearly identical organizations but differ in hardware implementation.
+ For example, the Core i7 family provides a model for desktop computers that
+ is more powerful but consumes more energy, while another model for laptops
+ is less performant but more energy efficient.
  To write software for a hardware device, seldom we need to understand a
  hardware implementation if documents are available.
  Computer organization and especially the instruction set architecture are
