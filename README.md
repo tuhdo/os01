@@ -81,38 +81,36 @@ reader to work on his or her own; the chapters are just like university assignme
 # Prerequisites
 
 Know some circuit concepts:
-+ Basic Concepts of Electricity: atom, electrons, proton, neutron, current flow.
-+ Ohm law
++ Basic Concepts of Electricity: atoms, electrons, protons, neutrons, current flow.
++ Ohm's law
 
 However, if you know absolutely nothing about electricity, you can quickly learn it here:
 <http://www.allaboutcircuits.com/textbook/>, by reading chapter 1 and chapter 2.
 
-Know some C programming. In particular:
+C programming. In particular:
 
-- Variable and function declarations and definitions
+– Variable and function declarations/definitions
 
-- While and for loops
+– While and for loops
 
-- How pointers work
+– Pointers and function pointers
 
-- Fundamentals of algorithms and data structures in C
+– Fundamental algorithms and data structures in C
 
-Know Linux basics:
+Linux basics: 
 
-- How to navigate directories on the command line
+– Know how to navigate directory with the command line
 
-- How to invoke a command with options
+– Know how to invoke a command with options
 
-- How to pipe a program's output to another program
+– Know how to pipe output to another program
 
-Know how to touch type. Since we are going to use Linux, touch typing helps. I
-know typing speed does not relate to problem -solving, but at least the speed
-should be fast enough not to let it get in the way and degrade the learning
-experience.
+Touch typing. Since we are going to use Linux, touch typing helps. I know typing
+speed does not relate to problem-solving, but at least your typing speed should
+be fast enough not to let it get it the way and degrade the learning experience.
 
-In general, I assume that the reader has acquired basic knowledge of programming with C,
-and can use an IDE at its basic. That is, know how to press the Play button for
-building and running a program.
+In general, I assume that the reader has basic C programming knowledge, and can
+use an IDE to build and run a program.
 
 # Status:
 * Part 1
