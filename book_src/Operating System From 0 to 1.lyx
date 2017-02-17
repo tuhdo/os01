@@ -1817,9 +1817,9 @@ All electronic devices, from simple to complex, manipulate this flow to
  When we write software, we indirectly manipulate electrical current at
  the physical level, in such a way that the underlying machine produces
  desired effects.
- To understand the process, we start from a light bulb.
- A light bulb can be alternating between on and off with a switch, periodically:
- an off means number 0, and an on means 1.
+ To understand the process, we consider a simple light bulb.
+ A light bulb can change two states between on and off with a switch, periodical
+ly: an off means number 0, and an on means 1.
 \begin_inset Float marginfigure
 wide false
 sideways false
@@ -1853,10 +1853,10 @@ A lightbulb
 \end_layout
 
 \begin_layout Standard
-However, one problem is that such switch requires manual intervention from
- a human.
- What needed is an automatic switch based on voltage level, as described
- above.
+However, one problem is that such a switch requires manual intervention
+ from a human.
+ What is required is an automatic switch based on the voltage level, as
+ described above.
  To enable automatic switching of electrical signals, a device called 
 \emph on
 transistor
@@ -2501,8 +2501,8 @@ end{figure}
 
 \begin_layout Standard
 From NAND gate, we have all other gates.
- As demonstrated, such simple circuitry performs the logical operators in
- day-to-day program languages e.g.
+ As demonstrated, such a simple circuitry performs the logical operators
+ in day-to-day program languages e.g.
  NOT operator 
 \family typewriter
 ~
@@ -2972,8 +2972,8 @@ nit
 \end_layout
 
 \begin_layout Standard
-Why does such bit pattern cause a device to do something? The reason is
- that underlying each instruction is a small circuit that implements such
+Why does such a bit pattern cause a device to do something? The reason is
+ that underlying each instruction is a small circuit that implements the
  instruction.
  Similar to how a function/subroutine in a computer program is called by
  its name, a bit pattern is a name of a little function inside a CPU that
@@ -3549,8 +3549,8 @@ H = HIGH voltage level; L = LOW voltage level; X = don’t care.
 
 The functional description provides a truth table with all possible pin
  inputs and outputs, which also describes the usage of all pins in the device.
- A user needs not to know the implementation, but on such table to use the
- device.
+ A user needs not to know the implementation, but on such a table to use
+ the device.
  We can say that the truth table above is the machine language of the device.
  Since the device is digital, its language is a collection of binary strings:
 \end_layout
@@ -3575,7 +3575,7 @@ The number of input strings is what the device understand, and the number
 \end_inset
 
 .
- However, such number is a tiny fraction of a complex device like a CPU,
+ However, the number is a tiny fraction of a complex device like a CPU,
  with hundreds of pins.
 \end_layout
 
@@ -4528,8 +4528,8 @@ height "1.5pt"
 \end_layout
 
 \begin_layout Standard
-To implement a 4-bit OR gate, we need a total of four of such 74HC00 chips
- configured as OR gates, packaged as a single chip as in figure 
+To implement a 4-bit OR gate, we need a total of four of 74HC00 chips configured
+ as OR gates, packaged as a single chip as in figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "or-chip-74hc00"
@@ -5086,8 +5086,8 @@ Assembly language is a step up from writing 0 and 1.
  all over again in all places, we simply refer to such blocks of code with
  easier to use text forms.
  For example, a block of assembly code checks whether one variable is greater
- than another and if so, execute the block of code A, else execute the block
- of code B; in C, such block of assembly code is represented by an 
+ than another and if so, execute a block of code, else execute another block
+ of code; in C, such block of assembly code is represented by an 
 \begin_inset Flex Code
 status open
 
