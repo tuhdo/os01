@@ -1,0 +1,141 @@
+Kernel Programming
+
+x86 Descriptors
+
+  Basic operating system concepts
+
+The first and foremost, OS manages hardware resources. It's easy
+to see the core features of an OS based on Von Neumann diagram:
+
+  CPU management: allows programs to share CPU for multitasking.
+
+  Memory management: allocates enough storage for programs to
+  run.
+
+  Devices management: detects and communicates with different
+  devices
+
+Any OS should be good at the above fundamentals tasks.
+
+Another important feature of an OS is to provide an software
+interface layer, that hides away hardware interfaces, to
+interface with applications that run on top of that OS. The
+benefits of such a layer:
+
+• reusability: that is, the same software API can be reused
+  across programs, thus simplifying software development process
+
+• separation of concerns: bugs appear either in application
+  programs, or in the OS; a programmer needs to isolate where the
+  bugs are.
+
+• simplify software development process: provides an easier to
+  use software interface layer with a uniform access to hardware
+  resources across devices, instead of directly using the
+  hardware interface of a particular device.
+
+  Hardware Abstraction Layer
+
+There are so many hardware devices out there, so it's best to
+leave the hardware engineers how the devices talk to an OS. To
+achieve this goal, the OS only provides a set of agreed software
+interfaces between itself and the device driver writers and is
+called Hardware Abstraction Layer.
+
+In C, this software interface is implemented through a structure
+function pointers.
+
+[illustrate with Linux example]
+
+  System programming interface
+
+System programming interfaces are standard interfaces that an OS
+provides application programs to use its services. For example,
+if a program wishes to read a file on disk, then it must call a
+function like open() and let the OS handle the details of talking
+to the hard disk for retrieving the file.
+
+  The need for an Operating System
+
+In a way, OS is an overhead, but a necessary one, for a user to
+tell a computer what to do. When resources in a computer system
+(CPU, GPU, memory, hard drive...) became big and more
+complicated, it's tedious to manually manage all the resources.
+
+Imagine we have to manually load programs on a computer with 3 GB
+of RAM. We would have to load programs at various fix addresses,
+and for each program a size must be manually calculated to avoid
+wasting memory resource, and enough for programs to not
+overriding each other.
+
+Or, when we want to give computer input through the keyboard,
+without an OS, an application also has to carry code to
+facilitate the communication with keyboard hardware; each
+application then handles such keyboard communication on its own.
+Why should there be such duplications across applications for
+such standard feature? If you write an accounting software, why
+should a programmer concern writing a keyboard driver, totally
+irrelevant to the problem domain?
+
+That's why a crucial job of an OS is to hide the complexity of
+hardware devices, so a program is freed from the burden of
+maintaining its own code for hardware communication by having a
+standardized set of interfaces and thus, reduce potential bugs
+along with faster development time.
+
+To write an OS effectively, a programmer need to understand well
+the underlying computer architecture that programmer are writing
+an OS for. The first reason is, many OS concepts are supported by
+the architecture e.g. the concepts of virtual memory are well
+supported by x86 architecture. If the underlying computer
+architecture is not well-understood, OS developers are doomed to
+reinvent it in your OS, and such software-implemented solutions
+run slower than the hardware version.
+
+  Drivers
+
+Drivers are programs that enable an OS to communicate and use
+features of hardware devices. For example, a keyboard driver
+enables an OS to get input from keyboard; or a network driver
+allows a network card to send and receive data packets to and
+from the Internet.
+
+If you only write application programs, you may wonder how can
+software control hardware devices? As mentioned in Chapter 2,
+through the hardware-software interface: by writing to a device's
+registers or to write to ports of a device, through the use of
+CPU's instructions.
+
+  Userspace and kernel space
+
+Kernel space refers to the working environment of an OS that only
+the kernel can access. Kernel space includes the direct
+communication with hardware, or manipulate privileged memory
+regions (such as kernel code and data).
+
+In contrast, userspace refers to less privileged processes that
+run above the OS, and is supervised by the OS. To access the
+kernel facility, user program must go through the standardized
+system programming interfaces provided by the OS.
+
+  Memory Segment
+
+  Segment Descriptor
+
+  Types of Segment Descriptors
+
+  Code and Data descriptors
+
+  Task Descriptor
+
+  Interrupt Descriptor
+
+  Descriptor Scope
+
+  Global Descriptor
+
+  Local Descriptor
+
+  Segment Selector
+
+  Enhancement: Bootloader with descriptors

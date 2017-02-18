@@ -1,0 +1,865 @@
+This chapter gives an intuition on how hardware and software
+connected together, and how software is represented physically.
+
+  The physical implementation of a bit
+
+All electronic devices, from simple to complex, manipulate this
+flow to achieve desired effects in the real world. Computers are
+no exception. When we write software, we indirectly manipulate
+electrical current at the physical level, in such a way that the
+underlying machine produces desired effects. To understand the
+process, we consider a simple light bulb. A light bulb can change
+two states between on and off with a switch, periodically: an off
+means number 0, and an on means 1.
+
+[float MarginFigure: [MarginFigure 1: A lightbulb]
+<Graphics file: C:/Users/Tu Do/os01/book_src/images/02/bulb.svg>
+]
+
+However, one problem is that such a switch requires manual
+intervention from a human. What is required is an automatic
+switch based on the voltage level, as described above. To enable
+automatic switching of electrical signals, a device called
+transistor, invented by William Shockley, John Bardeen and Walter
+Brattain. This invention started the whole computer industry.
+
+At the core, a [margin:
+transistor
+]transistortransistor is just a resistor whose values can vary
+based on an input voltage value[float MarginFigure:
+[MarginFigure 2:
+Modern transistor
+]
+
+<Graphics file: C:/Users/Tu Do/os01/book_src/images/02/transistor.svg>
+]. With this property, a transistor can be used as a current
+amplifier (more voltage, less resistance) or switch electrical
+signals off and on (block and unblock an electron flow) based on
+a voltage level. At 0 v, no current can pass through a
+transistor, thus it acts like a circuit with an open switch
+(light bulb off) because the resistor value is enough to block
+the electrical flow. Similarly, at +3.5 v, current can flow
+through a transistor because the resistor value is lessened,
+effectively enables electron flow, thus acts like a circuit with
+a closed switch.[margin:
+If you want a deeper explanation of transistors e.g. how
+electrons move, you should look at the video “How semiconductors
+work” on Youtube, by Ben Eater.
+]
+
+A bit has two states: 0 and 1, which is the building block of all
+digital systems and software. Similar to a light bulb that can be
+turned on and off, bits are made out of this electrical stream
+from the power source: Bit 0 are represented with 0 v (no
+electron flow), and bit 1 is +3.5 v to +5 v (electron flow).
+Transistor implements a bit correctly, as it can regulate the
+electron flow based on voltage level.
+
+  MOSFET transistors
+
+The classic transistors invented open a whole new world of micro
+digital devices. Prior to the invention, vacuum tubes - which are
+just fancier light bulbs - were used to present 0 and 1, and
+required human to turn it on and off. [margin:
+MOSFET
+]MOSFETMOSFET, or Metal–Oxide–Semiconductor Field-Effect
+Transistor, invented in 1959 by Dawon Kahng and Martin M. (John)
+Atalla at Bell Labs, is an improved version of classic
+transistors that is more suitable for digital devices, as it
+requires shorter switching time between two states 0 and 1, more
+stable, consumes less power and easier to produce.
+
+There are also two types of MOSFETs analogous to two types of
+transistors: n-MOSFET and p-MOSFET. n-MOSFET and p-MOSFET are
+also called NMOS and PMOS transistors for short.
+
+  Beyond transistors: digital logic gates
+
+All digital devices are designed with logic gates. A logic gate[margin:
+logic gate
+]logic gate is a device that implements a boolean function. Each
+logic gate includes a number of inputs and an output. All
+computer operations are built from the combinations of logic
+gates, which are just combinations of boolean functions. [float MarginFigure:
+[MarginFigure 3:
+Example: NAND gate
+]
+
+<Graphics file: C:/Users/Tu Do/os01/book_src/images/02/Nand-gate.svg>
+
+
+]
+
+  The theory behind logic gates
+
+Logic gates accept only binary inputs[footnote:
+Input that is either a 0 or 1.
+] and produce binary outputs. In other words, logic gates are
+functions that transform binary values. Fortunately, a branch of
+math that deals exclusively with binary values already existed,
+called Boolean Algebra, developed in the 19[superscript:th]century by George Boole. With a sound mathematical theory as a
+foundation logic gates were created. As logic gates implement
+Boolean functions, a set of Boolean functions is functionally complete
+[margin:
+functionally complete
+]functionally complete, if this set can construct all other
+Boolean functions can be constructed from. Later, Charles Sanders
+Peirce (during 1880 -- 1881) proved that either Boolean function
+of NOR or NAND alone is enough to create all other Boolean logic
+functions. Thus NOR and NAND gates are functionally complete Peirce (1933)
+. Gates are simply the implementations of Boolean logic
+functions, therefore NAND or NOR gate is enough to implement all
+other logic gates. The simplest gates CMOS circuit can implement
+are inverters (NOT gates) and from the inverters, comes NAND
+gates. With NAND gates, we are confident to implement everything
+else. This is why the inventions of transistors, then CMOS
+circuit revolutionized computer industry.[margin:
+If you want to understand why and how from NAND gate we can
+create all Boolean functions and a computer, I suggest the course
+Build a Modern Computer from First Principles: From Nand to
+Tetris available on Coursera: https://www.coursera.org/learn/build-a-computer
+. Go even further, after the course, you should take the series
+Computational Structures on Edx.
+]
+
+We should realize and appreciate how powerful boolean functions
+are available in all programming languages.
+
+  Logic Gate implementation: CMOS circuit
+
+Underlying every logic gate is a circuit called [margin:
+CMOS
+]CMOSCMOS - Complementary MOSFET. CMOS consists of two
+complementary transistors, NMOS and PMOS. The simplest CMOS
+circuit is an inverter or a NOT gate:
+
+
+
+
+
+
+
+
+
+
+From NOT gate, a NAND gate can be created:
+
+
+
+From NAND gate, we have all other gates. As demonstrated, such a
+simple circuitry performs the logical operators in day-to-day
+program languages e.g. NOT operator ~ is executed directly by an
+inverter circuit, and operator & is executed by an AND circuit
+and so on. Code does not run on magic a black box. In contrast,
+code execution is precise and transparent, often as simple as
+running some hardwired circuit. When we write software, we simply
+manipulate electrical current at the physical level to run
+appropriate circuits to produce desired outcomes. However, this
+whole process somehow does not relate to any thought involving
+electrical current. That is the real magic and will be explained
+soon.
+
+One interesting property of CMOS is that a k-input gate uses k
+PMOS and k NMOS transistors, a total of 2ᵏtransistors Wakerly (1999)
+. All logic gates are built by pairs of NMOS and PMOS
+transistors, and gates are the building blocks of all digital
+devices from simple to complex, including any computer. Thanks to
+this pattern, it is possible to separate between the actual
+physical circuit implementation and logical implementation.
+Digital designs are done by designing with logic gates then later
+be “compiled” into physical circuits. In fact, later we will see
+that logic gates become a language that describes how circuits
+operate. Understanding how CMOS works is important to understand
+how a computer is designed, and as a consequence, how a computer
+works[footnote:
+Again, if you want to understand how logic gates make a computer,
+consider the suggested courses on Coursera and Edx earlier.
+].
+
+Finally, an implemented circuit with its wires and transistors is
+stored physically in a package called a chip. A chipchip is a
+substrate that an integrated circuit is etched onto. However, a
+chip also refers to a completely packaged integrated circuit in
+consumer market. Depends on the context, it is understood
+differently.[float MarginFigure:
+
+
+[MarginFigure 4:
+74HC00 chip physical view
+]
+
+<Graphics file: C:/Users/Tu Do/os01/book_src/images/02/74hc00_nxp_physical.jpg>
+]
+
+
+-------------------------------------------
+
+
+74HC00 is a chip with four 2-input NAND gates. The chip comes
+with 8 input pins and 4 output pins, 1 pin for connecting to a
+voltage source and 1 pin for connecting to the ground. This
+device is the physical implementation of NAND gates that we can
+physically touch and use. But instead of just a single gate, the
+chip comes with 4 gates that can be combined. Each combination
+enables a different logic function, effective creating other
+logic gates. This feature is what make the chip popular.
+
+  [float Figure:
+[Figure 0.3:
+74HC00 logic diagrams (Source: 74HC00 datasheet, http://www.nxp.com/documents/data_sheet/74HC_HCT00.pdf
+)
+]
+
+[float Figure:
+[Sub-Figure a:
+Logic diagram of 74HC00
+]
+
+<Graphics file: C:/Users/Tu Do/os01/book_src/images/02/7400_block_diagram.png>
+]     [float Figure:
+[Sub-Figure b:
+Logic diagram of one NAND gate
+]
+
+<Graphics file: C:/Users/Tu Do/os01/book_src/images/02/7400_logic_diagram.png>
+]
+]
+
+  Each of the gates above is just a simple NAND circuit with the
+  electron flows, as demonstrated earlier. Yet, many these
+  NAND-gates chips combined can build a simple computer.
+  Software, at the physical level, is just electron flows.
+
+
+
+  How can the above gates can be created with 74HC00? It is
+  simple: as every gate has 2 input pins and 1 output pin, we can
+  write the output of 1 NAND gate to an input of another NAND
+  gate, thus chaining NAND gates together to produce the diagrams
+  as above.
+
+
+-------------------------------------------
+
+
+  Beyond Logic Gates: Machine Language
+
+  Machine language
+
+Being built upon gates, as gates only accept a series of 0 and 1,
+a hardware device only understands 0 and 1. However, a device
+only takes 0 and 1 in a systematic way. [margin:
+Machine language
+]Machine languageMachine language is a collection of unique bit
+patterns that a device can identify and perform a corresponding
+action. A machine instruction is a unique bit pattern that a
+device can identify. In a computer system, a device with its
+language is called CPU - Central Processing Unit, which controls
+all activities going inside a computer. For example, in the x86
+architecture, the pattern 10100000 means telling a CPU to add two
+numbers, or 000000101 to halt a computer. In the early days of
+computers, people had to write completely in binary.
+
+Why does such a bit pattern cause a device to do something? The
+reason is that underlying each instruction is a small circuit
+that implements the instruction. Similar to how a
+function/subroutine in a computer program is called by its name,
+a bit pattern is a name of a little function inside a CPU that
+got executed when the CPU finds one.
+
+Note that CPU is not the only device with its language. CPU is
+just a name to indicate a hardware device that controls a
+computer system. A hardware device may not be a CPU but still has
+its language. A device with its own machine language is a
+programmable device, since a user can use the language to command
+the device to perform different actions. For example, a printer
+has its set of commands for instructing it how to prints a page.
+
+
+-------------------------------------------
+
+
+<exa:74HC00-chip-can>A user can use 74HC00 chip without knowing
+its internal, but only the interface for using the device. First,
+we need to know its layout:
+
+  [float Figure:
+[Figure 0.4:
+74HC00 Pin Layout (Source: 74HC00 datasheet, http://www.nxp.com/documents/data_sheet/74HC_HCT00.pdf
+)
+]
+
+     <Graphics file: C:/Users/Tu Do/os01/book_src/images/02/7400_pin_configuration.pdf>
+
+]
+
+
+
+
+
+
+Then, the functionality of each pin:
+
+  [float Table:
+[Table 1:
+Pin Description (Source: 74HC00 datasheet, http://www.nxp.com/documents/data_sheet/74HC_HCT00.pdf
+)
+]
+
+
++-----------------------------+---------------+-----------------+
+| Symbol                      |  Pin          |  Description    |
++------------------------------+---------------+----------------+
+| 1A to 4A                     | 1, 4, 9, 12   | data input     |
++------------------------------+---------------+----------------+
+| 1B to 4B                     | 2, 5, 10, 13  | data input     |
++------------------------------+---------------+----------------+
+| 1Y to 4Y                     | 3, 6, 8, 11   | data output    |
++------------------------------+---------------+----------------+
+| GND                          | 7             | ground (0 V)   |
++------------------------------+---------------+----------------+
+| V[subscript:cc][subscript:]  | 14            | supply voltage |
++------------------------------+---------------+----------------+
+
+]
+
+  Finally, how to use the pins:
+
+  [float Table:
+[Table 2:
+Functional Description
+]
+
+
++------------+--------+
+| Input      | Output |
++-----+------+--------+
+| nA  | nB   | nY     |
++-----+------+--------+
+| L   | X    | H      |
++-----+------+--------+
+| X   | L    | H      |
++-----+------+--------+
+| H   | H    | L      |
++-----+------+--------+
+
+]
+
+  [margin:
+• n is a number, either 1, 2, 3, or 4
+
+• H = HIGH voltage level; L = LOW voltage level; X = don’t care.
+]The functional description provides a truth table with all
+  possible pin inputs and outputs, which also describes the usage
+  of all pins in the device. A user needs not to know the
+  implementation, but on such a table to use the device. We can
+  say that the truth table above is the machine language of the
+  device. Since the device is digital, its language is a
+  collection of binary strings:
+
+  • The device has 8 input pins, and this means it accepts binary
+    strings of 8 bits.
+
+  • The device has 4 output pins, and this means it produces
+    binary strings of 4 bits from the 8-bit inputs.
+
+  The number of input strings is what the device understand, and
+  the number of output strings is what the device can speak.
+  Together, they make the language of the device. Even though
+  this device is simple, yet the language it can accept contains
+  quite many binary strings: 2^{8}+2^{4}=272
+. However, the
+  number is a tiny fraction of a complex device like a CPU, with
+  hundreds of pins.
+
+  When leaving as is, 74HC00 is simply a NAND device with two
+  4-bit inputs[footnote:
+Or simply 4-bit NAND gate, as it can only accept 4 bits of input
+at the maximum.
+].
+
+
++--------+-----------------------------------------------+----------------------+
+  |        |                    Input                      |        Output        |
+  +--------+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----+
+  | Pin    | 1A  | 1B  | 2A  | 2B  | 3A  | 3B  | 4A  | 4B  | 1Y  | 2Y  | 3Y  | 4Y |
+  +--------+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----+
+  | Value  | 1   | 1   | 0   | 0   | 1   | 1   | 0   | 0   | 0   | 1   | 0   | 1  |
+  +--------+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+----+
+
+
+
+
+
+
+  The inputs and outputs as visually presented:
+
+  [float Figure:
+
+
+[Figure 0.5:
+Pins when receiving digital signals that correspond to a binary
+string. Green signals are inputs; blue signals are outputs.
+]     <Graphics file: C:/Users/Tu Do/os01/book_src/images/02/7400_bin_string1.pdf>
+
+]
+
+  On the other hand, if OR gate is implemented, we can only build
+  a 2-input OR gate from 74HC00, as it requires 3 NAND gates: 2
+  input NAND gates and 1 output NAND gate. Each input NAND gate
+  represents only a 1-bit input of the OR gate. In the following
+  figure, the pins of each input NAND gates are always set to the
+  same values (either both inputs are A or both inputs are B) to
+  represent a single bit input for the final OR gate:
+
+
+
+
+
+[float Table:
+[Table 3:
+Truth table of OR logic diagram.
+]
+
+
++----+----+----+----+---+
+| A  | B  | C  | D  | Y |
++----+----+----+----+---+
+| 0  | 0  | 1  | 1  | 0 |
++----+----+----+----+---+
+| 0  | 1  | 1  | 0  | 1 |
++----+----+----+----+---+
+| 1  | 0  | 0  | 1  | 1 |
++----+----+----+----+---+
+| 1  | 1  | 0  | 0  | 1 |
++----+----+----+----+---+
+
+]
+
+
+-------------------------------------------
+
+
+
+
+
+
+
+To implement a 4-bit OR gate, we need a total of four of 74HC00
+chips configured as OR gates, packaged as a single chip as in
+figure [or-chip-74hc00].
+
+[float Figure:
+[Figure 0.6:
+4-bit OR chip made from four 74HC00 devices
+]<or-chip-74hc00>
+
+     <Graphics file: C:/Users/Tu Do/os01/book_src/images/02/4-bit-or-gate-layout.pdf>
+
+]
+
+  Assembly Language
+
+Assembly language is the symbolic representation of binary
+machine code, by giving bit patterns mnemonic names. It was a
+vast improvement when programmers had to write 0 and 1. For
+example, instead of writing 000000101, a programmer simply write
+hlt to stop a computer. Such an abstraction makes instructions
+executed by a CPU easier to remember, and thus more instructions
+could be memorized, less time spent looking up CPU manual to find
+instructions in bit forms and as a result, code was written
+faster.
+
+Understand assembly language is crucial for low-level programming
+domains, even to this day. The more instructions a programmer
+want to understand, the deeper understanding of machine
+architecture is required.
+
+We can build a device with 2 assembly instructions:
+
+  or   <op1>, <op2>
+
+  nand <op1>, <op2>
+
+  • or accepts two 4-bit operands. This corresponds to a 4-input
+    OR gate device built from 4 74HC00 chips.
+
+  • nand accepts two 4-bit operands. This corresponds to a single
+    74HC00 chips, leave as is.
+
+  Essentially, the gates in the example [exa:74HC00-chip-can]
+  implements the instructions. Up to this point, we only specify
+  input and output and manually feed it to a device. That is, to
+  perform an operation:
+
+  • Pick a device by hands.
+
+  • Manually put electrical signals into pins.
+
+  First, we want to automate the process of device selection.
+  That is, we want to simply write assembly instruction and the
+  device that implements the instruction is selected correctly.
+  Solving this problem is easy:
+
+  • Give each instruction an index in binary code, called
+    operation code or opcode for short, and embed it as part of
+    input. The value for each instruction is specified as in
+    table [ex-ins-ops].[float MarginTable:
+[MarginTable 1:
+Instruction-Opcode mapping.
+]<ex-ins-ops>
+
+
++--------------+-------------+
+| Instruction  | Binary Code |
++--------------+-------------+
++--------------+-------------+
+|    nand      |     00      |
++--------------+-------------+
+|     or       |     01      |
++--------------+-------------+
+
+]
+
+    Each input now contains additional data at the beginning: an
+    opcode. For example, the instruction:
+
+    nand 1100, 1100
+
+    corresponds to the binary string: 0011001100. The first two
+    bits 00 encodes a nand instruction, as listed in the table
+    above.
+
+  • Add another device to select a device, based on a binary code
+    peculiar to an instruction.
+
+  Such a device is called a decoder, an important component in a
+  CPU that decides which circuit to use. In the above example,
+  when feeding 0011001100 to the decoder, because the opcode is
+  00, data are sent to NAND device for computing.
+
+  Finally, writing assembly code is just an easier way to write
+  binary strings that a device can understand. When we write
+  assembly code and save in a text file, a program called an [margin:
+assembler
+]assemblerassembler translates the text file into binary strings
+  that a device can understand. So, how can an assembler exist in
+  the first place? Assume this is the first assembler in the
+  world, then it is written in binary code. In the next version,
+  life is easier: the programmers write the assembler in the
+  assembly code, then use the first version to compile itself.
+  These binary strings are then stored in another device that
+  later can be retrieved and sent to a decoder. A storage device[margin:
+storage device
+]storage device is the device that stores machine instructions,
+  which is an array of circuits for saving 0 and 1 states.
+
+  A decoder is built out of logic gates similar to other digital
+  devices. However, a storage device can be anything that can
+  store 0 and 1 and is retrievable. A storage device can be a
+  magnetized device that uses magnetism to store information, or
+  it can be made out of electrical circuits using. Regardless of
+  the technology used, as long as the device can store data and
+  is accessible to retrieve data, it suffices. Indeed, the modern
+  devices are so complex that it is impossible and unnecessary to
+  understand every implementation detail. Instead, we only need
+  to learn the interfaces, e.g. the pins, that the devices
+  expose.
+
+
+
+
+
+
+
+
+  A computer essentially implements this process:
+
+  • Fetch an instruction from a storage device.
+
+  • Decode the instruction.
+
+  • Execute the instruction.
+
+  Or in short, a fetch -- decode -- executefetch -- decode --
+  execute cycle. The above device is extremely rudimentary, but
+  it already represents a computer with a fetch -- decode --
+  execute cycle. More instructions can be implemented by adding
+  more devices and allocating more opcodes for the instructions,
+  then update the decoder accordingly. The Apollo Guidance
+  Computer, a digital computer produced for the Apollo space
+  program from 1961 -- 1972, was built entirely with NOR gates -
+  the other choice to NAND gate for creating other logic gates.
+  Similarly, if we keep improving our hypothetical device, it
+  eventually becomes a full-fledge computer.
+
+  Programming Languages
+
+Assembly language is a step up from writing 0 and 1. As time goes
+by, people realized that many pieces of assembly code had
+repeating patterns of usages. It would be nice if instead of
+writing all the repeating blocks of code all over again in all
+places, we simply refer to such blocks of code with easier to use
+text forms. For example, a block of assembly code checks whether
+one variable is greater than another and if so, execute a block
+of code, else execute another block of code; in C, such block of
+assembly code is represented by an if statement that is close to
+human language.
+
+[float Figure:
+[Figure 0.7:
+Repeated assembly patterns are generalized into a new language.
+]
+
+     <Graphics file: C:/Users/Tu Do/os01/book_src/images/02/asm_to_proglang.pdf>
+
+]
+
+People created text forms to represent common blocks of assembly
+code, such as the if syntax above, then write a program to
+translate the text forms into assembly code. The program that
+translates such text forms to machine code is called a [margin:
+compiler
+]compilercompiler:
+
+
+
+Any software logic a programming language can implement, hardware
+can also implement. The reverse is also true: any hardware logic
+that is implemented in a circuit can be reimplemented in a
+programming language. The simple reason is that programming
+languages, or assembly languages, or machine languages, or logic
+gates are just languages to express computations. It is
+impossible for software to implement something hardware is
+incapable of because programming language is just a simpler way
+to use the underlying hardware. At the end of the day,
+programming languages are translated to machine instructions that
+are valid to a CPU. Otherwise, code is not runnable, thus a
+useless software. In reverse, software can do everything hardware
+(that run the software) can, as programming languages are just an
+easier way to use the hardware.
+
+In reality, even though all languages are equivalent in power,
+not all of them are capable of express programs of each other.
+Programming languages vary between two ends of a spectrum: high
+level and low level.
+
+The higher level a programming language is, the distant it
+becomes with hardware. In some high-level programming languages,
+such as Python, a programmer cannot manipulate underlying
+hardware, despite being able to deliver the same computations as
+low-level programming languages. The reason is that high-level
+languages want to hide hardware details to free programmers from
+dealing with irrelevant details not related to current problem
+domains. Such convenience, however, is not free: it requires
+software to carry an extra code for managing hardware details
+(e.g. memory) thus making the code run slower, and it makes
+hardware programming difficult or impossible. The more
+abstractions a programming language imposes, the more difficult
+it is for writing low-level software, such as hardware drivers or
+an operating system. This is the reason why C is usually a
+language of choice for writing an operating system, since C is
+just a thin wrapper of the underlying hardware, making it easy to
+understand how exactly a hardware device runs when executing a
+certain piece of C code.
+
+Each programming language represents a way of thinking about
+programs. Higher-level programming languages help to focus on
+problem domains that are not related to hardware at all, and
+where programmer performance is more important than computer
+performance. Lower-level programming languages help to focus on
+the inner-working of a machine, thus are best suited for problem
+domains that are related to control hardware. That is why so many
+languages exist. Use the right tools for the right job to achieve
+the best results.
+
+
+
+  Abstraction
+
+AbstractionAbstraction is a technique for hiding complexity that
+is irrelevant to the problem in context. For example, writing
+programs without any other layer except the lowest layer: with
+circuits. Not only a person needs an in-depth understanding of
+how circuits work, making it much more obscure to design a
+circuit because the designer must look at the raw circuits but
+think in higher-level such as logic gates. It is a distracting
+process, as a designer must constantly translate the idea into
+circuits. It is possible for a designer simply thinks his
+high-level ideas straight, and later translate the ideas into
+circuits. Not only it is more efficient, but it is also more
+accurate as a designer can focus all his efforts into verifying
+the design with high-level thinking. When a new designer arrives,
+he can easily understand the high-level designs, thus can
+continue to develop or maintain existing systems.
+
+  Why abstraction works
+
+In all the layers, abstractions manifest itself:
+
+• Logic gates abstract away the details of CMOS.
+
+• Machine language abstracts away the details of logic gates.
+
+• Assembly language abstracts away the details of machine
+  languages.
+
+• Programming language abstracts away the details of assembly
+  languages.
+
+We see repeating patterns of how lower-layers build upper-layers:
+
+• A lower layer has a recurring pattern. Then, this recurring
+  pattern is taken out and built a language on top of it.
+
+• A higher layer strips away layer-specific (non-recurring)
+  details to focus on the recurring details.
+
+• The recurring details are given a new and simpler language than
+  the languages of the lower layers.
+
+What to realize is that every layer is just a more convenient
+language to describe the lower layer. Only after a description is
+fully created with the language of the higher layer, it is then
+be implemented with the language of the lower layer.
+
+• CMOS layer has a recurring pattern that makes sure logic gates
+  are reliably translated to CMOS circuits: a k-input gate uses k
+  PMOS and k NMOS transistors, a total of 2ᵏtransistors Wakerly (1999)
+  . Since digital devices use CMOS exclusively, a language arose
+  to describe higher level ideas while hiding CMOS circuits:
+  Logic Gates.
+
+• Logic Gates hides the language of circuits and focuses on how
+  to implement primitive Boolean functions and combine them to
+  create new functions. All logic gates receive input and
+  generate output as binary numbers. Thanks to this recurring
+  patterns, logic gates are hidden away for the new language:
+  Assembly, which is a set of predefined binary patterns that
+  cause the underlying gates to perform an action.
+
+• Soon, people realized that many recurring patterns arisen from
+  within Assembly language. Repeated blocks of Assembly code
+  appear in Assembly source files that express the same or
+  similar idea. There were many such ideas that can be reliably
+  translated into Assembly code. Thus, the ideas were extracted
+  for building into the high level programming languages that
+  everyone programmer learns today.
+
+Recurring patterns are the key to abstraction. Recurring patterns
+are why abstraction works. Without them, no language can be
+built, and thus no abstraction. Fortunately, human already
+developed a systematic discipline for studying patterns:
+Mathematics. As quoted from the British mathematician G. H. Hardy
+(2005):
+
+A mathematician, like a painter or a poet, is a maker of
+patterns. If his patterns are more permanent than theirs, it is
+because they are made with ideas.
+
+Isn't that a mathematical formula a representation of a pattern?
+A variable represents values with the same properties given by
+constraints? Mathematics provides a formal system to identify and
+describe existing patterns in nature. For that reason, this
+system can certainly be applied in the digital world, which is
+just a subset of the real world. Mathematics can be used as a
+common language to help translation between layers easier, and
+help with the understanding of layers.
+
+
+
+  Why abstraction reduces complexity
+
+Abstraction by building language certainly leverages productivity
+by stripping irrelevant details to a problem. Imagine writing
+programs without any other layout except the lowest layer: with
+circuits. This is how complexity emerges: when high-level ideas
+are expressed with lower-level language, as the example above
+demonstrated. Unfortunately, this is the case with software as
+programming languages at the moment are more emphasized on
+software rather than the problem domains. That is, without prior
+knowledge, code written in a language is unable to express itself
+the knowledge of its target domain. In other words, a language is
+expressive if its syntax is designed to express the problem
+domain it is trying to solve. Consider this example: That is, the
+what it will do rather the how it will do.
+
+
+-------------------------------------------
+
+
+Graphviz (http://www.graphviz.org/) is a visualization software
+that provides a language, called dot, for describing graph:
+
+
+
+  As can be seen, the code perfectly expresses itself how the
+  graph is connected. Even a non-programmer can understand and
+  use such language easily. If it were to implement in C, it
+  would be more troublesome, and this is assuming that the
+  functions for drawing graphs are already available. To draw a
+  line, in C we might write something like:
+
+  draw_line(a, b);
+
+  However, it is still verbose compared with:
+
+  a -> b;
+
+  Also, a and b must be defined in C, compared to the implicit
+  nodes in the dot language. However, if we do not factor in the
+  verbosity, then C still has a limitation: it cannot change its
+  syntax to suit the problem domain. A domain-specific language
+  might even be more verbose, but it makes a domain more
+  understandable. If a problem domain must be expressed in C,
+  then it is constraint by the syntax of C. Since C is not a
+  specialized language for a problem domain that, but is a
+  general-purpose programming language, the domain knowledge is
+  buried within the implementation details. As a result, a C
+  programmer is needed to decipher and extract the domain
+  knowledge out. If the domain knowledge cannot be extracted,
+  then the software cannot be further developed.
+
+
+
+Linux is full of applications controlled by many domain-specific
+languages and are placed in /etc directory, such as a web server.
+Instead of reprogramming the software, a domain-agnostic language
+is made for it.
+
+
+-------------------------------------------
+
+
+In general, code that can express a problem domain must be
+understandable by a domain expert. Even within the software
+domain, building a language out of repeated programming patterns
+is useful. It helps people aware the existence of such patterns
+in code and thus making software easier to maintain, as software
+structure is visible as a language. Only a programming language
+that is capable of morphing itself to suit a problem domain can
+achieve that goal. Such language is called a programmable
+programming language. Unfortunately, this approach of turning
+software structure visible is not favored among programmers, as a
+new language must be made out of it along with new toolchain to
+support it. Thus, software structure and domain knowledge are
+buried within code written in the syntax of a general-purpose
+language, and if a programmer is not familiar or even aware of
+the existence of a code pattern, then it is hopeless to
+understand the code. A prime example is reading C code that
+controls hardware, e.g. an operating system: if a programmer
+knows absolutely nothing about hardware, then it is impossible to
+read and write operating system code in C, even if he could have
+20 years of writing application C code.
+
+With abstraction, a software engineer can also understand the
+inner-working of a device without specialized knowledge of
+physical circuit design, enables the software engineer to write
+code that controls a device. The separation between logical and
+physical implementation also entails that gate designs can be
+reused even when the underlying technologies changed. For
+example, in some distant future biological computer could be a
+reality, and gates might not be implemented as CMOS but some kind
+of biological cells e.g. as living cells; in either technology:
+electrical or biological, as long as logic gates are physically
+realized, the same computer design could be implemented.

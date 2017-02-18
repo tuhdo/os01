@@ -1,0 +1,3464 @@
+Linking and loading on bare metal<chap:Linking-and-loading>
+
+[margin:
+Relocation
+]RelocationRelocation is the process of replacing symbol
+references with its actual symbolic definitions in an object
+file. A symbol reference is the memory address of a symbol.
+
+If the definition is hard to understand, consider a similar
+analogy: house relocation. Suppose that a programmer bought a new
+house and the new house is empty. He must buy furnitures and
+appliances to fulfill daily needs and thus, he made a list of
+items to buy, and where to place them. To visualize the
+placements of new items, he draws a blueprint of the house and
+the respective places of all items. He then travels to the shops
+to buy goods. Whenever he visit a shop and sees matched items, he
+tells the shop owner to note them down. After done selecting, he
+tells the shop owner to pick up a brand new item instead of the
+objects on display, then give the address for delivering the
+goods to his new house. Finally, when the goods arrive, he places
+the items where he planned at the beginning.
+
+
+
+Now that house relocation is clear, object relocation is similar:
+
+• The list of items represents the relocation table, where the
+  memory location for each symbol (item) is predetermined.
+
+• Each item represents a pair of symbol definition and its symbol
+  address.
+
+• Each shop represents a compiled object file.
+
+• Each item on display represents a symbol definition and
+  references in the object file.
+
+• The new address, where all the goods are delivered, represents
+  the final executable binary or the final object file. Since the
+  items on display are not for sale, the shop owner delivers
+  brand new goods instead. Similarly, the object files are not
+  merged together, but copied all over a new file, the
+  object/executable file.
+
+• Finally, the goods are placed in the positions according to the
+  shopping list made from the beginning. Similarly, the symbol
+  definitions are placed appropriately in its respective section
+  and the symbol references of the final object/executable file
+  are replaced with the actual memory addresses of the symbol
+  definitions.
+
+
+
+
+
+  Understand relocations with readelf<sec:Understand-relocations-with-readelf>
+
+Earlier, when we explore object sections, there exists sections
+that begins with .rel. These sections are relocation tables that
+maps between a symbol and its location in the final object file
+or the final executable binary[footnote:
+A .rel section is equivalent to a list of items in the house
+analogy.
+].
+
+Suppose that a function foo is defined in another object file, so
+main.c declares it as extern:
+
+int i;
+
+void foo();
+
+int main(int argc, char *argv[])
+
+{
+
+    i = 5;
+
+    foo();
+
+    return 0;
+
+}
+
+
+
+void foo() {}
+
+When we compile main.c as object file with this command:
+
+
+
+$ gcc -m32 -masm=intel -c main.c
+
+
+
+Then, we can inspect the relocation tables with this command:
+
+
+
+$ readelf -r main.o
+
+
+
+The output:
+
+
+
+Relocation section '.rel.text' at offset 0x1cc contains 2
+entries:
+
+ Offset     Info    Type            Sym.Value  Sym. Name
+
+00000013  00000801 R_386_32          00000004   i
+
+0000001c  00000a02 R_386_PC32        0000002e   foo
+
+Relocation section '.rel.eh_frame' at offset 0x1dc contains 2
+entries:
+
+ Offset     Info    Type            Sym.Value  Sym. Name
+
+00000020  00000202 R_386_PC32        00000000   .text
+
+0000004c  00000202 R_386_PC32        00000000   .text
+
+
+
+  Offset
+
+An [margin:
+offset
+]offsetoffset is the location into a section of a binary file,
+where the actual memory address of a symbol definition is
+replaced. The section with .rel prefix determines which section
+to offset into. For example, .rel.text is the relocation table of
+symbols whose address needs correcting in .text section, at a
+specific offset into .text section. In the example output:
+
+
+
+0000001c  00000a02 R_386_PC32        0000002e   foo
+
+
+
+The blue number indicates there exists a reference of symbol foo
+that is 1c bytes into .text section. To see it clearer, we
+recompile main.c with option -g into the file main_debug.o, then
+run objdump on it and got:
+
+
+
+Disassembly of section .text:
+
+00000000 <main>:
+
+int i;
+
+void foo();
+
+int main(int argc, char *argv[])
+
+{
+
+   0:   8d 4c 24 04             lea    ecx,[esp+0x4]
+
+   4:   83 e4 f0                and    esp,0xfffffff0
+
+   7:   ff 71 fc                push   DWORD PTR [ecx-0x4]
+
+   a:   55                      push   ebp
+
+   b:   89 e5                   mov    ebp,esp
+
+   d:   51                      push   ecx
+
+   e:   83 ec 04                sub    esp,0x4
+
+    i = 5;
+
+  11:   c7 05 00 00 00 00 05    mov    DWORD PTR ds:0x0,0x5
+
+  18:   00 00 00
+
+    foo();
+
+  1b:   e8 fc ff ff ff          call   1c <main+0x1c>
+
+    return 0;
+
+  20:   b8 00 00 00 00          mov    eax,0x0
+
+}
+
+  25:   83 c4 04                add    esp,0x4
+
+  28:   59                      pop    ecx
+
+  29:   5d                      pop    ebp
+
+  2a:   8d 61 fc                lea    esp,[ecx-0x4]
+
+  2d:   c3                      ret
+
+....irrelevant content omitted....
+
+
+
+The byte at 1b[superscript:] is the opcode e8, the call instruction; byte at 1c is the value
+fc. Why is the operand value for e8 is 0xfffffffc, which is
+equivalent to -4, but the translated instruction call 1c?
+
+  Info
+
+Info specifies index of a symbol in the symbol table and the type
+of relocation to perform.
+
+
+
+0000001c  00000a02 R_386_PC32        0000002e   foo
+
+
+
+The pink number is the index of symbol foo in the symbol table,
+and the green number is the relocation type. The numbers are
+written in hex format. In the example, 0a means 10 in decimal,
+and symbol foo is indeed at index 10:
+
+
+
+10: 0000002e     6 FUNC    GLOBAL DEFAULT    1 foo
+
+
+
+  Type
+
+Type represents the type value in textual form. Looking at the
+type of foo:
+
+
+
+0000001c  00000a02 R_386_PC32        0000002e   foo
+
+
+
+The green number is type in its numeric form, and R_386_PC32 is
+the name assigned to that value. Each value represents a
+relocation method of calculation. For example, with the type
+R_386_PC32, the following formula is applied for relocation
+(Inteli386 psABI):
+
+Relocated\,Offset=S+A-P
+
+
+To understand the formula, it is necessary to understand symbol
+values.
+
+  Sym.Value
+
+This field shows the symbol value. A symbol value is a value
+assigned to a symbol, whose meaning depends on the Ndx field:
+
+  A symbol whose section index is COMMON, its symbol value holds
+  alignment constraints.
+
+  In the symbol table, the variable i is identified as COM
+  (uninitialized variable):[footnote:
+The command for listing symbol table is (assume the object file
+is hello.o):
+
+readelf -s hello.o
+]
+
+
+
+    Symbol table '.symtab' contains 16 entries:
+
+       Num:    Value  Size Type    Bind   Vis      Ndx Name
+
+         0: 00000000     0 NOTYPE  LOCAL  DEFAULT  UND
+
+         1: 00000000     0 FILE    LOCAL  DEFAULT  ABS hello2.c
+
+         2: 00000000     0 SECTION LOCAL  DEFAULT    1
+
+         3: 00000000     0 SECTION LOCAL  DEFAULT    3
+
+         4: 00000000     0 SECTION LOCAL  DEFAULT    4
+
+         5: 00000000     0 SECTION LOCAL  DEFAULT    5
+
+         6: 00000000     0 SECTION LOCAL  DEFAULT    7
+
+         7: 00000000     0 SECTION LOCAL  DEFAULT    8
+
+         8: 00000000     0 SECTION LOCAL  DEFAULT   10
+
+         9: 00000000     0 SECTION LOCAL  DEFAULT   12
+
+        10: 00000000     0 SECTION LOCAL  DEFAULT   14
+
+        11: 00000000     0 SECTION LOCAL  DEFAULT   15
+
+        12: 00000000     0 SECTION LOCAL  DEFAULT   13
+
+        13: 00000004     4 OBJECT  GLOBAL DEFAULT  COM i
+
+        14: 00000000    46 FUNC    GLOBAL DEFAULT    1 main
+
+        15: 0000002e     6 FUNC    GLOBAL DEFAULT    1 foo
+
+
+
+    so its symbol value is a memory alignment for assigning a
+    proper memory address that conforms to the alignment in the
+    final memory address. In the case of i, the value is 4, so
+    the starting memory address of i in the final binary file
+    will be a multiple of 4.
+
+  A symbol whose Ndx identifies a specific section, its symbol
+  value holds a section offset.
+
+  In the symbol table, main and foo belong to section 1:
+
+
+
+    14: 00000000    46 FUNC    GLOBAL DEFAULT    1 main
+
+    15: 0000002e     6 FUNC    GLOBAL DEFAULT    1 foo
+
+
+
+    which is .text[footnote:
+.text holds program code and read-only data.
+] section[footnote:
+The command for listing sections is (assume the object file is
+hello.o):
+
+readelf -S hello.o
+]:
+
+
+
+    There are 20 section headers, starting at offset 0x558:
+
+    Section Headers:
+
+      [Nr] Name              Type            Addr     Off    Size
+      ES Flg Lk Inf Al
+
+      [ 0]                   NULL            00000000 000000
+    000000 00      0   0  0
+
+      [ 1] .text             PROGBITS        00000000 000034
+    000034 00  AX  0   0  1
+
+      [ 2] .rel.text         REL             00000000 000414
+    000010 08   I 18   1  4
+
+      [ 3] .data             PROGBITS        00000000 000068
+    000000 00  WA  0   0  1
+
+      [ 4] .bss              NOBITS          00000000 000068
+    000000 00  WA  0   0  1
+
+      [ 5] .debug_info       PROGBITS        00000000 000068
+    000096 00      0   0  1
+
+    ..... remaining output omitted for clarity....
+
+
+
+  In the final executable and shared object files, instead of the
+  above values, a symbol value holds a memory address.
+
+  After compiling hello.o into the final executable hello, the
+  symbol table now contains the memory address for each symbol[footnote:
+The command to compile the object file hello.o into the
+executable hello:
+
+gcc -g -m32 -masm=intel hello.o -o hello
+]:
+
+
+
+    Symbol table '.symtab' contains 75 entries:
+
+       Num:    Value  Size Type    Bind   Vis      Ndx Name
+
+         0: 00000000     0 NOTYPE  LOCAL  DEFAULT  UND
+
+         1: 08048154     0 SECTION LOCAL  DEFAULT    1
+
+         2: 08048168     0 SECTION LOCAL  DEFAULT    2
+
+         3: 08048188     0 SECTION LOCAL  DEFAULT    3
+
+    ....output omitted...
+
+        64: 08048409     6 FUNC    GLOBAL DEFAULT   14 foo
+
+        65: 0804a020     0 NOTYPE  GLOBAL DEFAULT   26 _end
+
+        66: 080482e0     0 FUNC    GLOBAL DEFAULT   14 _start
+
+        67: 08048488     4 OBJECT  GLOBAL DEFAULT   16 _fp_hw
+
+        68: 0804a01c     4 OBJECT  GLOBAL DEFAULT   26 i
+
+        69: 0804a018     0 NOTYPE  GLOBAL DEFAULT   26
+    __bss_start
+
+        70: 080483db    46 FUNC    GLOBAL DEFAULT   14 main
+
+    ...ouput omitted...
+
+
+
+    Unlike the values of the symbols foo, i and main as in the
+    hello.o object file, the complete memory addresses are in
+    place.
+
+Now it suffices to understand relocation types. Previously, we
+mentioned the type R_386_PC32. The following formula is applied
+for relocation (Inteli386 psABI):
+
+Relocated\,Offset=S+A-P
+
+
+where
+
+  S represents the value of the symbol. In the final executable
+  binary, it is the address of the symbol.
+
+  A represents the addend, an extra value added to the value of a
+  symbol.
+
+  P Represents the memory address to be fixed.
+
+  Relocate Offset is the distance between a relocating location[footnote:
+where the referenced memory address is to be fixed.
+] and the actual memory location of a symbol definition, or a
+  memory address.
+
+But why do we waste time in calculating a distance instead of
+replacing with a direct memory address? The reason is that x86
+architecture does not use employ any addressing mode that uses an
+absolute memory address, as listed in table [mod-rm-32]. All
+addressing modes in x86 are relative. In some assembly language,
+an absolute address can be used simply because it is a syntactic
+sugar that is later transformed into one of the relative
+addressing mode provided by the x86 hardware by the assembler.
+
+
+-------------------------------------------
+
+
+For the foo symbol:
+
+
+
+  0000001c  00000a02 R_386_PC32        0000002e   foo
+
+
+
+  The distance between the usage of foo in main.o and its
+  definition, applying the formula S+A-P
+ is: \mathtt{2e+0-1c=12}
+
+  . That is, the place where memory fixing starts is 0x12 or 18
+  bytes away from the definition of the symbol foo. However, to
+  make an instruction works properly, we must also subtract 4
+  from 0x12 and results in 0xe. Why the extra -4? Because the
+  relative address starts at the end of an instruction, not the
+  address where memory fixing starts. For that reason, we must
+  also exclude the 4 bytes of the overwritten address.
+
+  Indeed, looking at the objdump output of the object file
+  hello.o:
+
+
+
+  Disassembly of section .text:
+
+  00000000 <main>:
+
+     0:   8d 4c 24 04             lea    ecx,[esp+0x4]
+
+     4:   83 e4 f0                and    esp,0xfffffff0
+
+     7:   ff 71 fc                push   DWORD PTR [ecx-0x4]
+
+     a:   55                      push   ebp
+
+     b:   89 e5                   mov    ebp,esp
+
+     d:   51                      push   ecx
+
+     e:   83 ec 04                sub    esp,0x4
+
+    11:   c7 05 00 00 00 00 05    mov    DWORD PTR ds:0x0,0x5
+
+    18:   00 00 00
+
+    1b:   e8 fc ff ff ff          call   1c <main+0x1c>
+
+    20:   b8 00 00 00 00          mov    eax,0x0
+
+    25:   83 c4 04                add    esp,0x4
+
+    28:   59                      pop    ecx
+
+    29:   5d                      pop    ebp
+
+    2a:   8d 61 fc                lea    esp,[ecx-0x4]
+
+    2d:   c3                      ret
+
+  0000002e <foo>:
+
+    2e:   55                      push   ebp
+
+    2f:   89 e5                   mov    ebp,esp
+
+    31:   90                      nop
+
+    32:   5d                      pop    ebp
+
+    33:   c3                      ret
+
+
+
+  The place where memory fixing starts is after the opcode e8,
+  with the mock value fc ff ff ff, which is -4 in decimal.
+  However, the assembly code, the value is displayed as 1c. the
+  memory address right after e8. The reason is that the
+  instruction e8 starts at 1b and ends at 20[footnote:
+The end of an instruction is the memory address right after its
+last operand. The whole instruction e8 spans from the address 1b
+to the address 1f.
+]. -4 means 4 bytes backward from the end of instruction, that
+  is: \mathtt{20-4=1c}
+. After linking, the output of the final
+  executable file is displayed with the actual memory fixing:
+
+
+
+  080483db <main>:
+
+   80483db:       8d 4c 24 04             lea    ecx,[esp+0x4]
+
+   80483df:       83 e4 f0                and    esp,0xfffffff0
+
+   80483e2:       ff 71 fc                push   DWORD PTR
+  [ecx-0x4]
+
+   80483e5:       55                      push   ebp
+
+   80483e6:       89 e5                   mov    ebp,esp
+
+   80483e8:       51                      push   ecx
+
+   80483e9:       83 ec 04                sub    esp,0x4
+
+   80483ec:       c7 05 1c a0 04 08 05    mov    DWORD PTR
+  ds:0x804a01c,0x5
+
+   80483f3:       00 00 00
+
+   80483f6:       e8 0e 00 00 00          call   8048409 <foo>
+
+   80483fb:       b8 00 00 00 00          mov    eax,0x0
+
+   8048400:       83 c4 04                add    esp,0x4
+
+   8048403:       59                      pop    ecx
+
+   8048404:       5d                      pop    ebp
+
+   8048405:       8d 61 fc                lea    esp,[ecx-0x4]
+
+   8048408:       c3                      ret
+
+
+
+  08048409 <foo>:
+
+   8048409:       55                      push   ebp
+
+   804840a:       89 e5                   mov    ebp,esp
+
+   804840c:       90                      nop
+
+   804840d:       5d                      pop    ebp
+
+   804840e:       c3                      ret
+
+   804840f:       90                      nop
+
+
+
+  In the final output, the opcode e8 previously at 1b now starts
+  at the address 80483f6. The mock value fc ff ff ff is replaced
+  with the actual value 0e 00 00 00 using the same calculating
+  method from its object file: opcode e8 is at 80483f6. The
+  definition of foo is at 8048409. The offset from the next
+  address after e8 is \mathtt{8048409+0-80483f7-4=0e}
+. However,
+  for readability, the assembly is displayed as call 8048409
+  <foo>, since GNU as[footnote:
+Or any current assembler in use today.
+] assembler allows specifying the actual memory address of a
+  symbol definition. Such address is later translated into
+  relative addressing mode, saving the programmer the trouble of
+  calculating offset manually.
+
+
+-------------------------------------------
+
+
+  Sym. Name
+
+This field displays the name of a symbol to be relocated. The
+named symbol is the same as written in a high level language such
+as C.
+
+  Crafting ELF binary with linker scripts
+
+A [margin:
+linker
+]linkerlinker is a program that combines separated object files
+into a final binary file. When gcc is invoked, it runs ld
+underneath to turn object files into the final executable file..
+
+A linker script[margin:
+linker script
+]linker script is a text file that instructs how a linker should
+combine object files. When gcc runs, it uses its default linker
+script to build the memory layout of a compiled binary file.
+Standardized memory layout is called object file format e.g. ELF
+includes program headers, section headers and their attributes.
+The default linker script is made for running in the current
+operating system environment[footnote:
+To view the default script, use --verbose option:
+
+ld --verbose
+]. Running on bare metal, the default script cannot be used as it
+is not designed for such environment. For that reason, a
+programmer needs to supply his own linker script for such
+environments.
+
+Every linker script consists of a series of commands with the
+following format:
+
+COMMAND
+
+{
+
+  sub-command 1
+
+  sub-command 2
+
+  .... more sub-command....
+
+}
+
+Each sub-command is specific to only the top-level command. The
+simplest linker script needs only one command: SECTION, that
+consumes input sections from object files and produces output
+sections of the final binary file[footnote:
+Recall that sections are chunks of code or data, or both.
+].
+
+  Example linker script
+
+Here is a minimal example of a linker script:
+
+SECTIONS                      /* Command */
+
+{
+
+   . = 0x10000;               /* sub-command 1 */
+
+   .text : { *(.text) }       /* sub-command 2 */
+
+   . = 0x8000000;             /* sub-command 3 */
+
+   .data : { *(.data) }       /* sub-command 4 */
+
+   .bss : { *(.bss) }         /* sub-command 5 */
+
+}
+
+Code Dissection:
+
+
+
+
++------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Code                   | Description                                                                                                                                                                                                                                                                                    |
++------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| SECTION                | Top-level command that declares a list of custom program
+sections. ld provides a set of such commands.                                                                                                                                                                                        |
++------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| . = 0x10000;           | Set location counter to the address 0x10000. Location counter
+specifies the base address for subsequent commands. In this
+example, subsequent commands will use 0x10000 onward.                                                                                                              |
++------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| .text : { *(.text) }   | Since location counter is set to 0x10000, the output .text in the
+final binary file will starts at the address 0x10000. This
+command combines all .text sections from all object files with
+*(.text) syntax into a final .text section. The * is the wildcard
+which matches any file name. |
++------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| . = 0x8000000;         | Again, the location counter is set to 0x8000000. Subsequent
+commands will use this address for working with sections.                                                                                                                                                                         |
++------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| .data : { *(.data) }   | All .data section are combined into one .data section in the
+final binary file.                                                                                                                                                                                                               |
++------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| .bss : { *(.bss) }     | All .bss section are combined into one .bss section in the final
+binary file.                                                                                                                                                                                                                 |
++------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
+
+
+The addresses 0x10000 and 0x8000000 are called Virtual Memory
+Address. A virtual memory address[margin:
+virtual memory address
+]virtual memory address is the address where a section is loaded
+in memory when a program runs. To use the linker script, we save
+it as a file e.g. main.lds[footnote:
+.lds is the extension for linker script.
+]; then, we need a sample program in a file, e.g. main.c:
+
+void test() {}
+
+int main(int argc, char *argv[])
+
+{
+
+
+
+    return 0;
+
+}
+
+Then, we compile the file and explicitly invoke ld with the
+linker script:
+
+
+
+$ gcc -m32 -g -c main.c
+
+$ ld -m elf_i386 -o main -T main.lds main.o
+
+
+
+In the ld command, the options are similar to gcc:
+
+
++---------+--------------------------------------------------------------------------------------------------------------+
+| Option  | Description                                                                                                  |
++---------+--------------------------------------------------------------------------------------------------------------+
++---------+--------------------------------------------------------------------------------------------------------------+
+| -m      | Specify object file format that ld produces. In the example,
+elf_i386 means a 32-bit ELF is to be produced. |
++---------+--------------------------------------------------------------------------------------------------------------+
+| -o      | Specify the name of the final executable binary.                                                             |
++---------+--------------------------------------------------------------------------------------------------------------+
+| -T      | Specify the linker script to use. In the example, it is main.lds.                                            |
++---------+--------------------------------------------------------------------------------------------------------------+
+
+
+The remaining input is a list of object files for linking. After
+the command ld is executed, the final executable binary - main -
+is produced. If we try running it:
+
+
+
+$ ./main
+
+Segmentation fault
+
+
+
+The reason is that when linking manually, the entry address must
+be explicitly set, or else ld sets it to the start of .text
+section by default. We can verify from the readelf output:
+
+
+
+$ readelf -h main
+
+
+
+
+
+ELF Header:
+
+  Magic:   7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00
+
+  Class:                             ELF64
+
+  Data:                              2's complement, little
+endian
+
+  Version:                           1 (current)
+
+  OS/ABI:                            UNIX - System V
+
+  ABI Version:                       0
+
+  Type:                              EXEC (Executable file)
+
+  Machine:                           Advanced Micro Devices
+X86-64
+
+  Version:                           0x1
+
+  Entry point address:               0x10000
+
+  Start of program headers:          64 (bytes into file)
+
+  Start of section headers:          2098144 (bytes into file)
+
+  Flags:                             0x0
+
+  Size of this header:               64 (bytes)
+
+  Size of program headers:           56 (bytes)
+
+  Number of program headers:         3
+
+  Size of section headers:           64 (bytes)
+
+  Number of section headers:         14
+
+  Section header string table index: 11
+
+
+
+The entry point address is set to 0x10000, which is the beginning
+of .text section. Using objdump to examine the address:
+
+
+
+$ objdump -z -M intel -S -D prog | less
+
+
+
+we see that the address 0x10000 does not start at main function
+when the program runs:
+
+
+
+Disassembly of section .text:
+
+00010000 <test>:
+
+int a = 5;
+
+int i;
+
+void test(){}
+
+   10000:       55                      push   ebp
+
+   10001:       89 e5                   mov    ebp,esp
+
+   10003:       90                      nop
+
+   10004:       5d                      pop    ebp
+
+   10005:       c3                      ret
+
+00010006 <main>:
+
+int main(int argc, char *argv[])
+
+{
+
+   10006:       55                      push   ebp
+
+   10007:       89 e5                   mov    ebp,esp
+
+
+
+    return 0;
+
+   10009:       b8 00 00 00 00          mov    eax,0x0
+
+}
+
+   1000e:       5d                      pop    ebp
+
+   1000f:       c3                      ret
+
+
+
+The start of .text section at 0x10000 is the function test, not
+main! To enable the program to run at main properly, we need to
+set the entry point in the linker script with the following line
+at the beginning of the file:
+
+ENTRY(main)
+
+Recompile the executable binary file main again. This time, the
+output from readelf is different:
+
+
+
+ELF Header:
+
+  Magic:   7f 45 4c 46 01 01 01 00 00 00 00 00 00 00 00 00
+
+  Class:                             ELF32
+
+  Data:                              2's complement, little
+endian
+
+  Version:                           1 (current)
+
+  OS/ABI:                            UNIX - System V
+
+  ABI Version:                       0
+
+  Type:                              EXEC (Executable file)
+
+  Machine:                           Intel 80386
+
+  Version:                           0x1
+
+  Entry point address:               0x10006
+
+  Start of program headers:          52 (bytes into file)
+
+  Start of section headers:          9168 (bytes into file)
+
+  Flags:                             0x0
+
+  Size of this header:               52 (bytes)
+
+  Size of program headers:           32 (bytes)
+
+  Number of program headers:         3
+
+  Size of section headers:           40 (bytes)
+
+  Number of section headers:         14
+
+  Section header string table index: 11
+
+
+
+The program now executes code at the address 0x10006 when it
+starts. 0x10006 is where main starts! To make sure we really
+starts at main, we run the program with gdb, set two breakpoints
+at main and test functions:
+
+
+
+$ gdb ./main
+
+
+
+
+
+.... output omitted ....
+
+Reading symbols from ./main...done.
+
+
+
+
+
+(gdb) b test
+
+
+
+
+
+Breakpoint 1 at 0x10003: file main.c, line 1.
+
+
+
+
+
+(gdb) b main
+
+
+
+
+
+Breakpoint 2 at 0x10009: file main.c, line 5.
+
+
+
+
+
+(gdb) r
+
+
+
+
+
+Starting program: /tmp/main
+
+Breakpoint 2, main (argc=-11493, argv=0x0) at main.c:5
+
+5	    return 0;
+
+
+
+As displayed in the output, gdb stopped at the 2[superscript:nd] breakpoint first. Now, we run the program normally, without gdb:
+
+
+
+$ ./main
+
+Segmentation fault
+
+
+
+We still get a segmentation fault. It is to be expected, as we
+ran a custom binary without C runtime support from the operating
+system. The last statement in the main function: return 0, simply
+returns to a random place[footnote:
+Return address is above the current ebp. However, when we enter
+main, no return value is pushed on the stack. So, when return is
+executed, it simply retrieves any value above ebp and use as a
+return address.
+]. The C runtime ensures that the program exit properly. In
+Linux, the _exit() function is implicitly called when main
+returns. To fix this problem, we simply change the program to
+exit properly:
+
+void test() {}
+
+int main(int argc, char *argv[])
+
+{
+
+    asm("mov eax, 0x1\n"
+
+        "mov ebx, 0x0\n"
+
+        "int 0x80");
+
+}
+
+Inline assembly is required because interrupt 0x80 is defined for
+system calls in Linux. Since the program uses no library, there
+is no other way to call system functions, aside from using
+assembly. However, when writing our operating system, we will not
+need such code, as there is no environment for exiting properly
+yet.
+
+Now that we can precisely control where the program runs
+initially, it is easy to bootstrap the kernel from the
+bootloader. Before we move on to the next section, note how
+readelf and objdump can be applied to debug a program even before
+it runs.
+
+  Understand the custom ELF structure
+
+In the example, we manage to create a runnable ELF executable
+binary from a custom linker script, as opposed to the default one
+provided by gcc. To make it convenient to look into its
+structure:
+
+
+
+$ readelf -e main
+
+
+
+-e option is the combination of 3 options -h -l -S:
+
+
+
+....... ELF header output omitted .......
+
+Section Headers:
+
+  [Nr] Name              Type            Addr     Off    Size
+ES Flg Lk Inf Al
+
+  [ 0]                   NULL            00000000 000000 000000
+00      0   0  0
+
+  [ 1] .text             PROGBITS        00010000 001000 000010
+00  AX  0   0  1
+
+  [ 2] .eh_frame         PROGBITS        00010010 001010 000058
+00   A  0   0  4
+
+  [ 3] .debug_info       PROGBITS        00000000 001068 000087
+00      0   0  1
+
+  [ 4] .debug_abbrev     PROGBITS        00000000 0010ef 000074
+00      0   0  1
+
+  [ 5] .debug_aranges    PROGBITS        00000000 001163 000020
+00      0   0  1
+
+  [ 6] .debug_line       PROGBITS        00000000 001183 000038
+00      0   0  1
+
+  [ 7] .debug_str        PROGBITS        00000000 0011bb 000078
+01  MS  0   0  1
+
+  [ 8] .comment          PROGBITS        00000000 001233 000034
+01  MS  0   0  1
+
+  [ 9] .shstrtab         STRTAB          00000000 00133a 000074
+00      0   0  1
+
+  [10] .symtab           SYMTAB          00000000 001268 0000c0
+10     11  10  4
+
+  [11] .strtab           STRTAB          00000000 001328 000012
+00      0   0  1
+
+Key to Flags:
+
+  W (write), A (alloc), X (execute), M (merge), S (strings)
+
+  I (info), L (link order), G (group), T (TLS), E (exclude), x
+(unknown)
+
+  O (extra OS processing required) o (OS specific), p (processor
+specific)
+
+Program Headers:
+
+  Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz
+Flg Align
+
+  LOAD           0x001000 0x00010000 0x00010000 0x00068 0x00068 R
+E 0x1000
+
+  GNU_STACK      0x000000 0x00000000 0x00000000 0x00000 0x00000
+RW  0x10
+
+ Section to Segment mapping:
+
+  Segment Sections...
+
+   00     .text .eh_frame
+
+   01
+
+
+
+The structure is incredibly simple. Both the segment and section
+listings can be contained within one screen. This is not the case
+with default ELF executable binary. From the output, there are
+only 11 sections, and only two are loaded at runtime: .text and
+.eh_frame because both section are assigned with an actual memroy
+addresses, 0x10000 and 0x10010 respectively. The remaining
+sections are assigned with 0 in the final executable binary[footnote:
+As opposed to the object files, where memory addresses are always
+0 and only assigned with actual values in the linking process.
+], which mean they are not loaded at runtime. It makes sense, as
+those sections are related to versioning[footnote:
+It is the .comment section. It can be viewed with the comment
+readelf -p .comment main.
+], debugging[footnote:
+The ones starts with .debug prefix.
+] and linking[footnote:
+The symbol tables and string table.
+].
+
+The program segment header table is even simpler. It only
+contains 2 segments: LOAD and GNU_STACK. By default, if the
+linker script does not supply the instructions for building
+program segments, ld provides reasonable default segments. As in
+this case, .text should be in the LOAD segment. GNU_STACK segment
+is a GNU extension used by the Linux kernel to control the state
+of the program stack. We will not need this segment, along with
+.eh_frame, which is for exception handling, as we write our own
+operating system from scratch. To achieve these goals, we will
+need to create our own program headers instead of letting ld
+handles the task, and instruct ld to remove .eh_frame.
+
+  Manipulate the program segments
+
+First, we need to craft our own program header table by using the
+following syntax:
+
+PHDRS
+
+{
+
+  <name> <type> [ FILEHDR ] [ PHDRS ] [ AT ( address ) ]
+
+        [ FLAGS ( flags ) ] ;
+
+}
+
+PHDRS command, similar to SECTION command, but for declaring a
+list of custom program segments with a predefined syntax.
+
+  name is the header name for later referenced by a section
+  declared in SECTION command.
+
+  type is the ELF segment type, as described in section [sec:Program-header-table]
+  , with added prefix PT_. For example, instead of NULL or LOAD
+  as displayed by readelf, it is PT_NULL or PT_LOAD.
+
+
+-------------------------------------------
+
+
+With only name and type, we can create any number of program
+segments. For example, we can add the NULL program segment and
+remove the GNU_STACK segment:
+
+  PHDRS
+
+{
+
+    null PT_NULL;
+
+    code PT_LOAD;
+
+}
+
+
+
+SECTIONS
+
+{
+
+    . = 0x10000;
+
+    .text : { *(.text) } :code
+
+    . = 0x8000000;
+
+    .data : { *(.data) }
+
+    .bss : { *(.bss) }
+
+}
+
+  The content of PHDRS command tells that the final executable
+  binary contains 2 program segments: NULL and LOAD. The NULL
+  segment is given the name null and LOAD segment given the name
+  code to signify this LOAD segment contains program code. Then,
+  to put a section into a segment, we use the syntax :<phdr>,
+  where phdr is the name given to a segment earlier. In this
+  example, .text section is put into code segment. We compile and
+  see the result (assuming main.o compiled earlier remains):
+
+
+
+  $ ld -m elf_i386 -o main -T main.lds main.o
+
+  $ readelf -l main
+
+
+
+
+
+  Elf file type is EXEC (Executable file)
+
+  Entry point 0x10000
+
+  There are 2 program headers, starting at offset 52
+
+  Program Headers:
+
+    Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz
+  Flg Align
+
+    NULL           0x000000 0x00000000 0x00000000 0x00000 0x00000
+      0x4
+
+    LOAD           0x001000 0x00010000 0x00010000 0x00010 0x00010
+  R E 0x1000
+
+   Section to Segment mapping:
+
+    Segment Sections...
+
+     00
+
+     01     .text .eh_frame
+
+
+
+  Those 2 segments are now NULL and LOAD instead of LOAD and
+  GNU_STACK.
+
+
+
+We can add as many segments of the same type, as long as they are
+given different names:
+
+  PHDRS
+
+{
+
+    null1 PT_NULL;
+
+    null2 PT_NULL;
+
+    code1 PT_LOAD;
+
+    code2 PT_LOAD;
+
+}
+
+
+
+SECTIONS
+
+{
+
+    . = 0x10000;
+
+    .text : { *(.text) } :code1
+
+    .eh_frame : { *(.eh_frame) } :code2
+
+    . = 0x8000000;
+
+    .data : { *(.data) }
+
+    .bss : { *(.bss) }
+
+}
+
+  After amending the PHDRS content earlier with this new segment
+  listing, we put .text into code1 segment and .eh_frame into
+  code2 segment, we compile and see the new segments:
+
+
+
+  $ ld -m elf_i386 -o main -T main.lds main.o
+
+  $ readelf -l main
+
+
+
+
+
+  Elf file type is EXEC (Executable file)
+
+  Entry point 0x10000
+
+  There are 4 program headers, starting at offset 52
+
+  Program Headers:
+
+    Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz
+  Flg Align
+
+    NULL           0x000000 0x00000000 0x00000000 0x00000 0x00000
+      0x4
+
+    NULL           0x000000 0x00000000 0x00000000 0x00000 0x00000
+      0x4
+
+    LOAD           0x001000 0x00010000 0x00010000 0x00010 0x00010
+  R E 0x1000
+
+    LOAD           0x001010 0x00010010 0x00010010 0x00058 0x00058
+  R   0x1000
+
+   Section to Segment mapping:
+
+    Segment Sections...
+
+     00
+
+     01
+
+     02     .text
+
+     03     .eh_frame
+
+
+
+  Now .text and .eh_frame are in different segments.
+
+
+-------------------------------------------
+
+
+  FILEHDR is an optional keyword, when added specifies that a
+  program segment includes the ELF file header of the executable
+  binary. However, this attribute should only added for the first
+  program segment, as it drastically alters the size and starting
+  address of a segment because the ELF header is always at the
+  beginning of a binary file, recall that a segment starts at the
+  address of its first content, which is in most of the cases
+  (except for this case, which is the file header), the first
+  section.
+
+
+-------------------------------------------
+
+
+Adding the FILEHDR keyword changes the size of NULL segment:
+
+  PHDRS
+
+{
+
+    null PT_NULL FILEHDR;
+
+    code PT_LOAD;
+
+}
+
+..... content is the same .....
+
+  We link it again and see the result:
+
+
+
+  $ ld -m elf_i386 -o main -T main.lds main.o
+
+  $ readelf -l main
+
+
+
+
+
+  Elf file type is EXEC (Executable file)
+
+  Entry point 0x10000
+
+  There are 2 program headers, starting at offset 52
+
+  Program Headers:
+
+    Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz
+  Flg Align
+
+    NULL           0x000000 0x00000000 0x00000000 0x00034 0x00034
+  R   0x4
+
+    LOAD           0x001000 0x00010000 0x00010000 0x00068 0x00068
+  R E 0x1000
+
+   Section to Segment mapping:
+
+    Segment Sections...
+
+     00
+
+     01     .text .eh_frame
+
+
+
+  In previous examples, the file size and memory size of the NULL
+  section are always 0, now they are both 34 bytes, which is the
+  size of an ELF header.
+
+
+
+If we assign FILEHDR to a non-starting segment, its size and
+starting address changes significantly:
+
+  PHDRS
+
+{
+
+    null PT_NULL;
+
+    code PT_LOAD FILEHDR;
+
+}
+
+..... content is the same .....
+
+
+
+  $ ld -m elf_i386 -o main -T main.lds main.o
+
+  $ readelf -l main
+
+
+
+
+
+  Elf file type is EXEC (Executable file)
+
+  Entry point 0x10000
+
+  There are 2 program headers, starting at offset 52
+
+  Program Headers:
+
+    Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz
+  Flg Align
+
+    NULL           0x000000 0x00000000 0x00000000 0x00000 0x00000
+      0x4
+
+    LOAD           0x000000 0x0000f000 0x0000f000 0x01068 0x01068
+  R E 0x1000
+
+   Section to Segment mapping:
+
+    Segment Sections...
+
+     00
+
+     01     .text .eh_frame
+
+
+
+  The size of the LOAD segment in the previous example is only
+  0x68, the same size as the total sizes of .text and .eh_frame
+  sections in it. But now, it is 0x01068, got 0x1000 bytes
+  larger. What is the reason for these extra bytes? A simple
+  answer: segment alignment. From the output, the alignment of
+  this segment is 0x1000; it means that regardless of which
+  address is the start of this segment, it must be divisible by
+  0x1000. For that reason, the starting address of LOAD is 0xf000
+  because it is divisible by 0x1000.
+
+  Another question arises: why is the starting address 0xf000
+  instead of 0x10000? .text is the first section, which starts at
+  0x10000, so the segment should start at 0x10000. The reason is
+  that we include FILEHDR as part of the segment, it must expand
+  to include the ELF file header, which is at the very start of
+  an ELF executable binary. To satisfy this constraint and the
+  alignment constraint, 0xf000 is the closest address. Note that
+  the virtual and physical memory addresses are the addresses at
+  runtime, not the locations of the segment in the file on disk.
+  As the FileSiz field shows, the segment only consumes 0x1068
+  bytes on disk. Figure [LOAD_segment] illustrates the difference
+  between the memory layouts with and without FILEHDR keyword.
+
+  [float Figure:
+[Figure 0.22:
+LOAD segment on disk and in memory.
+]<LOAD_segment>
+
+[float Figure:
+[Sub-Figure a:
+Without FILEHDR.
+]
+
+<Graphics file: C:/Users/Tu Do/os01/book_src/images/08/no_FILEHDR.pdf>
+]
+
+[float Figure:
+[Sub-Figure b:
+With FILEHDR.
+]
+
+<Graphics file: C:/Users/Tu Do/os01/book_src/images/08/with_FILEHDR.pdf>
+]
+]
+
+
+-------------------------------------------
+
+
+
+
+
+
+
+
+
+  PHDRS is an optional keyword, when added specifies that a
+  program segment is a program segment header table.
+
+
+-------------------------------------------
+
+
+The first segment of the default executable binary generated by
+gcc is a PHDR since the program segment header table appears
+right after the ELF header. It is also a convenient segment to
+put the ELF header into using the FILEHDR keyword. We replace the
+unused NULL segment earlier with a PHDR segment:
+
+  PHDRS
+
+{
+
+    headers PT_PHDR FILEHDR PHDRS;
+
+    code PT_LOAD FILEHDR;
+
+}
+
+..... content is the same .....
+
+
+
+  $ ld -m elf_i386 -o main -T main.lds main.o
+
+  $ readelf -l main
+
+
+
+
+
+  Elf file type is EXEC (Executable file)
+
+  Entry point 0x10000
+
+  There are 2 program headers, starting at offset 52
+
+  Program Headers:
+
+    Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz
+  Flg Align
+
+    PHDR           0x000000 0x00000000 0x00000000 0x00074 0x00074
+  R   0x4
+
+    LOAD           0x001000 0x00010000 0x00010000 0x00068 0x00068
+  R E 0x1000
+
+   Section to Segment mapping:
+
+    Segment Sections...
+
+     00
+
+     01     .text .eh_frame
+
+
+
+  As shown in the output, the first segment is of type PHDR. Its
+  size is 0x74, which includes:
+
+  • 0x34 bytes for ELF header.
+
+  • 0x40 bytes for the program segment header table, with 2
+    entries, each is 0x20 bytes (32 bytes) in length.
+
+  The above number is consistent with ELF header output:
+
+  ELF Header:
+
+    Magic:   7f 45 4c 46 01 01 01 00 00 00 00 00 00 00 00 00
+
+    Class:                             ELF32
+
+  ....... output omitted ......
+
+    Size of this header:               52 (bytes)   --> 0x34
+  bytes
+
+    Size of program headers:           32 (bytes)   --> 0x20
+  bytes each program header
+
+    Number of program headers:         2            --> 0x40
+  bytes in total
+
+    Size of section headers:           40 (bytes)
+
+    Number of section headers:         12
+
+    Section header string table index: 9
+
+
+-------------------------------------------
+
+
+  AT ( address ) specifies the load memory address where the
+  segment is placed. Every segment or section has a virtual
+  memory address and a load memory address:
+
+  • A [margin:
+virtual memory address
+]virtual memory addressvirtual memory address is a starting
+    address of a segment or a section when a program is in memory
+    and running. The memory address is called virtual because it
+    does not map to the actual memory cell that corresponds to
+    the address number, but any random memory cell, which depends
+    on how the underlying operating system translates the
+    address. For example, the virtual memory address 0x1 might
+    map to the memory cell with the physical address 0x1000.
+
+  • A load memory address[margin:
+load memory address
+]load memory address is the physical memory address, where a
+    program is loaded but not yet running.
+
+  The load memory address is specified by AT syntax. Normally
+  both types of addresses are the same, and the physical address
+  can be ignored. They differ when loading and running are
+  purposely divided into two distinct phases that require
+  different address regions.
+
+  For example, a program can be designed to load into a ROM[footnote:
+Read-Only Memory
+] at a fixed address. But when loading into RAM for a bare-metal
+  application or an operating system to use, the program needs a
+  load address that accommodates the addressing scheme of the
+  target application or operating system.
+
+
+-------------------------------------------
+
+
+We can specify a load memory address for the segment LOAD with AT
+syntax:
+
+  PHDRS
+
+{
+
+    headers PT_PHDR FILEHDR PHDRS AT(0x500);
+
+    code PT_LOAD;
+
+}
+
+..... content is the same .....
+
+
+
+  $ ld -m elf_i386 -o main -T main.lds main.o
+
+  $ readelf -l main
+
+
+
+
+
+  Elf file type is EXEC (Executable file)
+
+  Entry point 0x4000
+
+  There are 2 program headers, starting at offset 52
+
+  Program Headers:
+
+    Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz
+  Flg Align
+
+    PHDR           0x000000 0x00000000 0x00000500 0x00074 0x00074
+  R   0x4
+
+    LOAD           0x001000 0x00004000 0x00002000 0x00068 0x00068
+  R E 0x1000
+
+   Section to Segment mapping:
+
+    Segment Sections...
+
+     00
+
+     01     .text .eh_frame
+
+
+
+  It depends on an operating system whether to use the address or
+  not. For our operating system, the virtual memory address and
+  load are the same, so an explicit load address is none of our
+  concern.
+
+
+-------------------------------------------
+
+
+  FLAGS (flags) assigns permissions to a segment. Each flag is an
+  integer that represents a permission and can be combined with
+  OR operations. Possible values:
+
+
++-------------+--------+-------------+
+  | Permission  | Value  | Description |
+  +-------------+--------+-------------+
+  +-------------+--------+-------------+
+  | R           | 1      | Readable    |
+  +-------------+--------+-------------+
+  | W           | 2      | Writable    |
+  +-------------+--------+-------------+
+  | E           | 4      | Executable  |
+  +-------------+--------+-------------+
+
+
+
+-------------------------------------------
+
+
+We can create a LOAD segment with Read, Write and Execute
+permissions enabled:
+
+  PHDRS
+
+{
+
+    headers PT_PHDR FILEHDR PHDRS AT(0x500);
+
+    code PT_LOAD FILEHDR FLAGS(0x1 | 0x2 | 0x4);
+
+}
+
+..... content is the same .....
+
+
+
+  $ ld -m elf_i386 -o main -T main.lds main.o
+
+  $ readelf -l main
+
+
+
+
+
+  Elf file type is EXEC (Executable file)
+
+  Entry point 0x0
+
+  There are 2 program headers, starting at offset 52
+
+  Program Headers:
+
+    Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz
+  Flg Align
+
+    PHDR           0x000000 0x00000000 0x00000500 0x00074 0x00074
+  R   0x4
+
+    LOAD           0x001000 0x00000000 0x00000000 0x00010 0x00010
+  RWE 0x1000
+
+   Section to Segment mapping:
+
+    Segment Sections...
+
+     00
+
+     01     .text .eh_frame
+
+
+
+  LOAD segment now gets all the RWE permissions, as shown above.
+
+
+-------------------------------------------
+
+
+Finally, we want to remove the .eh_frame or any unwanted section,
+we add a special section called /DISCARD/:
+
+... program segment header table remains the same ...
+
+
+
+SECTIONS
+
+{
+
+    /* . = 0x10000; */
+
+    .text : { *(.text) } :code
+
+    . = 0x8000000;
+
+    .data : { *(.data) }
+
+    .bss : { *(.bss) }
+
+    /DISCARD/ : { *(.eh_frame) }
+
+}
+
+Any section putting in /DISCARD/ disappears in the final
+executable binary:
+
+
+
+$ ld -m elf_i386 -o main -T main.lds main.o
+
+$ readelf -l main
+
+
+
+
+
+Elf file type is EXEC (Executable file)
+
+Entry point 0x0
+
+There are 2 program headers, starting at offset 52
+
+Program Headers:
+
+  Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz
+Flg Align
+
+  PHDR           0x000000 0x00000000 0x00000500 0x00074 0x00074 R
+  0x4
+
+  LOAD           0x001000 0x00000000 0x00000000 0x00010 0x00010 R
+E 0x1000
+
+ Section to Segment mapping:
+
+  Segment Sections...
+
+   00
+
+   01     .text
+
+
+
+As can be seen, .eh_frame is nowhere to be found.
+
+  C Runtime: Hosted vs Freestanding<sec:C-Runtime>
+
+The purpose of .init, .init_array, .fini_array and .preinit_array
+section is to initialize a C Runtime environment that supports
+the C standard libraries. Why does C need a runtime environment,
+when it is supposed to be a compiled language? The reason is that
+many of the standard functions depend on the underlying operating
+system, which is of itself a big runtime environment. For
+example, I/O related functions such as reading from keyboard with
+gets(), reading from file with open(), printing on screen with
+printf(), managing system memory with malloc(), free(), etc.
+
+A C implementation cannot provide such routines without a running
+operating system, which is a hosted environment. A hosted environment
+hosted environment is a runtime environment that:
+
+• provides a default implementation of C libraries that includes
+  system-dependent data and routines.
+
+• perform resource allocations to prepare an environment for a
+  program to run.
+
+This process is similar to the hardware initialization process:
+
+• When first powered up, a desktop computer loads its basic
+  system routines from a read-only memory stored on the
+  motherboard.
+
+• Then, it starts initializing an environment, such as setting
+  default values for various registers in CPU and devices, before
+  executing the any code.
+
+In contrast, a freestanding environmentfreestanding environment
+is an environment that does not provide system-dependent data and
+routines. As a consequence, almost no C library exists and the
+environment can run code compiled written from pure C syntax. For
+a free standing environment to become a host environment, it must
+implement standard C system routines. But for a conforming
+freestanding environment, it only needs these header files
+available: <float.h>, <limits.h>, <stadarg.h> and <stddef.h>
+(according to GCC manual).
+
+For a typical desktop x86 program, C runtime environment is
+initialized by a compiler so a program runs normal. However, for
+an embedded platform where a program runs directly on it, this is
+not the case. The typical C runtime environment used in desktop
+operating systems cannot be used on the embedded platforms,
+because architectural differences and resource constraints. As
+such, the software writer must implement a custom C runtime
+environment suitable for the targeted platform. For the embedded
+platform,
+
+In writing our operating system, the first step is to create a
+freestanding environment before creating a hosted one.
+
+  Debuggable bootloader on bare metal
+
+Currently, the bootloader is compiled as a flat binary file.
+Although gdb can display the assembly code, it is not always the
+same as the source code. In the assembly source code, there
+exists variable names and labels. These symbols are lost when
+compiled as a flat binary file, making debugging more difficult.
+Another issue is the mismatch between the written assembly source
+code and the displayed assembly source code. The written code
+might contain higher level syntax that is assembler-specific and
+is generated into lower-level assembly code as displayed by gdb.
+Finally, with debug information available, the command next/n and
+prev/p can be used instead of ni and si.
+
+To enable debug information, we modify the bootloader Makefile:
+
+1. The bootloader must be compiled as a ELF binary. Open the
+  Makefile in bootloader/ directory and change this line under
+  $(BUILD_DIR)/%.o: %.asm recipe:
+
+  nasm -f bin $< -o $@
+
+  to this line:
+
+  nasm -f elf $< -F dwarf -g -o $@
+
+  In the updated recipe, bin format is replaced with elf format
+  to enable debugging information to be properly produced.-F
+  option specifies the debug information format, which is dwarf
+  in this case. Finally, -g option causes nasm to actually
+  generate debug information in selected format.
+
+2. Then, ld consumes the ELF bootloader binary and produces
+  another ELF bootloader binary, with proper starting memory
+  address of .text section that match the actual address of the
+  bootloader at runtime, when QEMU virtual machine loads it at
+  0x7c00. We need ld because when compiled by nasm, the starting
+  address is assumed to be 0, not 0x7c00.
+
+3. Finally, we use objcopy to separate extract only the flat
+  binary content as the original bootloader by adding this line
+  to $(BUILD_DIR)/%.o: %.asm:
+
+  objcopy -O binary $(BUILD_DIR)/bootloader.o.elf $@
+
+  objcopy, as its name implies, is a program that copies and
+  translates object files. Here, we copy the original ELF
+  bootloader and translate it into a flat binary file.
+
+The updated recipe should look like:
+
+$(BUILD_DIR)/%.o: %.asm
+
+	nasm -f elf $< -F dwarf -g -o $@
+
+	ld -m elf_i386 -T bootloader.lds $@ -o $@.elf
+
+	objcopy -O binary  $(BUILD_DIR)/bootloader.o.elf $@
+
+Now we test the bootloader with debug information available:
+
+1. Start the QEMU machine:
+
+
+
+  $ make qemu
+
+
+
+2. Start gdb with the debug information stored in
+  bootloader.o.elf:
+
+
+
+  $ gdb build/bootloader/bootloader.o.elf
+
+
+
+  After getting into gdb, press the Enter key and if the sample
+  .gdbinit section [sub:Automate-debugging-steps] is used, the
+  output should look like:
+
+
+
+  ---Type <return> to continue, or q <return> to quit---
+
+  [f000:fff0] 0x0000fff0 in ?? ()
+
+  Breakpoint 1 at 0x7c00: file bootloader.asm, line 6.
+
+  (gdb)
+
+
+
+  gdb now understand where the instruction at address 0x7c00 is
+  in the assembly source file, thanks to the debug information.
+
+  Debuggable program on bare metal
+
+The process of building a debug-ready executable binary is
+similar to that of a bootloader, except more involved. Recall
+that for a debugger to work properly, its debugging information
+must contain correct address mappings between memory addresses
+and the source code. gcc stores such mapping information in DIE
+entries, in which it tells gdb at which code address corresponds
+to a line in a source file, so that breakpoints work properly.
+
+But first, we need a sample C source file, a very simple one:
+
+void main() {}
+
+Because this is a free standing environment, standard libraries
+that involve system functions such as printf() would not work,
+because a C runtime does not exist. At this stage, the goal is to
+correctly jump to main with source code displayed properly in
+gdb, so no fancy C code is needed yet.
+
+The next step is updating os/Makefile:
+
+BUILD_DIR=../build_os
+
+OS=$(BUILD_DIR)/os
+
+
+
+@|\color{red}\bfseries CFLAGS+=-ffreestanding -nostdlib -gdwarf-4
+-m32 -ggdb3|@
+
+
+
+OS_SRCS := $(wildcard *.c)
+
+OS_OBJS := $(patsubst %.c, $(BUILD_DIR)/%.o, $(OS_SRCS))
+
+
+
+all: $(OS)
+
+
+
+$(BUILD_DIR)/%.o: %.c
+
+	gcc $(CFLAGS) -m32 -c  $< -o $@
+
+
+
+$(OS): $(OS_OBJS)
+
+	ld -m elf_i386 -T@|\color{blue}\bfseries os.lds|@ $(OS_OBJS) -o
+$@
+
+
+
+clean:
+
+	rm $(OS_OBJS)
+
+We updated the Makefile with the following changes:
+
+• Add a CFLAGS variable for passing options to gcc.
+
+• Instead of the rule to build assembly source code earlier, it
+  is replaced with a C version with a recipe to build C source
+  files. The CFLAGS variable makes the gcc command in the recipe
+  looks cleaner regardless how many options are added.
+
+• Add a linking command for building the final executable binary
+  of the operating system with a custom linker script os.lds.
+
+Everything looks good, except for the linker script part. Why is
+it needed? The linker script is required for controlling at which
+physical memory address the operating system binary appears in
+the memory, so the linker can jump to the operating system code
+and execute it. To complete this requirement, the default linker
+script used by gcc would not work as it assumes the compiled
+executable runs inside an existing operating system, while we are
+writing an operating system itself.
+
+The next question is, what will be the content in the linker
+script? To answer this question, we must understand what goals to
+achieve with the linker script:
+
+• For the bootloader to correctly jump to and execute the
+  operating system code.
+
+• For gdb to debug correctly with the operating system source
+  code.
+
+To achieve the goals, we must devise a design of a suitable
+memory layout for the operating system. Recall that the
+bootloader developed in chapter [chap:Bootloader] can already
+load a simple binary compiled from the sample Assembly program
+sample.asm. To load the operating system, we can simply throw
+binary compiled from sample.asm with the binary compiled from
+os.c above.
+
+If only it is that simple. The idea is correctly, but not enough.
+The goals implies the following constraints:
+
+1. The operating system code is written in C and compiled as an
+  ELF executable binary. It means, the bootloader needs to
+  retrieve correct entry address from the ELF header.
+
+2. To debug properly with gdb, the debug info must contain
+  correct mappings between instruction addresses and source code.
+
+Thanks to the understanding of ELF and DWARF acquire in the
+earlier chapters, we can certainly modify the bootloader and
+create an executable binary that satisfy the above constraint. We
+will solve these problems one by one.
+
+  Loading an ELF binary from a bootloader
+
+Earlier we examined that an ELF header contains a entry address
+of a program. That information is 0x18 bytes away from the
+beginning of an ELF header, according to man elf :
+
+typedef struct {
+
+               unsigned char e_ident[EI_NIDENT];
+
+               uint16_t      e_type;
+
+               uint16_t      e_machine;
+
+               uint32_t      e_version;
+
+               ElfN_Addr     e_entry;
+
+               ElfN_Off      e_phoff;
+
+               ElfN_Off      e_shoff;
+
+               uint32_t      e_flags;
+
+               uint16_t      e_ehsize;
+
+               uint16_t      e_phentsize;
+
+               uint16_t      e_phnum;
+
+               uint16_t      e_shentsize;
+
+               uint16_t      e_shnum;
+
+               uint16_t      e_shstrndx;
+
+           } ElfN_Ehdr;
+
+The offset from the start of the struct to the start of e_entry
+is:
+
+• 16 bytes of e_ident[EI_NIDENT]:
+
+  #define EI_NIDENT 16
+
+• 2 bytes of e_type
+
+• 2 bytes of e_machine
+
+• 4 bytes of e_version
+
+\mathtt{Offset=16+2+2+4=24=0x18}
+
+
+e_entry is of type ElfN_Addr, in which N is either 32 or 64. We
+are writing 32-bit operating system, in this case N=32
+ and so
+ElfN_Addr is Elf32_Addr, which is 4 bytes long.
+
+With any program, such as this simple one:
+
+  #include <stdio.h>
+
+
+
+int main(int argc, char *argv[])
+
+{
+
+    printf("hello world!\n");
+
+    return 0;
+
+}
+
+  We can retrieve the entry address with a human-readable
+  presentation using readelf:
+
+
+
+  $ gcc hello.c -o hello
+
+  $ readelf -h hello
+
+
+
+
+
+  ELF Header:
+
+    Magic:   7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00
+
+    .... output omitted ....
+
+    Entry point address:               0x400430
+
+    .... output omitted ....
+
+
+
+  Or in raw binary with hd:
+
+
+
+  $ hd hello | less
+
+
+
+
+
+  00000000  7f 45 4c 46 02 01 01 00  00 00 00 00 00 00 00 00
+  |.ELF............|
+
+  00000010  02 00 3e 00 01 00 00 00  30 04 40 00 00 00 00 00
+  |..>.....0.@.....|
+
+  .........
+
+
+
+  The offset 0x18 is the start of the least-significant byte of
+  e_entry, which is 0x30, followed by 04 40 00, together in
+  reverse makes the address 0x00400430.
+
+Now that we know where the position of the entry address in the
+ELF header, it is easy to modify the bootloader made in section [sub:Read-and-load]
+ to retrieve and jump to the address:
+
+;******************************************
+
+; Bootloader.asm
+
+; A Simple Bootloader
+
+;******************************************
+
+bits 16
+
+start: jmp boot
+
+
+
+;; constant and variable definitions
+
+msg	db	"Welcome to My Operating System!", 0ah, 0dh, 0h
+
+
+
+boot:
+
+  cli	; no interrupts
+
+  cld	; all that we need to init
+
+
+
+  mov		ax, 50h
+
+
+
+  ;; set the buffer
+
+  mov	es, ax
+
+  xor	bx, bx
+
+
+
+  mov	al, 2					      ; read 2 sector
+
+  mov	ch, 0                          ; we are reading the second
+sector past us,
+
+                                        ; so its still on track 0
+
+  mov	cl, 2					      ; sector to read (The second sector)
+
+  mov	dh, 0					      ; head number
+
+  mov	dl, 0					      ; drive number. Remember Drive 0 is floppy
+drive.
+
+
+
+  mov	ah, 0x02			           ; read floppy sector function
+
+  int	0x13					       ; call BIOS - Read the sector
+
+  jmp	@|\color{blue}\bfseries [500h + 18h]|@				  ; jump and
+execute the sector!
+
+
+
+  hlt	; halt the system
+
+
+
+  ; We have to be 512 bytes. Clear the rest of the bytes with 0
+
+  times 510 - ($-$$) db 0
+
+  dw 0xAA55				  ; Boot Signiture
+
+It is as simple as that! First, we load the operating system
+binary at 0x500, then we retrieve the entry address at the offset
+0x18 from 0x500, by first calculating the expression 500h+18h=518h
+
+ to get the actual in-memory address, then retrieve the content
+by dereference it.
+
+The first part is done. For the next part, we need to build an
+ELF operating system image for the bootloader to load. The first
+step is to create a linker script:
+
+@|\color{blue}\bfseries ENTRY(main);|@
+
+
+
+PHDRS
+
+{
+
+  headers PT_PHDR FILEHDR PHDRS;
+
+  code PT_LOAD;
+
+}
+
+
+
+SECTIONS
+
+{
+
+  .text @|\color{blue}\bfseries 0x500|@: { *(.text)  } :code
+
+  .data :  { *(.data)  }
+
+  .bss :  { *(.bss) }
+
+  /DISCARD/ : { *(.eh_frame) }
+
+}
+
+The script is straight-forward and remains almost the same as
+before. The only differences are:
+
+• main are explicitly specified as the entry point by specifying
+  ENTRY(main).
+
+• .text is explicitly specified with 0x500 as its virtual memory
+  address since we load the operating system image at 0x500.
+
+After putting the script, we compile with make and it should work
+smoothly:
+
+
+
+$ make clean; make
+
+$ readelf -l  build/os/os
+
+
+
+
+
+Elf file type is EXEC (Executable file)
+
+Entry point 0x500
+
+There are 2 program headers, starting at offset 52
+
+Program Headers:
+
+  Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz
+Flg Align
+
+  PHDR           0x000000 0x00000000 0x00000000 0x00074 0x00074 R
+  0x4
+
+  LOAD           0x000500 0x00000500 0x00000500 0x00040 0x00040 R
+E 0x1000
+
+ Section to Segment mapping:
+
+  Segment Sections...
+
+   00
+
+   01     .text
+
+
+
+All looks good, until we run it. We begin by starting the QEMU
+virtual machine:
+
+
+
+$ make qemu
+
+
+
+Then, start gdb and load the debug info (which is also in the
+same binary file) and set a breakpoint at main:
+
+
+
+(gdb) symbol-file build/os/os
+
+Reading symbols from build/os/os...done.
+
+(gdb) b main
+
+Breakpoint 2 at 0x500
+
+
+
+Then we start the program:
+
+
+
+(gdb) symbol-file build/os/os
+
+Reading symbols from build/os/os...done.
+
+(gdb) b main
+
+Breakpoint 2 at 0x500
+
+
+
+Keep the programming running until it stops at main:
+
+
+
+(gdb) c
+
+Continuing.
+
+[ 0:7c00]
+
+Breakpoint 1, 0x00007c00 in ?? ()
+
+(gdb) c
+
+Continuing.
+
+[ 0: 500]
+
+Breakpoint 2, main () at main.c:1
+
+
+
+At this point, we switch the layout to the C source code instead
+of the registers:
+
+
+
+(gdb) layout split
+
+
+
+layout split creates a layout that consists of 3 smaller windows:
+
+• Source window at the top.
+
+• Assembly window in the middle.
+
+• Command window at the bottom.
+
+After the command, the layout should look like this:
+
+
+
+
+┌──main.c───────────────────────────────────────────────────────┐
+
+B+>│1       void main(){}
+ │
+
+   │2
+ │
+
+   │3
+ │
+
+   │4
+ │
+
+   │5
+ │
+
+   │6
+ │
+
+   │7
+ │
+
+   │8
+ │
+
+   │9
+ │
+
+   │10
+ │
+
+   │11
+ │
+
+   │12
+ │
+
+   │13
+ │
+
+   │14
+ │
+
+   │15
+ │
+
+   │16
+ │
+
+
+└───────────────────────────────────────────────────────────────┘
+
+B+>│0x500 <main>    jg     0x547
+ │
+
+   │0x502 <main+2>  dec    sp
+ │
+
+   │0x503 <main+3>  inc    si
+ │
+
+   │0x504 <main+4>  add    WORD PTR [bx+di],ax
+ │
+
+   │0x506           add    WORD PTR [bx+si],ax
+ │
+
+   │0x508           add    BYTE PTR [bx+si],al
+ │
+
+   │0x50a           add    BYTE PTR [bx+si],al
+ │
+
+   │0x50c           add    BYTE PTR [bx+si],al
+ │
+
+   │0x50e           add    BYTE PTR [bx+si],al
+ │
+
+   │0x510           add    al,BYTE PTR [bx+si]
+ │
+
+   │0x512           add    ax,WORD PTR [bx+si]
+ │
+
+   │0x514           add    WORD PTR [bx+si],ax
+ │
+
+   │0x516           add    BYTE PTR [bx+si],al
+ │
+
+   │0x518           add    BYTE PTR [di],al
+ │
+
+   │0x51a           add    BYTE PTR [bx+si],al
+ │
+
+   │0x51c           xor    al,0x0
+ │
+
+   │0x51e           add    BYTE PTR [bx+si],al
+ │
+
+
+└───────────────────────────────────────────────────────────────┘
+
+remote Thread 1 In: main                            L1    PC:
+0x500
+
+[f000:fff0] 0x0000fff0 in ?? ()
+
+Breakpoint 1 at 0x7c00
+
+(gdb) symbol-file build/os/os
+
+Reading symbols from build/os/os...done.
+
+(gdb) b main
+
+Breakpoint 2 at 0x500: file main.c, line 1.
+
+(gdb) c
+
+Continuing.
+
+[   0:7c00]
+
+Breakpoint 1, 0x00007c00 in ?? ()
+
+(gdb) c
+
+Continuing.
+
+[   0: 500]
+
+Breakpoint 2, main () at main.c:1
+
+(gdb) layout split
+
+(gdb)
+
+
+
+Something wrong is going on here. It is not the generated
+assembly code for function call as it is known in section [sub:Function-Call-and]
+. It is definitely wrong, verified with objdump:
+
+
+
+$ objdump -D build/os/os | less
+
+
+
+
+
+/home/tuhdo/workspace/os/build/os/os:     file format elf32-i386
+
+Disassembly of section .text:
+
+00000500 <main>:
+
+ 500:   55                      push   %ebp
+
+ 501:   89 e5                   mov    %esp,%ebp
+
+ 503:   90                      nop
+
+ 504:   5d                      pop    %ebp
+
+ 505:   c3                      ret
+
+.... remaining output omitted ....
+
+
+
+The assembly code of main is completely different. This is why
+understanding assembly code and its relation to high-level
+languages are important. Without the knowledge, we would have
+used gdb as a simple source-level debugger without bother looking
+at the assembly code from the split layout. As a consequence, the
+true cause of the non-working code could never been discovered.
+
+  Debugging the memory layout
+
+What is the reason for the incorrect Assembly code in main
+displayed by gdb? There can only be one cause: the bootloader
+jumped to the wrong addresses. But why was the address wrong? We
+made the .text section at address 0x500, in which main code is in
+the first byte for executing, and instructed the bootloader to
+retrieve the address at the offset 0x18, then jump to the entry
+address.[float MarginFigure:
+[MarginFigure 14:
+Memory state after loading 2[superscript:nd] sector.
+]<mem-state-bootloader>
+
+     <Graphics file: C:/Users/Tu Do/os01/book_src/images/08/mem_after_load_os.pdf>
+
+]
+
+Then, it might be possible for the bootloader to load the
+operating system address at the wrong address. But then, we
+explicitly set the load address to 50h:00, which is 0x500, and so
+the correct address was used. After the bootloader loas the 2[superscript:nd] sector, the in-memory state should look like the figure [mem-state-bootloader]
+:
+
+What is the reason for the incorrect Assembly code in main
+displayed by gdb? There can only be one cause: the bootloader
+jumped to the wrong addresses. But why was the address wrong? We
+made the .text section at address 0x500, in which main code is in
+the first byte for executing, and instructed the bootloader to
+retrieve the address at the offset 0x18, then jump to the entry
+address.
+
+Then, it might be possible for the bootloader to load the
+operating system address at the wrong address. But then, we
+explicitly set the load address to 50h:00, which is 0x500, and so
+the correct address was used. After the bootloader loads the 2[superscript:nd] sector, the in-memory state should look like the figure [mem-state-bootloader]
+.
+
+Here is the problem: 0x500 is the start of the ELF header. The
+bootloader actually loads the 2[superscript:nd] sector, which stores the executable as a whole, to 0x500.
+Clearly, .text section, where main resides, is far from 0x500.
+Since the in-memory entry address of the executable binary is
+0x500, .text should be at \mathtt{0x500+0x500=0xa00}
+. However,
+the entry address recorded in the ELF header remains 0x500 and as
+a result, the bootloader jumped there instead of 0xa00. This is
+one of the issues that must be fixed.
+
+The other issue is the mapping between debug info and the memory
+address. Because the debug info is compiled with the assumed
+offset 0x500 that is the start of .text section, but due to
+actual loading, the offset is pushed another 0x500 bytes, making
+the address actually is at 0xa00. This memory mismatch renders
+the debug info useless.
+
+[float Figure:
+[Figure 0.23:
+Wrong symbol-memory mappings in debug info.
+]
+
+     <Graphics file: C:/Users/Tu Do/os01/book_src/images/08/debug_info_bad_position.pdf>
+
+]
+
+In summary, we have 2 problems to overcome:
+
+• Fix the entry address to account for the extra offset when
+  loading into memory.
+
+• Fix the debug info to account for the extra offset when loading
+  into memory.
+
+First, we need to know the actual layout of the compiled
+executable binary:l
+
+
+
+$ readelf -l build/os/os
+
+
+
+
+
+Elf file type is EXEC (Executable file)
+
+Entry point 0x500
+
+There are 2 program headers, starting at offset 52
+
+Program Headers:
+
+  Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz
+Flg Align
+
+  PHDR           0x000000 0x00000000 0x00000000 0x00074 0x00074 R
+  0x4
+
+  LOAD           0x000500 0x00000500 0x00000500 0x00040 0x00040 R
+E 0x1000
+
+ Section to Segment mapping:
+
+  Segment Sections...
+
+   00
+
+   01     .text
+
+
+
+Notice the Offset and the VirtAddress fields: both have the same
+value. This is problematic, as the entry address and the memory
+addresses in the debug info depend on VirtAddr field, but the
+Offset having the same value destroys the validity of VirtAddr[footnote:
+The offset is the distance in bytes between the beginning of the
+file, the address 0, to the beginning address of a segment or a
+section.
+] because it means that the real in-memory address will always be
+greater than the VirtAddr.
+
+If we try to adjust the virtual memory address of the .text
+section in the linker script os.lds, whatever value we set also
+sets the Offset to the same value, until we set it to some value
+equal or greater than 0x1074:
+
+
+
+Elf file type is EXEC (Executable file)
+
+Entry point 0x1074
+
+There are 2 program headers, starting at offset 52
+
+Program Headers:
+
+  Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz
+Flg Align
+
+  PHDR           0x000000 0x00000000 0x00000000 0x00074 0x00074 R
+  0x4
+
+  LOAD           0x000074 0x00001074 0x00001074 0x00006 0x00006 R
+E 0x1000
+
+ Section to Segment mapping:
+
+  Segment Sections...
+
+   00
+
+   01     .text
+
+
+
+If we adjust the virtual address to 0x1073, both the Offset and
+VirtAddr still share the same value:
+
+
+
+Elf file type is EXEC (Executable file)
+
+Entry point 0x1073
+
+There are 2 program headers, starting at offset 52
+
+Program Headers:
+
+  Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz
+Flg Align
+
+  PHDR           0x000000 0x00000000 0x00000000 0x00074 0x00074 R
+  0x4
+
+  LOAD           0x001073 0x00001073 0x00001073 0x00006 0x00006 R
+E 0x1000
+
+ Section to Segment mapping:
+
+  Segment Sections...
+
+   00
+
+   01     .text
+
+
+
+The key to answer such phenonemon is in the Align field. The
+value 0x1000 indicates that the offset address of the segment
+should be divisible by 0x1000, or if the distance between segment
+is divisible by 0x1000, the linker removes such distance to save
+the binary size. We can do some experiments to verify this claim[footnote:
+All the outputs are produced by the command:
+
+$ readelf -l build/os/os
+]:
+
+• By setting the virtual address of .text to 0x0 to 0x73 (in
+  os.lds), the offset starts from 0x1000 to 0x1073, accordingly.
+  For example, by setting it to 0x0:
+
+
+
+  Elf file type is EXEC (Executable file)
+
+  Entry point 0x0
+
+  There are 2 program headers, starting at offset 52
+
+  Program Headers:
+
+    Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz
+  Flg Align
+
+    PHDR           0x000000 0x00000000 0x00000000 0x00074 0x00074
+  R   0x4
+
+    LOAD           0x001000 0x00000000 0x00000000 0x00006 0x00006
+  R E 0x1000
+
+   Section to Segment mapping:
+
+    Segment Sections...
+
+     00
+
+     01     .text
+
+
+
+  By default, if we do not specify any virtual address, the
+  offset stays at 0x1000 because 0x1000 is the perfect offset to
+  satisfy the alignment constraint. Any addition from 0x1 to 0x73
+  makes the segment misaligned, but the linker keeps it anyway
+  because it is told so.
+
+• By setting the virtual address of .text to 0x74 (in os.lds):
+
+
+
+  Elf file type is EXEC (Executable file)
+
+  Entry point 0x74
+
+  There are 2 program headers, starting at offset 52
+
+  Program Headers:
+
+    Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz
+  Flg Align
+
+    PHDR           0x000000 0x00000000 0x00000000 0x00074 0x00074
+  R   0x4
+
+    LOAD           0x000074 0x00000074 0x00000074 0x00006 0x00006
+  R E 0x1000
+
+   Section to Segment mapping:
+
+    Segment Sections...
+
+     00
+
+     01     .text
+
+
+
+  PHDR is 0x74 bytes in size, so if LOAD starts at 0x1074, the
+  distance between the PHDR segment and LOAD segment is \mathtt{0x1074-0x74=0x1000}
+
+   bytes. To save space, it removes that extra 0x1000 bytes.
+
+• By setting the virtual address of .text to any value between
+  0x75 and 0x1073 (in os.lds), the offset takes the exact values
+  specified, as can be seen in the case of setting to 0x1073
+  above.
+
+• By setting the virtual address of .text to any value equal or
+  greater than 0x1074: it starts all over again at 0x74, where
+  the distance is equal to 0x1000 bytes.
+
+Now we get a hint how to control the values of Offset and
+VirtAddr to produce a desired binary layout. What we need is to
+change the Align field to a value with smaller value for finer
+grain control. It might work out with a binary layout like this:
+
+
+
+Elf file type is EXEC (Executable file)
+
+Entry point 0x600
+
+There are 2 program headers, starting at offset 52
+
+Program Headers:
+
+  Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz
+Flg Align
+
+  PHDR           0x000000 0x00000000 0x00000000 0x00074 0x00074 R
+  0x4
+
+  LOAD           0x000100 0x00000600 0x00000600 0x00006 0x00006 R
+E 0x100
+
+ Section to Segment mapping:
+
+  Segment Sections...
+
+   00
+
+   01     .text
+
+
+
+
+
+The binary will look like figure [fig-good-bin-layout] in memory:
+
+[float Figure:
+
+
+[Figure 0.24:
+A good binary layout.
+]<fig-good-bin-layout>
+
+     <Graphics file: C:/Users/Tu Do/os01/book_src/images/08/binary_layout_good.pdf>
+
+]
+
+If we set the Offset field to 0x100 from the beginning of the
+file and the VirtAddr to 0x600, when loading in memory, the
+actual memory of .text is \mathtt{0x500+0x100=0x600}
+; 0x500 is
+the memory location where the bootloader loads into the physical
+memory and 0x100 is the offset from the end of ELF header to
+.text. The entry address and the debug info will then take the
+value 0x600 from the VirtAddr field above, which totally matches
+the actual physical layout. We can do it by changing os.lds as
+follow:
+
+@|\color{blue}\bfseries ENTRY(main);|@
+
+
+
+PHDRS
+
+{
+
+  headers PT_PHDR FILEHDR PHDRS;
+
+  code PT_LOAD;
+
+}
+
+
+
+SECTIONS
+
+{
+
+  .text @|\color{blue}\bfseries 0x600|@: @|\color{magenta}
+ALIGN(0x100)|@ { *(.text)  } :code
+
+  .data :  { *(.data)  }
+
+  .bss :  { *(.bss) }
+
+  /DISCARD/ : { *(.eh_frame) }
+
+}
+
+The ALIGN keyword, as it implies, tells the linker to align a
+section, thus the segment containing it. However, to make the
+ALIGN keyword has any effect, automatic alignment must be
+disabled. According to man ld:
+
+
+
+-n
+
+--nmagic
+
+    Turn off page alignment of sections, and disable linking
+against shared
+
+    libraries.  If the output format supports Unix style magic
+numbers, mark the
+
+    output as "NMAGIC"
+
+
+
+That is, by default, each section is aligned by an operating
+system page, which is 4096, or 0x1000 bytes in size. The -n or
+-nmagic option disables this behavior, which is needed. We amend
+the ld command used in os/Makefile:
+
+..... above content omitted ....
+
+$(OS): $(OS_OBJS)
+
+	ld -m elf_i386 @|\color{red}\bfseries -nmagic|@ -Tos.lds
+$(OS_OBJS) -o $@
+
+Finally, we also need to update the top-level Makefile to write
+more than one sector into the disk image for the operating system
+binary, as its size exceeds one sector:
+
+
+
+$ ls -l build/os/os
+
+-rwxrwxr-x 1 tuhdo tuhdo 9060 Feb 13 21:37 build/os/os
+
+
+
+We update the rule so that the sectors are automatically
+calculated:
+
+..... above content omitted ....
+
+bootdisk:  bootloader os
+
+	dd if=/dev/zero of=$(DISK_IMG) bs=512 count=2880
+
+	dd conv=notrunc if=$(BOOTLOADER) of=$(DISK_IMG) bs=512 count=1
+seek=0
+
+	dd conv=notrunc if=$(OS) of=$(DISK_IMG) bs=512 count=$$(($(shell
+stat --printf="%s" $(OS))/512)) seek=1
+
+After updating the everything, recompiling the executable binary
+and we get the desired offset and virtual memory at 0x100 and
+0x600, respectively:
+
+
+
+Elf file type is EXEC (Executable file)
+
+Entry point 0x600
+
+There are 2 program headers, starting at offset 52
+
+Program Headers:
+
+  Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz
+Flg Align
+
+  PHDR           0x000000 0x00000000 0x00000000 0x00074 0x00074 R
+  0x4
+
+  LOAD           0x000100 0x00000600 0x00000600 0x00006 0x00006 R
+E 0x100
+
+ Section to Segment mapping:
+
+  Segment Sections...
+
+   00
+
+   01     .text
+
+
+
+  Testing the new binary
+
+First, we start the QEMU machine:
+
+
+
+$ make qemu
+
+
+
+In another terminal, we start gdb, loading the debug info and set
+a breakpoint at main:
+
+
+
+$ gdb
+
+
+
+The following output should be produced:
+
+
+
+---Type <return> to continue, or q <return> to quit---
+
+[f000:fff0] 0x0000fff0 in ?? ()
+
+Breakpoint 1 at 0x7c00
+
+Breakpoint 2 at 0x600: file main.c, line 1.
+
+
+
+
+
+Then, let gdb runs until it hits the main function, then we
+change to the split layout between source and assembly:
+
+
+
+(gdb) layout split
+
+
+
+The final terminal output should look like this:
+
+
+
+
+┌──main.c───────────────────────────────────────────────────────┐
+
+B+>│1       void main(){}
+ │
+
+   │2
+ │
+
+   │3
+ │
+
+   │4
+ │
+
+   │5
+ │
+
+   │6
+ │
+
+   │7
+ │
+
+   │8
+ │
+
+   │9
+ │
+
+   │10
+ │
+
+   │11
+ │
+
+   │12
+ │
+
+   │13
+ │
+
+   │14
+ │
+
+   │15
+ │
+
+   │16
+ │
+
+
+└───────────────────────────────────────────────────────────────┘
+
+B+>│0x600 <main>    push   bp
+ │
+
+   │0x601 <main+1>  mov    bp,sp
+ │
+
+   │0x603 <main+3>  nop
+ │
+
+   │0x604 <main+4>  pop    bp
+ │
+
+   │0x605 <main+5>  ret
+ │
+
+   │0x606           aaa
+ │
+
+   │0x607           add    BYTE PTR [bx+si],al
+ │
+
+   │0x609           add    BYTE PTR [si],al
+ │
+
+   │0x60b           add    BYTE PTR [bx+si],al
+ │
+
+   │0x60d           add    BYTE PTR [bx+si],al
+ │
+
+   │0x60f           add    BYTE PTR [si],al
+ │
+
+   │0x611           add    ax,bp
+ │
+
+   │0x613           push   ss
+ │
+
+   │0x614           add    BYTE PTR [bx+si],al
+ │
+
+   │0x616           or     al,0x67
+ │
+
+   │0x618           adc    al,BYTE PTR [bx+si]
+ │
+
+   │0x61a           add    BYTE PTR [bx+si+0x2],al
+ │
+
+
+└───────────────────────────────────────────────────────────────┘
+
+remote Thread 1 In: main                            L1    PC:
+0x600
+
+(gdb) c
+
+Continuing.
+
+[   0:7c00]
+
+Breakpoint 1, 0x00007c00 in ?? ()
+
+(gdb) c
+
+Continuing.
+
+[   0: 600]
+
+Breakpoint 2, main () at main.c:1
+
+(gdb) layout split
+
+
+
+Now, the displayed assembly is the same as in objdump, except the
+registers are 16-bit ones. This is normal, as gdb is operating in
+16-bit mode, while objdump displays code in 32-bit mode. To make
+sure, we verify the raw opcode by using x command:
+
+
+
+(gdb) x/16xb 0x600
+
+
+
+
+
+0x600 <main>:   0x55    0x89    0xe5    0x90    0x5d    0xc3
+0x37
+
+        0x00
+
+0x608:  0x00    0x00    0x04    0x00    0x00    0x00    0x00
+0x00
+
+
+
+From the assembly window, main stops at the address 0x605. As
+such, the corresponding bytes from 0x600 to 0x605 are highlighted
+in red from the output of the command x/16xb 0x600. Then, the raw
+opcode from the objdump output:
+
+
+
+$ objdump -z -M intel -S -D build/os/os | less
+
+
+
+
+
+build/os/os:     file format elf32-i386
+
+Disassembly of section .text:
+
+00000600 <main>:
+
+void main(){}
+
+ 600:   55                      push   ebp
+
+ 601:   89 e5                   mov    ebp,esp
+
+ 603:   90                      nop
+
+ 604:   5d                      pop    ebp
+
+ 605:   c3                      ret
+
+Disassembly of section .debug_info:
+
+...... output omitted ......
+
+
+
+Both raw opcode displayed by the two programs are the same. In
+this case, it proved that gdb correctly jumped to the address of
+main for a proper debugging. This is an extremely important
+milestone. Being able to debug in bare metal will help
+tremendously in writing an operating system, as a debugger allows
+a programmer to inspect the internal state of a running machine
+at each step to verify his code, step by step, to gradually build
+up a solid understanding. Some professional programmers do not
+like debuggers, but it is because they understand their domain
+deep enough to not need to rely on a debugger to verify their
+code. When encountering new domains, a debugger is indispensable
+learning tool because of its verifiability.
+
+However, even with the aid of debugger, writing an operating
+system is still not a walk in the park. The debugger may give the
+access to the machine at one point in time, but it does not give
+the cause. To find out the root cause, is up to the ability of a
+programmer. Later in the book, we will learn how to use other
+debugging techniques, such as using QEMU logging facility to
+debug CPU exceptions.
