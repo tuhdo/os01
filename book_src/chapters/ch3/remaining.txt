@@ -1,0 +1,101 @@
+
+
+Interrupt
+
+Memory management
+
+  Address Space
+
+Address space is the set of all addressable memory locations.
+There are 2 types of address spaces in physical memory address:
+
+• One for memory:
+
+• One for I/O:
+
+Each process has its own address space to do whatever it wants,
+as long as the physical memory is not exhausted. This address
+space is called virtual memory.
+
+  Virtual Memory
+
+Physical memory is a contagious memory locations that has a
+simple mapping between a physical memory address and its
+corresponding location in memory, decoded by memory controller.
+On the other hand, *virtual memory* does not have direct mapping
+between a memory address and the corresponding physical memory
+location, even though it appears contagious from the view of an
+userspace program. Instead, virtual memory address is translated
+by OS into an actual physical memory address. For that reason,
+even addresses appear next to each other in virtual memory space,
+they are scattered through out the physical memory.
+
+Why virtual memory is needed? Because virtual memory reduces the
+complexity of programming, by giving each program an illusion
+that it has its own separate "physical" memory to work with.
+Without virtual memory, programs must know and agree with each
+other their own memory regions to not accidentally destroy each
+other.
+
+[illustration a world without virtual memory]
+
+Virtual memory also enables a more secured OS, as application
+programs cannot manipulate main memory directly, so malicious
+programs won't cause havocs by destroying main memory and
+possibly hardware devices, by gaining access to hardware I/O
+ports.
+
+Another benefit is that virtual memory can extend beyond physical
+memory, by storing its data to hard disk. By swapping some of
+unused memory (i.e. inactive memory of a sleeping process), the
+system gains some free memory to continue running, so no data is
+destroyed. Otherwise, the OS is forced to kill a random user
+process to free up some memory, and you may lose unsaved work
+that belongs to the killed process. However, this process can
+significantly slow down the whole system because of Von Neumann
+bottleneck. In the old days, when memory was scarce, it was
+useful.
+
+File System
+
+File system is a mechanism on how raw bytes in a storage device
+can be meaningfully managed. That is, a group of bytes at
+specific locations in a storage device can be allocated for a
+purpose e.g. storing raw ASCII document, and later the exact
+chunks of bytes can be retrieved correctly. File system manages
+many such groups of bytes. It's helpful to think a file system as
+a database that maps between high level information and specific
+locations in a hard disk, similar to how business information is
+mapped to a specific row in a table. The high level information
+that is relevant to a file system is organized as *files* and
+*directories*.
+
+[illustration between a file system and a database table to see
+how they are similar]
+
+File is an entity that includes two components: metadata and the
+actual raw data. Metadata is the information describes the
+properties of the raw data associated with the file; raw data are
+real content of a file. Directory is a file that holds a group of
+files and also child directories. Together, they create a file
+hierarchy system as commonly seen in Windows or Linux.
+
+  Example: Ex2 filesystem
+
+
+
+[LaTeX Command: printindex]
+
+Bibliography
+
+References
+
+[Hardy 2005] G. H. Hardy, "A Mathematician's Apology", University of Alberta Mathematical Sciences Society (2005), 13.
+
+[Intel 2016] Intel, IntelÂ® 64 and IA-32 Architectures Optimization Reference Manual (Intel, 2016).
+
+[Kovitz 1999] Benjamin L. Kovitz, "Practical Software Requirements", Manning (1999), 53.
+
+[Peirce 1933] Charles Sanders Peirce, "Collected Papers v. 4" (1933).
+
+[Wakerly 1999] John F. Wakerly, "Digital Design: Principles and Practices", Prentice Hall (1999), 86.
