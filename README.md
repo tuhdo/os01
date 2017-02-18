@@ -89,21 +89,21 @@ However, if you know absolutely nothing about electricity, you can quickly learn
 
 C programming. In particular:
 
-– Variable and function declarations/definitions
++ Variable and function declarations/definitions
 
-– While and for loops
++ While and for loops
 
-– Pointers and function pointers
++ Pointers and function pointers
 
-– Fundamental algorithms and data structures in C
++ Fundamental algorithms and data structures in C
 
 Linux basics: 
 
-– Know how to navigate directory with the command line
++ Know how to navigate directory with the command line
 
-– Know how to invoke a command with options
++ Know how to invoke a command with options
 
-– Know how to pipe output to another program
++ Know how to pipe output to another program
 
 Touch typing. Since we are going to use Linux, touch typing helps. I know typing
 speed does not relate to problem-solving, but at least your typing speed should
