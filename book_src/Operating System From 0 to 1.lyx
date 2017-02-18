@@ -64176,6 +64176,7 @@ The boot process.
 
 \begin_inset Graphics
 	filename images/07/simple_boot_process.pdf
+	scale 80
 
 \end_inset
 
@@ -64210,7 +64211,7 @@ ES:BX
 \begin_deeper
 \begin_layout Standard
 \begin_inset listings
-lstparams "language={[x86masm]Assembler},showstringspaces=false,tabsize=4,commentstyle={\color{mygray}\itshape},frame=shadowbox"
+lstparams "language={[x86masm]Assembler},numbers=left,showstringspaces=false,tabsize=4,commentstyle={\color{mygray}\itshape},frame=shadowbox"
 inline false
 status open
 
@@ -64374,7 +64375,7 @@ status open
 
 \begin_layout Plain Layout
 
-; Bootloader.asm		
+; bootloader.asm		
 \end_layout
 
 \begin_layout Plain Layout
@@ -64385,6 +64386,11 @@ status open
 \begin_layout Plain Layout
 
 ;******************************************
+\end_layout
+
+\begin_layout Plain Layout
+
+org 0x7c00
 \end_layout
 
 \begin_layout Plain Layout
@@ -65913,7 +65919,7 @@ nd
 \noindent
 \align left
 \begin_inset listings
-lstparams "language={[x86masm]Assembler},basicstyle={\ttfamily},showstringspaces=false,tabsize=4,title={\texttt{sample.asm}},commentstyle={\color{mygray}\itshape},frame=shadowbox"
+lstparams "language={[x86masm]Assembler},numbers=left,basicstyle={\ttfamily},showstringspaces=false,tabsize=4,title={\texttt{sample.asm}},commentstyle={\color{mygray}\itshape},frame=shadowbox"
 inline false
 status open
 
@@ -66301,7 +66307,7 @@ nd
 \noindent
 \align left
 \begin_inset listings
-lstparams "language={[x86masm]Assembler},basicstyle={\ttfamily},showstringspaces=false,tabsize=4,title={\texttt{bootloader.asm}},commentstyle={\color{mygray}\itshape},frame=shadowbox"
+lstparams "language={[x86masm]Assembler},numbers=left,basicstyle={\ttfamily},showstringspaces=false,tabsize=4,title={\texttt{bootloader.asm}},commentstyle={\color{mygray}\itshape},frame=shadowbox"
 inline false
 status open
 
@@ -66323,6 +66329,11 @@ status open
 \begin_layout Plain Layout
 
 ;******************************************
+\end_layout
+
+\begin_layout Plain Layout
+
+org 0x7c00
 \end_layout
 
 \begin_layout Plain Layout
@@ -66608,7 +66619,7 @@ With Makefile, we can build simpler commands and save time:
 \noindent
 \align left
 \begin_inset listings
-lstparams "language={[gnu]make},tabsize=4,title={\texttt{Makefile}},commentstyle={\color{mygray}\itshape},frame=shadowbox"
+lstparams "language={[gnu]make},numbers=left,tabsize=4,title={\texttt{Makefile}},commentstyle={\color{mygray}\itshape},frame=shadowbox"
 inline false
 status open
 
@@ -67181,6 +67192,118 @@ nasm
 \family default
  files and we no longer need a separate recipe for each object files.
  Putting it all together with the new variables, we get a better Makefile:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align left
+\begin_inset listings
+lstparams "language={[gnu]make},numbers=left,tabsize=4,title={\texttt{Makefile}},commentstyle={\color{mygray}\itshape},frame=shadowbox"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+BOOTLOADER=bootloader.o
+\end_layout
+
+\begin_layout Plain Layout
+
+OS=sample.o
+\end_layout
+
+\begin_layout Plain Layout
+
+DISK_IMG=disk.img
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+BOOTLOADER_SRCS := $(wildcard *.asm)
+\end_layout
+
+\begin_layout Plain Layout
+
+BOOTLOADER_OBJS := $(patsubst %.asm, %.o, $(BOOTLOADER_SRCS))
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+all: bootdisk
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%.o: %.asm
+\end_layout
+
+\begin_layout Plain Layout
+
+	nasm -f bin $< -o $@
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+bootdisk:  $(BOOTLOADER_OBJS)
+\end_layout
+
+\begin_layout Plain Layout
+
+	dd if=/dev/zero of=$(DISK_IMG) bs=512 count=2880
+\end_layout
+
+\begin_layout Plain Layout
+
+	dd conv=notrunc if=$(BOOTLOADER) of=$(DISK_IMG) bs=512 count=1 seek=0
+\end_layout
+
+\begin_layout Plain Layout
+
+	dd conv=notrunc if=$(OS) of=$(DISK_IMG) bs=512 count=1 seek=1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From here on, any 
+\family typewriter
+.asm
+\family default
+ file is compiled automatically, without an explicit recipe for each file.
+ 
+\end_layout
+
+\begin_layout Standard
+The object files are in the same directory as the source files, making it
+ more difficult when working with the source tree.
+ Ideally, object files and source files should live in different directories.
+ We want a better organized directory layout like Figure 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "project-layout"
+
+\end_inset
+
+.
 \begin_inset Float marginfigure
 wide false
 sideways false
@@ -67291,118 +67414,6 @@ $ tree
 \end_layout
 
 \begin_layout Standard
-\noindent
-\align left
-\begin_inset listings
-lstparams "language={[gnu]make},tabsize=4,title={\texttt{Makefile}},commentstyle={\color{mygray}\itshape},frame=shadowbox"
-inline false
-status open
-
-\begin_layout Plain Layout
-
-BOOTLOADER=bootloader.o
-\end_layout
-
-\begin_layout Plain Layout
-
-OS=sample.o
-\end_layout
-
-\begin_layout Plain Layout
-
-DISK_IMG=disk.img
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-BOOTLOADER_SRCS := $(wildcard *.asm)
-\end_layout
-
-\begin_layout Plain Layout
-
-BOOTLOADER_OBJS := $(patsubst %.asm, %.o, $(BOOTLOADER_SRCS))
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-all: bootdisk
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-%.o: %.asm
-\end_layout
-
-\begin_layout Plain Layout
-
-	nasm -f bin $< -o $@
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-bootdisk:  $(BOOTLOADER_OBJS)
-\end_layout
-
-\begin_layout Plain Layout
-
-	dd if=/dev/zero of=$(DISK_IMG) bs=512 count=2880
-\end_layout
-
-\begin_layout Plain Layout
-
-	dd conv=notrunc if=$(BOOTLOADER) of=$(DISK_IMG) bs=512 count=1 seek=0
-\end_layout
-
-\begin_layout Plain Layout
-
-	dd conv=notrunc if=$(OS) of=$(DISK_IMG) bs=512 count=1 seek=1
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-From here on, any 
-\family typewriter
-.asm
-\family default
- file is compiled automatically, without an explicit recipe for each file.
- 
-\end_layout
-
-\begin_layout Standard
-The object files are in the same directory as the source files, making it
- more difficult when working with the source tree.
- Ideally, object files and source files should live in different directories.
- We want a better organized directory layout like Figure 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "project-layout"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
 
 \family typewriter
 \color blue
@@ -67455,7 +67466,7 @@ bootloader/
 \noindent
 \align left
 \begin_inset listings
-lstparams "language={[gnu]make},tabsize=4,title={\texttt{bootloader/Makefile}},commentstyle={\color{mygray}\itshape},frame=shadowbox"
+lstparams "language={[gnu]make},numbers=left,tabsize=4,title={\texttt{bootloader/Makefile}},commentstyle={\color{mygray}\itshape},frame=shadowbox"
 inline false
 status open
 
@@ -67793,7 +67804,7 @@ Makefile
 \noindent
 \align left
 \begin_inset listings
-lstparams "language={[gnu]make},tabsize=4,title={\texttt{os/Makefile}},commentstyle={\color{mygray}\itshape},frame=shadowbox"
+lstparams "language={[gnu]make},numbers=left,tabsize=4,title={\texttt{os/Makefile}},commentstyle={\color{mygray}\itshape},frame=shadowbox"
 inline false
 status open
 
@@ -67942,7 +67953,7 @@ os
 \noindent
 \align left
 \begin_inset listings
-lstparams "language={[gnu]make},tabsize=4,title={\texttt{Makefile}},commentstyle={\color{mygray}\itshape},frame=shadowbox"
+lstparams "language={[gnu]make},numbers=left,tabsize=4,title={\texttt{Makefile}},commentstyle={\color{mygray}\itshape},frame=shadowbox"
 inline false
 status open
 
@@ -69070,7 +69081,7 @@ Our first configuration:
 \noindent
 \align left
 \begin_inset listings
-lstparams "language=bash,showstringspaces=false,tabsize=4,title={\texttt{.gdbinit}}"
+lstparams "language=bash,numbers=left,showstringspaces=false,tabsize=4,title={\texttt{.gdbinit}}"
 inline false
 status open
 
@@ -69181,7 +69192,12 @@ gdb
 status open
 
 \begin_layout Plain Layout
-The QEMU virtual machine should have already been started.
+The QEMU virtual machine should have already been started before starting
+ 
+\family typewriter
+gdb
+\family default
+.
 \end_layout
 
 \end_inset
@@ -73437,7 +73453,7 @@ main
 
 \begin_layout Standard
 \begin_inset listings
-lstparams "language=C,showstringspaces=false,tabsize=4,title={\texttt{hello.c}}"
+lstparams "language=C,numbers=left,showstringspaces=false,tabsize=4,title={\texttt{hello.c}}"
 inline false
 status open
 
@@ -74066,7 +74082,7 @@ GNU_STACK
 \begin_deeper
 \begin_layout Standard
 \begin_inset listings
-lstparams "language=bash,showstringspaces=false,tabsize=4,title={\texttt{main.lds}}"
+lstparams "language=bash,numbers=left,showstringspaces=false,tabsize=4,title={\texttt{main.lds}}"
 inline false
 status open
 
@@ -74356,7 +74372,7 @@ We can add as many segments of the same type, as long as they are given
 \begin_deeper
 \begin_layout Standard
 \begin_inset listings
-lstparams "language=bash,showstringspaces=false,tabsize=4,title={\texttt{main.lds}}"
+lstparams "language=bash,numbers=left,showstringspaces=false,tabsize=4,title={\texttt{main.lds}}"
 inline false
 status open
 
@@ -74860,8 +74876,15 @@ end{shelloutput16.6}
 \end_layout
 
 \begin_layout Standard
-In previous examples, the file size and memory size of the NULL section
- are always 0, now they are both 34 bytes, which is the size of an ELF header.
+In previous examples, the file size and memory size of the 
+\family typewriter
+NULL
+\family default
+ section are always 0, now they are both 
+\family typewriter
+34
+\family default
+ bytes, which is the size of an ELF header.
 \end_layout
 
 \end_deeper
@@ -75589,6 +75612,22 @@ PHDR
 The above number is consistent with ELF header output:
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{shelloutput16.6}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout LyX-Code
 ELF Header:
 \end_layout
@@ -75661,6 +75700,22 @@ bytes in total
 
 \begin_layout LyX-Code
   Section header string table index: 9
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{shelloutput16.6}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
