@@ -61,7 +61,7 @@ come from. For example, instead of just teaching x86 Assembly, it also teaches
 how to use reference manuals from Intel. Learning to read the official
 manuals is important because only the hardware manufacturers themselves
 understand how their hardware work. If you only learn from the secondary
-resources because it is easier, you will never gain a complete understating of
+resources because it is easier, you will never gain a complete understanding of
 the hardware you are programming for. Have you ever read a book on Assembly, and
 wondered where all the information came from? How does the author know
 everything he says is correct? And how one seems to magically know so much about
