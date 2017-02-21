@@ -1706,8 +1706,25 @@ i
 \end_layout
 
 \begin_layout Standard
+
+\family typewriter
+N
+\family default
+ = Next local variable starts here
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill
+\backslash
+break
+\end_layout
 
 \begin_layout Plain Layout
 
@@ -1719,14 +1736,6 @@ end{figure*}
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-
-\family typewriter
-N
-\family default
- = Next local variable starts here
 \end_layout
 
 \end_body
