@@ -25,8 +25,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2"
-     inkscape:cx="17.22184"
-     inkscape:cy="181.37481"
+     inkscape:cx="-67.52816"
+     inkscape:cy="61.37481"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -240,7 +240,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -643,45 +643,45 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:83.85453796px;line-height:139.99999762%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.5406388px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="222.97968"
+       x="282.7453"
        y="395.27432"
        id="text5646-8-7-9-2"><tspan
          sodipodi:role="line"
          id="tspan5648-3-2-9-4"
-         x="222.97968"
+         x="282.7453"
          y="395.27432"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.48181725px;line-height:139.99999762%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:1.5406388px">00</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:83.85453796px;line-height:139.99999762%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.5406388px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="252.86249"
-       y="395.27432"
+       x="312.62811"
+       y="396.21182"
        id="text5646-8-7-9-2-8"><tspan
          sodipodi:role="line"
          id="tspan5648-3-2-9-4-9"
-         x="252.86249"
-         y="395.27432"
+         x="312.62811"
+         y="396.21182"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.48181725px;line-height:139.99999762%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:1.5406388px">00</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:83.85453796px;line-height:139.99999762%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.5406388px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="312.57437"
+       x="252.80875"
        y="395.34851"
        id="text5646-8-7-9"><tspan
          sodipodi:role="line"
          id="tspan5648-3-2-9"
-         x="312.57437"
+         x="252.80875"
          y="395.34851"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.48181725px;line-height:139.99999762%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:1.5406388px">12</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:83.85453796px;line-height:139.99999762%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.5406388px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="282.63782"
+       x="222.87219"
        y="395.27432"
        id="text5646-8-7"><tspan
          sodipodi:role="line"
          id="tspan5648-3-2"
-         x="282.63782"
+         x="222.87219"
          y="395.27432"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.48181725px;line-height:139.99999762%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:1.5406388px">34</tspan></text>
   </g>

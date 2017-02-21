@@ -21407,8 +21407,8 @@ mul
 mul 
 \family default
 instruction consumes more than 1 byte, while the SIB only consumes 1 byte.
- More importantly, if the element is repeated accessed many times in a loop,
- e.g.
+ More importantly, if the element is repeatedly accessed many times in a
+ loop, e.g.
  millions of times, then an extra 
 \family typewriter
 mul
@@ -29500,7 +29500,7 @@ cs
  register with the value 
 \family typewriter
 \color blue
-0x1234
+0x5678
 \family default
 \color inherit
 ; the 
@@ -29514,7 +29514,7 @@ eip
 register with the value 
 \family typewriter
 \color red
-0x5678
+0x1234
 \family default
 \color inherit
  and start executing from there.
@@ -29537,11 +29537,11 @@ EA
 \begin_layout LyX-Code
 jmp 
 \color blue
-0x1234
+0x5678
 \color inherit
 :
 \color red
-0x5678
+0x1234
 \end_layout
 
 \begin_layout Standard
@@ -29553,11 +29553,11 @@ is generated into:
 \begin_layout LyX-Code
 ea 
 \color red
-78 56
+34 12
 \color inherit
  
 \color blue
-34 12
+78 56
 \end_layout
 
 \begin_layout Standard
@@ -29566,11 +29566,11 @@ ea
 The address 
 \family typewriter
 \color blue
-0x1234
+0x5678
 \color inherit
 :
 \color red
-0x5678
+0x1234
 \family default
 \color inherit
  is right next to the opcode, unlike 
