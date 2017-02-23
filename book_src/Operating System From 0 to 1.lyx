@@ -35294,7 +35294,7 @@ qual comparison.
 Expression: 
 \family typewriter
 int 
-\color green
+\color blue
 logical_and
 \color inherit
  = (i && j);
@@ -35308,9 +35308,9 @@ logical_and
 \end_layout
 
 \begin_layout LyX-Code
-
+804849f:       je 
 \color blue
-804849f:       je     
+    
 \color magenta
 80484ae
 \color blue
@@ -35330,9 +35330,9 @@ logical_and
 \end_layout
 
 \begin_layout LyX-Code
-
+80484a5:       je
 \color blue
-80484a5:       je     
+     
 \color magenta
 80484ae <expr+0xd3>   
 \color blue
@@ -35348,7 +35348,11 @@ logical_and
 \end_layout
 
 \begin_layout LyX-Code
-80484ac:       jmp    80484b3 <expr+0xd8>    
+80484ac:       jmp    
+\color green
+80484b3 <expr+0xd8>   
+\color inherit
+ 
 \end_layout
 
 \begin_layout LyX-Code
@@ -35364,8 +35368,12 @@ logical_and
 \end_layout
 
 \begin_layout LyX-Code
-80484b3:       mov    DWORD PTR 
+
 \color green
+80484b3:
+\color inherit
+       mov    DWORD PTR 
+\color blue
 [ebp-0x8]
 \color inherit
 ,eax
@@ -35532,25 +35540,26 @@ Set it accordingly with the instruction at
 \end_layout
 
 \begin_layout Enumerate
-Then jump over the instruction at 
+Then jump to the instruction at 
 \family typewriter
-\color magenta
-0x80484ae
+\color green
+0x80484b3
 \family default
 \color inherit
  to set the variable 
 \family typewriter
-\color green
+\color blue
 logical_and
 \family default
 \color inherit
- at 
+ at
+\color blue
+ 
 \family typewriter
-\color green
 [ebp-0x8]
 \family default
 \color inherit
- to 0.
+ to 1.
 \end_layout
 
 \end_deeper
