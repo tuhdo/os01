@@ -51,7 +51,7 @@ the [minimum requirement](http://wiki.osdev.org/Required_Knowledge) by OSDev
 Wiki (well, not quite, the book actually goes deeper for the suggested topics).
 Or, if you consider developing an OS for fun is impractical, you can continue
 with a Linux-specific book, such as this free
-book [Linux Insiders](https://0xax.gitbooks.io/linux-insides/content/), or other
+book [Linux Insides](https://0xax.gitbooks.io/linux-insides/content/), or other
 popular Linux kernel books. The book tries hard to provide you a strong
 foundation, and that's why part 1 and part 2 were released first.
 
