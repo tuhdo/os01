@@ -97,7 +97,7 @@ C programming. In particular:
 
 + Fundamental algorithms and data structures in C
 
-Linux basics: 
+Linux basics:
 
 + Know how to navigate directory with the command line
 
