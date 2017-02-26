@@ -2526,16 +2526,7 @@ From NAND gate, we have all other gates.
 One interesting property of CMOS is that 
 \series bold
 \emph on
-a k-input gate uses k PMOS and k NMOS transistors, a total of 2
-\begin_inset script superscript
-
-\begin_layout Plain Layout
-k
-\end_layout
-
-\end_inset
-
-transistors
+a k-input gate uses k PMOS and k NMOS transistors
 \series default
 \emph default
  
