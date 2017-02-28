@@ -147,7 +147,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.8"
-     inkscape:cx="338.52113"
+     inkscape:cx="277.98542"
      inkscape:cy="18.511845"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
@@ -186,7 +186,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -224,7 +224,7 @@
          x="44.627274"
          y="109.51762"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text';stroke-width:0.10524125"
-         id="tspan11891">   i = i;</tspan><tspan
+         id="tspan11891">   i = 1;</tspan><tspan
          sodipodi:role="line"
          x="44.627274"
          y="112.14865"
@@ -328,7 +328,7 @@
          x="130.90654"
          y="116.76944"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Typewriter Text';-inkscape-font-specification:'CMU Typewriter Text';stroke-width:0.07209447"
-         id="tspan12760"></tspan><tspan
+         id="tspan12760" /><tspan
          sodipodi:role="line"
          x="130.90654"
          y="118.61545"
