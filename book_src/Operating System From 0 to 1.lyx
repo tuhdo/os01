@@ -2531,7 +2531,7 @@ a k-input gate uses k PMOS and k NMOS transistors
 \emph default
  
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "John_digital"
 
 \end_inset
