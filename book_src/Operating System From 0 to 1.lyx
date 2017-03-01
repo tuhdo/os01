@@ -5391,21 +5391,12 @@ CMOS layer has a recurring pattern that makes sure logic gates are reliably
  translated to CMOS circuits: 
 \series bold
 \emph on
-a k-input gate uses k PMOS and k NMOS transistors, a total of 2
-\begin_inset script superscript
-
-\begin_layout Plain Layout
-k
-\end_layout
-
-\end_inset
-
-transistors
+a k-input gate uses k PMOS and k NMOS transistors
 \series default
 \emph default
  
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "John_digital"
 
 \end_inset
