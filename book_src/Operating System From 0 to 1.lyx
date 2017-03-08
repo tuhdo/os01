@@ -8782,7 +8782,7 @@ objdump
  translates every hex values into assembly instructions.
  In the above example, the assembly instruction is 
 \family typewriter
-push %rb
+push %rbp
 \family default
 .
  
