@@ -1,7 +1,7 @@
 
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=tuhdo1710%40gmail%2ecom&lc=VN&item_number=tuhdo&currency_code=USD&bn=PP%2dDonationsBF%3aDonate%2dPayPal%2dgreen%2esvg%3aNonHosted)
 
-Operating System: From 0 to 1
+Operating Systems: From 0 to 1
 =============================
 
 This book helps you gain the foundational knowledge required to write an
@@ -165,7 +165,7 @@ For example: `[pg.9][grammar] Incorrect verb usage`.
 - `Content`: indicates problems with the content.
 
 Even better, you can make a pull request with the provided book source. The main
-content of the book is in the file "Operating System: From 0 to 1.lyx". You can
+content of the book is in the file "Operating Systems: From 0 to 1.lyx". You can
 edit the .txt file, then I will integrate the changes manually. It is a
 workaround for now since Lyx can cause a huge diff which makes it impossible to
 review changes.
