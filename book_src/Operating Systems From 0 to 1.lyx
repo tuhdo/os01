@@ -301,7 +301,7 @@ End
 
 \begin_layout Title
 \noindent
-Operating System: 
+Operating Systems:
 \begin_inset Newline newline
 \end_inset
 
@@ -412,36 +412,36 @@ Greetings!
 
 \begin_layout Standard
 \noindent
-You've probably asked yourself at least once how an operating system is^M
+You've probably asked yourself at least once how an operating system is
  written from the ground up.
  You might even have years of programming experience under your belt, yet
  your understanding of operating systems may still be a collection of abstract
- concepts, not grounded in actual implementation.
+ concepts not grounded in actual implementation.
  To those who've never built one, an operating system may seem like magic:
  a mysterious thing that can control hardware while handling a programmer's
- requests via an API of their favorite programming language.
+ requests via the API of their favorite programming language.
  Learning how to build an operating system seems intimidating and difficult;
  no matter how much you learn, it never feels like you know enough.
  You're probably reading this book right now to gain a better understanding
  of operating systems to be a better software engineer.
- 
+
 \end_layout
 
 \begin_layout Standard
+
 If that is the case, this book is for you.
- By going through this book, you will be able to find the missing piece
- that is essential and enable you to implement your operating system, from
- scratch! Yes, from scratch, without going through any existing operating
- system layer to comfort yourself that you are an operating system developer.
- You may ask, 
+ By going through this book, you will be able to find the missing pieces
+ that are essential and enable you to implement your own operating system from
+ scratch! Yes, from scratch without going through any existing operating
+ system layer to prove to yourself that you are an operating system developer.
+ You may ask,
 \begin_inset Quotes eld
 \end_inset
 
 Isn't it more practical to learn the internals of Linux?
 \begin_inset Quotes erd
 \end_inset
-
-, you might ask.
+.
 \end_layout
 
 \begin_layout Standard
@@ -470,12 +470,12 @@ You will learn how a computer works at the hardware level, and you will
 \end_layout
 
 \begin_layout Itemize
-You will learn the fundamentals of operating systems, making you able to
+You will learn the fundamentals of operating systems, allowing you to
  adapt to any operating system, not just Linux
 \end_layout
 
 \begin_layout Itemize
-To hack Linux internals profoundly, you'll need to write at least one operating
+To hack on Linux internals suitably, you'll need to write at least one operating
  system on your own.
  This is just like applications programming: to write a large application,
  you'll need to start with simple ones.
@@ -484,10 +484,10 @@ To hack Linux internals profoundly, you'll need to write at least one operating
 \begin_layout Itemize
 You will open pathways to various low-level programming domains such as
  reverse engineering, exploits, building virtual machines, game console
- emulators and more.
- Assembly language will become one of your indispensable tools for low-level
- analysis.(but it does not mean that you have to write your operating system
- in Assembly!).
+ emulation and more.
+ Assembly language will become one of your most indispensable tools for low-level
+ analysis. (But that does not mean you have to write your operating system
+ in Assembly!)
 \end_layout
 
 \begin_layout Itemize
@@ -497,7 +497,7 @@ Writing an operating system is fun!
 \begin_layout Section*
 
 \emph on
-Why another book on Operating System? 
+Why another book on Operating Systems?
 \end_layout
 
 \begin_layout Standard
@@ -506,7 +506,7 @@ There are many books and courses on this topic made by famous professors
  Who am I to write a book on such an advanced topic? While it's true that
  many quality resources exist, I find them lacking.
  Do any of them show you how to compile your C code and the C runtime library
- on top of it independent of an existing operating system? Most books on
+ independent of an existing operating system? Most books on
  operating system design and implementation only discuss the software side;
  how the operating system communicates with the hardware is skipped.
  Important hardware details are skipped, and it's difficult for a self-learner
@@ -514,12 +514,12 @@ There are many books and courses on this topic made by famous professors
  The aim of this book is to bridge that gap: not only will you learn how
  to program hardware directly, but also how to read official documents from
  hardware vendors to program it.
- You no longer have to seek out resources to help you interpret hardware
+ You no longer have to seek out resources to help yourself interpret hardware
  manuals and documentation: you can do it yourself.
  Lastly, I wrote this book from an autodidact's perspective.
- I made this book as self-contained as possible, so you can spend more time
+ I made this book as self-contained as possible so you can spend more time
  learning and less time guessing or seeking out information on the Internet.
- 
+
 \end_layout
 
 \begin_layout Standard
