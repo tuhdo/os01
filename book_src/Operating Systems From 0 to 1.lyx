@@ -424,15 +424,13 @@ You've probably asked yourself at least once how an operating system is
  no matter how much you learn, it never feels like you know enough.
  You're probably reading this book right now to gain a better understanding
  of operating systems to be a better software engineer.
-
 \end_layout
 
 \begin_layout Standard
-
 If that is the case, this book is for you.
  By going through this book, you will be able to find the missing pieces
- that are essential and enable you to implement your own operating system from
- scratch! Yes, from scratch without going through any existing operating
+ that are essential and enable you to implement your own operating system
+ from scratch! Yes, from scratch without going through any existing operating
  system layer to prove to yourself that you are an operating system developer.
  You may ask,
 \begin_inset Quotes eld
@@ -441,6 +439,7 @@ If that is the case, this book is for you.
 Isn't it more practical to learn the internals of Linux?
 \begin_inset Quotes erd
 \end_inset
+
 .
 \end_layout
 
@@ -470,8 +469,8 @@ You will learn how a computer works at the hardware level, and you will
 \end_layout
 
 \begin_layout Itemize
-You will learn the fundamentals of operating systems, allowing you to
- adapt to any operating system, not just Linux
+You will learn the fundamentals of operating systems, allowing you to adapt
+ to any operating system, not just Linux
 \end_layout
 
 \begin_layout Itemize
@@ -485,9 +484,9 @@ To hack on Linux internals suitably, you'll need to write at least one operating
 You will open pathways to various low-level programming domains such as
  reverse engineering, exploits, building virtual machines, game console
  emulation and more.
- Assembly language will become one of your most indispensable tools for low-level
- analysis. (But that does not mean you have to write your operating system
- in Assembly!)
+ Assembly language will become one of your most indispensable tools for
+ low-level analysis.
+ (But that does not mean you have to write your operating system in Assembly!)
 \end_layout
 
 \begin_layout Itemize
@@ -506,9 +505,9 @@ There are many books and courses on this topic made by famous professors
  Who am I to write a book on such an advanced topic? While it's true that
  many quality resources exist, I find them lacking.
  Do any of them show you how to compile your C code and the C runtime library
- independent of an existing operating system? Most books on
- operating system design and implementation only discuss the software side;
- how the operating system communicates with the hardware is skipped.
+ independent of an existing operating system? Most books on operating system
+ design and implementation only discuss the software side; how the operating
+ system communicates with the hardware is skipped.
  Important hardware details are skipped, and it's difficult for a self-learner
  to find relevant resources on the Internet.
  The aim of this book is to bridge that gap: not only will you learn how
@@ -519,7 +518,6 @@ There are many books and courses on this topic made by famous professors
  Lastly, I wrote this book from an autodidact's perspective.
  I made this book as self-contained as possible so you can spend more time
  learning and less time guessing or seeking out information on the Internet.
-
 \end_layout
 
 \begin_layout Standard
@@ -544,7 +542,7 @@ Hello World
 \end_inset
 
  centric.
- Most examples revolve around variants of a
+ Most examples revolve around variants of a 
 \begin_inset Quotes eld
 \end_inset
 
@@ -9455,7 +9453,7 @@ hd.
 \end_layout
 
 \begin_layout LyX-Code
-00000180  00 64 69 73 70 38 2d 35  2e 61 73 6d 00 00 00 00  |.disp8-5.asm....|
+00000180  00 74 65 73 74 2e 61 73  6d 00 00 00 00 00 00 00  |.disp8-5.asm....|
 \end_layout
 
 \begin_layout LyX-Code
