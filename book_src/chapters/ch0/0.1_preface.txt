@@ -90,8 +90,7 @@ of hardware requirements. Thus, the first chapter is dedicated to
 discussing relevant documents and their importance.
 
 Another distinct feature of this book is that it is “Hello World”
-centric. Most examples revolve around variants of a“Hello World”
-program. Most examples revolve around variants of a “Hello World”
+centric. Most examples revolve around variants of a “Hello World”
 program, which will acquaint you with core concepts. These
 concepts must be learned before attempting to write an operating
 system. Anything beyond a simple “Hello World” example gets in
