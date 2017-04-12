@@ -66011,7 +66011,7 @@ $ nasm -f bin sample.asm -o sample
 \begin_layout Standard
 
 \family typewriter
-$ dd if=sample of=disk.img bs=512 count=1 seek=0
+$ dd if=sample of=disk.img bs=512 count=1 seek=1
 \end_layout
 
 \begin_layout Standard
