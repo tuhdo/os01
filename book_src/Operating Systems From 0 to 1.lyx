@@ -550,15 +550,6 @@ Hello World
 \begin_inset Quotes erd
 \end_inset
 
- program.
- Most examples revolve around variants of a 
-\begin_inset Quotes eld
-\end_inset
-
-Hello World
-\begin_inset Quotes erd
-\end_inset
-
  program, which will acquaint you with core concepts.
  These concepts must be learned before attempting to write an operating
  system.
@@ -1892,7 +1883,7 @@ transistor
 
 
 \emph default
- is just a resistor whose values can vary based on an input voltage value
+ is just a resistor whose values can vary based on an input voltage value.
 \begin_inset Float marginfigure
 wide false
 sideways false
@@ -1922,7 +1913,6 @@ Modern transistor
 
 \end_inset
 
-.
  With this property, a transistor can be used as a current amplifier (more
  voltage, less resistance) or switch electrical signals off and on (block
  and unblock an electron flow) based on a voltage level.
