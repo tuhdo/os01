@@ -499,7 +499,7 @@ software engineering knowledge.
 implement the software, but also the problem domain that it tries 
 to solve, which might require in-depth expert knowledge. The 
 software engineer must also select the right programming 
-techniques that are apply to the problem domain he is trying to 
+techniques that apply to the problem domain he is trying to 
 solve because many techniques that are effective in one domain 
 might not be in another. For example, many types of applications 
 do not require performant written code, but a short time to 
