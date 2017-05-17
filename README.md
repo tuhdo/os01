@@ -151,7 +151,7 @@ Paging and I/O are not yet implemented. I will try to implement it as the book p
 
 # Contributing
 
-If you find any grammatical issue, please report it using Github Issues. Or, if
+If you find any grammatical issues, please report it using Github Issues. Or, if
 some sentence or paragraph is difficult to understand, feel free to open an
 issue with the following title format: `[page number][type] Descriptive Title`.
 
