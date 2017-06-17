@@ -1118,8 +1118,8 @@ programming
  but also the problem domain that it tries to solve, which might require
  in-depth expert knowledge.
  The software engineer must also select the right programming techniques
- that are apply to the problem domain he is trying to solve because many
- techniques that are effective in one domain might not be in another.
+ that apply to the problem domain he is trying to solve because many techniques
+ that are effective in one domain might not be in another.
  For example, many types of applications do not require performant written
  code, but a short time to market.
  In this case, interpreted languages are widely popular because it can satisfy
@@ -7720,7 +7720,7 @@ Bus
  is a subsystem that transfers data between computer components or between
  computers.
  Physically, buses are just electrical wires that connect all components
- together and each wire transfer a single big of data.
+ together and each wire transfer a single big chunk of data.
  The total number of wires is called 
 \emph on
 
