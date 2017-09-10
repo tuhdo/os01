@@ -1,7 +1,9 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass tufte-book
 \begin_preamble
 % DO NOT ALTER THIS PREAMBLE!!!
@@ -219,16 +221,16 @@ End
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman lmodern
-\font_sans lmss
-\font_typewriter lmtt
-\font_math auto
+\font_roman "lmodern" "default"
+\font_sans "lmss" "default"
+\font_typewriter "lmtt" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 110
-\font_tt_scale 100
+\font_sf_scale 110 100
+\font_tt_scale 100 100
 \graphics default
 \default_output_format default
 \output_sync 1
@@ -399,6 +401,10 @@ status open
 addcontentsline{toc}{chapter}{Preface}
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -584,6 +590,10 @@ Prerequisites
 
 \begin_layout Itemize
 Basic knowledge of circuits
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -616,6 +626,10 @@ http://www.allaboutcircuits.com/textbook/
 \begin_layout Itemize
 C programming.
  In particular:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -638,6 +652,10 @@ Fundamental algorithms and data structures in C
 \end_deeper
 \begin_layout Itemize
 Linux basics: 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -788,6 +806,10 @@ Part
 \end_inset
 
 1 provides a foundation for learning operating system.
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -872,6 +894,10 @@ http://wiki.osdev.org/
 
 .
  
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -1449,6 +1475,10 @@ vs
 \end_inset
 
 How
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -1519,6 +1549,10 @@ how
 \end_deeper
 \begin_layout Description
 Sketches
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -2195,9 +2229,9 @@ functionally complete
 \emph default
 , if this set can construct all other Boolean functions can be constructed
  from.
- Later, Charles Sanders Peirce (during 1880 -- 1881) proved that either
- Boolean function of NOR or NAND alone is enough to create all other Boolean
- logic functions.
+ Later, Charles Sanders Peirce (during 1880 – 1881) proved that either Boolean
+ function of NOR or NAND alone is enough to create all other Boolean logic
+ functions.
  Thus NOR and NAND gates are functionally complete 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -2616,6 +2650,10 @@ status collapsed
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2644,6 +2682,10 @@ height "1.5pt"
  other logic gates.
  This feature is what make the chip popular.
  
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -2855,6 +2897,10 @@ How can the above gates can be created with 74HC00? It is simple: as every
  gate has 2 input pins and 1 output pin, we can write the output of 1 NAND
  gate to an input of another NAND gate, thus chaining NAND gates together
  to produce the diagrams as above.
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -2972,6 +3018,10 @@ programmable device
  actions.
  For example, a printer has its set of commands for instructing it how to
  prints a page.
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2998,6 +3048,10 @@ name "exa:74HC00-chip-can"
 A user can use 74HC00 chip without knowing its internal, but only the interface
  for using the device.
  First, we need to know its layout:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -3098,7 +3152,7 @@ http://www.nxp.com/documents/data_sheet/74HC_HCT00.pdf
 \begin_layout Plain Layout
 \begin_inset Tabular
 <lyxtabular version="3" rows="6" columns="3">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="left" valignment="top" width="3cm">
 <column alignment="left" valignment="top" width="3cm">
 <column alignment="left" valignment="top" width="3cm">
@@ -3341,7 +3395,7 @@ Functional Description
 \begin_layout Plain Layout
 \begin_inset Tabular
 <lyxtabular version="3" rows="5" columns="3">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="left" valignment="top" width="3cm">
 <column alignment="left" valignment="top" width="3cm">
 <column alignment="left" valignment="top" width="3cm">
@@ -3577,7 +3631,7 @@ Or simply 4-bit NAND gate, as it can only accept 4 bits of input at the
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="13">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="left" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -4181,7 +4235,7 @@ Truth table of OR logic diagram.
 
 \begin_inset Tabular
 <lyxtabular version="3" rows="5" columns="5">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -4598,6 +4652,10 @@ Understand assembly language is crucial for low-level programming domains,
 
 \begin_layout Example
 We can build a device with 2 assembly instructions:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -4703,7 +4761,7 @@ name "ex-ins-ops"
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="2">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <row>
@@ -4785,6 +4843,10 @@ or
 
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -5023,22 +5085,22 @@ Or in short, a
 status open
 
 \begin_layout Plain Layout
-fetch -- decode -- execute
+fetch – decode – execute
 \end_layout
 
 \end_inset
 
-fetch -- decode -- execute cycle.
+fetch – decode – execute cycle.
  The above device is extremely rudimentary, but it already represents a
  computer with a 
 \emph on
 fetch
 \emph default
- -- 
+ – 
 \emph on
 decode
 \emph default
- -- 
+ – 
 \emph on
 execute
 \emph default
@@ -5046,7 +5108,7 @@ execute
  More instructions can be implemented by adding more devices and allocating
  more opcodes for the instructions, then update the decoder accordingly.
  The Apollo Guidance Computer, a digital computer produced for the Apollo
- space program from 1961 -- 1972, was built entirely with NOR gates - the
+ space program from 1961 – 1972, was built entirely with NOR gates - the
  other choice to NAND gate for creating other logic gates.
  Similarly, if we keep improving our hypothetical device, it eventually
  becomes a full-fledge computer.
@@ -5527,6 +5589,10 @@ what
 how
 \emph default
  it will do.
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5560,6 +5626,10 @@ http://www.graphviz.org/
 dot
 \family default
 , for describing graph:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -5654,7 +5724,10 @@ general-purpose
 \end_layout
 
 \end_deeper
-\begin_layout --Separator--
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -6520,7 +6593,7 @@ PCB
 
 PCB
 \emph default
- -- 
+ – 
 \emph on
 
 \begin_inset Index idx
@@ -7262,12 +7335,12 @@ The Von-Neumann computer operates by storing its instructions in main memory,
 status open
 
 \begin_layout Plain Layout
-fetch -- decode -- execute
+fetch – decode – execute
 \end_layout
 
 \end_inset
 
-fetch -- decode -- execute
+fetch – decode – execute
 \emph default
  cycle.
 \end_layout
@@ -7417,6 +7490,10 @@ are a hardware component for high-speed data access and communication with
  Registers allow software to control hardware directly by writing to registers
  of a device, or receive information from hardware device when reading from
  registers of a device.
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -7827,6 +7904,10 @@ a slot or more for CPU
 
 \begin_layout Itemize
 a chipset of two chips which are the Northbridge and Southbridge chips
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -8220,6 +8301,10 @@ end{tcolorbox}
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -8318,6 +8403,10 @@ status open
 end{tcolorbox}
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -8547,6 +8636,10 @@ end{tcolorbox}
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -8619,6 +8712,10 @@ end{tcolorbox}
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -8645,6 +8742,10 @@ Reading the output
 
 \begin_layout Standard
 At the start of the output displays the file format of the object file:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout LyX-Code
@@ -8655,6 +8756,10 @@ hello: file format elf64-x86-64
 
 \begin_layout Standard
 After the line is a series of disassembled sections:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout LyX-Code
@@ -8694,6 +8799,10 @@ etc
 \begin_layout Standard
 Finally, each disassembled section displays its actual content - which is
  a sequence of assembly instructions - with the following format:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout LyX-Code
@@ -8784,6 +8893,10 @@ The optional fourth column is a comment - appears when there is a reference
 blue
 \color inherit
 :
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -9075,6 +9188,10 @@ The subsequent sections examine the anatomy of an assembly instruction.
 nasm
 \family default
  assembler to write a few line of assembly code and see the generated code.
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Full Width
@@ -9093,6 +9210,10 @@ height "1.5pt"
 
 \begin_layout Example
 Suppose we want to see the machine code generated for this instruction:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -9144,6 +9265,10 @@ status open
 end{tcolorbox}
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -9258,6 +9383,10 @@ jmp eax
 \family default
 .
  
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -9275,8 +9404,10 @@ height "1.5pt"
 
 \end_layout
 
-\begin_layout --Separator--
-\noindent
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -9286,6 +9417,10 @@ If we were to use
 elf
 \family default
  as file format:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -9322,6 +9457,10 @@ status open
 end{tcolorbox}
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -9610,6 +9749,10 @@ and execute accordingly.
 ModR/M
 \family default
  byte when needed.
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -9660,6 +9803,10 @@ ModR/M
 specifies operands of an instruction.
  Operand can either be a register, a memory location or an immediate value.
  This component of an instruction consists of 3 smaller parts:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -9787,6 +9934,10 @@ caption{16-Bit Addressing Forms with the ModR/M Byte}
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -9794,7 +9945,7 @@ caption{16-Bit Addressing Forms with the ModR/M Byte}
 \align left
 \begin_inset Tabular
 <lyxtabular version="3" rows="41" columns="11">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="left" valignment="top" width="4cm">
 <column alignment="left" valignment="top" width="1cm">
 <column alignment="left" valignment="top" width="1cm">
@@ -15297,7 +15448,7 @@ caption{32-Bit Addressing Forms with the ModR/M Byte}
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="41" columns="11">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="left" valignment="top" width="4cm">
 <column alignment="left" valignment="top" width="1cm">
 <column alignment="left" valignment="top" width="1cm">
@@ -20894,6 +21045,10 @@ ModR/M
  byte.
  Then, look up the byte value in this table to get the corresponding operands
  in the row and column.
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -20912,6 +21067,10 @@ height "1.5pt"
 
 \begin_layout Example
 An instruction uses this addressing mode:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -20990,7 +21149,7 @@ Then the machine code is:
 \end_layout
 
 \begin_layout LyX-Code
-01 
+66 01 
 \color red
 c8
 \end_layout
@@ -20998,12 +21157,53 @@ c8
 \begin_layout Standard
 \noindent
 \align left
-
+The interesting feature of this instruction is that 
 \family typewriter
-0x01 
+0x66
 \family default
-is the opcode.
- Next to it, 
+ is the not the opcode.
+ 
+\family typewriter
+0x01
+\family default
+ is the opcode.
+ So then, what is 
+\family typewriter
+0x66
+\family default
+? Recall that for every assembly instruction, there will be an optional
+ instruction prefix, and that is what 
+\family typewriter
+0x66
+\family default
+ is.
+ According to the Intel manual, vol 1:
+\end_layout
+
+\begin_layout Quote
+The operand-size override prefix allows a program to switch between 16-
+ and 32-bit operand sizes.
+ Either size can be the default; use of the prefix selects the non-default
+ size.
+\end_layout
+
+\begin_layout Standard
+If the CPU is switched to 32-bit mode, when it runs an instruction with
+ 
+\family typewriter
+0x66
+\family default
+ prefix, the instruction operands are limited to only 16-bit width.
+ On the other hand, if the CPU is in 16-bit environment, as a result, 32-bit
+ is considered non-standard and as such, instruction operands are temporary
+ upgraded to 32-bit width while the instructions without the prefix use
+ 16-bit operands.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align left
+Next to it, 
 \family typewriter
 \color red
 c8
@@ -21053,6 +21253,10 @@ ModR/M
 c8
 \family default
 , into bits:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -21060,7 +21264,7 @@ c8
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="2" columns="8">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0.4cm">
 <column alignment="center" valignment="top" width="0.4cm">
 <column alignment="center" valignment="top" width="0.4cm">
@@ -21247,6 +21451,10 @@ r/m
 reg/opcode
 \family default
  field finally provides the if an instruction requires one.
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -21292,6 +21500,10 @@ ase
  of an array.
  SIB is the name that is based on this formula for calculating an effective
  address:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -21354,6 +21566,10 @@ th
 Scale
 \family default
  is set to 1 and a compiler needs to calculate the offset:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -21467,7 +21683,7 @@ caption{32-Bit Addressing Forms with the SIB Byte}
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="37" columns="11">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="left" valignment="top" width="4cm">
 <column alignment="left" valignment="top" width="1cm">
 <column alignment="left" valignment="top" width="1cm">
@@ -25985,7 +26201,7 @@ The [*] nomenclature means a disp32 with no base if the MOD is 00B.
 \begin_layout Plain Layout
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="2">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
 <row>
@@ -26233,6 +26449,10 @@ endgroup
 
 \begin_layout Example
 This instruction:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -26328,11 +26548,19 @@ Displacement
 \family default
 is the offset from the start of the base index.
  
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
 \begin_layout Example
 This instruction:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -26381,6 +26609,10 @@ byte.
 
 \begin_layout Example
 This instruction:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -26477,11 +26709,19 @@ When an instruction accepts a fixed value, e.g.
  Note that this field is different from displacement: the value is not necessary
  used an offset, but an arbitrary value of anything.
  
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
 \begin_layout Example
 This instruction:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -26540,6 +26780,10 @@ eax
 \begin_layout Exercise
 Read section 2.1 in Volume 2 for even more details.
  
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -26577,6 +26821,10 @@ Opcode
 table
 \family default
  lists all possible opcodes of an assembly instruction.
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -26587,7 +26835,7 @@ Each table contains the following fields, and can have one or more rows:
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="1" columns="6">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="left" valignment="top" width="1.5cm">
 <column alignment="left" valignment="top" width="2.5cm">
 <column alignment="left" valignment="top" width="1.2cm">
@@ -26798,6 +27046,10 @@ Instruction Operand Encoding
 
 \emph default
  is added for explaining the operand encoding, with the following structure:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -26806,7 +27058,7 @@ Instruction Operand Encoding
 \align left
 \begin_inset Tabular
 <lyxtabular version="3" rows="1" columns="5">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="left" valignment="top" width="1.2cm">
 <column alignment="left" valignment="top" width="3.1cm">
 <column alignment="left" valignment="top" width="3.1cm">
@@ -26978,6 +27230,10 @@ field.
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -27025,7 +27281,7 @@ Compat/Leg Mode
 \begin_layout Plain Layout
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="2">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top" width="4cm">
 <row>
@@ -27313,7 +27569,7 @@ texttt{jmp} opcode table}
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="12" columns="6">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="left" valignment="top" width="2.5cm">
 <column alignment="left" valignment="top" width="2.7cm">
 <column alignment="left" valignment="top" width="0.5cm">
@@ -28358,7 +28614,7 @@ Memory address of each opcode
 \begin_layout Plain Layout
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="11">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -29441,6 +29697,10 @@ end{figure*}
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -29799,6 +30059,10 @@ stdint.h
 
 \begin_layout Description
 Source
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -29897,6 +30161,10 @@ int main(int argc, char *argv[]) {
 \end_deeper
 \begin_layout Description
 Assembly
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -30319,6 +30587,10 @@ end{tcolorbox}
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -30609,6 +30881,10 @@ C only provides near pointer, since far pointer is platform dependent, such
 
 \begin_layout Description
 Source
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -30677,6 +30953,10 @@ int main(int argc, char *argv[]) {
 \end_deeper
 \begin_layout Description
 Assembly
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -30898,6 +31178,10 @@ end{figure}
 
 \begin_layout Description
 Source
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -31220,6 +31504,10 @@ int main(int argc, char *argv[]) {
 \end_deeper
 \begin_layout Description
 Assembly
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -31686,6 +31974,10 @@ bit_field
 bf
 \family default
  variable are changed to:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -31815,6 +32107,10 @@ The following code demonstrates how to define array (string) data types:
 
 \begin_layout Description
 Source
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -31900,6 +32196,10 @@ int main(int argc, char *argv[])
 \end_deeper
 \begin_layout Description
 Assembly
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -32276,7 +32576,7 @@ a8
 
 \begin_inset Tabular
 <lyxtabular version="3" rows="1" columns="1">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
@@ -32311,7 +32611,7 @@ a16
 : 
 \begin_inset Tabular
 <lyxtabular version="3" rows="1" columns="1">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
@@ -32370,7 +32670,7 @@ a32
 : 
 \begin_inset Tabular
 <lyxtabular version="3" rows="1" columns="1">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
@@ -32461,7 +32761,7 @@ a64
 : 
 \begin_inset Tabular
 <lyxtabular version="3" rows="1" columns="1">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
@@ -32619,6 +32919,10 @@ However, beyond one-dimensional arrays that map directly to hardware string
 
 \begin_layout Description
 Source
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -32725,6 +33029,10 @@ int main(int argc, char *argv[]) {
 \end_deeper
 \begin_layout Description
 Assembly
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -32861,6 +33169,10 @@ a[2][2]
 \begin_layout Example
 The following two-dimensional array can hold a list of 2 names with the
  length of 10:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -33072,6 +33384,10 @@ Previous section explores how various types of data are created, and how
 
 \begin_layout Description
 Source
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -33136,6 +33452,10 @@ int main(int argc, char *argv[]) {
 \end_deeper
 \begin_layout Description
 Assembly
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -33330,6 +33650,10 @@ Expressions
 
 \begin_layout Description
 Source
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -33520,6 +33844,10 @@ int main(int argc, char *argv[]) {
 \end_deeper
 \begin_layout Description
 Assembly
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -33536,6 +33864,12 @@ int
 add
 \color inherit
  = i + j;
+\family default
+
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -33613,6 +33947,12 @@ int
 sub
 \color inherit
  = i - j;
+\family default
+
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -33702,6 +34042,12 @@ int
 mul
 \color inherit
  = i * j;
+\family default
+
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -33794,6 +34140,12 @@ int
 div
 \color inherit
  = i / j;
+\family default
+
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -33944,6 +34296,12 @@ int
 mod
 \color inherit
  = i % j;
+\family default
+
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -34001,6 +34359,12 @@ int
 neg
 \color inherit
  = -i;
+\family default
+
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -34075,6 +34439,12 @@ int
 and
 \color inherit
  = i & j;
+\family default
+
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -34134,6 +34504,12 @@ int
 or
 \color inherit
  = i | j;
+\family default
+
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -34196,6 +34572,12 @@ int
 xor
 \color inherit
  = i ^ j;
+\family default
+
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -34258,6 +34640,12 @@ int
 not
 \color inherit
  = ~i;
+\family default
+
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -34323,6 +34711,12 @@ int
 shl
 \color inherit
  = i << 8;
+\family default
+
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -34508,6 +34902,12 @@ int
 shr
 \color inherit
  = i >> 8;
+\family default
+
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -34659,6 +35059,12 @@ char
 equal1
 \color inherit
  = (i == j);
+\family default
+
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -34782,6 +35188,12 @@ equal1
 Expression: 
 \family typewriter
 int equal2 = (i == j);
+\family default
+
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -34901,7 +35313,7 @@ movzx
 \family typewriter
 \begin_inset Tabular
 <lyxtabular version="3" rows="1" columns="4">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -34988,7 +35400,7 @@ movzx eax, al
 \begin_layout Plain Layout
 \begin_inset Tabular
 <lyxtabular version="3" rows="1" columns="4">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -35065,6 +35477,12 @@ movzx eax, al
 Expression: 
 \family typewriter
 char greater = (i > j);
+\family default
+
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -35109,6 +35527,12 @@ reater comparison instead.
 Expression: 
 \family typewriter
 char less = (i < j);
+\family default
+
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -35158,6 +35582,12 @@ ess comparison.
 Expression: 
 \family typewriter
 char greater_equal = (i >= j);
+\family default
+
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -35214,6 +35644,12 @@ qual comparison.
 Expression: 
 \family typewriter
 char less_equal = (i <= j);
+\family default
+
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -35268,6 +35704,12 @@ int
 logical_and
 \color inherit
  = (i && j);
+\family default
+
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -35389,6 +35831,10 @@ i
 \color inherit
 .
  
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -35444,6 +35890,10 @@ j
 \color inherit
 .
  
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -35495,6 +35945,10 @@ j
 true
 \family default
 .
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -35538,6 +35992,12 @@ logical_and
 Expression: 
 \family typewriter
 int logical_or = (i || j);
+\family default
+
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -35605,6 +36065,10 @@ i++
 i--
 \family default
 )
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -35706,6 +36170,12 @@ int
 i1
 \color inherit
  = i++;
+\family default
+
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -35857,6 +36327,12 @@ i1
 Expression: 
 \family typewriter
 int i2 = ++i;
+\family default
+
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -35937,6 +36413,12 @@ i
 Expression: 
 \family typewriter
 int i3 = i--;
+\family default
+
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -35969,6 +36451,12 @@ i++
 Expression:
 \family typewriter
  int i4 = --i;
+\family default
+
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -36012,6 +36500,10 @@ Partial Register Stalls
 
 \emph default
  to understand register stalls in general.
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -36119,7 +36611,7 @@ texttt{0x10004}] {
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="5" columns="4">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="left" valignment="top" width="0.35cm">
@@ -36383,7 +36875,7 @@ texttt{push word 0x5678}] {
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="5" columns="4">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="left" valignment="top" width="0.35cm">
@@ -36649,7 +37141,7 @@ texttt{pop word}] {
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="5" columns="4">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="left" valignment="top" width="0.35cm">
@@ -36917,6 +37409,10 @@ Local variables are variables that exist within a scope.
 
 \begin_layout Example
 Function scope:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -36967,12 +37463,19 @@ foo
 \end_layout
 
 \end_deeper
-\begin_layout --Separator--
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
 \begin_layout Example
 Unnamed scope:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -37177,7 +37680,7 @@ caption{Function arguments and local variables}
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="15">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -37694,6 +38197,10 @@ Here is an example to make it more concrete:
 
 \begin_layout Description
 Source
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -37755,6 +38262,10 @@ bfseries b|@;
 \end_deeper
 \begin_layout Description
 Assembly
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -37973,7 +38484,7 @@ caption{Function arguments and local variables in memory}
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="9" columns="17">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -39551,7 +40062,7 @@ b
 Function Call and Return
 \begin_inset CommandInset label
 LatexCommand label
-name "sub:Function-Call-and"
+name "subsec:Function-Call-and"
 
 \end_inset
 
@@ -39560,6 +40071,10 @@ name "sub:Function-Call-and"
 
 \begin_layout Description
 Source 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -39638,6 +40153,10 @@ int main(int argc, char *argv[]) {
 \end_deeper
 \begin_layout Description
 Assembly
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -39964,6 +40483,10 @@ jmp
 
 \begin_layout Description
 Source
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -40019,6 +40542,10 @@ int main(int argc, char *argv[]) {
 \end_deeper
 \begin_layout Description
 Assembly
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -40202,6 +40729,10 @@ blue
 green
 \color inherit
  instructions)?
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -40239,6 +40770,10 @@ jmp
 
 \begin_layout Description
 Source
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -40318,6 +40853,10 @@ int main(int argc, char *argv[]) {
 \end_deeper
 \begin_layout Description
 Assembly
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -40886,6 +41425,10 @@ Segments and section
 \emph default
 s are the main content of an ELF binary, which are the code and data, divided
  into chunks of different purposes.
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -41141,6 +41684,10 @@ end{shellcommand}
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -41276,6 +41823,10 @@ Magic
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -41300,6 +41851,10 @@ status open
 begin{shelloutput16.6}
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -41338,7 +41893,7 @@ Examine byte by byte:
 
 \begin_inset Tabular
 <lyxtabular version="3" rows="12" columns="2">
-<features rotate="0" booktabs="true" tabularvalignment="middle">
+<features booktabs="true" tabularvalignment="middle">
 <column alignment="left" valignment="top" width="3cm">
 <column alignment="left" valignment="top" width="60col%">
 <row>
@@ -41729,6 +42284,10 @@ Class
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -41759,7 +42318,7 @@ Possible values:
 
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="2">
-<features rotate="0" booktabs="true" tabularvalignment="middle">
+<features booktabs="true" tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0pt">
 <column alignment="center" valignment="top">
 <row>
@@ -41892,6 +42451,10 @@ Data
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -41922,7 +42485,7 @@ Possible values:
 
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="2">
-<features rotate="0" booktabs="true" tabularvalignment="middle">
+<features booktabs="true" tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0pt">
 <column alignment="left" valignment="top">
 <row>
@@ -42055,6 +42618,10 @@ Version
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -42084,7 +42651,7 @@ Possible values:
 
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="2">
-<features rotate="0" booktabs="true" tabularvalignment="middle">
+<features booktabs="true" tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0pt">
 <column alignment="left" valignment="top">
 <row>
@@ -42170,6 +42737,10 @@ OS/ABI
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -42216,6 +42787,10 @@ Type
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -42230,7 +42805,7 @@ Identifies the object file type.
 
 \begin_inset Tabular
 <lyxtabular version="3" rows="8" columns="2">
-<features rotate="0" booktabs="true" tabularvalignment="middle">
+<features booktabs="true" tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0pt">
 <column alignment="left" valignment="top">
 <row>
@@ -42504,6 +43079,10 @@ Machine
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -42537,6 +43116,10 @@ status open
 Version
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -42578,6 +43161,10 @@ point
 address
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -42628,6 +43215,10 @@ program
 headers
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -42744,6 +43335,10 @@ headers
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -42772,6 +43367,10 @@ status open
 Flags
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -42838,6 +43437,10 @@ header
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -42875,6 +43478,10 @@ program
 headers
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -42918,6 +43525,10 @@ headers
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -42954,6 +43565,10 @@ headers
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -42987,6 +43602,10 @@ section
 headers
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -43035,6 +43654,10 @@ table
 index
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -43153,6 +43776,10 @@ status open
 end{shellcommand}
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -43520,6 +44147,10 @@ end{tcolorbox}
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -43782,6 +44413,10 @@ holds executable instructions of a program.
 segmentation fault
 \emph default
 .
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -43796,7 +44431,7 @@ ELF gives information to enable an OS with such protection mechanism.
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="17" columns="2">
-<features rotate="0" islongtable="true" longtabularalignment="left">
+<features islongtable="true" longtabularalignment="left">
 <column alignment="left" valignment="top" width="1cm">
 <column alignment="left" valignment="top" width="14cm">
 <row endfirsthead="true" caption="true">
@@ -44371,6 +45006,10 @@ Info
  field holds an index of a section, a symbol table entry or a hash table
  entry, depends on the type of a section.
  
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -44414,6 +45053,10 @@ Output of
 .interp
 \family default
  section:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -44601,7 +45244,10 @@ Align
 \end_layout
 
 \end_deeper
-\begin_layout --Separator--
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -44611,6 +45257,10 @@ Output of the
 .text
 \family default
  section:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -44994,6 +45644,10 @@ NULL
 \family default
  section is always the first entry of section header table.
  It means, any useful section starts from 1.
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -45003,6 +45657,10 @@ The sample output of
 NULL
 \family default
  section:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -45115,6 +45773,10 @@ NOTE
  marks a section with special information that other programs will check
  for conformance, compatibility...
  by a vendor or a system builder.
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -45124,6 +45786,10 @@ In the sample output, we have 2
 NOTE
 \family default
  sections:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -45295,11 +45961,19 @@ PROGBITS
 \family default
  indicates a section holding the main content of a program, either code
  or data.
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
 \begin_layout Example
 There are many PROGBITS sections:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -45453,6 +46127,10 @@ end{shelloutput16.6}
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -45466,6 +46144,12 @@ For our operating system, we only need the following section:
 
 \family typewriter
 .text
+\family default
+
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -45479,6 +46163,12 @@ This section holds all the compiled code of a program.
 
 \family typewriter
 .data
+\family default
+
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -45496,6 +46186,12 @@ allocates the section with actual byte in the executable binary.
 
 \family typewriter
 .rodata
+\family default
+
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -45518,6 +46214,12 @@ Hello World
 
 \family typewriter
 .bss
+\family default
+
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -45541,6 +46243,10 @@ ymbol
  Unlike other sections, no space is allocated for this section in the image
  of the executable binary on disk.
  The section is allocated only when the program is loaded into main memory.
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -45592,11 +46298,19 @@ symbol
 is a name assigned to an entity in a program.
  The types of these entities are also the types of symbols, and these are
  the possible types of an entity:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
 \begin_layout Example
 In the sample output, section 5 and 29 are symbol tables:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -45901,6 +46615,10 @@ is the size of the entity associated with a symbol.
 Type 
 \family default
 is a symbol type according to table.
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -46064,6 +46782,10 @@ Bind
 \family default
 is the scope of a symbol.
  
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -46084,6 +46806,10 @@ static
 \family default
 modifier marks a symbol (e.g.
  a variable/function) as local to only the file that defines it.
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -46093,6 +46819,10 @@ If we define variables and functions with
 static
 \family default
  modifer:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -46166,6 +46896,10 @@ Then we get the
 static
 \family default
  variables listed as local symbols after compiling:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -46268,6 +47002,10 @@ Symbol table '.symtab' contains 72 entries:
 
 \begin_layout LyX-Code
      0: 00000000     0 NOTYPE  LOCAL  DEFAULT  UND 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -46488,6 +47226,17 @@ GLOBAL
 \noun off
 \color none
 .
+\family default
+\series default
+\shape default
+\size default
+\bar default
+\color inherit
+
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -46505,6 +47254,10 @@ GLOBAL
 main
 \family default
 :
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -46554,6 +47307,10 @@ WEAK
  However, this constraint is lax when a definition is explicitly marked
  as weak, which means the default implementation can be replaced by a different
  definition at link time.
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -46563,6 +47320,10 @@ Suppose we have a default implementation of the function
 add
 \family default
 :
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -46788,6 +47549,10 @@ int add(int a, int b) {
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -46858,13 +47623,17 @@ Vis
 \family default
 is the visibility of a symbol.
  The following values are available:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="6" columns="2">
-<features rotate="0" islongtable="true" longtabularalignment="center">
+<features islongtable="true" longtabularalignment="center">
 <column alignment="left" valignment="top" width="2.5cm">
 <column alignment="left" valignment="top" width="13.5cm">
 <row caption="true">
@@ -47044,13 +47813,17 @@ Ndx
 is the index of a section that the symbol is in.
  Aside from fixed index numbers that represent section indexes, index has
  these special values:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="8" columns="2">
-<features rotate="0" islongtable="true" longtabularalignment="center">
+<features islongtable="true" longtabularalignment="center">
 <column alignment="left" valignment="top" width="2cm">
 <column alignment="left" valignment="top" width="14cm">
 <row newpage="true" caption="true">
@@ -47344,6 +48117,10 @@ main
 .symtab
 \family default
  section is:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -47514,6 +48291,10 @@ objdump
  can display various objects in a program, e.g.
  variable, functions, section names, in a human-readable text instead of
  its raw hex address.
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -47531,6 +48312,10 @@ In the sample output, section
 STRTAB
 \family default
  type:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -47619,6 +48404,10 @@ Strings in those
  
 \family default
 section can be inspected with the command:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -47868,7 +48657,7 @@ textcolor{red}{red} number is the starting index of a string.}
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="6" columns="17">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -49263,6 +50052,10 @@ is similar to
 PROGBITS
 \family default
  but occupies no space.
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -49457,6 +50250,10 @@ is an array of function pointers for program initialization.
  and this section are executed first.
  The first element in this array is an ignored function pointer.
  
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -49502,6 +50299,10 @@ INIT_ARRAY
 constructor
 \family default
 :
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -49670,7 +50471,10 @@ end{shellcommand}
 \end_layout
 
 \end_deeper
-\begin_layout --Separator--
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -49690,6 +50494,10 @@ init2
 init1
 \family default
 , we give it a higher priority:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -49857,12 +50665,19 @@ end{shellcommand}
 
 \end_layout
 
-\begin_layout --Separator--
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
 \begin_layout Example
 We can add initialization functions using another method:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -50059,6 +50874,12 @@ init2
 
 \family typewriter
 hello world!
+\family default
+
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -50111,6 +50932,10 @@ abort()
 .finit_array
 \family default
  is ignored.
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -50270,6 +51095,10 @@ n functions in
 INIT_ARRAY
 \family default
 .
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -50639,7 +51468,7 @@ emph{Info}} depend on section types.} interpretation}
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="7" columns="3">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="left" valignment="top" width="3cm">
 <column alignment="left" valignment="top" width="6cm">
 <column alignment="left" valignment="top" width="6cm">
@@ -50933,7 +51762,10 @@ STRTAB
  section.
 \end_layout
 
-\begin_layout --Separator--
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -50954,7 +51786,10 @@ Info
  field onward, no local symbol appears.
 \end_layout
 
-\begin_layout --Separator--
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -50974,7 +51809,10 @@ SYMTAB
  section.
 \end_layout
 
-\begin_layout --Separator--
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -51219,7 +52057,7 @@ Segment Permission
 \begin_layout Plain Layout
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="2">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
 <row>
@@ -51358,6 +52196,10 @@ height "1.5pt"
 
 \begin_layout Example
 The command to get the program header table:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -51770,6 +52612,10 @@ LOAD
  are segments at index 2 and 3.
  As can be seen from the two lists of sections, most sections are loadable
  and is available at runtime.
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -53226,6 +54072,10 @@ Hello World
 \end_inset
 
  program suffices for the educational purpose in this chapter:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -53407,6 +54257,10 @@ The output of the command from
 hello
 \family default
  program, a local target in detail:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -53617,6 +54471,10 @@ symbol file
  between an executable binary and its debugging information into 2 files,
  especially for remote debugging.
  In the example, it is this line:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -53628,6 +54486,10 @@ Symbols from "/tmp/hello".
 \begin_layout Itemize
 The path of the debugging program and its file type.
  In the example, it is this line:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -53644,6 +54506,10 @@ Local exec file:
 The entry point to the debugging program.
  That is, the very first code the program runs.
  In the example, it is this line:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -53658,7 +54524,10 @@ A list of sections with its starting and ending addresses.
 \end_layout
 
 \end_deeper
-\begin_layout --Separator--
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -53669,6 +54538,10 @@ If the debugging program runs in a different machine, it is a remote target
 gdb
 \family default
  only prints a brief information:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -53778,6 +54651,10 @@ Here is the output when running against
 hello
 \family default
  program:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -53987,11 +54864,19 @@ section
 
 names displays only named sections.
  
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
 \begin_layout Example
 The command:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -54032,6 +54917,10 @@ status open
 end{shellcommand}
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -54150,6 +55039,10 @@ gdb
 gdb
 \family default
  understands the following flags:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -54220,6 +55113,10 @@ IS_COMMON Section contains common symbols.
 \begin_layout Example
 We can restrict the output to only display sections that contain code with
  the command:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -54383,6 +55280,10 @@ This commands list all function names and their loaded addresses.
 
 \begin_layout Example
 Run the command, we get the following output:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -54565,6 +55466,10 @@ i
 \family default
  into the sample source program and recompile then run the command, we get
  the following output:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -54798,6 +55703,10 @@ This command displays the assembly code of the executable file.
 gdb
 \family default
  can display the assembly code of a function:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -55150,7 +56059,10 @@ green
 \end_layout
 
 \end_deeper
-\begin_layout --Separator--
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -55164,6 +56076,10 @@ If the option
 objdump
 \family default
  displays assembly code by default:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -55618,6 +56534,10 @@ We can examine the raw content of
 main
 \family default
 :
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -55710,13 +56630,20 @@ main
 \end_layout
 
 \end_deeper
-\begin_layout --Separator--
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
 \begin_layout Example
 With format arguments, the command can print a range of memory in a specific
  format.
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -55853,7 +56780,7 @@ gdb
 \begin_layout Example
 \begin_inset Tabular
 <lyxtabular version="3" rows="11" columns="2">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
 <row>
@@ -56182,6 +57109,10 @@ This command starts running the program.
 
 \begin_layout Example
 Run the hello program:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -56311,6 +57242,10 @@ A breakpoint can be set on a line as displayed by an editor.
 main
 \family default
  function:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -56563,7 +57498,10 @@ gdb
 \end_layout
 
 \end_deeper
-\begin_layout --Separator--
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -56579,6 +57517,10 @@ gdb
 main
 \family default
  function? In this case, a better method is to use the function name directly:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -56638,7 +57580,10 @@ main
 \end_layout
 
 \end_deeper
-\begin_layout --Separator--
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -56654,6 +57599,10 @@ gdb
 print
 \family default
  command can be used:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -56779,7 +57728,10 @@ end{shellcommand}
 \end_layout
 
 \end_deeper
-\begin_layout --Separator--
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -56808,6 +57760,10 @@ hello3.c
 \family default
 ...
  In that case, simply add the filename before either a line number:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -56855,12 +57811,19 @@ end{shellcommand}
 \end_layout
 
 \end_deeper
-\begin_layout --Separator--
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
 \begin_layout Example
 A function name in a specific file can also be set:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -56929,6 +57892,10 @@ main
 printf
 \family default
 :
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -57151,6 +58118,10 @@ printf
 \end_inset
 
 :
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -57491,6 +58462,10 @@ printf
 ni
 \family default
  is used, it steps through each assembly instruction:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -58268,6 +59243,10 @@ printf
 call
 \family default
  instruction:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -58830,6 +59809,10 @@ This command executes until the next line is greater than the current line.
 
 \begin_layout Example
 Suppose we have a function that execute a long loop:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -59686,6 +60669,10 @@ finish
 until
 \family default
 :
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -59912,6 +60899,10 @@ backtrace
 
 \begin_layout Example
 Suppose we have a chain of function calls:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -60534,6 +61525,10 @@ d
 c
 \family default
  function and look at its state:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -60752,6 +61747,10 @@ c
 d
 \family default
 :
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -61022,6 +62021,10 @@ This command lists the current values in commonly used registers.
 
 \begin_layout Example
 Executing the command, we can see the commonly used registers:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -61220,7 +62223,7 @@ int 3
 
 \begin_inset Tabular
 <lyxtabular version="3" rows="2" columns="7">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0.8cm">
 <column alignment="center" valignment="top" width="0.8cm">
 <column alignment="center" valignment="top" width="0.8cm">
@@ -61451,7 +62454,7 @@ int 3
 
 \begin_inset Tabular
 <lyxtabular version="3" rows="2" columns="7">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0.8cm">
 <column alignment="center" valignment="top" width="0.8cm">
 <column alignment="center" valignment="top" width="0.8cm">
@@ -61641,6 +62644,10 @@ int 3
 gdb
 \family default
  to stop:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -62079,7 +63086,7 @@ caption{Source-binary mapping with DIE}
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="7" columns="4">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="2.25cm">
 <column alignment="left" valignment="top" width="6cm">
 <column alignment="center" valignment="top" width="1.25cm">
@@ -62717,6 +63724,10 @@ When an executable binary contains debug info,
 \family default
  can display such information in a readable format.
  Using the good old hello world program:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -62853,6 +63864,10 @@ status open
 end{shellcommand}
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -63199,6 +64214,10 @@ DW_AT_
 \color inherit
  prefix are the attributes attached to a DIE that describe an entity.
  Notable attributes:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -63295,6 +64314,10 @@ and end at
 objdump
 \family default
 :
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -63541,6 +64564,10 @@ Pink
 .debug_abbrev
 \family default
  section:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -63827,6 +64854,10 @@ hello.c:
 
 \begin_layout LyX-Code
 <0><b>: Abbrev Number: 1 (DW_TAG_compile_unit)
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -64185,6 +65216,10 @@ ES:BX
 \family default
 .
  The parameters are stored in registers like this:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -64284,6 +65319,10 @@ Setup machine environment for booting by properly initialize segment registers
 
 \begin_layout Enumerate
 Load the kernel:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -64337,6 +65376,10 @@ cold reboot
 \emph default
 , in which the machine environment is reset to initial settings when the
  computer starts from a powerless state.
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -65313,6 +66356,10 @@ Boot failed: not a bootable disk
 hd
 \family default
 :
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -65400,6 +66447,10 @@ height "1.5pt"
 
 \begin_layout Exercise
 Print a welcome message
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -65461,6 +66512,10 @@ MovCursor
 \end_inset
 
  
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -65521,6 +66576,12 @@ PutChar
 \end_inset
 
  
+\size default
+
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -65590,6 +66651,10 @@ Print
 \end_inset
 
  
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -65635,6 +66700,10 @@ Print
 \end_inset
 
  should display a welcome message on screen.
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -65874,7 +66943,7 @@ Floppy disk platter with 2 sides.
 Read and load sectors from a floppy disk
 \begin_inset CommandInset label
 LatexCommand label
-name "sub:Read-and-load"
+name "subsec:Read-and-load"
 
 \end_inset
 
@@ -65892,6 +66961,10 @@ nd
 \end_inset
 
  sector, so we can experiment with floppy disk reading:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -66049,7 +67122,7 @@ The bootloader and the sample program on floppy disk.
 
 \begin_inset Tabular
 <lyxtabular version="3" rows="2" columns="5">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -66280,6 +67353,10 @@ nd
 \end_inset
 
  sector:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -66592,6 +67669,10 @@ https://www.gnu.org/software/make/manual/
 
 \begin_layout Standard
 With Makefile, we can build simpler commands and save time:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -66869,6 +67950,10 @@ disk.img
  This way, only one place that is changed - the variable definition - all
  other places are updated automatically.
  The following variables are added:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -66981,6 +68066,10 @@ wildcard
 patsubst
 \family default
  for solving such problems:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -67084,6 +68173,10 @@ Finally, a recipe for building from
 .o
 \family default
  are needed:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -67171,6 +68264,10 @@ nasm
 \family default
  files and we no longer need a separate recipe for each object files.
  Putting it all together with the new variables, we get a better Makefile:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -67439,6 +68536,10 @@ bootloader/
 \family default
 \color inherit
  directory should be:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -67777,6 +68878,10 @@ Makefile
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -67923,6 +69028,10 @@ os
     └── sample.asm
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -68104,6 +69213,10 @@ make
 \begin_layout Standard
 To save time entering the command for starting up a QEMU virtual machine,
  we also add a target to the top-level Makefile:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -68145,6 +69258,10 @@ clean
 
 \begin_layout Itemize
 Bootloader Makefile:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -68174,6 +69291,10 @@ clean:
 \end_deeper
 \begin_layout Itemize
 OS Makefile:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -68203,6 +69324,10 @@ clean:
 \end_deeper
 \begin_layout Itemize
 Top-level Makefile:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -68262,7 +69387,7 @@ GNU Make, at its core, is a domain-specific language for build automation.
 \noindent
 \begin_inset Tabular
 <lyxtabular version="3" rows="6" columns="2">
-<features rotate="0" islongtable="true" longtabularalignment="center">
+<features islongtable="true" longtabularalignment="center">
 <column alignment="left" valignment="top" width="7cm">
 <column alignment="left" valignment="top" width="8cm">
 <row>
@@ -69016,7 +70141,7 @@ status open
 Automate debugging steps with GDB script
 \begin_inset CommandInset label
 LatexCommand label
-name "sub:Automate-debugging-steps"
+name "subsec:Automate-debugging-steps"
 
 \end_inset
 
@@ -69054,6 +70179,10 @@ gdb
 
 \begin_layout Standard
 Our first configuration:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -70223,6 +71352,10 @@ COMMON
  
 \family default
 its symbol value holds alignment constraints.
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -70253,6 +71386,10 @@ hello.o
 readelf -s hello.o
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -70442,6 +71579,10 @@ section
 \end_inset
 
 , its symbol value holds a section offset.
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -70455,6 +71596,10 @@ main
 foo
 \family default
  belong to section 1:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -70681,6 +71826,10 @@ files
 \end_inset
 
 , instead of the above values, a symbol value holds a memory address.
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -70709,6 +71858,10 @@ gcc -g -m32 -masm=intel hello.o -o hello
 \end_inset
 
 :
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -70856,6 +72009,10 @@ R_386_PC32
 \color inherit
 .
  The following formula is applied for relocation (Inteli386 psABI): 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -70954,6 +72111,10 @@ reference "mod-rm-32"
  In some assembly language, an absolute address can be used simply because
  it is a syntactic sugar that is later transformed into one of the relative
  addressing mode provided by the x86 hardware by the assembler.
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -70976,6 +72137,10 @@ For the
 foo
 \family default
  symbol:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -71546,6 +72711,10 @@ Or any current assembler in use today.
 assembler allows specifying the actual memory address of a symbol definition.
  Such address is later translated into relative addressing mode, saving
  the programmer the trouble of calculating offset manually.
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -71699,6 +72868,10 @@ COMMAND
 
 \begin_layout LyX-Code
 {
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -71827,7 +73000,7 @@ begin{table*}
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="7" columns="2">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="left" valignment="top" width="5cm">
 <column alignment="left" valignment="top" width="10cm">
 <row>
@@ -72254,7 +73427,7 @@ gcc
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="2">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="left" valignment="top" width="2cm">
 <column alignment="left" valignment="top" width="14cm">
 <row>
@@ -74056,6 +75229,10 @@ NULL
 GNU_STACK
 \family default
  segment:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -74339,13 +75516,20 @@ GNU_STACK
 \end_layout
 
 \end_deeper
-\begin_layout --Separator--
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
 \begin_layout Example
 We can add as many segments of the same type, as long as they are given
  different names:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -74616,6 +75800,10 @@ Now
 .eh_frame
 \family default
  are in different segments.
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -74677,6 +75865,10 @@ FILEHDR
 NULL
 \family default
  segment:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -74867,7 +76059,10 @@ NULL
 \end_layout
 
 \end_deeper
-\begin_layout --Separator--
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
@@ -74877,6 +76072,10 @@ If we assign
 FILEHDR
 \family default
  to a non-starting segment, its size and starting address changes significantly:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -75290,6 +76489,10 @@ FILEHDR
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -75373,6 +76576,10 @@ NULL
 PHDR
 \family default
  segment:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -75695,6 +76902,10 @@ end{shelloutput16.6}
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -75744,6 +76955,10 @@ virtual memory address
 load memory address
 \emph default
 :
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -75850,6 +77065,10 @@ Read-Only Memory
  system to use, the program needs a load address that accommodates the addressin
 g scheme of the target application or operating system.
  
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -75873,6 +77092,10 @@ We can specify a load memory address for the segment
 LOAD
 \family default
  with AT syntax:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -76046,6 +77269,10 @@ end{shelloutput16.6}
 It depends on an operating system whether to use the address or not.
  For our operating system, the virtual memory address and load are the same,
  so an explicit load address is none of our concern.
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -76081,13 +77308,17 @@ FLAGS
  Each flag is an integer that represents a permission and can be combined
  with OR operations.
  Possible values:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="3">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
@@ -76224,6 +77455,10 @@ Executable
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -76243,6 +77478,10 @@ height "1.5pt"
 
 \begin_layout Example
 We can create a LOAD segment with Read, Write and Execute permissions enabled:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -76424,6 +77663,10 @@ RWE
 \family default
 \color inherit
  permissions, as shown above.
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -76878,6 +78121,10 @@ The bootloader must be compiled as a ELF binary.
 $(BUILD_DIR)/%.o: %.asm
 \family default
  recipe:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -76901,6 +78148,10 @@ nasm -f bin $< -o $@
 
 \begin_layout Standard
 to this line:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -77001,6 +78252,10 @@ objcopy
 $(BUILD_DIR)/%.o: %.asm
 \family default
 :
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -77035,6 +78290,10 @@ objcopy
 \end_deeper
 \begin_layout Standard
 The updated recipe should look like:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -77076,6 +78335,10 @@ Now we test the bootloader with debug information available:
 
 \begin_layout Enumerate
 Start the QEMU machine:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -77128,6 +78391,10 @@ gdb
 bootloader.o.elf
 \family default
 :
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -77185,7 +78452,7 @@ Enter
  section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sub:Automate-debugging-steps"
+reference "subsec:Automate-debugging-steps"
 
 \end_inset
 
@@ -77324,6 +78591,10 @@ The next step is updating
 os/Makefile
 \family default
 :
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -77573,6 +78844,10 @@ Earlier we examined that an ELF header contains a entry address of a program.
 man elf
 \family default
  :
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -77680,6 +78955,12 @@ e_entry
 16 bytes of 
 \family typewriter
 e_ident[EI_NIDENT]:
+\family default
+
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -77752,6 +79033,10 @@ Elf32_Addr
 
 \begin_layout Example
 With any program, such as this simple one:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -78039,11 +79324,15 @@ Now that we know where the position of the entry address in the ELF header,
  it is easy to modify the bootloader made in section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sub:Read-and-load"
+reference "subsec:Read-and-load"
 
 \end_inset
 
  to retrieve and jump to the address:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -79130,7 +80419,7 @@ Something wrong is going on here.
  in section 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sub:Function-Call-and"
+reference "subsec:Function-Call-and"
 
 \end_inset
 
@@ -80033,6 +81322,10 @@ os.lds
 0x0
 \family default
 :
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -80160,6 +81453,10 @@ By setting the virtual address of
 os.lds
 \family default
 ):
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -80751,6 +82048,10 @@ ld
 os/Makefile
 \family default
 :
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -80842,6 +82143,10 @@ end{shellcommand}
 
 \begin_layout Standard
 We update the rule so that the sectors are automatically calculated:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -82287,6 +83592,10 @@ To implement the concept of a process, a kernel needs to be able to save
 
 \begin_layout Description
 Description
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper

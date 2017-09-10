@@ -9,9 +9,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="210mm"
-   height="297mm"
-   viewBox="0 0 210 297"
+   width="220.39252mm"
+   height="142.46725mm"
+   viewBox="0 0 220.39252 142.46725"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.0 r15299"
@@ -26,19 +26,25 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4142136"
-     inkscape:cx="539.18778"
-     inkscape:cy="528.12366"
+     inkscape:cx="424.9532"
+     inkscape:cy="230.38511"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="true"
-     inkscape:window-width="1245"
-     inkscape:window-height="1007"
-     inkscape:window-x="1579"
-     inkscape:window-y="124"
-     inkscape:window-maximized="0">
+     inkscape:window-width="2560"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0">
     <inkscape:grid
        type="xygrid"
-       id="grid4485" />
+       id="grid4485"
+       originx="1.4869637"
+       originy="-146.12855" />
   </sodipodi:namedview>
   <metadata
      id="metadata5">
@@ -55,9 +61,10 @@
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(1.4869635,-8.4041679)">
     <rect
-       style="fill:#0000ff;fill-opacity:0;stroke:#000000;stroke-width:0.4;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:#0000ff;fill-opacity:0;stroke:#000000;stroke-width:0.40000001;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4487"
        width="18.520834"
        height="7.9374986"
@@ -97,7 +104,7 @@
          y="21.118393"
          style="font-size:4.23333311px;stroke-width:0.26458332">7</tspan></text>
     <rect
-       style="fill:#0000ff;fill-opacity:0;stroke:#000000;stroke-width:0.4;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:#0000ff;fill-opacity:0;stroke:#000000;stroke-width:0.40000001;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4487-0"
        width="37.126125"
        height="7.8787384"
@@ -137,7 +144,7 @@
          y="39.639225"
          style="font-size:4.23333311px;stroke-width:0.26458332">15</tspan></text>
     <rect
-       style="fill:#0000ff;fill-opacity:0;stroke:#000000;stroke-width:0.4;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:#0000ff;fill-opacity:0;stroke:#000000;stroke-width:0.40000001;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4487-2"
        width="74.371773"
        height="7.7963862"
@@ -334,7 +341,7 @@
          id="tspan4489-9-5"
          x="155.73215"
          y="69.991524"
-         style="font-size:4.23333311px;stroke-width:0.26458332">Byte Unsigned Integer</tspan></text>
+         style="font-size:4.23333311px;stroke-width:0.26458332">Quadword Unsigned Integer</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:4.23333311px;line-height:6.61458349px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
@@ -372,7 +379,7 @@
          id="tspan4489-2-7-0"
          x="155.73215"
          y="144.07486"
-         style="font-size:4.23333311px;stroke-width:0.26458332">Byte Signed Integer</tspan></text>
+         style="font-size:4.23333311px;stroke-width:0.26458332">Quadword Signed Integer</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:4.23333311px;line-height:6.61458349px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
@@ -403,7 +410,7 @@
        x="0.54116821"
        y="138.25" />
     <rect
-       style="fill:#b3b3b3;fill-opacity:1;stroke:#000000;stroke-width:0.27;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:#b3b3b3;fill-opacity:1;stroke:#000000;stroke-width:0.27000001;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect5173-2-6-5"
        width="2.6458333"
        height="7.6729169"
