@@ -44252,8 +44252,7 @@ Type
 \end_inset
 
  This field (in a section header) identifies the type of each section.
- Types classify sections (similar to types in programming languages are
- used by a compiler).
+ Types are used to classify sections.
  
 \end_layout
 
@@ -44277,7 +44276,7 @@ virtual
  address of each section.
  Note that the addresses are virtual only when a program runs in an OS with
  support for virtual memory enabled.
- In our OS, since we run on bare metal, the addresses will all be physical.
+ In our OS, we run on the bare metal, the addresses will all be physical.
 \end_layout
 
 \begin_layout Description
@@ -44293,23 +44292,9 @@ Offset
 
 \end_inset
 
- The offset of each section into a file.
- An 
+
 \emph on
 
-\begin_inset Marginal
-status open
-
-\begin_layout Plain Layout
-
-\series bold
-\emph on
-offset
-\end_layout
-
-\end_inset
-
-offset
 \begin_inset Index idx
 status open
 
@@ -44999,7 +44984,7 @@ are numbers that references the indexes of sections, symbol table entries,
 \family typewriter
 Link
 \family default
- field holds the index of a section, while 
+ field only holds the index of a section, while 
 \family typewriter
 Info
 \family default
@@ -53910,17 +53895,21 @@ LOAD
 .eh_frame
 \family default
 .
- The section starts at 
+ The 
 \family typewriter
-0x08048510
+.eh_frame
 \family default
-, with the offset 
+ section starts at 
+\family typewriter
+0x0804851
+\family default
+ becauase the start address is 
+\family typewriter
+0x08048000
+\family default
+, the offset into the file is 
 \family typewriter
 0x510
-\family default
- and its size is 
-\family typewriter
-0xec
 \family default
 .
  The end address of 
@@ -53928,14 +53917,23 @@ LOAD
 .eh_frame
 \family default
  should be: 
-\begin_inset Formula $\mathtt{0x08048510+0x510+0xec=0x080485fc}$
+\begin_inset Formula $\mathtt{0x08048000+0x510+0xec=0x080485fc}$
 \end_inset
 
-, exactly the same as the end address of the first 
+ because the segment size is 
+\family typewriter
+0x
+\family default
+ec.
+ This is exactly the same as the end address of the first 
 \family typewriter
 LOAD
 \family default
- segment.
+ segment above: 
+\begin_inset Formula $\mathtt{0x08048000+0x5ec=0x080485fc}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -71088,7 +71086,8 @@ e8
 \family typewriter
 call 1c
 \family default
-?
+? It will be explained after a few more sections, but you should pause and
+ think a bit about the reason why.
 \end_layout
 
 \begin_layout Subsection
@@ -72423,7 +72422,7 @@ fc ff ff ff
 1c
 \family default
 .
- the memory address right after 
+ The memory address right after 
 \family typewriter
 e8
 \family default
