@@ -76,7 +76,12 @@
 [{\titlerule[0.8pt]}]
 
 
-\usepackage{microtype}
+\usepackage[activate={true, nocompatibility}, final, tracking=true, kerning=true, spacing=true, factor=1100, stretch=20, shrink=20]{microtype}
+\hyphenpenalty=10
+\exhyphenpenalty=10
+\doublehyphendemerits=10
+\finalhyphendemerits=5000
+\uchyph=0
 
 \titleformat{\chapter}[display]
   {\normalfont\bfseries\color{mygray}}
@@ -182,6 +187,8 @@ boxed title style={skin=enhancedfirst jigsaw,size=small,arc=0mm,bottom=0mm,
 \newtcolorbox{shellcommand}[1][]{%
 enlarge top initially by=5mm,
 }
+\RequirePackage{ragged2e}
+\setlength{\RaggedRightRightskip}{\z@ plus 0.01\hsize}
 \end_preamble
 \options fleqn,bibliography=totoc,index=totoc,BCOR7.5mm,titlepage,captions=tableheading
 \use_default_options true
@@ -218,7 +225,7 @@ EndPreamble
 End
 \end_local_layout
 \language english
-\language_package default
+\language_package none
 \inputencoding auto
 \fontencoding global
 \font_roman "lmodern" "default"
@@ -1182,10 +1189,6 @@ domain expert
 wide false
 sideways false
 status open
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -5085,7 +5088,7 @@ Or in short, a
 status open
 
 \begin_layout Plain Layout
-fetch – decode – execute
+f@fetch – decode – execute
 \end_layout
 
 \end_inset
@@ -7335,7 +7338,7 @@ The Von-Neumann computer operates by storing its instructions in main memory,
 status open
 
 \begin_layout Plain Layout
-fetch – decode – execute
+f@fetch – decode – execute
 \end_layout
 
 \end_inset
@@ -65162,10 +65165,6 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -65185,6 +65184,7 @@ The boot process.
 \begin_inset Graphics
 	filename images/07/simple_boot_process.pdf
 	scale 80
+	clip
 
 \end_inset
 
@@ -83826,8 +83826,9 @@ addcontentsline{toc}{chapter}{Biblography}
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
+btprint "btPrintCited"
 bibfiles "references"
-options "bibtotoc,plainnat"
+options "plainnat"
 
 \end_inset
 
