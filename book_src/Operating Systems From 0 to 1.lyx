@@ -1076,7 +1076,7 @@ Directly
 
  means include anything that the software can control to produce the desired
  effects, e.g.
- keyboards, printers, monitors, other software...
+ keyboards, printers, monitors, other software, etc.
  
 \begin_inset Quotes eld
 \end_inset
@@ -1594,7 +1594,7 @@ linked list
 \end_layout
 
 \begin_layout Itemize
-...
+etc
 \end_layout
 
 \begin_layout Standard
@@ -7147,8 +7147,7 @@ ISA
  languages.
  The design includes all the instructions, registers, interrupts, memory
  models (how memory are arranged to be used by programs), addressing modes,
- I/O...
- of a CPU.
+ I/O, etc., of a CPU.
  The more features (e.g.
  more instructions) a CPU has, the more circuits are required to implement
  it.
@@ -7318,10 +7317,9 @@ I/O Devices
 \end_inset
 
  are devices that give input to a computer i.e.
- keyboard, mouse, sensor...
- and takes the output from a computer i.e.
+ keyboard, mouse, sensor, etc, and takes the output from a computer i.e.
  monitor takes information sent from CPU to display it, LED turns on/off
- according to a pattern computed by CPU...
+ according to a pattern computed by CPU, etc.
 \end_layout
 
 \begin_layout Standard
@@ -8077,7 +8075,7 @@ operations?
 
 \end_inset
 
- data transfer, arithmetic, control, floating-point...
+ data transfer, arithmetic, control, floating-point, etc.
 \end_layout
 
 \begin_layout Itemize
@@ -8116,9 +8114,7 @@ How is the operand location specified?
 
 \end_inset
 
- register, immediate, indirect, .
- .
- .
+ register, immediate, indirect, etc.
 \end_layout
 
 \begin_layout Itemize
@@ -8131,7 +8127,7 @@ What type and size of operands are supported?
 
 \end_inset
 
- byte, int, float, double, string, vector...
+ byte, int, float, double, string, vector, etc.
 \end_layout
 
 \begin_layout Itemize
@@ -8359,8 +8355,7 @@ status open
 
 \end_inset
 
- (for storing program data), debug sections...
- are not displayed.
+ (for storing program data), debug sections, etc, are not displayed.
  We will learn more about section when studying ELF binary file format in
  chapter 
 \begin_inset CommandInset ref
@@ -45459,8 +45454,7 @@ In this section, we will learn different details of section types and the
 \family typewriter
 .bss, .text, .data
 \family default
-...
- by looking at each section one by one.
+, etc, by looking at each section one by one.
  We will also examine the content of each section as a hexdump with the
  commands:
 \end_layout
@@ -45759,8 +45753,7 @@ NOTE
 
 \family default
  marks a section with special information that other programs will check
- for conformance, compatibility...
- by a vendor or a system builder.
+ for conformance, compatibility, etc, by a vendor or a system builder.
 \begin_inset Separator latexpar
 \end_inset
 
@@ -50803,16 +50796,33 @@ section(
 
 )
 \family default
- put a function into a particular section rather then the default 
+ put a function into a particular section rather than the default 
 \family typewriter
 .text
 \family default
 .
  In this example, it is 
 \family typewriter
-.init_arary
+.init_array
 \family default
 .
+ The section name is not necessary the same as the standard header in an
+ ELF file (such as 
+\family typewriter
+.text
+\family default
+ or 
+\family typewriter
+.init_array
+\family default
+, but can be anything.
+ Non-standard section names are often used for controlling the final binary
+ layout of a compiled program.
+ We will explore this techinque in more details when learning the 
+\family typewriter
+GNU ld
+\family default
+ linker and the linking process.
  Again, the program automatically calls the constructors without explicitly
  invoking it:
 \end_layout
@@ -53670,8 +53680,7 @@ ld
 \end_layout
 
 \begin_layout Itemize
-....
- and so on until the last loadable section...
+and so on until the last loadable section.
 \end_layout
 
 \begin_layout Standard
@@ -57081,7 +57090,7 @@ Examining raw memory is useful but usually it is better to have a more human-rea
 dable output.
  This command does precisely the task: it pretty-prints an expression.
  An expression can be a global variable, a local variable in current stack
- frame, a function, a register, a number...
+ frame, a function, a register, a number, etc.
 \end_layout
 
 \begin_layout Section
@@ -83324,13 +83333,13 @@ task
  is a unit of work that an OS needs to do, similar to how human have tasks
  to do daily.
  From a user point of view, a task for a computer to do can be web browsing,
- document editing, gaming, sending and receiving emails...
+ document editing, gaming, sending and receiving emails, etc.
  Since a CPU can only execute sequentially, one instruction after another
  (fetching from main memory), there must be some way to do many meaningful
  tasks at once.
  For that reason, the computer must share the resources e.g.
- registers, stack, memory...
- between tasks, since we have many tasks but single and limited resources.
+ registers, stack, memory, etc, between tasks, since we have many tasks
+ but single and limited resources.
 \end_layout
 
 \begin_layout Subsection
@@ -83348,7 +83357,7 @@ Process
  For example, when you run Firefox, a process structure is created to keep
  track of where the stack and the heap allocated for firefox are, where
  Firefox's code area is and which instruction EIP is holding to execute
- next...
+ next, etc.
  The typical process structure looks like this:
 \end_layout
 
@@ -83392,7 +83401,7 @@ Scheduler
 
 \begin_layout Standard
 An OS needs to perform a wide range of different functionalities, e.g.
- web browsing, document editing, gaming...
+ web browsing, document editing, gaming, etc.
  A 
 \emph on
 scheduler
@@ -83415,7 +83424,7 @@ Context switch
 \begin_layout Standard
 When a process is prepared to be switched out for another process to take
  its place, certain hardware resources i.e.
- current open files, current register values...
+ current open files, current register values, etc.
  must be backed up to later resume that process's execution.
 \end_layout
 
