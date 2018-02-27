@@ -626,9 +626,9 @@ upon the knowledge of the problem domain. The better understood
 the domain, the higher quality software can be. For example, 
 building a house is practiced over thousands of years and is well 
 understood, and it is easy to build a high-quality house; 
-software is no difference. Code that is difficult to understand, 
-usually because of the ignorance of problem domain. In the 
-context of this book, we sought to understand the low-level 
+software is no different. Code that is difficult to understand 
+is usually due to the author's ignorance of a problem domain. In
+the context of this book, we seek to understand the low-level 
 working of various hardware devices.
 
 Because software quality depends upon the understandings of the 
