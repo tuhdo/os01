@@ -573,7 +573,7 @@ mean a software engineer can automatically be good at hardware
 programming or any related low-level programming domains. One can 
 spend 10 years, 20 years or his entire life writing C/C++ code, 
 and he still cannot write an operating system, simply because of 
-the ignorant of relevant domain knowledge. Just like learning 
+the ignorance of relevant domain knowledge. Just like learning 
 English does not mean a person automatically becomes good at 
 reading Math books written in English. Much more than that is 
 needed. Knowing one or two programming languages is not enough. 
