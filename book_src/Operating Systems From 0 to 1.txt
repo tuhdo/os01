@@ -539,7 +539,7 @@ predefined framework just to understand high-level algorithms.
 For that reason, EE students have an easier time to implement an 
 OS, as they only need to study a few core CS courses. In fact, 
 only “C programming” and “Algorithms and Data Structures” classes 
-are usually enough to get them start writing code for device 
+are usually enough to get them started writing code for device 
 drivers, and later generalize it into an operating system.
 
 [float Figure:
