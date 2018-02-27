@@ -587,8 +587,8 @@ programming in their spare time.
 Documents are essential for learning a problem domain (and 
 actually, anything) since information can be passed down in a 
 reliable way. It is evident that this written text has been used 
-for thousands of years to pass knowledge from generations to 
-generations. Documents are integral parts of non-trivial 
+for thousands of years to pass knowledge from generation to 
+generation. Documents are integral parts of non-trivial 
 projects. Without the documents:
 
 • New people will find it much harder to join a project.
