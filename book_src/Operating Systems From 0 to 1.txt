@@ -682,7 +682,7 @@ Be aware that software requirements are not:
   body of knowledge from multiple fields is required, especially 
   if the operating system runs on non-PC devices. 
 
-  It's better to put anything related to the problem domain in 
+  It's best to include informat related to the problem domain in 
   the requirement document. A good way to test the quality of 
   requirement document is to hand it to the domain expert for 
   proofreading if he can understand the material thoroughly. 
