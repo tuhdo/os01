@@ -527,7 +527,7 @@ Problem domains: Software and Non-software.
      
 ]
 
-One example of such scenario is the domain that is presenting in 
+One example of such scenario is the domain that is presented in 
 this book: operating system. A certain amount of electrical 
 engineering (EE) knowledge is required to implement an operating 
 system. If a computer science (CS) curriculum that does not 
