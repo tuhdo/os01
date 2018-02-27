@@ -560,7 +560,7 @@ intelligence, etc., are parts of software engineering domains
 (actually it is more of a computer science domain than a software 
 engineering domain). In general, a software-exclusive domain 
 creates software to be used by other software. Operating System 
-is also a domain, but is overlapped with other domain such as 
+is also a domain, but is overlapped with other domains such as 
 electrical engineering. To effectively implement an operating 
 system, it is required to learn enough of the external domain. 
 How much learning is enough for a software engineer? At the 
