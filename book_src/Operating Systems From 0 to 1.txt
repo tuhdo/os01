@@ -295,7 +295,7 @@ on getting started writing an operating system.
 
 Let's dive in. With this book, I hope to provide enough 
 foundational knowledge that will open doors for you to make sense 
-of other resources. This book is will be especially beneficial to 
+of other resources. This book will be especially beneficial to 
 students who've just finished their first C/C++ course. Imagine 
 how cool it would be to show prospective employers that you've 
 already built an operating system.
