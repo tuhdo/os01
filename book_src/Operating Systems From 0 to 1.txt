@@ -674,8 +674,8 @@ Be aware that software requirements are not:
   ranting how useless documentation is. 
 
   More often than not there is no straightforward one-to-one 
-  mapping. For example, a regular computer user expects OS to be 
-  something that runs some program with GUI, or their favorite 
+  mapping. For example, a regular computer user expects an OS to
+  be something that runs some program with GUI, or their favorite 
   computer games. But for such requirements, an operating system 
   is implemented as multiple layers, each hides the details from 
   the upper layers. To implement an operating system, a large 
