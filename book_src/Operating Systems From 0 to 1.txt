@@ -684,9 +684,9 @@ Be aware that software requirements are not:
 
   It's best to include informat related to the problem domain in 
   the requirement document. A good way to test the quality of 
-  requirement document is to hand it to the domain expert for 
-  proofreading if he can understand the material thoroughly. 
-  Requirement document is also useful as a help document later, 
+  a requirement document is to provide it to a domain expert 
+  for proofreading, to ensure he can understand the material. 
+  thoroughly. A requirement document is also useful as a help document later, 
   or for writing one much easier.
 
   Software Specification
