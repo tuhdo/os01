@@ -677,7 +677,7 @@ Be aware that software requirements are not:
   mapping. For example, a regular computer user expects an OS to
   be something that runs some program with GUI, or their favorite 
   computer games. But for such requirements, an operating system 
-  is implemented as multiple layers, each hides the details from 
+  is implemented as multiple layers, each hiding the details from 
   the upper layers. To implement an operating system, a large 
   body of knowledge from multiple fields are required, especially 
   if the operating system runs on non-PC devices. 
