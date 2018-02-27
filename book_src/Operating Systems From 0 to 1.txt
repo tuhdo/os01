@@ -631,9 +631,9 @@ is usually due to the author's ignorance of a problem domain. In
 the context of this book, we seek to understand the low-level 
 working of various hardware devices.
 
-Because software quality depends upon the understandings of the 
-problem domain, the amount of software requirement document 
-should consist of problem domain description.
+Because software quality depends upon an understanding of the 
+problem domain, a software requirement document should always 
+include a description of the problem domain.
 
 Be aware that software requirements are not:
 
