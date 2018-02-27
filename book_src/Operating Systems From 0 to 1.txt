@@ -421,10 +421,10 @@ knowledge, and can use an IDE to build and run a program.
 
   Part 2 presents how to write a bootloader to bootstrap a 
   kernel. Hence the name “Groundwork”. After mastering this part, 
-  the reader can either continue with the next part that is a 
-  guide on writing an operating system. However, if the reader 
-  does not like the presentation, he or she can look elsewhere, 
-  such as OSDev Wiki: http://wiki.osdev.org/. 
+  the reader can continue with the next part, which is a guide 
+  for writing an operating system. However, if the reader does not 
+  like the presentation, he or she can look elsewhere, such as 
+  the OSDev Wiki: http://wiki.osdev.org/. 
 
   • Chapter 7 introduces what the bootloader is, how to write one 
     in assembly, and how to load it on QEMU, a hardware emulator. 
