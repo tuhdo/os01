@@ -679,7 +679,7 @@ Be aware that software requirements are not:
   computer games. But for such requirements, an operating system 
   is implemented as multiple layers, each hiding the details from 
   the upper layers. To implement an operating system, a large 
-  body of knowledge from multiple fields are required, especially 
+  body of knowledge from multiple fields is required, especially 
   if the operating system runs on non-PC devices. 
 
   It's better to put anything related to the problem domain in 
