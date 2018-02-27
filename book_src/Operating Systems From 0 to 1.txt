@@ -577,7 +577,7 @@ the ignorance of relevant domain knowledge. Just like learning
 English does not mean a person automatically becomes good at 
 reading Math books written in English. Much more than that is 
 needed. Knowing one or two programming languages is not enough. 
-If a programmer writes software for a living, he should better be 
+If a programmer writes software for a living, he had better be 
 specialized in one or two problem domains outside of software if 
 he does not want his job taken by domain experts who learn 
 programming in their spare time.
