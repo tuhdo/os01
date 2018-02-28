@@ -3110,16 +3110,6 @@ http://www.nxp.com/documents/data_sheet/74HC_HCT00.pdf
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace vfill
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage pagebreak
-\end_inset
-
 Then, the functionality of each pin:
 \end_layout
 
@@ -4093,7 +4083,7 @@ The inputs and outputs as visually presented:
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -4214,7 +4204,7 @@ end{figure*}
 \end_inset
 
 
-\begin_inset Float table
+\begin_inset Float margintable
 wide false
 sideways false
 status open
@@ -4547,17 +4537,6 @@ offset "4ex"
 width "100col%"
 height "1.5pt"
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset VSpace vfill
-\end_inset
-
-
-\begin_inset Newpage pagebreak
 \end_inset
 
 
