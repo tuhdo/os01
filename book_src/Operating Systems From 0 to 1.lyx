@@ -885,8 +885,8 @@ Groundwork
 
 \emph default
 .
- After mastering this part, the reader can either continue with the next
- part that is a guide on writing an operating system.
+ After mastering this part, the reader can continue with the next part,
+ which is a guide for writing an operating system.
  However, if the reader does not like the presentation, he or she can look
  elsewhere, such as OSDev Wiki: 
 \begin_inset Flex URL
@@ -1225,7 +1225,7 @@ Problem domains: Software and Non-software.
 \end_layout
 
 \begin_layout Standard
-One example of such scenario is the domain that is presenting in this book:
+One example of such scenario is the domain that is presented in this book:
  
 \emph on
 operating system
@@ -1265,8 +1265,8 @@ Algorithms and Data Structures
 
 
 \emph default
- classes are usually enough to get them start writing code for device drivers,
- and later generalize it into an 
+ classes are usually enough to get them started writing code for device
+ drivers, and later generalize it into an 
 \emph on
 operating system.
 \end_layout
@@ -1323,7 +1323,7 @@ One thing to note is that software is its own problem domain.
  science domain than a software engineering domain).
  In general, a software-exclusive domain creates software to be used by
  other software.
- Operating System is also a domain, but is overlapped with other domain
+ Operating System is also a domain, but is overlapped with other domains
  such as electrical engineering.
  To effectively implement an operating system, it is required to learn enough
  of the external domain.
@@ -1338,13 +1338,13 @@ Learning a programming language, even C or Assembly, does not mean a software
  engineer can automatically be good at hardware programming or any related
  low-level programming domains.
  One can spend 10 years, 20 years or his entire life writing C/C++ code,
- and he still cannot write an operating system, simply because of the ignorant
+ and he still cannot write an operating system, simply because of the ignorance
  of relevant domain knowledge.
  Just like learning English does not mean a person automatically becomes
  good at reading Math books written in English.
  Much more than that is needed.
  Knowing one or two programming languages is not enough.
- If a programmer writes software for a living, he should better be specialized
+ If a programmer writes software for a living, he had better be specialized
  in one or two problem domains outside of software if he does not want his
  job taken by domain experts who learn programming in their spare time.
 \end_layout
@@ -1357,7 +1357,7 @@ Documents for implementing a problem domain
 Documents are essential for learning a problem domain (and actually, anything)
  since information can be passed down in a reliable way.
  It is evident that this written text has been used for thousands of years
- to pass knowledge from generations to generations.
+ to pass knowledge from generation to generation.
  Documents are integral parts of non-trivial projects.
  Without the documents:
 \end_layout
@@ -1451,17 +1451,17 @@ A software solves a business problem.
  The better understood the domain, the higher quality software can be.
  For example, building a house is practiced over thousands of years and
  is well understood, and it is easy to build a high-quality house; software
- is no difference.
- Code that is difficult to understand, usually because of the ignorance
- of problem domain.
- In the context of this book, we sought to understand the low-level working
+ is no different.
+ Code that is difficult to understand is usually due to the author's ignorance
+ of a problem domain.
+ In the context of this book, we seek to understand the low-level working
  of various hardware devices.
 \end_layout
 
 \begin_layout Standard
-Because software quality depends upon the understandings of the problem
- domain, the amount of software requirement document should consist of problem
- domain description.
+Because software quality depends upon the understanding of the problem domain,
+ the amount of software requirement document should consist of problem domain
+ description.
 \end_layout
 
 \begin_layout Standard
@@ -1612,23 +1612,23 @@ In the future, instead of a drop-down menu, all books are listed directly
 
 \begin_layout Standard
 More often than not there is no straightforward one-to-one mapping.
- For example, a regular computer user expects OS to be something that runs
- some program with GUI, or their favorite computer games.
+ For example, a regular computer user expects an OS to be something that
+ runs some program with GUI, or their favorite computer games.
  But for such requirements, an operating system is implemented as multiple
- layers, each hides the details from the upper layers.
+ layers, each hiding the details from the upper layers.
  To implement an operating system, a large body of knowledge from multiple
- fields are required, especially if the operating system runs on non-PC
- devices.
+ fields is required, especially if the operating system runs on non-PC devices.
  
 \end_layout
 
 \begin_layout Standard
-It's better to put anything related to the problem domain in the requirement
- document.
- A good way to test the quality of requirement document is to hand it to
- the domain expert for proofreading if he can understand the material thoroughly.
- Requirement document is also useful as a help document later, or for writing
- one much easier.
+It's best to include information related to the problem domain in the requiremen
+t document.
+ A good way to test the quality of a requirement document is to provide
+ it to a domain expert for proofreading, to ensure he can understand the
+ material thoroughly.
+ A requirement document is also useful as a help document later, or for
+ writing one much easier.
 \end_layout
 
 \end_deeper
