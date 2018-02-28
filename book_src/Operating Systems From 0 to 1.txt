@@ -421,10 +421,10 @@ knowledge, and can use an IDE to build and run a program.
 
   Part 2 presents how to write a bootloader to bootstrap a 
   kernel. Hence the name “Groundwork”. After mastering this part, 
-  the reader can either continue with the next part that is a 
-  guide on writing an operating system. However, if the reader 
-  does not like the presentation, he or she can look elsewhere, 
-  such as OSDev Wiki: http://wiki.osdev.org/. 
+  the reader can continue with the next part, which is a guide 
+  for writing an operating system. However, if the reader does not 
+  like the presentation, he or she can look elsewhere, such as 
+  the OSDev Wiki: http://wiki.osdev.org/. 
 
   • Chapter 7 introduces what the bootloader is, how to write one 
     in assembly, and how to load it on QEMU, a hardware emulator. 
@@ -527,7 +527,7 @@ Problem domains: Software and Non-software.
      
 ]
 
-One example of such scenario is the domain that is presenting in 
+One example of such scenario is the domain that is presented in 
 this book: operating system. A certain amount of electrical 
 engineering (EE) knowledge is required to implement an operating 
 system. If a computer science (CS) curriculum that does not 
@@ -539,7 +539,7 @@ predefined framework just to understand high-level algorithms.
 For that reason, EE students have an easier time to implement an 
 OS, as they only need to study a few core CS courses. In fact, 
 only “C programming” and “Algorithms and Data Structures” classes 
-are usually enough to get them start writing code for device 
+are usually enough to get them started writing code for device 
 drivers, and later generalize it into an operating system.
 
 [float Figure:
@@ -560,7 +560,7 @@ intelligence, etc., are parts of software engineering domains
 (actually it is more of a computer science domain than a software 
 engineering domain). In general, a software-exclusive domain 
 creates software to be used by other software. Operating System 
-is also a domain, but is overlapped with other domain such as 
+is also a domain, but is overlapped with other domains such as 
 electrical engineering. To effectively implement an operating 
 system, it is required to learn enough of the external domain. 
 How much learning is enough for a software engineer? At the 
@@ -573,11 +573,11 @@ mean a software engineer can automatically be good at hardware
 programming or any related low-level programming domains. One can 
 spend 10 years, 20 years or his entire life writing C/C++ code, 
 and he still cannot write an operating system, simply because of 
-the ignorant of relevant domain knowledge. Just like learning 
+the ignorance of relevant domain knowledge. Just like learning 
 English does not mean a person automatically becomes good at 
 reading Math books written in English. Much more than that is 
 needed. Knowing one or two programming languages is not enough. 
-If a programmer writes software for a living, he should better be 
+If a programmer writes software for a living, he had better be 
 specialized in one or two problem domains outside of software if 
 he does not want his job taken by domain experts who learn 
 programming in their spare time.
@@ -587,8 +587,8 @@ programming in their spare time.
 Documents are essential for learning a problem domain (and 
 actually, anything) since information can be passed down in a 
 reliable way. It is evident that this written text has been used 
-for thousands of years to pass knowledge from generations to 
-generations. Documents are integral parts of non-trivial 
+for thousands of years to pass knowledge from generation to 
+generation. Documents are integral parts of non-trivial 
 projects. Without the documents:
 
 • New people will find it much harder to join a project.
@@ -626,14 +626,14 @@ upon the knowledge of the problem domain. The better understood
 the domain, the higher quality software can be. For example, 
 building a house is practiced over thousands of years and is well 
 understood, and it is easy to build a high-quality house; 
-software is no difference. Code that is difficult to understand, 
-usually because of the ignorance of problem domain. In the 
-context of this book, we sought to understand the low-level 
+software is no different. Code that is difficult to understand 
+is usually due to the author's ignorance of a problem domain. In
+the context of this book, we seek to understand the low-level 
 working of various hardware devices.
 
-Because software quality depends upon the understandings of the 
-problem domain, the amount of software requirement document 
-should consist of problem domain description.
+Because software quality depends upon an understanding of the 
+problem domain, a software requirement document should always 
+include a description of the problem domain.
 
 Be aware that software requirements are not:
 
@@ -674,19 +674,19 @@ Be aware that software requirements are not:
   ranting how useless documentation is. 
 
   More often than not there is no straightforward one-to-one 
-  mapping. For example, a regular computer user expects OS to be 
-  something that runs some program with GUI, or their favorite 
+  mapping. For example, a regular computer user expects an OS to
+  be something that runs some program with GUI, or their favorite 
   computer games. But for such requirements, an operating system 
-  is implemented as multiple layers, each hides the details from 
+  is implemented as multiple layers, each hiding the details from 
   the upper layers. To implement an operating system, a large 
-  body of knowledge from multiple fields are required, especially 
+  body of knowledge from multiple fields is required, especially 
   if the operating system runs on non-PC devices. 
 
-  It's better to put anything related to the problem domain in 
+  It's best to include informat related to the problem domain in 
   the requirement document. A good way to test the quality of 
-  requirement document is to hand it to the domain expert for 
-  proofreading if he can understand the material thoroughly. 
-  Requirement document is also useful as a help document later, 
+  a requirement document is to provide it to a domain expert 
+  for proofreading, to ensure he can understand the material. 
+  thoroughly. A requirement document is also useful as a help document later, 
   or for writing one much easier.
 
   Software Specification
