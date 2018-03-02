@@ -333,8 +333,8 @@ already built an operating system.
 
 • Touch typing. Since we are going to use Linux, touch typing 
   helps. I know typing speed does not relate to problem-solving, 
-  but at least your typing speed should be fast enough not to let 
-  it get it the way and degrade the learning experience.
+  but at least your typing speed should be fast enough to not let 
+  it get in the way and degrade the learning experience.
 
 In general, I assume that the reader has basic C programming 
 knowledge, and can use an IDE to build and run a program.
