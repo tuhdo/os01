@@ -1561,8 +1561,8 @@ that provides a language, called dot, for describing graph:
 
   As can be seen, the code perfectly expresses itself how the 
   graph is connected. Even a non-programmer can understand and 
-  use such language easily. If it were to implement in C, it 
-  would be more troublesome, and this is assuming that the 
+  use such language easily. An implementation in C
+  would be more troublesome, and that's assuming that the 
   functions for drawing graphs are already available. To draw a 
   line, in C we might write something like:
 
