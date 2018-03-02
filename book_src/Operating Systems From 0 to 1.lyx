@@ -683,7 +683,7 @@ Know how to pipe output to another program
 Touch typing.
  Since we are going to use Linux, touch typing helps.
  I know typing speed does not relate to problem-solving, but at least your
- typing speed should be fast enough not to let it get it the way and degrade
+ typing speed should be fast enough not to let it get in the way and degrade
  the learning experience.
 \end_layout
 
@@ -5273,8 +5273,8 @@ In reality, even though all languages are equivalent in power, not all of
 \end_layout
 
 \begin_layout Standard
-The higher level a programming language is, the distant it becomes with
- hardware.
+The higher level a programming language is, the more distant it becomes
+ from the hardware.
  In some high-level programming languages, such as Python, a programmer
  cannot manipulate underlying hardware, despite being able to deliver the
  same computations as low-level programming languages.
@@ -5655,8 +5655,8 @@ end{figure*}
 \begin_layout Standard
 As can be seen, the code perfectly expresses itself how the graph is connected.
  Even a non-programmer can understand and use such language easily.
- If it were to implement in C, it would be more troublesome, and this is
- assuming that the functions for drawing graphs are already available.
+ An implementation in C would be more troublesome, and that's assuming that
+ the functions for drawing graphs are already available.
  To draw a line, in C we might write something like:
 \end_layout
 
