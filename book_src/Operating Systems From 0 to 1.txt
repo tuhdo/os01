@@ -1411,8 +1411,8 @@ not all of them are capable of express programs of each other.
 Programming languages vary between two ends of a spectrum: high 
 level and low level. 
 
-The higher level a programming language is, the distant it 
-becomes with hardware. In some high-level programming languages, 
+The higher level a programming language is, the more distant it 
+becomes from the hardware. In some high-level programming languages, 
 such as Python, a programmer cannot manipulate underlying 
 hardware, despite being able to deliver the same computations as 
 low-level programming languages. The reason is that high-level 
