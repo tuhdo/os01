@@ -2708,7 +2708,7 @@ status collapsed
 
 \begin_layout Plain Layout
 
-http://www.nxp.com/documents/data_sheet/74HC_HCT00.pdf
+http://www.scrpdf.com/pdf/Semiconductors_new/Logic/74HCT/74HC_HCT00.pdf
 \end_layout
 
 \end_inset
@@ -7423,14 +7423,14 @@ After understanding one CPU architecture well, it is easier to learn other
 \end_layout
 
 \begin_layout Standard
-A CPU is an implementation of an ISA, effective the implementation of an
- assembly language (and depends on the CPU architecture, the language may
- vary).
+A CPU is an implementation of an ISA, effectively the implementation of
+ an assembly language (and depending on the CPU architecture, the language
+ may vary).
  Assembly language is one of the interfaces that are provided for software
  engineers to control a CPU, thus control a computer.
  But how can every computer device be controlled with only the access to
  the CPU? The simple answer is that a CPU can communicate with other devices
- through these two interfaces, thus commanding them what to do:
+ through these two interfaces, thus commanding them:
 \end_layout
 
 \begin_layout Description
