@@ -2026,8 +2026,7 @@ the interfaces that are provided for software engineers to
 control a CPU, thus control a computer. But how can every 
 computer device be controlled with only the access to the CPU? 
 The simple answer is that a CPU can communicate with other 
-devices through these two interfaces, thus commanding them what 
-to do:
+devices through these two interfaces, thus commanding them:
 
   Registers Registers[margin:
 Registers
