@@ -973,7 +973,7 @@ logic gates. This feature is what make the chip popular.
 
   [float Figure:
 [Figure 0.3:
-74HC00 logic diagrams (Source: 74HC00 datasheet, http://www.nxp.com/documents/data_sheet/74HC_HCT00.pdf
+74HC00 logic diagrams (Source: 74HC00 datasheet, https://neurophysics.ucsd.edu/courses/physics_120/74HC00_QUAD_NAND.pdf
 )
 ]
 
