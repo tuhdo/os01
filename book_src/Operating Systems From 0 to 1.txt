@@ -973,7 +973,7 @@ logic gates. This feature is what make the chip popular.
 
   [float Figure:
 [Figure 0.3:
-74HC00 logic diagrams (Source: 74HC00 datasheet, http://www.nxp.com/documents/data_sheet/74HC_HCT00.pdf
+74HC00 logic diagrams (Source: 74HC00 datasheet, https://neurophysics.ucsd.edu/courses/physics_120/74HC00_QUAD_NAND.pdf
 )
 ]
 
@@ -2019,15 +2019,14 @@ essential to writing an OS from scratch:
 • After understanding one CPU architecture well, it is easier to 
   learn other CPU architectures.
 
-A CPU is an implementation of an ISA, effective the 
-implementation of an assembly language (and depends on the CPU 
+A CPU is an implementation of an ISA, effectively the 
+implementation of an assembly language (and depending on the CPU 
 architecture, the language may vary). Assembly language is one of 
 the interfaces that are provided for software engineers to 
 control a CPU, thus control a computer. But how can every 
 computer device be controlled with only the access to the CPU? 
 The simple answer is that a CPU can communicate with other 
-devices through these two interfaces, thus commanding them what 
-to do:
+devices through these two interfaces, thus commanding them:
 
   Registers Registers[margin:
 Registers

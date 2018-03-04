@@ -32,7 +32,7 @@ After completing this book, at the very least you will learn:
 - Linking and loading on bare metal x86_64, with pure C. No standard library. No
   runtime overhead.
 
-[Download the book](https://github.com/tuhdo/os01/files/1485608/Operating_Systems_From_0_to_1.pdf)
+[Download the book](https://github.com/tuhdo/os01/blob/master/Operating_Systems_From_0_to_1.pdf)
 
 # The pedagogy of the book
 
