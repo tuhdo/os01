@@ -918,7 +918,7 @@ From NAND gate, we have all other gates. As demonstrated, such a
 simple circuitry performs the logical operators in day-to-day 
 program languages e.g. NOT operator ~ is executed directly by an 
 inverter circuit, and operator & is executed by an AND circuit 
-and so on. Code does not run on magic a black box. In contrast, 
+and so on. Code does not run on a magic black box. In contrast, 
 code execution is precise and transparent, often as simple as 
 running some hardwired circuit. When we write software, we simply 
 manipulate electrical current at the physical level to run 
