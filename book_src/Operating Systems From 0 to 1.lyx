@@ -2537,7 +2537,7 @@ From NAND gate, we have all other gates.
 &
 \family default
  is executed by an AND circuit and so on.
- Code does not run on magic a black box.
+ Code does not run on a magic black box.
  In contrast, code execution is precise and transparent, often as simple
  as running some hardwired circuit.
  When we write software, we simply manipulate electrical current at the
