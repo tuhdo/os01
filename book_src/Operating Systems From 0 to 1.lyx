@@ -80662,67 +80662,6 @@ reference "mem-state-bootloader"
 \end_layout
 
 \begin_layout Standard
-What is the reason for the incorrect Assembly code in 
-\family typewriter
-main
-\family default
- displayed by 
-\family typewriter
-gdb
-\family default
-? There can only be one cause: the bootloader jumped to the wrong addresses.
- But why was the address wrong? We made the 
-\family typewriter
-.text
-\family default
- section at address 
-\family typewriter
-0x500
-\family default
-, in which 
-\family typewriter
-main
-\family default
- code is in the first byte for executing, and instructed the bootloader
- to retrieve the address at the offset 
-\family typewriter
-0x18
-\family default
-, then jump to the entry address.
-\end_layout
-
-\begin_layout Standard
-Then, it might be possible for the bootloader to load the operating system
- address at the wrong address.
- But then, we explicitly set the load address to 
-\family typewriter
-50h:00
-\family default
-, which is 
-\family typewriter
-0x500
-\family default
-, and so the correct address was used.
- After the bootloader loads the 2
-\begin_inset script superscript
-
-\begin_layout Plain Layout
-nd
-\end_layout
-
-\end_inset
-
- sector, the in-memory state should look like the figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "mem-state-bootloader"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
 Here is the problem: 
 \family typewriter
 0x500
