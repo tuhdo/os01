@@ -53894,7 +53894,7 @@ LOAD
 \family typewriter
 0x0804851
 \family default
- becauase the start address is 
+ because the start address is 
 \family typewriter
 0x08048000
 \family default
@@ -70159,7 +70159,7 @@ gdb
 \family typewriter
 ~/.gdbinit
 \family default
-? Because these commands are specific to only this projec e.g.
+? Because these commands are specific to only this project e.g.
  not all programs are required a remote connection.
 \end_layout
 
