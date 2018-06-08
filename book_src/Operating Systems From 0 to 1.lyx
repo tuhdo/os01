@@ -56518,7 +56518,7 @@ This command examines the content of a given memory range.
 \end_layout
 
 \begin_layout Example
-We can examine the raw content of 
+We can examine the raw content in 
 \family typewriter
 main
 \family default
@@ -56611,7 +56611,7 @@ end{shelloutput16.6}
 \begin_layout Standard
 By default, without any argument, the command only prints the content of
  a single memory address.
- In this case, that is the starting memory address of 
+ In this case, that is the starting memory address in 
 \family typewriter
 main
 \family default
@@ -83002,7 +83002,7 @@ Both raw opcode displayed by the two programs are the same.
 \family typewriter
 gdb
 \family default
- correctly jumped to the address of 
+ correctly jumped to the address in 
 \family typewriter
 main
 \family default
