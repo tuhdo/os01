@@ -1,5 +1,5 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -190,7 +190,7 @@ enlarge top initially by=5mm,
 \RequirePackage{ragged2e}
 \setlength{\RaggedRightRightskip}{\z@ plus 0.01\hsize}
 \end_preamble
-\options fleqn,bibliography=totoc,index=totoc,BCOR7.5mm,titlepage,captions=tableheading
+\options bibliography=totoc,index=totoc,BCOR7.5mm,titlepage,captions=tableheading
 \use_default_options true
 \begin_modules
 eqs-within-sections
@@ -238,6 +238,8 @@ End
 \font_osf false
 \font_sf_scale 110 100
 \font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
 \graphics default
 \default_output_format default
 \output_sync 1
@@ -282,6 +284,7 @@ End
 \suppress_date false
 \justification true
 \use_refstyle 0
+\use_minted 0
 \notefontcolor #aa007f
 \index Index
 \shortcut idx
@@ -293,7 +296,11 @@ End
 \tocdepth 1
 \paragraph_separation skip
 \defskip smallskip
-\quotes_language english
+\is_math_indent 1
+\math_indentation default
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 2
 \paperpagestyle fancy
@@ -1043,6 +1050,7 @@ the part of the world
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Kovitz_psr"
+literal "true"
 
 \end_inset
 
@@ -1233,9 +1241,9 @@ operating system
 .
  A certain amount of electrical engineering (EE) knowledge is required to
  implement an operating system.
- If a computer science (CS) curriculum that does not include minimum EE
- courses, students in the curriculum have little chance to implement a working
- operating system.
+ If a computer science (CS) curriculum does not include minimum EE courses,
+ students in the curriculum have little chance to implement a working operating
+ system.
  Even if they can implement one, either they need to invest a significant
  amount of time to study on their own, or they fill code in a predefined
  framework just to understand high-level algorithms.
@@ -1431,6 +1439,7 @@ Software requirement document
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Kovitz_psr"
+literal "true"
 
 \end_inset
 
@@ -1673,6 +1682,7 @@ Software specification
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Kovitz_psr"
+literal "true"
 
 \end_inset
 
@@ -2239,6 +2249,7 @@ functionally complete
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Peirce"
+literal "true"
 
 \end_inset
 
@@ -2558,6 +2569,7 @@ a k-input gate uses k PMOS and k NMOS transistors
 \begin_inset CommandInset citation
 LatexCommand citep
 key "John_digital"
+literal "true"
 
 \end_inset
 
@@ -2813,8 +2825,8 @@ begin{figure}
 
 
 \backslash
-caption{Some logic gates built from NAND gates.
- EAch accepts 2 input signals and generate 1 output signal.}
+caption{Gates built from NAND gates, each accepts 2 input signals and generate
+ 1 output signal.}
 \end_layout
 
 \begin_layout Plain Layout
@@ -2896,10 +2908,10 @@ end{figure}
 \end_layout
 
 \begin_layout Standard
-How can the above gates can be created with 74HC00? It is simple: as every
- gate has 2 input pins and 1 output pin, we can write the output of 1 NAND
- gate to an input of another NAND gate, thus chaining NAND gates together
- to produce the diagrams as above.
+How can the above gates be created with 74HC00? It is simple: as every gate
+ has 2 input pins and 1 output pin, we can write the output of 1 NAND gate
+ to an input of another NAND gate, thus chaining NAND gates together to
+ produce the diagrams as above.
 \begin_inset Separator latexpar
 \end_inset
 
@@ -4177,7 +4189,7 @@ hfill{}
 
 
 \backslash
-subfloat[Pin layout; pin 3A and 3B take the values from 1Y and 2Y.]{
+subfloat[Pin 3A and 3B take the values from 1Y and 2Y.]{
 \end_layout
 
 \begin_layout Plain Layout
@@ -5430,6 +5442,7 @@ a k-input gate uses k PMOS and k NMOS transistors
 \begin_inset CommandInset citation
 LatexCommand citep
 key "John_digital"
+literal "true"
 
 \end_inset
 
@@ -5470,6 +5483,7 @@ Recurring patterns are the key to abstraction.
 \begin_inset CommandInset citation
 LatexCommand citeyearpar
 key "Hardy"
+literal "true"
 
 \end_inset
 
@@ -5916,6 +5930,7 @@ chassis
 LatexCommand href
 name "Wikimedia"
 target "https://commons.wikimedia.org/wiki/File:Wikimedia_Foundation_Servers-8055_35.jpg"
+literal "false"
 
 \end_inset
 
@@ -6366,6 +6381,7 @@ An Intel 82815 Graphics and Memory Controller Hub embedded on a PC motherboard.
 LatexCommand href
 name "Wikimedia"
 target "https://commons.wikimedia.org/wiki/File:Intel_82815_GMCH.jpg"
+literal "false"
 
 \end_inset
 
@@ -6413,6 +6429,7 @@ A PIC microcontroller.
 LatexCommand href
 name "Microchip"
 target "http://www.microchip.com/wwwproducts/en/PIC18F4620"
+literal "false"
 
 \end_inset
 
@@ -6854,6 +6871,7 @@ FPGA Architecture (Source:
 LatexCommand href
 name "National Instruments"
 target "http://www.ni.com/tutorial/6097/en/"
+literal "false"
 
 \end_inset
 
@@ -7411,6 +7429,7 @@ To effectively use the CPU, a programmer needs to understand the documentation
 LatexCommand href
 name "Intel® 64 and IA-32 Architectures Software Developer Manuals"
 target "[http://www.intel.com/content/www/us/en/processors/architectures-software-developer-manuals.html"
+literal "false"
 
 \end_inset
 
@@ -21340,7 +21359,7 @@ r/m
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -21367,7 +21386,7 @@ r/m
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -21427,7 +21446,8 @@ r/m
 \family typewriter
 reg/opcode
 \family default
- field finally provides the if an instruction requires one.
+ field finally provides an extra register or different variants, if an instructi
+on requires one.
 \begin_inset Separator latexpar
 \end_inset
 
@@ -26594,7 +26614,7 @@ This instruction:
 
 \begin_deeper
 \begin_layout LyX-Code
-jmp [eax * 4  + 
+jmp [eax * 4 + 
 \color red
 0x1234
 \color inherit
@@ -26607,7 +26627,7 @@ generates the machine code:
 \end_layout
 
 \begin_layout LyX-Code
-67 ff 24 8d 
+67 ff 24 85 
 \color red
 34 12 00 00
 \end_layout
@@ -26647,16 +26667,309 @@ generates the machine code:
 ModR/M
 \family default
  byte.
- The value suggests that a SIB byte follows, according to table 
+ According to table 
 \begin_inset CommandInset ref
 LatexCommand formatted
 reference "mod-rm-32"
 
 \end_inset
 
-.
+, the value suggests that a SIB byte follows, .
 \end_layout
 
+\begin_layout Itemize
+
+\family typewriter
+0x85
+\family default
+ is the 
+\family typewriter
+SIB
+\family default
+ byte.
+ According to table 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "sib"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, the byte 
+\family typewriter
+0x85
+\family default
+ can be destructured into bits as follow:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="8">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0.4cm">
+<column alignment="center" valignment="top" width="0.4cm">
+<column alignment="center" valignment="top" width="0.4cm">
+<column alignment="center" valignment="top" width="0.4cm">
+<column alignment="center" valignment="top" width="0.4cm">
+<column alignment="center" valignment="top" width="0.4cm">
+<column alignment="center" valignment="top" width="0.4cm">
+<column alignment="center" valignment="top" width="0.4cm">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+SS
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+R/M
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+REG
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The above values are obtained through the columns 
+\series bold
+SS
+\series default
+,
+\series bold
+ R/M
+\series default
+ and finally the 8 column of 
+\series bold
+REG
+\series default
+ respectively.
+ The total bits combined into the value 
+\family typewriter
+10000101
+\family default
+, which is 
+\family typewriter
+0x85 
+\family default
+in hex value.
+ By default, if a register after the displacement is not specified, it is
+ set to 
+\family typewriter
+EBP
+\family default
+ register, and thus the 6
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+th
+\end_layout
+
+\end_inset
+
+ column (bit pattern 
+\family typewriter
+101
+\family default
+) is always chosen.
+ If the example uses another register:
+\end_layout
+
+\begin_layout Example
+For example:
+\end_layout
+
+\begin_layout LyX-Code
+jmp [eax * 4 + eax + 
+\color red
+esi
+\color inherit
+]
+\end_layout
+
+\begin_layout Standard
+the 
+\family typewriter
+SIB
+\family default
+ byte becomes 
+\family typewriter
+0x86
+\family default
+ instead of , which is in the 7
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+th
+\end_layout
+
+\end_inset
+
+ column.
+ Try to verify with the table 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "sib"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ again.
+\end_layout
+
+\end_deeper
 \begin_layout Itemize
 
 \family typewriter
@@ -36102,6 +36415,7 @@ section 3.5.2.6
 LatexCommand citealt
 before "Optimization Manual,"
 key "intel_opt_manual"
+literal "true"
 
 \end_inset
 
@@ -36131,6 +36445,7 @@ sub
 LatexCommand citealt
 before "Optimization Manual,"
 key "intel_opt_manual"
+literal "true"
 
 \end_inset
 
@@ -67699,7 +68014,7 @@ kernel:
 
 \begin_layout Plain Layout
 
-	nasm -f bin sample.asm -o bootloader.o
+	nasm -f bin sample.asm -o sample.o
 \end_layout
 
 \begin_layout Plain Layout
@@ -78594,7 +78909,7 @@ status open
 
 \begin_layout Plain Layout
 
-BUILD_DIR=../build_os
+BUILD_DIR=../build
 \end_layout
 
 \begin_layout Plain Layout
@@ -78649,7 +78964,7 @@ $(BUILD_DIR)/%.o: %.c
 
 \begin_layout Plain Layout
 
-	gcc $(CFLAGS) -m32 -c  $< -o $@
+	gcc $(CFLAGS) -c  $< -o $@
 \end_layout
 
 \begin_layout Plain Layout
@@ -83725,6 +84040,8 @@ bigskip}% perhaps as well
 \begin_inset CommandInset index_print
 LatexCommand printindex
 type "idx"
+name "Index"
+literal "true"
 
 \end_inset
 
