@@ -730,7 +730,7 @@ requirement document and specification are usually separated.
 However, if the problem domain is inside software, specification 
 most often includes both, and content of both can be mixed with 
 each other. As demonstrated by previous sections the importance 
-of documents, to implement an OS, we will need to collects 
+of documents, to implement an OS, we will need to collect 
 relevant documents to gain sufficient domain knowledge. These 
 documents are as follow:
 
