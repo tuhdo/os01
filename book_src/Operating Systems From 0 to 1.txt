@@ -1,4 +1,4 @@
-Operating Systems:
+﻿Operating Systems:
 From 0 to 1
 
 Tu, Do Hoang
@@ -215,7 +215,7 @@ systems to be a better software engineer.
 If that is the case, this book is for you. By going through this 
 book, you will be able to find the missing pieces that are 
 essential and enable you to implement your own operating system 
-from scratch! Yes, from scratch without going through any 
+from scratch! Yes, from scratch, without going through any 
 existing operating system layer to prove to yourself that you are 
 an operating system developer. You may ask,“Isn't it more 
 practical to learn the internals of Linux?”.
@@ -1040,7 +1040,7 @@ computer system. A hardware device may not be a CPU but still has
 its language. A device with its own machine language is a 
 programmable device, since a user can use the language to command 
 the device to perform different actions. For example, a printer 
-has its set of commands for instructing it how to prints a page.
+has its set of commands for instructing it how to print a page.
 
 
 -------------------------------------------
@@ -3698,7 +3698,7 @@ gcc throws an error.
 The data types in C, which represents the fundamental data types, 
 are also called unsigned numbers. Other than numerical 
 calculations, unsigned numbers are used as a tool for structuring 
-data in memory; we will this application see later in the book, 
+data in memory; we will see this application later on in the book, 
 when various data structures are organized into bit groups.
 
 In all the examples above, when the value of a variable with 
@@ -3738,10 +3738,10 @@ Pointers are variables that hold memory addresses. x86 works with
 
 
 
-C only provides near pointer, since far pointer is platform 
-dependent, such as x86. In application code, you can assume that 
+C only provides support for near pointers, since far pointers are platform 
+dependent. In application code, you can assume that 
 the address of current segment starts at 0, so the offset is 
-actually any memory addres from 0 to the maximum address.
+actually any memory address from 0 to the maximum address.
 
   Source
 
