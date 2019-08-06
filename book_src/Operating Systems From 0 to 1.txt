@@ -864,8 +864,8 @@ Logic gates accept only binary inputs[footnote:
 Input that is either a 0 or 1.
 ] and produce binary outputs. In other words, logic gates are 
 functions that transform binary values. Fortunately, a branch of 
-math that deals exclusively with binary values already existed, 
-called Boolean Algebra, developed in the 19[superscript:th]century by George Boole. With a sound mathematical theory as a 
+math that deals exclusively with binary values already exists, 
+called Boolean Algebra, developed in the 19[superscript:th]century by George Boole. With sound mathematical theory as a 
 foundation logic gates were created. As logic gates implement 
 Boolean functions, a set of Boolean functions is functionally complete
 [margin:
@@ -1034,10 +1034,10 @@ function/subroutine in a computer program is called by its name,
 a bit pattern is a name of a little function inside a CPU that 
 got executed when the CPU finds one.
 
-Note that CPU is not the only device with its language. CPU is 
-just a name to indicate a hardware device that controls a 
+Note that the CPU is not the only device with it's own language. The CPU is 
+just a name given to a hardware device that controls a 
 computer system. A hardware device may not be a CPU but still has 
-its language. A device with its own machine language is a 
+it's own language. A device with its own machine language is a 
 programmable device, since a user can use the language to command 
 the device to perform different actions. For example, a printer 
 has its set of commands for instructing it how to prints a page.
@@ -1228,12 +1228,12 @@ figure [or-chip-74hc00].
   Assembly Language
 
 Assembly language is the symbolic representation of binary 
-machine code, by giving bit patterns mnemonic names. It was a 
-vast improvement when programmers had to write 0 and 1. For 
-example, instead of writing 000000101, a programmer simply write 
+machine code through giving bit patterns mnemonic names. This was a 
+vast improvement from when programmers had to write 0's and 1's manually. For 
+example, instead of writing 000000101, a programmer can simply write 
 hlt to stop a computer. Such an abstraction makes instructions 
 executed by a CPU easier to remember, and thus more instructions 
-could be memorized, less time spent looking up CPU manual to find 
+could be memorized, less time spent looking up CPU  manual to find 
 instructions in bit forms and as a result, code was written 
 faster.
 
