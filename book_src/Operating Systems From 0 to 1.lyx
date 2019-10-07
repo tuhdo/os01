@@ -8250,7 +8250,31 @@ objdump
 
  to examine how high level source code maps to assembly code.
  For now, we ignore the output and learn how to use the command first.
- It is simple to use 
+ Supposed that we have a executable binary named 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+hello
+\end_layout
+
+\end_inset
+
+ compiled from a 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+hello.c
+\end_layout
+
+\end_inset
+
+ thath prints 
+\begin_inset Quotes eld
+\end_inset
+
+Hello World', it is simple to use 
 \begin_inset Flex Code
 status open
 
@@ -8837,7 +8861,7 @@ The
 second column
 \color inherit
  is assembly instruction in raw hex values.
- In the above example, the address is 
+ In the above example, the value is 
 \family typewriter
 0x55
 \family default
@@ -32232,12 +32256,22 @@ bit_field
 \family typewriter
 .data5
 \family default
-, and is defined as an integer.
+, and is defined as a 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+char
+\end_layout
+
+\end_inset
+
+.
  For this reason, another 4 bytes are allocated just for 
 \family typewriter
 .data5
 \family default
-, even though it can only access 8 bits of information, and the final value
+, even though it can only access 4 bits of information, and the final value
  of 
 \family typewriter
 \color green
