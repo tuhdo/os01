@@ -450,7 +450,7 @@ You've probably asked yourself at least once how an operating system is
 If that is the case, this book is for you.
  By going through this book, you will be able to find the missing pieces
  that are essential and enable you to implement your own operating system
- from scratch! Yes, from scratch without going through any existing operating
+ from scratch! Yes, from scratch, without going through any existing operating
  system layer to prove to yourself that you are an operating system developer.
  You may ask,
 \begin_inset Quotes eld
@@ -590,8 +590,8 @@ Hello World
 Let's dive in.
  With this book, I hope to provide enough foundational knowledge that will
  open doors for you to make sense of other resources.
- This book is will be especially beneficial to students who've just finished
- their first C/C++ course.
+ This book will be beneficial to students who've just finished their first
+ C/C++ course greatly.
  Imagine how cool it would be to show prospective employers that you've
  already built an operating system.
 \end_layout
@@ -1733,7 +1733,7 @@ When problem domain is different from software domain, requirement document
  However, if the problem domain is inside software, specification most often
  includes both, and content of both can be mixed with each other.
  As demonstrated by previous sections the importance of documents, to implement
- an OS, we will need to collects relevant documents to gain sufficient domain
+ an OS, we will need to collect relevant documents to gain sufficient domain
  knowledge.
  These documents are as follow:
 \end_layout
@@ -3032,7 +3032,7 @@ programmable device
 , since a user can use the language to command the device to perform different
  actions.
  For example, a printer has its set of commands for instructing it how to
- prints a page.
+ print a page.
 \begin_inset Separator latexpar
 \end_inset
 
@@ -4985,7 +4985,8 @@ A decoder is built out of logic gates similar to other digital devices.
  However, a storage device can be anything that can store 0 and 1 and is
  retrievable.
  A storage device can be a magnetized device that uses magnetism to store
- information, or it can be made out of electrical circuits using.
+ information, or it can be made out of electrical circuits that can change
+ and rermember states when a voltage is applied.
  Regardless of the technology used, as long as the device can store data
  and is accessible to retrieve data, it suffices.
  Indeed, the modern devices are so complex that it is impossible and unnecessary
@@ -31044,7 +31045,7 @@ unsigned numbers
 \emph default
 .
  Other than numerical calculations, unsigned numbers are used as a tool
- for structuring data in memory; we will this application see later in the
+ for structuring data in memory; we will see this application later on the
  book, when various data structures are organized into bit groups.
 \end_layout
 
@@ -31162,10 +31163,10 @@ end{figure}
 \end_layout
 
 \begin_layout Standard
-C only provides near pointer, since far pointer is platform dependent, such
- as x86.
+C only provides support for near pointers, since far pointers are platform
+ dependent, such as x86.
  In application code, you can assume that the address of current segment
- starts at 0, so the offset is actually any memory addres from 0 to the
+ starts at 0, so the offset is actually any memory address from 0 to the
  maximum address.
 \end_layout
 
