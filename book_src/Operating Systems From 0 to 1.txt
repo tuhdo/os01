@@ -3162,7 +3162,7 @@ Feature flag    Description |
   64/32-bit mode indicates whether the opcode sequence is 
     supported in a 64-bit mode and possibly 32-bit mode.
 
-  CPUID Feature Flag indicates indicate a particular CPU feature 
+  CPUID Feature Flag indicates a particular CPU feature 
     must be available to enable the instruction. An instruction 
     is invalid if a CPU does not support the required feature.[margin:
 In Linux, the command:
