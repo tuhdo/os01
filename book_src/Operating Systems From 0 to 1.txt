@@ -9193,7 +9193,7 @@ The general form for format argument is: /<repeated count><format
 letter>
 
 If the repeated count is not supplied, by default gdb supplies 
-the count as 1. The format letter is one the following value:
+the count as 1. The format letter is one of the following values:
 
 
 +---------+-------------------------------------------------------------------------------------------------+
