@@ -11206,7 +11206,7 @@ Breakpoint 1 at 0x7c00
 
 
 
-Note the before the memory address. Without the asterisk, gdb 
+Note the asterisk before the memory address. Without the asterisk, gdb 
 treats the address as a symbol in a program rather than an 
 address. Then, for convenience, we use a split layout for viewing 
 the assembly code and registers together:
