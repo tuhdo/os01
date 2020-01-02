@@ -11155,7 +11155,7 @@ qemu-system-i386 -machine help
 
 After the command is executed, a new console window that displays 
 the screen output of the virtual machine. Open another terminal, 
-run gdb and set the current architecture to i386, since we are 
+run gdb and set the current architecture to i8086, since we are 
 running in 16-bit mode:
 
 
