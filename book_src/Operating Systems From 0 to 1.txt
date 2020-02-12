@@ -3468,7 +3468,7 @@ in this section will be:
 
 
 
-$ objdump -z -M intel -S -D <object file> | less
+$ objdump -z -M intel -S -D -j .data -j .bss <object file> | less
 
 
 

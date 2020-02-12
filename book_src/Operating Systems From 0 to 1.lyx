@@ -30227,7 +30227,7 @@ begin{tcolorbox}[enlarge top initially by=5mm]
 \begin_layout Standard
 
 \family typewriter
-$ objdump -z -M intel -S -D <object file> | less
+$ objdump -z -M intel -S -D -j .data -j .bss <object file> | less
 \end_layout
 
 \begin_layout Standard
