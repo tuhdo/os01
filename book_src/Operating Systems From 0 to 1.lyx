@@ -51561,7 +51561,7 @@ typedef void (*init)();
 
 \begin_layout Plain Layout
 
-__attribute__((section(".init_array"))) preinit preinit_arr[2] = {preinit1,
+__attribute__((section(".preinit_array"))) preinit preinit_arr[2] = {preinit1,
  preinit2};
 \end_layout
 
