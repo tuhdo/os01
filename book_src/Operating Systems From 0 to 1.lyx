@@ -3399,7 +3399,7 @@ Functional Description
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="5" columns="3">
+<lyxtabular version="3" rows="6" columns="3">
 <features tabularvalignment="middle">
 <column alignment="left" valignment="top" width="3cm">
 <column alignment="left" valignment="top" width="3cm">
@@ -3467,6 +3467,35 @@ nB
 
 \series bold
 nY
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+L
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+L
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+H
 \end_layout
 
 \end_inset
@@ -27507,6 +27536,7 @@ mode
  possibly 32-bit mode.
 \end_layout
 
+\begin_deeper
 \begin_layout Description
 
 \family typewriter
@@ -27520,8 +27550,7 @@ Feature
 
 Flag
 \family default
- indicates indicate a particular CPU feature must be available to enable
- the instruction.
+ indicates a particular CPU feature must be available to enable the instruction.
  An instruction is invalid if a CPU does not support the required feature.
 \begin_inset Marginal
 status collapsed
@@ -27551,7 +27580,6 @@ field.
 
 \end_layout
 
-\begin_deeper
 \begin_layout Description
 
 \family typewriter
@@ -30227,7 +30255,7 @@ begin{tcolorbox}[enlarge top initially by=5mm]
 \begin_layout Standard
 
 \family typewriter
-$ objdump -z -M intel -S -D <object file> | less
+$ objdump -z -M intel -S -D -j .data -j .bss <object file> | less
 \end_layout
 
 \begin_layout Standard
@@ -43778,8 +43806,8 @@ Specifies the total size of ELF header's size in bytes.
 64
 \family default
  bytes, which is equivalent to Start of program headers.
- Note that these two numbers are not necessary equivalent, as program header
- table might be placed far away from the ELF header.
+ Note that these two numbers are not necessarily equivalent, as program
+ header table might be placed far away from the ELF header.
  The only fixed component in the ELF executable binary is the ELF header,
  which appears at the very beginning of the file.
 \end_layout
@@ -51561,13 +51589,13 @@ typedef void (*init)();
 
 \begin_layout Plain Layout
 
-__attribute__((section(".init_array"))) preinit preinit_arr[2] = {preinit1,
+__attribute__((section(".preinit_array"))) preinit preinit_arr[2] = {preinit1,
  preinit2};
 \end_layout
 
 \begin_layout Plain Layout
 
-__attribute__((section(".init_array"))) init init_arr[2] = {init1, init2};
+__attribute__((section(".preinit_array"))) init init_arr[2] = {init1, init2};
 \end_layout
 
 \begin_layout Plain Layout
@@ -57113,7 +57141,7 @@ If the repeated count is not supplied, by default
 gdb
 \family default
  supplies the count as 1.
- The format letter is one the following value:
+ The format letter is one the following values:
 \end_layout
 
 \begin_layout Example
@@ -66218,7 +66246,7 @@ gdb
 \family default
  and set the current architecture to 
 \family typewriter
-i386
+i8086
 \family default
 , since we are running in 16-bit mode:
 \end_layout
@@ -66491,7 +66519,7 @@ end{shelloutput16.6}
 \end_layout
 
 \begin_layout Standard
-Note the before the memory address.
+Note the asterick before the memory address.
  Without the asterisk, 
 \family typewriter
 gdb
