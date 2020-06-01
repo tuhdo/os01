@@ -30227,7 +30227,7 @@ begin{tcolorbox}[enlarge top initially by=5mm]
 \begin_layout Standard
 
 \family typewriter
-$ objdump -z -M intel -S -D <object file> | less
+$ objdump -z -M intel -S -D -j .data -j .bss <object file> | less
 \end_layout
 
 \begin_layout Standard
@@ -51561,7 +51561,7 @@ typedef void (*init)();
 
 \begin_layout Plain Layout
 
-__attribute__((section(".init_array"))) preinit preinit_arr[2] = {preinit1,
+__attribute__((section(".preinit_array"))) preinit preinit_arr[2] = {preinit1,
  preinit2};
 \end_layout
 
