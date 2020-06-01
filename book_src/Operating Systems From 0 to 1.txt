@@ -3162,7 +3162,7 @@ Feature flag    Description |
   64/32-bit mode indicates whether the opcode sequence is 
     supported in a 64-bit mode and possibly 32-bit mode.
 
-  CPUID Feature Flag indicates indicate a particular CPU feature 
+  CPUID Feature Flag indicates a particular CPU feature 
     must be available to enable the instruction. An instruction 
     is invalid if a CPU does not support the required feature.[margin:
 In Linux, the command:
@@ -11155,7 +11155,7 @@ qemu-system-i386 -machine help
 
 After the command is executed, a new console window that displays 
 the screen output of the virtual machine. Open another terminal, 
-run gdb and set the current architecture to i386, since we are 
+run gdb and set the current architecture to i8086, since we are 
 running in 16-bit mode:
 
 
