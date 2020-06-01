@@ -5920,7 +5920,7 @@ future use when more information is needed.
 
   Specifies the total size of ELF header's size in bytes. In the 
   example, it is 64 bytes, which is equivalent to Start of 
-  program headers. Note that these two numbers are not necessary 
+  program headers. Note that these two numbers are not necessarily 
   equivalent, as program header table might be placed far away 
   from the ELF header. The only fixed component in the ELF 
   executable binary is the ELF header, which appears at the very 
