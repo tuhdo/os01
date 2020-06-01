@@ -8790,7 +8790,7 @@ section flags for filtered outputs:
 
   Command: info functions
 
-This commands list all function names and their loaded addresses. 
+This command lists all function names and their loaded addresses. 
 The names can be filtered with a regular expression.
 
 Run the command, we get the following output:
