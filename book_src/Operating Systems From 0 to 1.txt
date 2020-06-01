@@ -1103,6 +1103,8 @@ Functional Description
 +-----+------+--------+
 | nA  | nB   | nY     |
 +-----+------+--------+
+| L   | L    | H      |
++-----+------+--------+
 | L   | X    | H      |
 +-----+------+--------+
 | X   | L    | H      |
@@ -3162,7 +3164,7 @@ Feature flag    Description |
   64/32-bit mode indicates whether the opcode sequence is 
     supported in a 64-bit mode and possibly 32-bit mode.
 
-  CPUID Feature Flag indicates indicate a particular CPU feature 
+  CPUID Feature Flag indicates a particular CPU feature 
     must be available to enable the instruction. An instruction 
     is invalid if a CPU does not support the required feature.[margin:
 In Linux, the command:
@@ -3468,7 +3470,7 @@ in this section will be:
 
 
 
-$ objdump -z -M intel -S -D <object file> | less
+$ objdump -z -M intel -S -D -j .data -j .bss <object file> | less
 
 
 
@@ -5920,7 +5922,7 @@ future use when more information is needed.
 
   Specifies the total size of ELF header's size in bytes. In the 
   example, it is 64 bytes, which is equivalent to Start of 
-  program headers. Note that these two numbers are not necessary 
+  program headers. Note that these two numbers are not necessarily 
   equivalent, as program header table might be placed far away 
   from the ELF header. The only fixed component in the ELF 
   executable binary is the ELF header, which appears at the very 
@@ -7630,7 +7632,7 @@ typedef void (*init)();
 
 
 
-__attribute__((section(".init_array"))) preinit preinit_arr[2] = 
+__attribute__((section(".preinit_array"))) preinit preinit_arr[2] = 
 {preinit1, preinit2};
 
 __attribute__((section(".init_array"))) init init_arr[2] = 
@@ -8790,7 +8792,7 @@ section flags for filtered outputs:
 
   Command: info functions
 
-This commands list all function names and their loaded addresses. 
+This command lists all function names and their loaded addresses. 
 The names can be filtered with a regular expression.
 
 Run the command, we get the following output:
@@ -9193,7 +9195,7 @@ The general form for format argument is: /<repeated count><format
 letter>
 
 If the repeated count is not supplied, by default gdb supplies 
-the count as 1. The format letter is one the following value:
+the count as 1. The format letter is one of the following values:
 
 
 +---------+-------------------------------------------------------------------------------------------------+
@@ -11155,7 +11157,7 @@ qemu-system-i386 -machine help
 
 After the command is executed, a new console window that displays 
 the screen output of the virtual machine. Open another terminal, 
-run gdb and set the current architecture to i386, since we are 
+run gdb and set the current architecture to i8086, since we are 
 running in 16-bit mode:
 
 
@@ -11206,7 +11208,7 @@ Breakpoint 1 at 0x7c00
 
 
 
-Note the before the memory address. Without the asterisk, gdb 
+Note the asterisk before the memory address. Without the asterisk, gdb 
 treats the address as a symbol in a program rather than an 
 address. Then, for convenience, we use a split layout for viewing 
 the assembly code and registers together:
