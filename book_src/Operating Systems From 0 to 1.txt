@@ -1220,7 +1220,7 @@ figure [or-chip-74hc00].
 
 [float Figure:
 [Figure 0.6:
-4-bit OR chip made from four 74HC00 devices
+4-bit OR chip made from four 74HC00 devices (Typo: A1 to 1B for 1st chip)
 ]<or-chip-74hc00>
 
      <Graphics file: C:/Users/Tu Do/os01/book_src/images/02/4-bit-or-gate-layout.pdf>
@@ -1339,7 +1339,7 @@ storage device
 
 
 
-  
+  (Typo in Figure 2.3.5: A1 to 1B for 1st chip)
 
 
   A computer essentially implements this process: 
