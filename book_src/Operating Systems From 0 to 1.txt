@@ -5,7 +5,7 @@ Tu, Do Hoang
 
 
 
-
+R
 
 
 Table of Contents
@@ -2107,7 +2107,7 @@ Bus
 ]Bus is a subsystem that transfers data between computer 
 components or between computers. Physically, buses are just 
 electrical wires that connect all components together and each 
-wire transfer a single big of data. The total number of wires is 
+wire transfer a single bit of data. The total number of wires is 
 called bus width[margin:
 bus width
 ]bus width, and is dependent on how many wires a CPU can support. 
