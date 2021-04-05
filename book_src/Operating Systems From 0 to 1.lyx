@@ -7453,7 +7453,7 @@ CPU built-in OS features boost both OS performance and developer productivity
 
 \begin_layout Itemize
 To effectively use the CPU, a programmer needs to understand the documentation
- provided from CPU manufacturer.
+ provided by the CPU manufacturer.
  For example, 
 \begin_inset CommandInset href
 LatexCommand href
@@ -7477,7 +7477,7 @@ A CPU is an implementation of an ISA, effectively the implementation of
  may vary).
  Assembly language is one of the interfaces that are provided for software
  engineers to control a CPU, thus control a computer.
- But how can every computer device be controlled with only the access to
+ But how can every computer device be controlled with only access to
  the CPU? The simple answer is that a CPU can communicate with other devices
  through these two interfaces, thus commanding them:
 \end_layout
@@ -7517,7 +7517,7 @@ Registers
 are a hardware component for high-speed data access and communication with
  other hardware devices.
  Registers allow software to control hardware directly by writing to registers
- of a device, or receive information from hardware device when reading from
+ of a device, or receive information from a hardware device when reading from
  registers of a device.
 \begin_inset Separator latexpar
 \end_inset
@@ -7529,7 +7529,7 @@ are a hardware component for high-speed data access and communication with
 \begin_layout Standard
 Not all registers are used for communication with other devices.
  In a CPU, most registers are used as high-speed storage for temporary data.
- Other devices that a CPU can communicate always have a set of registers
+ Other devices that a CPU can communicate with always have a set of registers
  for interfacing with the CPU.
  
 \end_layout
@@ -7569,10 +7569,10 @@ Port
 \emph default
 is a specialized register in a hardware device used for communication with
  other devices.
- When data are written to a port, it causes a hardware device to perform
+ When data is written to a port, it causes a hardware device to perform
  some operation according to values written to the port.
- The different between a port and a register is that port does not store
- data, but delegate data to some other circuit.
+ The difference between a port and a register is that a port does not store
+ data, but delegates data to some other circuit.
 \end_layout
 
 \begin_layout Standard
