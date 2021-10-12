@@ -76,7 +76,7 @@ complete each operating system component. It does not contain code aside from a
 few examples. Part 3 is just there to shorten the reader's time when reading the
 official manuals by giving hints where to read, explaining difficult concepts
 and how to use the manuals to debug. In short, the implementation is up to the
-reader to work on his or her own; the chapters are just like university assignments.
+reader to work on their own; the chapters are just like university assignments.
 
 # Prerequisites
 
