@@ -2047,11 +2047,11 @@ Registers
   Port Port[margin:
 Port
 ]is a specialized register in a hardware device used for 
-  communication with other devices. When data are written to a 
+  communication with other devices. When data is written to a 
   port, it causes a hardware device to perform some operation 
-  according to values written to the port. The different between 
-  a port and a register is that port does not store data, but 
-  delegate data to some other circuit.
+  according to the value written to a port. The difference between 
+  a port and a register is that a port does not store data, but 
+  delegates data to some other circuit.
 
 These two interfaces are extremely important, as they are the 
 only interfaces for controlling hardware with software. Writing 
@@ -2064,26 +2064,26 @@ Memory
 consists of many cells. Each cell is a byte with its address 
 number, so a CPU can use such address number to access an exact 
 location in memory. Memory is where software instructions (in the 
-form of machine language) is stored and retrieved to be executed 
-by CPU; memory also stores data needed by some software. Memory 
+form of machine language) are stored and retrieved to be executed 
+by the CPU; memory also stores data needed by some software. Memory 
 in a Von Neumann machine does not distinguish between which bytes 
 are data and which bytes are software instructions. It's up to 
 the software to decide, and if somehow data bytes are fetched and 
 executed as instructions, CPU still does it if such bytes 
-represents valid instructions, but will produce undesirable 
+represent valid instructions, but will produce undesirable 
 results. To a CPU, there's no code and data; both are merely 
-different types of data for it to act on: one tells it how to do 
+different types of instructions for it to act on: one tells it how to do 
 something in a specific manner, and one is necessary materials 
-for it to carry such action.
+for it to carry out such an action.
 
-The RAM is controlled by a device called a memory controllermemory controller
+RAM is controlled by a device called a memory controllermemory controller
 . Currently, most processors have this device embedded, so the 
 CPU has a dedicated memory bus connecting the processor to the 
-RAM. On older CPU[footnote:
+RAM. On older CPUs[footnote:
 Prior to the CPU's produced in 2009
 ], however, this device was located in a chip also known as MCH 
 or Memory Controller HubMemory Controller Hub. In this case, the 
-CPU does not communicate directly to the RAM, but to the MCH 
+CPU does not communicate directly with the RAM, but with the MCH 
 chip, and this chip then accesses the memory to read or write 
 data. The first option provides better performance since there is 
 no middleman in the communications between the CPU and the 
@@ -2106,8 +2106,8 @@ Bus[margin:
 Bus
 ]Bus is a subsystem that transfers data between computer 
 components or between computers. Physically, buses are just 
-electrical wires that connect all components together and each 
-wire transfer a single big of data. The total number of wires is 
+electrical wires that connect all components together with each 
+wire transfering a single big chunk of data. The total number of wires is 
 called bus width[margin:
 bus width
 ]bus width, and is dependent on how many wires a CPU can support. 
@@ -2141,7 +2141,7 @@ single chip, thus more space, energy, and cost efficient. In a
 desktop computer, various hardware devices are connected to each 
 other through a PCB called a motherboardmotherboard. Each CPU 
 needs a compatible motherboard that can host it. Each motherboard 
-is defined by its chipset model that determine the environment 
+is defined by its chipset model that determines the environment 
 that a CPU can control. This environment typically consists of 
 
 • a slot or more for CPU
@@ -2212,7 +2212,7 @@ organization, in which Q35 shares similar organization.
 
 An execution environmentexecution environment is an environment 
 that provides the facility to make code executable. The execution 
-environment needs to address the following question:
+environment needs to address the following questions:
 
 • Supported operations? data transfer, arithmetic, control, 
   floating-point...
