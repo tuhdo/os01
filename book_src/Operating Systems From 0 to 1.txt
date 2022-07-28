@@ -16053,12 +16053,12 @@ space is called virtual memory.
 
   Virtual Memory
 
-Physical memory is a contagious memory locations that has a 
+Physical memory is a contiguous memory locations that has a 
 simple mapping between a physical memory address and its 
 corresponding location in memory, decoded by memory controller. 
 On the other hand, *virtual memory* does not have direct mapping 
 between a memory address and the corresponding physical memory 
-location, even though it appears contagious from the view of an 
+location, even though it appears contiguous from the view of an 
 userspace program. Instead, virtual memory address is translated 
 by OS into an actual physical memory address. For that reason, 
 even addresses appear next to each other in virtual memory space, 
