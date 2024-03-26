@@ -2069,10 +2069,10 @@ form of machine language) are stored and retrieved to be executed
 by the CPU; memory also stores data needed by some software. Memory 
 in a Von Neumann machine does not distinguish between which bytes 
 are data and which bytes are software instructions. It's up to 
-the software to decide, and if somehow data bytes are fetched and 
-executed as instructions, CPU still does it if such bytes 
-represent valid instructions, but will produce undesirable 
-results. To a CPU, there's no code and data; both are merely 
+the software to decide. If somehow data bytes are fetched, the 
+CPU will execute them if such bytes represent valid instructions, 
+but will produce undesirable results.
+To a CPU, there's no code and data; both are merely 
 different types of instructions for it to act on: one tells it how to do 
 something in a specific manner, and one is necessary materials 
 for it to carry out such an action.
