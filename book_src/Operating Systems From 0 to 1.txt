@@ -2081,7 +2081,7 @@ RAM is controlled by a device called a memory controllermemory controller
 . Currently, most processors have this device embedded, so the 
 CPU has a dedicated memory bus connecting the processor to the 
 RAM. On older CPUs[footnote:
-Prior to the CPU's produced in 2009
+Prior to the CPUs produced in 2009
 ], however, this device was located in a chip also known as MCH 
 or Memory Controller HubMemory Controller Hub. In this case, the 
 CPU does not communicate directly with the RAM, but with the MCH 
