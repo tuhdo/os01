@@ -1828,7 +1828,7 @@ resources.
 [margin:
 Field Programmable Gate Array
 ]Field Programmable Gate ArrayField Gate Programmable Array (FPGA
-FPGA) is a hardware an array of reconfigurable gates that makes 
+FPGA) is a hardware array of reconfigurable gates that makes 
 circuit structure programmable after it is shipped away from the 
 factory[footnote:
 This is why it is called Field Gate Programmable Array. It is 
