@@ -1409,7 +1409,8 @@ useless software. In reverse, software can do everything hardware
 easier way to use the hardware.
 
 In reality, even though all languages are equivalent in power, 
-not all of them are capable of express programs of each other. 
+not all of them are capable of expressing each other's programs
+effectively.
 Programming languages vary between two ends of a spectrum: high 
 level and low level. 
 
@@ -1827,7 +1828,7 @@ resources.
 [margin:
 Field Programmable Gate Array
 ]Field Programmable Gate ArrayField Gate Programmable Array (FPGA
-FPGA) is a hardware an array of reconfigurable gates that makes 
+FPGA) is a hardware array of reconfigurable gates that makes 
 circuit structure programmable after it is shipped away from the 
 factory[footnote:
 This is why it is called Field Gate Programmable Array. It is 
@@ -2068,10 +2069,10 @@ form of machine language) are stored and retrieved to be executed
 by the CPU; memory also stores data needed by some software. Memory 
 in a Von Neumann machine does not distinguish between which bytes 
 are data and which bytes are software instructions. It's up to 
-the software to decide, and if somehow data bytes are fetched and 
-executed as instructions, CPU still does it if such bytes 
-represent valid instructions, but will produce undesirable 
-results. To a CPU, there's no code and data; both are merely 
+the software to decide. If somehow data bytes are fetched, the 
+CPU will execute them if such bytes represent valid instructions, 
+but will produce undesirable results.
+To a CPU, there's no code and data; both are merely 
 different types of instructions for it to act on: one tells it how to do 
 something in a specific manner, and one is necessary materials 
 for it to carry out such an action.
@@ -2080,7 +2081,7 @@ RAM is controlled by a device called a memory controllermemory controller
 . Currently, most processors have this device embedded, so the 
 CPU has a dedicated memory bus connecting the processor to the 
 RAM. On older CPUs[footnote:
-Prior to the CPU's produced in 2009
+Prior to the CPUs produced in 2009
 ], however, this device was located in a chip also known as MCH 
 or Memory Controller HubMemory Controller Hub. In this case, the 
 CPU does not communicate directly with the RAM, but with the MCH 
