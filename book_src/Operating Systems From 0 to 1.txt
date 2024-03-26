@@ -1409,7 +1409,8 @@ useless software. In reverse, software can do everything hardware
 easier way to use the hardware.
 
 In reality, even though all languages are equivalent in power, 
-not all of them are capable of express programs of each other. 
+not all of them are capable of expressing each other's programs
+effectively.
 Programming languages vary between two ends of a spectrum: high 
 level and low level. 
 
